@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    /*background-color: #fafafa;*/
+  }
+
+  #logo1{
+    float: left;
+    display: inline;
+    height: 60px;
+    width: 200px;
+    margin-left: 50px;
+  }  
+  #rel a {
+    text-decoration: none;
+    color: #8b8b8b;
+  }
+  #rel a:hover{
+    color: rgba(255, 166, 0, 0.822);
+  }
+  .sidenav {
+    margin: 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /*background-color: #4caf50;*/
+    background-color: #dddddd;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    border-right: 1px solid grey;
+    color: #414141;
+    /*box-shadow: 1px 0 3px grey;*/
+  }
+  #slideShow{
+      width: 100%;
+      height: 0;
+      /*background-color: blue;*/
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: hidden;
+      margin-top: 60px;
+      position: absolute;
+      z-index: 0.5;
+      box-shadow: 0 2px 2px #ebebeb;
+  }
+
+  .relSlide{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+  }
+  .relSlide > *{
+    width: 60%;
+    margin: auto;
+  }
+
+  .bilde {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+  }
+
+  .bilde img {
+    width: 80%;
+    height: 60%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  #header{
+    width: 500px;
+      height: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) 100px;
+      color: #8b8b8b;
+      position: relative;
+      letter-spacing: 2px;
+      font-size: 10px;
+      z-index: 1;
+      float: right;
+  }
+
+  .valg{
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+.valg:hover a {
+    cursor: pointer;
+    color: #000000;
+}
+.valg a:hover {
+  cursor: pointer;
+  text-decoration-color: #000000;
+}
+.valg:hover #arrow{
+  border: solid black;
+  border-width: 0 2px 2px 0;
+}
+  
+  .sidenav a {
+    padding: 0 18px 16px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #6d6d6d;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: black;
+    /*background-color: white;*/
+  }
+  
+  .main {
+    margin-left: 0; /* Same as the width of the sidenav */ 
+    padding: 0px 0;
+    overflow: hidden;
+    /*font-family: Nunito, Helvetica Neue,Helvetica,Arial,sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .slides{
+      background-color: rgb(255, 255, 255);
+
+  }
+  #siden {
+      margin-left: 50px;
+      margin-right: 50px;
+      display: grid;
+      grid-template-columns: 3fr 10fr;
+  }
+  .indreSide  h1 {
+    font-weight: 350;
+    color: #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+    /*font-family: "Segoe UI",Soleil,Arial,sans-serif;*/
+  }
+  .indreSide  h2 {
+    font-weight: 300;
+    color: rgb(129, 129, 129);
+    border-bottom: 1px solid rgb(131, 131, 131);
+    padding-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
+    /*font-family: "Segoe UI",Soleil,Arial,sans-serif;*/
+  }
+
+
+  #arrow-up {
+    width: 0; 
+    height: 0; 
+    top: 85px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    left: calc(12.5% - 15px);
+    border-bottom: 15px solid white;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  #rel {
+      position: fixed;
+      background-color: white;
+      width: 100vw;
+      border-bottom: 1px solid #d1d1d1;
+      z-index: 1;
+
+  }
+  #shadow{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 10px 10px 10px grey;
+    height: 0;
+    background-color: red;
+  }
+  #innerLogo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  #innerLogo > h3 {
+    margin: 10px;
+  }
+
+  .boks{
+    background-color: #f5f5f5;
+    width: calc(100% - 40px);
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  #siden {
+    margin-top: 60px;
+  }
+  .rowtema {
+    padding: 20px;
+  }
+  #arrow {
+    border: solid #8b8b8b;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-top: 0;
+    transform: rotate(45deg);
+    /*-webkit-transform: rotate(45deg);*/
+    margin-left: 5px;
+  }
+  #indreVenstre{
+    width: 100%;
+    background-color: white;
+    margin-top: calc(22px + 10px);
+    border-radius: 5px;
+    border: solid 1px rgb(202, 202, 202);
+    position: relative;
+  }
+  .indreSide{
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+.venstreBoks{
+  background-color: #f5f5f5;
+  padding: 20px 0 20px 20px ;
+  border-top: 1px solid rgb(201, 201, 201);
+  color: #8b8b8b;
+  position: relative;
+}
+.venstreBoks:hover {
+  color: black;
+  cursor: pointer;
+}
+#venstreTema{
+  width: 100%;
+  text-align: center;
+}
+#venstreTema h1{
+  margin-bottom: 0;
+  z-index: 0.1;
+}
+#venstreTema h2{
+  margin-top: 0;
+}
+.eqn{
+  height: 100%;
+  display: inline;
+  float: left;
+  margin-top: -20px;
+}
+.rowtema{
+  position: relative;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 0;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 18px);
+}
+
+.inner-triangle {
+  position: relative;
+  top: -18px;
+  left: 2px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 22px solid white;
+  z-index: 0.3;
+}
+#v0{
+  border-right: 22px solid rgb(201, 201, 201);
+}
+.indreSide {
+  display: none;
+}
+#indreSide0{
+  display: inherit;
+}
+video{
+  width: 80%;
+  margin-left: 10%;
+}
+.them{
+  display: inline;
+}
+.relSlide img{
+  display: inline;
+  border: solid 1px grey;
+  margin: 10px;
+  border-radius: 10px;
+}
+.rowtema{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.imgBox{
+  position: relative;
+  float: none;
+  display: block;
+  min-height: 400px;
+}
+
+.imgBox img {
+  border-radius: 5px;
+}
+#kursSide{
+  padding-left: 50px;
+  margin-top: 60px;
+  padding-right: 50px;
+  background-color: #F7F7F8;
+}
+
+.temaboks {
+  width: 20%;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+.temaboks:hover h3{
+  transform: scale(1.2);
+  transition-duration: 200ms;
+}
+.temaboks a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

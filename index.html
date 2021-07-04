@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onscroll="scrollFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="relMain">
+        <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
+        <div id="header">
+            <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg">Kontakt</div>
+            <div class="valg">
+                <div style="border: 1px solid lightgrey;
+                            padding: 4px; border-radius: 4px;
+                            padding-right: 10px;
+                            padding-left: 10px;">Logg inn</div></div>
+        </div>
+    </div>
+    <div id="rel">
+        
+    </div>
+    <dic id="section1">
+        <div id="vs1"></div>
+        <div id="hs1">
+            <div id="bildeDiv"></div>
+        </div>
+    </dic>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+<h1>dfsf</h1>
+    
+    
+</div>
+<script>
+    var rel = document.getElementById("rel");
+    function scrollFunc() {
+        if(window.pageYOffset > 60){
+            rel.style.transitionDuration = "300ms";
+            rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
+                document.getElementById("rel").innerHTML = `
+                <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
+        <div id="header">
+            <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg">Kontakt</div>
+            <div class="valg">
+                <div style="border: 1px solid lightgrey;
+                            padding: 4px; border-radius: 4px;
+                            padding-right: 10px;
+                            padding-left: 10px;">Logg inn</div></div>
+        </div>
+        <div id="shadow"></div>
+                `
+            
+        }
+        else {
+            document.getElementById("rel").innerHTML = '';
+            rel.style.borderBottom = '0';
+        }
+    }
+ 
+            
+   
+</script>
+<script type="text/javascript" src="test.js"></script> 
+
+</body>
+</html> 

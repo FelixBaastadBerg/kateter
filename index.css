@@ -1,0 +1,38 @@
+#rel{
+    border-bottom: 1 solid rgb(209, 209, 209);
+    transition-duration: 0.3s;
+}
+.main{
+    background-image: url(https://preview.colorlib.com/theme/etrain/img/xbanner_bg.png.pagespeed.ic.gSoqtyNfDM.png);
+    background-repeat: no-repeat;
+    background-size: 68%;
+    background-position: top right;
+}
+#bildeDiv{
+    margin-top: 100px;
+    background-image: url(https://preview.colorlib.com/theme/etrain/img/xbanner_img.png.pagespeed.ic.Wi5mnRaKkR.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+#relMain {
+    width: 100vw;
+    z-index: 1;
+}
+#relMain a {
+    text-decoration: none;
+    color: #8b8b8b;
+  }
+  #relMain a:hover{
+    color: rgba(255, 166, 0, 0.822);
+  }
+
+
+  #section1{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 1vh;
+  }

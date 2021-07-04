@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload="changeDisplay(0)">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></a></div>
+        <div id="header">
+            <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href = "kontakt.html">Kontakt</a></div>
+            <div class="valg">
+                <a href="loggInn.html"><div style="border: 1px solid orange;
+                            padding: 4px; border-radius: 4px;
+                            padding-right: 10px;
+                            padding-left: 10px;">Logg inn</div></a></div>
+        </div>
+        <div id="shadow"></div>
+        
+    </div>
+    
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/grenser.png" height="100px">
+                    <h2>Grenser & Kontinuitet</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1)">Grenser
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(2)">Kontinuitet
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3)">Ekstremalverdien og skjæringssetningen
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4)">Formel definisjon av grense
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+        
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til Grenser & Kontinuitet</h1>
+                <p>To av de mest sentrale og grunnleggende prinsippene i Matematikk 1 er grenser og kontinuitet.
+                    Dette er byggesteiner for de aller fleste temaene som skal gjennomgås dette semesteret. 
+
+                    Essensen av matematikk 1 handler i stor grad om å håndtere derivasjon og integrasjon, og disse temaene inngår i stort sett alt som  foretas.
+                    Grenseverdier  brukes i selve definisjonen av integrasjon og derivasjon, mens ikke-kontinuerlige funksjoner  og deriverte fører til spesielle egenskaper hos den integrerte. </p>
+                    <video width="400" controls>
+                        <source src="videoer/Introduksjon_Grenser.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+            </div>
+            
+            <div id="indreSide1" class="indreSide">
+                <h1>Grenser</h1>
+
+                <!--<img src="bilder/gifsmos.gif" alt="Girl in a jacket" height="400px">-->
+                <p>En grense er funksjonsverdien \(L\) som funksjonen \(f(x)\) nærmer seg når \(x\) går mot \(a\). 
+                    Vi kan skrive at </p>
+                <div class="boks">
+                    \[
+                    L = \lim_{x \rightarrow a} f(x).
+                    \]
+                </div>
+                <div class="imgBox">
+                    <img src="bilder/GEOgrenser1.gif" alt="Girl in a jacket" height="400px" style="float: right; box-shadow: 1px 1px 20px;">
+                <p>Vi tar for oss funksjonen \(f(x) = x + 1\) for grundigere gjennomgang. Vi observerer at etterhvert som
+
+                </p>
+                </div>
+            <h2>Definisjon</h2>
+            <p>Vi definerer henholdsvis øvre grense \(U\) og nedre grense \(P\) som </p>
+            <div class="boks">
+                \[
+                U(f, P) = f(u_1) \Delta x_1 + f(u_2) \Delta x_2 + \cdots f(u_n) \Delta x_n = \sum_{i=1}^n f(u_i) \Delta x_i,
+                \]
+                \[
+                L(f, P) = f(l_1) \Delta x_1 + f(l_2) \Delta x_2 + \cdots f(l_n) \Delta x_n = \sum_{i=1}^n f(l_i) \Delta x_i.
+                \]
+            </div>
+            Vi sier at integralet vi er ute etter er gitt ved \(U(f, P) \leq I \leq L(f, P)\) og vi kan konkludere med at integralet skrives som
+            <div class="boks">
+                \[
+                    I = \int_a^b f(x) dx .
+                \]
+            </div>
+            <h2>Video</h2>
+            
+        <!--<iframe width="420" height="345" src="https://www.youtube.com/watch?v=h3nuls-0Ems&ab_channel=UlrikUnneberg">
+        </iframe>-->
+            </div>
+            <div id="indreSide2" class="indreSide">
+                <h1>Bestemt integral</h1>
+                <p>
+                    Følgende egenskaper ved det bestemte integralet kan være kjekke å huske på.
+                </p>
+                <div class="boks">
+                    \[
+                    \int_a^a f(x)dx=0.
+                    \]
+                    \[
+                    \int_b^a f(x) \, dx=-\int_a^b f(x) \, dx.
+                    \]
+                    \[
+                    \int_a^b \left(Af(x)+Bg(x)\right) \, dx=A\int_a^b f(x) \, dx+B\int_a^b g(x)\, dx.                    
+                    \]
+                    \[
+                    \int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx.    
+                    \]               
+                    \[
+                    \left| \int_a^b f(x) \, dx \right|\leq \int_a^b \left|f(x)\right| \, dx.                    
+                    \]
+                </div>
+            </div>
+            <div id="indreSide3" class="indreSide">
+                <h1>Analysens fundamentalteorem</h1>
+                <p>
+                    Å løse integrasjonsoppgaver ved bruk av definisjonen av det bestemte integralet kan være 
+                    arbeidskrevende og strevsomt. Analysens fundamentalteorem forteller oss at integrasjon og 
+                    derivasjon er motsatte regningsarter. Dette gjør at vi, i stedet for å evaluere kompliserte summer, kan løse 
+                    integrasjonsoppgaver ved å finne en antiderivert til den funksjonen vi ønsker å integrere.
+                </p>
+                <h2>Definisjon</h2>
+                Anta at \(f : [a,b] \rightarrow \mathbb{R}\) er kontinuerlig. Da er f integrerbar på ethvert intervall \([a, x]\), 
+                der \(a \leq x \leq b\) og funksjonen 
+                \[
+                F(x)=\int_a^x f(t) dt
+                \]
+                er en antiderivert til \(f\) på \([a, b]\).
+            </div>
+            <div id="indreSide4" class="indreSide">
+                <h1>Substitusjon</h1>
+                <p>\(\sqrt{x^2 + 4x}\)</p>
+            Der "vanlige" funksjoner tar tall fra defenisjonsmengden til verdimengden, vil inverse funksjoner ta 
+            verdier fra verdimengden til definisjonsmengden. Dette er definert som 
+            <h2>Definisjon</h2>
+            <div class="boks">
+                Invers funksjon
+                <br>
+                <br>
+                Dette er en inver funksjon
+                <br>
+                <br>
+                Her er en formel
+            </div>
+            Her kan man tydelig se at funksjonen er deriverbar noe som er fint for invershet.
+            <br>
+            <br>
+            Inverse funksjoner er bare inverterbare i verdimengden til den opprinnelige funksjonen dette kan 
+            formuleres som et teorem. Teoremet beskriver jeg nå nedenfor:
+            <div class="boks">
+                Dette er et teorem
+                <br>
+                <br>
+                Teroemet er lættis
+                <br>
+                <br>
+                Her er en formel
+            </div>
+            <h2>Eksempler</h2>
+                <div id="big">
+                    \[ f( y')\]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.7/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+</html> 
