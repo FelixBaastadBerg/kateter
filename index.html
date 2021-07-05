@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Kateter</title>
+<link rel="icon" href="bilder/rekker.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="test.css">
 <link rel="stylesheet" href="index.css">
@@ -30,7 +32,13 @@
         
     </div>
     <dic id="section1">
-        <div id="vs1"></div>
+        <div id="vs1">
+            <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
+            <div id="orangeLine"></div>
+            <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
+                Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
+            </h3>
+        </div>
         <div id="hs1">
             <div id="bildeDiv"></div>
         </div>
@@ -61,7 +69,6 @@
     var rel = document.getElementById("rel");
     function scrollFunc() {
         if(window.pageYOffset > 60){
-            rel.style.transitionDuration = "300ms";
             rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
                 document.getElementById("rel").innerHTML = `
                 <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
@@ -75,13 +82,12 @@
                             padding-right: 10px;
                             padding-left: 10px;">Logg inn</div></div>
         </div>
-        <div id="shadow"></div>
                 `
             
         }
         else {
             document.getElementById("rel").innerHTML = '';
-            rel.style.borderBottom = '0';
+            rel.style.borderBottom = '0 solid rgb(209, 209, 209)';
         }
     }
  
