@@ -61,3 +61,13 @@
     font-size: 25px;
     color: grey;
 }
+#vs1 button{
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'Nunito';
+    font-weight: 400;
+    border: 0 solid grey;
+    background: orange;
+    color: white;
+}
