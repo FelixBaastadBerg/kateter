@@ -70,8 +70,10 @@
 
 <script>
     var rel = document.getElementById("rel");
+    var isOver60 = true;
     function scrollFunc() {
-        if(window.pageYOffset > 60){
+        if(window.pageYOffset > 60 && window.innerWidth>641){
+            isOver60 = true;
             rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
                 document.getElementById("rel").innerHTML = `
                 <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
@@ -83,11 +85,28 @@
                 `
             
         }
+        else if (window.pageYOffset > 60 && window.innerWidth<641){
+            isOver60 = true;
+            rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
+                document.getElementById("rel").innerHTML = `
+                <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
+        <div id="header">
+            <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
+            <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+        </div>
+                `
+            
+        }
         else {
+            isOver60 = false
             document.getElementById("rel").innerHTML = '';
             rel.style.borderBottom = '0 solid rgb(209, 209, 209)';
         }
-    }
+    };
  
     function limitFunction(){
         if (window.innerWidth<761){
