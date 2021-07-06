@@ -339,3 +339,7 @@ video{
   background-color: #F7F7F8;
 }
 
+.container{
+  display: none;
+}
+

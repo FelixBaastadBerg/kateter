@@ -147,7 +147,10 @@ footer {
         font-size: 30px;
     }
     #hs2 h3{
-        font-size: 15px;
+        font-size: 20px;
+    }
+    #vs1 h3{
+        font-size: 23px;
     }
     button{
         padding: 17px;
@@ -186,4 +189,65 @@ footer {
         height: 300px;
         margin-top: 0;
     }
+    #header{
+        grid-template-columns: 1fr 50px;
+        width: 100px;
+        align-items: center;
+    }
+  }
+  @media only screen and (max-width: 560px){
+    #bildeDiv{
+        width: 60%;
+        height: 250px;
+    }
+    #vs1 h1{
+        font-size: 25px;
+    }
+    #vs1 h3{
+        font-size: 20px;
+    }
+    #hs2 h3{
+        font-size: 15px;
+    }
+    button{
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+  }
+  @media only screen and (max-width: 48px){
+    #bildeDiv{
+        width: 60%;
+        height: 220px;
+    }
+  }
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .container:hover .bar1, .container:hover .bar2, .container:hover .bar3{
+    background-color: #333;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #777;
+    margin: 6px 0;
+    transition: 0.2s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }

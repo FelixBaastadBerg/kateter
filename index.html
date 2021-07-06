@@ -21,6 +21,7 @@
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
             <div class="valg">Kontakt</div>
+                
         </div>
     </div>
     <div id="rel">
@@ -121,10 +122,25 @@
         
             `
         }
+        if (window.innerWidth<641){
+            document.getElementById("header").innerHTML = `
+            <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+            `
+        } else{
+            document.getElementById("header").innerHTML = `
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg">Kontakt</div>
+            `
+        }
     };
 
     var limitFunc = function(){
         if (window.innerWidth<761){
+            console.log(window.innerWidth)
             document.getElementById("section1").innerHTML = `
             <div id="hs1">
             <div id="bildeDiv"></div>
@@ -156,11 +172,30 @@
         
             `
         }
+        if (window.innerWidth<641){
+            document.getElementById("header").innerHTML = `
+            <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+            `
+        } else{
+            document.getElementById("header").innerHTML = `
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg">Kontakt</div>
+            `
+        }
     };
     window.addEventListener("resize", limitFunc);
     window.addEventListener("onload", limitFunc);
    
 </script>
+<script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    </script>
 <script type="text/javascript" src="test.js"></script> 
 
 </body>
