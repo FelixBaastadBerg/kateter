@@ -217,7 +217,7 @@ footer {
         margin-bottom: 25px;
     }
   }
-  @media only screen and (max-width: 48px){
+  @media only screen and (max-width: 480px){
     #bildeDiv{
         width: 60%;
         height: 220px;
