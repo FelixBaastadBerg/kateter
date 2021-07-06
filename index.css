@@ -13,7 +13,7 @@
     width: 80%;
     margin: auto;
     margin-top: 80px;
-    height: calc(100vh - 140px);
+    height: 80vh;
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -61,7 +61,8 @@
     font-size: 25px;
     color: grey;
 }
-#vs1 button{
+button{
+    transition-duration: 100ms;
     padding: 20px;
     border-radius: 20px;
     font-size: 20px;
@@ -70,4 +71,119 @@
     border: 0 solid grey;
     background: orange;
     color: white;
+    margin-bottom: 30px;
 }
+button:hover{
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.03);
+}
+#hr {
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    border-radius: 50px;
+    background-color: grey;
+}
+#vs2 * {
+    margin: auto;
+}
+#section2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-top: 1px solid rgb(190, 190, 190);
+    padding-top: 50px;
+}
+#hs2{
+    margin-top: 20px;
+}
+#hs2 h2{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+#hs2 h3{
+    font-size: 25px;
+    color: grey;
+}
+footer {
+    margin-top: 100px;
+    color: black;
+}
+#innerFooter{
+    width: calc(100vw - 100px);
+    margin: auto;
+    height: 100%;
+    border-top: 1px solid rgb(190, 190, 190);
+    text-align: center;
+    align-items: center;
+}
+#imgdiv {
+    width: 200px;
+    margin: auto;
+}
+#imgdiv *{
+    width: 200px;
+    margin: auto;
+}
+#imgdiv img {
+    margin-top: 50px;
+}
+#emaildiv{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#indiv{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    #vs1 h1{
+        font-size: 30px;
+    }
+    #hs2 h3{
+        font-size: 15px;
+    }
+    button{
+        padding: 17px;
+        border-radius: 17px;
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    #section1{
+        display: block;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+    #bildeDiv{
+        width: 50%;
+        height: 300px;
+        margin-top: 0;
+    }
+    #section2{
+        display: block;
+        padding-top: 50px;
+    }
+    #vs1{
+        margin-top: 0;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    
+  }
+  @media only screen and (max-width: 640px){
+    #bildeDiv{
+        width: 60%;
+        height: 300px;
+        margin-top: 0;
+    }
+  }

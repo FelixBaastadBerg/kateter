@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onscroll="scrollFunc()">
+<body onscroll="scrollFunc()" onload="limitFunction()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -21,51 +21,52 @@
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
             <div class="valg">Kontakt</div>
-            <div class="valg">
-                <div style="border: 1px solid lightgrey;
-                            padding: 4px; border-radius: 4px;
-                            padding-right: 10px;
-                            padding-left: 10px;">Logg inn</div></div>
         </div>
     </div>
     <div id="rel">
         
     </div>
-    <dic id="section1">
+    <div id="section1">
         <div id="vs1">
             <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
             <div id="orangeLine"></div>
             <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
                 Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
             </h3>
-            <button>Kom igang</button>
+            <a href="kurs.html"><button>Gå til kurs</button></a>
         </div>
         <div id="hs1">
             <div id="bildeDiv"></div>
         </div>
-    </dic>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
-<h1>dfsf</h1>
+    </div>
+    <div id="section2">
+        <div id="vs2"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_adcnc7go.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player></div>
+        <div id="hs2">
+            <h2>Undervisning fra Norgestoppen</h2>
+            <div id="orangeLine"></div>
+            <h3>Bli kjent med studentene som ønsker å reformere norsk undervisning</h3>
+            <a href="kontakt.html"><button>Kontakt Oss</button></a>
+        </div>
+    </div>
     
-    
+    <footer>
+        <div id="innerFooter">
+            <div id="imgdiv"><img src="bilder/kateter2.png" width = "250px" alt=""></div>
+            <div id="emaildiv">
+                <div style="text-align: right; margin-top: 6px;"><img src="bilder/email.png" width="20"></div>
+                <div style="text-align: left; align-items: center; display: flex; margin-left: 5px;">    kontakt@kateter.no</div>
+            </div>
+            <div id="indiv">
+                <div style="text-align: right; margin-top: 6px;"><img src="bilder/linkedin.png" width="20"></div>
+                <div style="text-align: left; align-items: center; display: flex; margin-left: 5px;">    kateter</div>
+            </div>
+            <!--<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+            <div style="margin: 10px; margin-bottom: 40px;">Copyright 2021 © Kateter. All rights reserved.</div>
+        </div>
+    </footer>
 </div>
+
 <script>
     var rel = document.getElementById("rel");
     function scrollFunc() {
@@ -77,11 +78,6 @@
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
             <div class="valg">Kontakt</div>
-            <div class="valg">
-                <div style="border: 1px solid lightgrey;
-                            padding: 4px; border-radius: 4px;
-                            padding-right: 10px;
-                            padding-left: 10px;">Logg inn</div></div>
         </div>
                 `
             
@@ -92,7 +88,77 @@
         }
     }
  
+    function limitFunction(){
+        if (window.innerWidth<761){
+            document.getElementById("section1").innerHTML = `
+            <div id="hs1">
+            <div id="bildeDiv"></div>
+        </div>
+            <div id="vs1">
+            <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
+            <div id="orangeLine"></div>
+            <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
+                Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
+            </h3>
+            <a href="kurs.html"><button>Gå til kurs</button></a>
+        </div>
+        
+            `
+        } else {
+            document.getElementById("section1").innerHTML = `
             
+            <div id="vs1">
+            <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
+            <div id="orangeLine"></div>
+            <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
+                Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
+            </h3>
+            <a href="kurs.html"><button>Gå til kurs</button></a>
+        </div>
+        <div id="hs1">
+            <div id="bildeDiv"></div>
+        </div>
+        
+            `
+        }
+    };
+
+    var limitFunc = function(){
+        if (window.innerWidth<761){
+            document.getElementById("section1").innerHTML = `
+            <div id="hs1">
+            <div id="bildeDiv"></div>
+        </div>
+            <div id="vs1">
+            <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
+            <div id="orangeLine"></div>
+            <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
+                Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
+            </h3>
+            <a href="kurs.html"><button>Gå til kurs</button></a>
+        </div>
+        
+            `
+        } else {
+            document.getElementById("section1").innerHTML = `
+            
+            <div id="vs1">
+            <h1>Lær matematikk mer effektivt enn noe annet sted</h1>
+            <div id="orangeLine"></div>
+            <h3>Denne nettsiden fungerer som et supplement til undervisning for ingeniører over hele Norge.
+                Dette vil være ditt online <span style="color: orange; opacity: 1;">kateter</span> for resten av semesteret.
+            </h3>
+            <a href="kurs.html"><button>Gå til kurs</button></a>
+        </div>
+        <div id="hs1">
+            <div id="bildeDiv"></div>
+        </div>
+        
+            `
+        }
+    };
+    window.addEventListener("resize", limitFunc);
+    window.addEventListener("onload", limitFunc);
    
 </script>
 <script type="text/javascript" src="test.js"></script> 
