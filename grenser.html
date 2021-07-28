@@ -77,6 +77,11 @@
                         <source src="mov_bbb.ogg" type="video/ogg">
                         Your browser does not support HTML video.
                     </video>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST">
+                        <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <button type="submit">Send</button>
+                   </form>
             </div>
             
             <div id="indreSide1" class="indreSide">
@@ -90,26 +95,41 @@
                     L = \lim_{x \rightarrow a} f(x).
                     \]
                 </div>
-                <div class="imgBox">
+                <!--<div class="imgBox">
                     <img src="bilder/GEOgrenser1.gif" alt="Girl in a jacket" height="400px" style="float: right; box-shadow: 1px 1px 20px;">
                 <p>Vi tar for oss funksjonen \(f(x) = x + 1\) for grundigere gjennomgang. Vi observerer at etterhvert som
 
                 </p>
-                </div>
-            <h2>Definisjon</h2>
-            <p>Vi definerer henholdsvis øvre grense \(U\) og nedre grense \(P\) som </p>
+                </div>-->
+                <h2>Ensidige grenser</h2>
+            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra høyre eller venstre kalles det en ensidig grenseverdig og vi skriver henholdsvis</p>
             <div class="boks">
                 \[
-                U(f, P) = f(u_1) \Delta x_1 + f(u_2) \Delta x_2 + \cdots f(u_n) \Delta x_n = \sum_{i=1}^n f(u_i) \Delta x_i,
-                \]
-                \[
-                L(f, P) = f(l_1) \Delta x_1 + f(l_2) \Delta x_2 + \cdots f(l_n) \Delta x_n = \sum_{i=1}^n f(l_i) \Delta x_i.
+                \lim_{x\to a^+}f(x)=L \quad \lor \quad \lim_{x\to a^-}f(x)=L.
                 \]
             </div>
-            Vi sier at integralet vi er ute etter er gitt ved \(U(f, P) \leq I \leq L(f, P)\) og vi kan konkludere med at integralet skrives som
+            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra både høyre og venstre kalles det en tosidig grenseverdi. 
+                Grenseverdien eksisterer og er lik \(L\) hvis og bare hvis hvis begge de ensidige grenseneverdiene eksisterer og er lik \(L\).
+            </p>
             <div class="boks">
                 \[
-                    I = \int_a^b f(x) dx .
+                \lim_{x\to a}f(x)=L\iff \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L.
+                \]
+            </div>
+            <h2>Regneregler for grenser</h2>
+            Anta at de to funksjonene \(f\) og \(g\) begge er definert i nærheten av \(a\), og at \(\lim_{x\to a}f(x)=L\) og \(\lim_{x\to a}g(x)=M\). Da gjelder følgende:
+            <div class="boks">
+                \[
+                \lim_{x\to a}[f(x)\pm g(x)]=L\pm M
+                \]
+                \[
+                \lim_{x\to a}f(x)g(x)=LM
+                \]
+                \[
+                \lim_{x\to a}kf(x)=kL, \quad k = \text{konstant}
+                \]
+                \[
+                \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}, \quad M\neq 0.
                 \]
             </div>
             <h2>Video</h2>
