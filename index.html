@@ -24,7 +24,7 @@
 
 
 <div class="main">
-    <div id="relMain">
+    <div id="relMain" style="z-index: 10000; background-color: white;">
         <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
         <div id="header">
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
@@ -32,8 +32,13 @@
             <div class="valg">Kontakt</div>
                 
         </div>
+        <div id="dropdown">
+            <div id="innerDropdown">
+                <div><a href="kurs.html">Kurs</a></div><div><a href="kontakt.html">Kontakt</a></div>
+            </div>
+        </div>
     </div>
-    <div id="rel">
+    <div id="rel" style="z-index: 10000; background-color: white;">
         
     </div>
     <div id="section1">
@@ -83,6 +88,7 @@
     function scrollFunc() {
         if(window.pageYOffset > 60 && window.innerWidth>641){
             isOver60 = true;
+            document.getElementById("dropdown").style.position = 'fixed';
             rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
                 document.getElementById("rel").innerHTML = `
                 <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
@@ -97,6 +103,7 @@
         else if (window.pageYOffset > 60 && window.innerWidth<641){
             isOver60 = true;
             rel.style.borderBottom = '1px solid rgb(209, 209, 209)';
+            document.getElementById("dropdown").style.position = 'fixed';
                 document.getElementById("rel").innerHTML = `
                 <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
         <div id="header">
@@ -111,6 +118,8 @@
             
         }
         else {
+            document.getElementById("dropdown").style.position = 'absolute';
+            document.getElementById("dropdown").style.borderTop = '1px rgb(209, 209, 209) solid'
             isOver60 = false
             document.getElementById("rel").innerHTML = '';
             rel.style.borderBottom = '0 solid rgb(209, 209, 209)';
@@ -118,6 +127,7 @@
     };
  
     function limitFunction(){
+        scrollFunc()
         if (window.innerWidth<761){
             document.getElementById("section1").innerHTML = `
             <div id="hs1">
@@ -222,6 +232,11 @@
 <script>
     function myFunction(x) {
       x.classList.toggle("change");
+      if (document.getElementById("dropdown").style.display == 'block'){
+        document.getElementById("dropdown").style.display = 'none';
+      } else {
+        document.getElementById("dropdown").style.display = 'block';
+      }
     }
     </script>
 <script type="text/javascript" src="test.js"></script> 

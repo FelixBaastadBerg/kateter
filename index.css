@@ -194,6 +194,9 @@ footer {
         width: 100px;
         align-items: center;
     }
+    .main{
+        background-image: none;
+    }
   }
   @media only screen and (max-width: 560px){
     #bildeDiv{
@@ -250,4 +253,25 @@ footer {
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  #dropdown{
+      display: none;
+      margin-top: 60px;
+      position: absolute;
+      text-align: center;
+      width: 100vw;
+      z-index: 1;
+      overflow: hidden;
+  }
+  #innerDropdown {
+    border-bottom: 1px rgb(209, 209, 209) solid;
+    box-shadow: 0px 1px 10px grey;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  #dropdown a {
+      font-size: 34px;
+      padding: 10px;
   }
