@@ -374,7 +374,7 @@ video{
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(131, 131, 131);
 }
 
 .form label::after{
@@ -394,6 +394,8 @@ video{
   bottom: 5px;
   left: 0px;
   transition: all 0.3s ease;
+  font-size: 20px;
+  color: rgb(80, 80, 80);
 }
 .form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
   transform: translateY(-150%);
@@ -414,4 +416,83 @@ video{
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
 }
+.big_form{
+  margin-top: 8px;
+}
 
+@media only screen and (max-width: 640px){
+  #header{
+      grid-template-columns: 1fr 50px;
+      width: 100px;
+      align-items: center;
+  }
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+.container:hover .bar1, .container:hover .bar2, .container:hover .bar3{
+  background-color: #333;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #777;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -7px);
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+#dropdown{
+  display: none;
+  margin-top: 60px;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
+}
+#innerDropdown {
+border-bottom: 1px rgb(209, 209, 209) solid;
+box-shadow: 0px 0.05px 5px rgb(146, 146, 146);
+margin-bottom: 20px;
+background-color: white;
+text-align: center;
+}
+
+#dropdown a {
+  font-size: 34px;
+  padding: 20px;
+  text-decoration: none;
+  color: #8b8b8b;
+}
+#dropdown a:hover{
+  color: rgba(255, 166, 0, 0.822);
+}
+#innerDropdown > div{
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+ul.a {
+  list-style-type: circle;
+}
+ul.a li{
+  padding: 10px;
+}
+.indreSide{
+  margin-bottom: 50px;
+}

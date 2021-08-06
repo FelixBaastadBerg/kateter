@@ -236,23 +236,23 @@ footer {
   }
   
   .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 30px;
+    height: 4px;
     background-color: #777;
     margin: 6px 0;
     transition: 0.2s;
   }
   
   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px);
   }
   
   .change .bar2 {opacity: 0;}
   
   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
   }
 
   #dropdown{
@@ -266,12 +266,18 @@ footer {
   }
   #innerDropdown {
     border-bottom: 1px rgb(209, 209, 209) solid;
-    box-shadow: 0px 1px 10px grey;
+    box-shadow: 0px 0.05px 5px rgb(146, 146, 146);
     margin-bottom: 20px;
     background-color: white;
+    text-align: center;
   }
 
   #dropdown a {
       font-size: 34px;
-      padding: 10px;
+      padding: 20px;
+  }
+  #innerDropdown > div{
+      padding: 20px;
+      width: 50%;
+      margin: auto;
   }

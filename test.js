@@ -45,3 +45,32 @@ function slide1(){
         showSlide();
     }
 }
+
+function limitFunc(){
+    if (window.innerWidth<641){
+        document.getElementsByClassName("temaboks")[0].style.margin = "auto";
+        document.getElementById("header").innerHTML = `
+        <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        `
+    } else{
+        document.getElementsByClassName("temaboks")[0].style.margin = "0";
+        document.getElementById("header").innerHTML = `
+        <div class="valg"><a href="kurs.html">Kurs</a></div>
+        <div class="valg">Kontakt</div>
+        `
+    }
+}
+function myFunction(x) {
+    x.classList.toggle("change");
+    if (document.getElementById("dropdown").style.display == 'block'){
+      document.getElementById("dropdown").style.display = 'none';
+    } else {
+      document.getElementById("dropdown").style.display = 'block';
+    }
+  }
+window.addEventListener("resize", limitFunc);
+

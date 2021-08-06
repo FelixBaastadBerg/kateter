@@ -7,23 +7,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 <div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div style="border-bottom: 1px solid rgb(209 209 209);"><a href="kurs.html">Kurs</a></div><div><a href="kontakt.html">Kontakt</a></div>
+        </div>
+    </div>
     <div id="rel">
         <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
         <div id="header">
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
             <div class="valg">Kontakt</div>
-            <div class="valg">
-                <div style="border: 1px solid lightgrey;
-                            padding: 4px; border-radius: 4px;
-                            padding-right: 10px;
-                            padding-left: 10px;">Logg inn</div></div>
         </div>
         
     </div>
@@ -46,5 +46,6 @@
 </div>
 
 <script type="text/javascript" src="test.js"></script> 
+
 </body>
 </html> 
