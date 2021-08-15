@@ -6,20 +6,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onload="changeDisplay(0)">
+<body onload="changeDisplay(0)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 <div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div style="border-bottom: 1px solid rgb(209 209 209);"><a href="kurs.html">Kurs</a></div><div><a href="kontakt.html">Kontakt</a></div>
+        </div>
+    </div>
     <div id="rel">
         <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></a></div>
         <div id="header">
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
-            <div class="valg"><a href = "kontakt.html">Kontakt</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
         </div>
-        <div id="shadow"></div>
         
     </div>
     
@@ -59,9 +63,22 @@
         
         </div>
         <div>
+
+            <div id="sideNavBar">
+                <i class="arrow left" onclick="closeSideBar()"></i>
+                <div id="toppen">
+                    <img src="bilder/grenser.png" height="100px">
+                    <h2>Grenser & Kontinuitet</h2>
+                </div>
+                <div class="barListe"><h3>Introduksjon</h3></div>
+                <div class="barListe"><h3>Grenser</h3></div>
+                <div class="barListe"><h3>Kontinuitet</h3></div>
+                <div class="barListe"><h3>Ekstremalverdi & Skjæringssetningen</h3></div>
+                <div class="barListe"><h3>Formell definisjon av grense</h3></div>
+            </div>
         
             <div id = "indreSide0" class="indreSide">
-                <h1>Introduksjon til Grenser & Kontinuitet</h1>
+                <h1><i class="arrow right" onclick="openSideBar()"></i>Introduksjon til Grenser & Kontinuitet</h1>
                 <p>To av de mest sentrale og grunnleggende prinsippene i Matematikk 1 er grenser og kontinuitet.
                     Dette er byggesteiner for de aller fleste temaene som skal gjennomgås dette semesteret. 
 
@@ -69,7 +86,7 @@
                     Grenseverdier  brukes i selve definisjonen av integrasjon og derivasjon, mens ikke-kontinuerlige funksjoner  og deriverte fører til spesielle egenskaper hos den integrerte. </p>
                     <h2>Video - Introduksjon</h2>
                     <video width="400" controls>
-                        <source src="videoer/epsdelt.mp4" type="video/mp4">
+                        <source src="videoer/01intro.mp4" type="video/mp4">
                         Your browser does not support HTML video.
                     </video>
                     
@@ -99,7 +116,7 @@
                 </div>
                 <h2>Video - Grenser</h2>
                 <video width="400" controls>
-                    <source src="videoer/01kontinuitet.mp4" type="video/mp4">
+                    <source src="videoer/01Grenser.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
@@ -221,7 +238,7 @@
                 Ekstremalverdisetningen og skjæringssetningen er to nyttige verktøy i blant annet funksjonsanalyse og bevis. Ekstremalverdisetningen sier noe om eksistensen av topp- og bunnpunkter, mens skjæringssetningen sier noe om hvilke funksjonsverdier som MÅ befinne seg på et intervall.
                 <h2>Video - Ekstremalverdisetningen og Skjæringssetningen</h2>
                 <video width="400" controls>
-                    <source src="videoer/01skvise.mp4" type="video/mp4">
+                    <source src="videoer/01ekstremalverdi.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">

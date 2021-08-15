@@ -37,6 +37,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
   }
+  #section3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-top: 1px solid rgb(190, 190, 190);
+    padding-top: 20px;
+}
 
   #vs1{
       margin-left: 50px;
@@ -89,6 +97,9 @@ button:hover{
 #vs2 * {
     margin: auto;
 }
+#hs3 * {
+    margin: auto;
+}
 #section2{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,6 +107,7 @@ button:hover{
     margin-right: 50px;
     border-top: 1px solid rgb(190, 190, 190);
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 #hs2{
     margin-top: 20px;
@@ -109,7 +121,7 @@ button:hover{
     color: grey;
 }
 footer {
-    margin-top: 100px;
+    margin-top: 50px;
     color: black;
 }
 #innerFooter{
@@ -141,12 +153,26 @@ footer {
     display: grid;
     grid-template-columns: auto auto;
 }
+#vs3{
+    margin-top: 20px;
+}
+#vs3 h3{
+    font-size: 25px;
+    color: grey;
+}
+#vs3 h2{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+#hs3 {
+    margin: auto;
+}
 
 @media only screen and (max-width: 1000px) {
     #vs1 h1{
         font-size: 30px;
     }
-    #hs2 h3{
+    #hs2 h3, #vs3 h3{
         font-size: 20px;
     }
     #vs1 h3{
@@ -174,12 +200,16 @@ footer {
     #section2{
         display: block;
         padding-top: 50px;
+        padding-bottom: 50px;
     }
     #vs1{
         margin-top: 0;
     }
     footer{
         margin-top: 50px;
+    }
+    #section3{
+        display: block;
     }
     
   }
@@ -209,8 +239,8 @@ footer {
     #vs1 h3{
         font-size: 20px;
     }
-    #hs2 h3{
-        font-size: 15px;
+    #hs2 h3, #vs3 h3{
+        font-size: 17px;
     }
     button{
         padding: 15px;
@@ -281,3 +311,5 @@ footer {
       width: 50%;
       margin: auto;
   }
+
+ 

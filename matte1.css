@@ -2,6 +2,14 @@
     font-size: 60px;
     padding-top: 40px;
 }
+#orangeLine{
+    height: 10px;
+    width: 70px;
+    background-color: orange;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
 h1 {
     margin: 0;
 }
@@ -41,3 +49,44 @@ h1 {
 .title {
     margin-top: 0;
 }
+.delKursBoks:nth-child(3n-2){
+    margin-left: 0;
+}
+.delKursBoks:nth-child(3n){
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 920px){
+    #delKursGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .delKursBoks:nth-child(2n-1){
+        margin-left: 0;
+    }
+    .delKursBoks:nth-child(2n){
+        margin-right: 0;
+        margin-left: auto;
+    }
+  }
+
+@media only screen and (max-width: 630px){
+    #delKursGrid{
+        grid-template-columns: 1fr;
+    }
+    .delKursBoks{
+        width: 70%;
+    }
+    .delKursBoks:nth-child(n){
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 550px){
+    #delKursGrid{
+        grid-template-columns: 1fr;
+    }
+    .delKursBoks{
+        width: 80%;
+    }
+}
+

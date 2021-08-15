@@ -19,16 +19,16 @@
         </div>
     </div>
     <div id="rel">
-        <div id="logo1"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></div>
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></a></div>
         <div id="header">
             <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
             <div class="valg"><a href="kurs.html">Kurs</a></div>
-            <div class="valg">Kontakt</div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
         </div>
         
     </div>
 
-    <div id="kursSide" style="height: calc(100vh - 60px);">
+    <div id="kursSide" style="min-height: calc(100vh - 60px);">
         <h1 style="padding-top: 30px; margin-bottom: 5px; font-size: 40px;">Kurs</h1>
         <div id="orangeLine"></div>
         <div class="temaboks">
@@ -46,6 +46,17 @@
 </div>
 
 <script type="text/javascript" src="test.js"></script> 
+<script>
+
+function boxResizeFunc(){
+    if (window.innerWidth<601){
+        document.getElementsByClassName("temaboks")[0].style.margin = "auto";
+    } else{
+        document.getElementsByClassName("temaboks")[0].style.margin = "0";
+    }
+}
+    window.addEventListener("resize", boxResizeFunc);
+</script>
 
 </body>
 </html> 

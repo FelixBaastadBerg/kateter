@@ -3,6 +3,9 @@ arrow = document.getElementById("arrow");
 header = document.getElementById("header");
 
 function changeDisplay(id){
+    if (id == 0){
+        limitFunc()
+    }
     //if (id != 0){
     //    document.getElementById("indreSide0").style.display = "none";
     //}
@@ -48,7 +51,7 @@ function slide1(){
 
 function limitFunc(){
     if (window.innerWidth<641){
-        document.getElementsByClassName("temaboks")[0].style.margin = "auto";
+        //document.getElementsByClassName("temaboks")[0].style.margin = "auto";
         document.getElementById("header").innerHTML = `
         <div class="container" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -57,10 +60,10 @@ function limitFunc(){
               </div>
         `
     } else{
-        document.getElementsByClassName("temaboks")[0].style.margin = "0";
+        //document.getElementsByClassName("temaboks")[0].style.margin = "0";
         document.getElementById("header").innerHTML = `
         <div class="valg"><a href="kurs.html">Kurs</a></div>
-        <div class="valg">Kontakt</div>
+        <div class="valg"><a href="kontakt.html">Kontakt</a></div>
         `
     }
 }
@@ -73,4 +76,25 @@ function myFunction(x) {
     }
   }
 window.addEventListener("resize", limitFunc);
+
+function openSideBar(){
+    var bar = document.getElementById("sideNavBar");
+    bar.style.width = "300px";
+    bar.style.display = "inherit";
+    var klassen = document.getElementsByClassName("indreSide");
+    for (var i = 0; i < klassen.length; i++) {
+        klassen.item(i).style.opacity = ".4";
+}
+}
+function closeSideBar(){
+    var bar = document.getElementById("sideNavBar");
+    bar.style.width = "0px";
+    bar.style.display = "none";
+    var klassen = document.getElementsByClassName("indreSide");
+    for (var i = 0; i < klassen.length; i++) {
+        klassen.item(i).style.opacity = "1";
+}
+}
+
+
 
