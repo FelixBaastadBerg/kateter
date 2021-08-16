@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onload="changeDisplay(0)" onload="limitFunc()">
+<body onload="changeDisplay(0, 5)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -14,7 +14,11 @@
 <div class="main">
     <div id="dropdown">
         <div id="innerDropdown">
-            <div style="border-bottom: 1px solid rgb(209 209 209);"><a href="kurs.html">Kurs</a></div><div><a href="kontakt.html">Kontakt</a></div>
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
         </div>
     </div>
     <div id="rel">
@@ -26,7 +30,6 @@
         </div>
         
     </div>
-    
     <div id="siden">
         <div id="venstreSide">
             <div id="indreVenstre">
@@ -34,27 +37,27 @@
                     <img src="bilder/grenser.png" height="100px">
                     <h2>Grenser & Kontinuitet</h2>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0)">Introduksjon
+                <div class="venstreBoks"  onclick="changeDisplay(0, 5)">Introduksjon
                     <div class="triangle-left" id= "v0">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1)">Grenser
+                <div class="venstreBoks"  onclick="changeDisplay(1, 5)">Grenser
                     <div class="triangle-left" id= "v1">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(2)">Kontinuitet
+                <div class="venstreBoks" onclick="changeDisplay(2, 5)">Kontinuitet
                     <div class="triangle-left" id= "v2">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(3)">Ekstremalverdien og skjæringssetningen
+                <div class="venstreBoks" onclick="changeDisplay(3, 5)">Ekstremalverdien og skjæringssetningen
                     <div class="triangle-left" id= "v3">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(4)">Formell definisjon av grense
+                <div class="venstreBoks" onclick="changeDisplay(4, 5)">Formell definisjon av grense
                     <div class="triangle-left" id= "v4">
                         <div class="inner-triangle"></div>
                     </div>
@@ -65,20 +68,20 @@
         <div>
 
             <div id="sideNavBar">
-                <i class="arrow left" onclick="closeSideBar()"></i>
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
                 <div id="toppen">
                     <img src="bilder/grenser.png" height="100px">
                     <h2>Grenser & Kontinuitet</h2>
                 </div>
-                <div class="barListe"><h3>Introduksjon</h3></div>
-                <div class="barListe"><h3>Grenser</h3></div>
-                <div class="barListe"><h3>Kontinuitet</h3></div>
-                <div class="barListe"><h3>Ekstremalverdi & Skjæringssetningen</h3></div>
-                <div class="barListe"><h3>Formell definisjon av grense</h3></div>
+                <div class="barListe" onclick="changeDisplay(0, 5)"><h3>Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 5)"><h3>Grenser</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 5)"><h3>Kontinuitet</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 5)"><h3>Ekstremalverdi & Skjæringssetningen</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 5)"><h3>Formell definisjon av grense</h3></div>
             </div>
-        
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
-                <h1><i class="arrow right" onclick="openSideBar()"></i>Introduksjon til Grenser & Kontinuitet</h1>
+                <h1>Introduksjon til Grenser & Kontinuitet</h1>
                 <p>To av de mest sentrale og grunnleggende prinsippene i Matematikk 1 er grenser og kontinuitet.
                     Dette er byggesteiner for de aller fleste temaene som skal gjennomgås dette semesteret. 
 

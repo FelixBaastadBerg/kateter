@@ -106,21 +106,41 @@ body {
     margin-right: 20px;
     margin-bottom: 5px;
     cursor: pointer;
+
   }
-  
+  #aroundLeftArrow{
+    position: absolute;
+    left: 2px;
+    top: 78px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+#aroundArrow{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
   .arrow:hover{
     border: solid rgb(30, 30, 30);
     border-width: 0 3px 3px 0;
   }
   
   .right {
+    margin: 20px;
+    margin-bottom: 17px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
   .left {
-    position: absolute;
+    /*position: absolute;*/
     top: 30px;
     right: 15px;
+    margin: 20px;
+    margin-bottom: 17px;
+    margin-right: 17px;
     transform: rotate(-225deg);
     -webkit-transform: rotate(-225deg);
   }
@@ -137,7 +157,7 @@ body {
   .outsideArrow:hover{
     border: 1px rgb(30, 30, 30) solid;
   }
-  .outsideArrow:hover * {
+  #aroundArrow:hover * , #aroundLeftArrow:hover * {
     border: solid rgb(30, 30, 30);
     border-width: 0 3px 3px 0;
   }
@@ -235,6 +255,24 @@ body {
       z-index: 10;
 
   }
+  #innerFooter{
+    width: calc(100vw - 100px);
+    margin: auto;
+    height: 100%;
+    /*border-top: 1px solid rgb(190, 190, 190);*/
+    text-align: center;
+    align-items: center;
+}
+#indiv{
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#emaildiv{
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
   #shadow{
     position: absolute;
     bottom: 0;
@@ -264,6 +302,9 @@ body {
   #toppen img {
     margin-top: 20px;
   }
+  #toppen {
+    border-bottom: 1px solid rgb(201, 201, 201);
+  }
 
   .barListe {
     background-color: #f5f5f5;
@@ -272,8 +313,12 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     color: #8b8b8b;
-    border-top: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(201, 201, 201);
     padding: 20px;
+    cursor: pointer;
+  }
+  .barListe h3:hover {
+    color: orange;
   }
   .boks{
     background-color: #f5f5f5;
@@ -496,6 +541,9 @@ video{
 .big_form{
   margin-top: 8px;
 }
+#venstreSide{
+  margin-bottom: 50px;
+}
 
 @media only screen and (max-width: 640px){
   #header{
@@ -538,21 +586,25 @@ video{
   margin-top: 60px;
   position: fixed;
   text-align: center;
-  right: 50px;
-  width: calc(100vw - 100px);
+  width: 100vw;
+  height: calc(100vh - 60px);
   z-index: 1;
   overflow: hidden;
+  background-color: white;
 }
 #innerDropdown {
 border-bottom: 1px rgb(209, 209, 209) solid;
-box-shadow: 0px 0.05px 5px rgb(146, 146, 146);
-margin-bottom: 20px;
+width: 100vw;
+height: calc(100vh - 60px);
+margin:auto;
+
 background-color: white;
 text-align: center;
+display: flex;
 }
 
 #dropdown a {
-  font-size: 34px;
+  font-size: 25px;
   padding: 20px;
   text-decoration: none;
   color: #8b8b8b;
@@ -564,6 +616,9 @@ text-align: center;
   padding: 20px;
   width: 50%;
   margin: auto;
+}
+#inInIn > div{
+  padding: 20px;
 }
 ul.a {
   list-style-type: circle;

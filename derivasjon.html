@@ -3,9 +3,385 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="test.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="changeDisplay(0, 8)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-   
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div style="border-bottom: 1px solid rgb(209 209 209);"><a href="kurs.html">Kurs</a></div><div><a href="kontakt.html">Kontakt</a></div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateter2.png" style="height: 30px; width: auto;"></div></a></div>
+        <div id="header">
+            <!--<div class="valg" onclick="slide1()">Kurs<i id="arrow"></i></div>-->
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/derivasjon.png" height="100px">
+                    <h2>Derivasjon</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 8)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 8)">Definisjon av deriverte
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(2, 8)">Derivasjonsregler
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 8)">Sekantsetningen og kritisk-punkt-teorem
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 8)">Implisitt derivasjon
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 8)">Koblede hastigheter
+                    <div class="triangle-left" id= "v5">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(6, 8)">Ubestemte former
+                    <div class="triangle-left" id= "v6">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(7, 8)">Ekstremalverdier
+                    <div class="triangle-left" id= "v7">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/derivasjon.png" height="100px">
+                    <h2>Derivasjon</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 8)"><h3>Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1 ,8)"><h3>Definisjon av deriverte</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 8)"><h3>Derivasjonsregler</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 8)"><h3>Sekantsetningen og kritisk-punkt-teorem</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3>Implisitt derivasjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3>Koblede hastigheter</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3>Ubestemte former</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3>Ekstremalverdier</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til Derivasjon</h1>
+                <p>Derivasjon... </p>
+                    <h2>Video - Introduksjon</h2>
+                    <video width="400" controls>
+                        <source src="videoer/02intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Intro grenser">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                       <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+            </div>
+            
+            <div id="indreSide1" class="indreSide">
+                <h1>Definisjonen av den deriverte som grenseverdi</h1>
+                <p>En grense er funksjonsverdien \(L\) som funksjonen \(f(x)\) nærmer seg når \(x\) går mot \(a\). 
+                    Vi kan skrive at </p>
+                <div class="boks">
+                    \[
+                    L = \lim_{x \rightarrow a} f(x).
+                    \]
+                </div>
+                <h2>Video - Grenser</h2>
+                <video width="400" controls>
+                    <source src="videoer/01Grenser.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_grenser" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+                <h2>Ensidige grenser</h2>
+            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra høyre eller venstre kalles det en ensidig grenseverdig og vi skriver henholdsvis</p>
+            <div class="boks">
+                \[
+                \lim_{x\to a^+}f(x)=L \quad \lor \quad \lim_{x\to a^-}f(x)=L.
+                \]
+            </div>
+            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra både høyre og venstre kalles det en tosidig grenseverdi. 
+                Grenseverdien eksisterer og er lik \(L\) hvis og bare hvis hvis begge de ensidige grenseneverdiene eksisterer og er lik \(L\).
+            </p>
+            <div class="boks">
+                \[
+                \lim_{x\to a}f(x)=L\iff \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L.
+                \]
+            </div>
+            <h2>Regneregler for grenser</h2>
+            Anta at de to funksjonene \(f\) og \(g\) begge er definert i nærheten av \(a\), og at \(\lim_{x\to a}f(x)=L\) og \(\lim_{x\to a}g(x)=M\). Da gjelder følgende:
+            <div class="boks">
+                \[
+                \lim_{x\to a}[f(x)\pm g(x)]=L\pm M
+                \]
+                \[
+                \lim_{x\to a}f(x)g(x)=LM
+                \]
+                \[
+                \lim_{x\to a}kf(x)=kL, \quad k = \text{konstant}
+                \]
+                \[
+                \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}, \quad M\neq 0.
+                \]
+            </div>
+            <h2>Flere regler</h2>
+            <ul class="a">
+                <li>Gitt heltallene \(p\) og \(q\), hvor \(q > 0\) kan vi si at \(\lim_{x\to a}[f(x)]^{m/n}=L^{p/q}\). Dette gjelder bare om \(L > 0\) dersom \(q\), grunnet at det ikke er mulig å ta kvadratrot, fjerderot, osv av et negativt tall. Det forutsetter også at \(L \neq 0\) hvis \(p < 0\) da det ikke er lov å dele på null. Enkelt fortalt kan forklares regelen som at eksponentialoperasjoner på et grenseverdi-uttrykk er det samme som eksponentialoperasjoner på verdien.</li>
+                <li>Dersom \(f(x)\leq g(x)\) i en omegn rundt \(a\), så medfører dette at \(L \leq M\). I omegn betyr i denne sammengeng potensielt uendelig nærme.</li>
+                <li><b>Skviseregelen:</b> Med forrige regel frisk i minnet kan vi formulere
+                <div class="boks">Hvis det for et intervall \(I\) (som kan være uendelig lite) der \(f, g\) og \(h\) er definert for alle verdier med mulighet for unntak i \(x = a\) har vi at dersom
+                    \[f(x)\leq g(x)\leq h(x) \text{ og } \lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\]
+                    \[\Downarrow\]
+                    \[\lim_{x\to a}g(x)=L.\]
+                </div>
+                Her kalles funksjonene \(g\) og \(h\) den nedre og øvre grensen til \(f\).
+                </li>
+              </ul>
+            <h2>Video - Skviseregelen</h2>
+            <video width="400" controls>
+                <source src="videoer/01skvise.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                <input type="hidden" name="_subject" value="Intro grenser">
+                
+                <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                <div class="form">
+                <input type="text" name="Tilbakemelding_skviseregel" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content-name">Tilbakemelding:</span>
+                </label>
+                </div>
+           </form>
+            <h2>Grenseverdier med uendelig</h2>
+            <p><b>Grenseverdier i uendelig:</b><br> \(f(x)\) går mot \(L\) som grenseverdi når \(x\) går mot \(\pm\infty\), dersom vi kan få avstanden mellom \(f(x)\) og \(L\) så liten vi måtte ønske ved å velge \(\pm x\) tilstrekkelig stor. Vi skriver</p>
+            \[\lim_{x\to\pm\infty}f(x)=L.\]
+            <p><b>Uendelige grenser:</b><br> Dersom grensen <span style="text-decoration: underline;">ikke eksisterer</span>, men går mot \(\pm\infty\), nå \(x\) går mot \(a\) skriver vi</p>
+            \[\lim_{x\to a}f(x)=\pm\infty.\]
+            <p>Et eksempel på en slik funksjon er \(2x/(1-x)\). Når \(x \rightarrow 1\) vil funksjonsverdien stige ubegrenset.</p>
+            <p>Her er det viktig å presisere at grensen ikke eksisterer, men at den uendelige grensen er årsaken.</p>
+        </div>
+            <div id="indreSide2" class="indreSide">
+                <h1>Derivasjonsregler</h1>
+                En kontinuerlig funksjon er en funksjon uten diskrete og plutselige endringer i funksjonsverdi. En funksjon \(f\) er kontinuerlig i et punkt \(a\) dersom 
+                <div class="boks">
+                    \[\lim_{x \to a} \ f(x) = f(a).\]
+                </div>
+                For at en funksjon skal være kontinuerlig i et punkt må grenseverdien og den faktiske verdien i punktet være den samme.
+                <h2>Video - Kontinuitet</h2>
+                <video width="400" controls>
+                    <source src="videoer/01kontinuitet.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_kontinuitet" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+                <h2>Ensidig kontinuitet</h2>
+                For lukkede intervall er det hensiksmessig å evaluere kontinuiteten i endepunktet. Dersom en funksjon er kontinuerlig nedenfra (fra venstre) kan vi skrive
+                <div class="boks">
+                    \[\lim_{x\to a^-} f(x)=f(a).\]
+                </div>
+                Tilsvarende gjelder for grenser fra høyre.
+                <h2>Kontinuitet over intervall</h2>
+                En funksjon \(f\) er kontinuerlig over intervallet \([a, b]\) dersom \(f\) er kontinuerlig over i alle indre punkter \(c \in (a,b)\) samt ensidig kontinuerlig (fra siden til intervallet) i endepunktene. Med andre ord skal det for ingen punkter på intervallet være brudd eller diskrete endringer i funksjonsverdien \(f(x)\).
+            </div>
+            <div id="indreSide3" class="indreSide">
+                <h1>Sekantsetningen og teoremet om kristisk punkt</h1>
+                Ekstremalverdisetningen og skjæringssetningen er to nyttige verktøy i blant annet funksjonsanalyse og bevis. Ekstremalverdisetningen sier noe om eksistensen av topp- og bunnpunkter, mens skjæringssetningen sier noe om hvilke funksjonsverdier som MÅ befinne seg på et intervall.
+                <h2>Video - Ekstremalverdisetningen og Skjæringssetningen</h2>
+                <video width="400" controls>
+                    <source src="videoer/01ekstremalverdi.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekstremalverdi" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+                <h2>Ekstremalverdisetningen</h2>
+                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) har en maksimums og minimumsverdi. For \(f\) finnes det tall \(p\) og \(q\) i \([a, b]\) slik at 
+                \[f(p) \leq f(x) \leq f(q)\]
+                for alle \(x \in [a, b]\). Her vil \(f(p)\) være bunnpunktet på intervallet, mens \(f(q)\) vil være toppunktet på intervallet.
+                <h2>Skjæringssetningen</h2>
+                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) tar alle verdier mellom \(f(a)\) og \(f(b)\). Dersom \(f(-1) = -5\) og \(f(1) = 3\), så vet vi at i et punkt \(c \in (-1, 1)\) så vil \(f(c) = 0\). Vi skriver definisjonen som: 
+                <p>For en kontinuerlig \(f\) funksjon på \([a, b]\) så finnes det for enhver \(s \in (f(a), f(b))\) en \(c \in (a, b)\) slik at \(f(c) = s\).</p> 
+            </div>
+            <div id="indreSide4" class="indreSide">
+                <h1>Implisitt derivasjon</h1>
+               Den formelle definisjonen av grense (epsilon-delta bevis) er en matematisk metode for å bevise at en grenseverdi eksisterer i motsetning til den vanlige "jeg ser det på funksjonsuttrykket".
+               Beviset er noe av det vanskeligere i kurset (synes tidligere studenter), men når man først forstår er det ikke lenger så mystisk. 
+            <h2>Video - Formell definisjon av grense</h2>
+               <video width="400" controls>
+                <source src="videoer/epsdelt.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+            <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                <input type="hidden" name="_subject" value="Intro grenser">
+                
+                <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                <div class="form">
+                <input type="text" name="Tilbakemelding_epsdel" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content-name">Tilbakemelding:</span>
+                </label>
+                </div>
+           </form>
+            <h2>Definisjon</h2>
+            <p>Gitt en funksjon \(f\) som er definert i omegn \(a\) kan vi si at grenseverdien 
+                \[L=\lim_{x\to a} \ f(x)\]
+                eksisterer dersom</p>
+            <div class="boks">
+                For enhver \(\varepsilon > 0\) finnes det en \(\delta > 0\) slik at 
+                \[
+                0 < | \, x - a \, | < \delta \Rightarrow | \, f(x) - L \, | < \varepsilon
+                \]
+            </div>
+            I oppgavesammenheng går det ut på å finne \(\delta\) (ofte uttrykkt ved \(\varepsilon\)) som oppfyller implikasjonen for alle \(\varepsilon\). Sånn er det ja.
+        </div>
+        <div id = "indreSide5" class="indreSide">
+            <h1>Koblede hastigheter</h1>
+            <p>Derivasjon... </p>
+                <h2>Video - Introduksjon</h2>
+                <video width="400" controls>
+                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Intro grenser">
+                        
+                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <div class="form">
+                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Tilbakemelding:</span>
+                        </label>
+                        </div>
+                   </form>
+                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+        </div>
+        <div id = "indreSide6" class="indreSide">
+            <h1>Ubestemte former (L'Hopitals regel)</h1>
+            <p>Derivasjon... </p>
+                <h2>Video - Introduksjon</h2>
+                <video width="400" controls>
+                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Intro grenser">
+                        
+                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <div class="form">
+                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Tilbakemelding:</span>
+                        </label>
+                        </div>
+                   </form>
+                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+        </div>
+        <div id = "indreSide7" class="indreSide">
+            <h1>Ekstremalverdier</h1>
+            <p>Derivasjon... </p>
+                <h2>Video - Introduksjon</h2>
+                <video width="400" controls>
+                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Intro grenser">
+                        
+                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <div class="form">
+                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Tilbakemelding:</span>
+                        </label>
+                        </div>
+                   </form>
+                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
 </body>
 </html> 

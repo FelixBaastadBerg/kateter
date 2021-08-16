@@ -2,14 +2,14 @@ slideShow = document.getElementById("slideShow");
 arrow = document.getElementById("arrow");
 header = document.getElementById("header");
 
-function changeDisplay(id){
+function changeDisplay(id, numEl){
     if (id == 0){
         limitFunc()
     }
     //if (id != 0){
     //    document.getElementById("indreSide0").style.display = "none";
     //}
-    for (var i = 0; i < 5; i++){
+    for (var i = 0; i < numEl; i++){
         var streng = "indreSide" + i;
         var v_streng = "v" + i;
         document.getElementById(streng).style.display = "none";
@@ -67,12 +67,24 @@ function limitFunc(){
         `
     }
 }
+// function run when the bar menu is clicked
 function myFunction(x) {
     x.classList.toggle("change");
     if (document.getElementById("dropdown").style.display == 'block'){
       document.getElementById("dropdown").style.display = 'none';
+      document.getElementById("vegg").remove();
     } else {
       document.getElementById("dropdown").style.display = 'block';
+      var tblin = document.createElement('div');
+      tblin.id = 'vegg';
+      tblin.style.position = "fixed";
+      tblin.style.top = "60px";
+      tblin.style.left = "0px";
+      tblin.style.height = "calc(100vh - 60px)";
+      tblin.style.width = "100vw";
+      tblin.style.backgroundColor = "grey";
+      tblin.style.opacity = ".4";
+      document.body.appendChild(tblin);
     }
   }
 window.addEventListener("resize", limitFunc);

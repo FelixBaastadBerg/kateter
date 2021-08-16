@@ -88,5 +88,9 @@ h1 {
     .delKursBoks{
         width: 80%;
     }
+    #tittel{
+        font-size: 50px;
+        padding-top: 40px;
+    }
 }
 
