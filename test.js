@@ -2,6 +2,9 @@ slideShow = document.getElementById("slideShow");
 arrow = document.getElementById("arrow");
 header = document.getElementById("header");
 
+var sideNavDivs = document.getElementsByClassName("barListe");
+var side = document.getElementsByClassName("sideH");
+
 function changeDisplay(id, numEl){
     if (id == 0){
         limitFunc()
@@ -10,11 +13,15 @@ function changeDisplay(id, numEl){
     //    document.getElementById("indreSide0").style.display = "none";
     //}
     for (var i = 0; i < numEl; i++){
+        sideNavDivs[i].style.backgroundColor = "#f5f5f5";
+        side[i].style.color = "#8b8b8b";
         var streng = "indreSide" + i;
         var v_streng = "v" + i;
         document.getElementById(streng).style.display = "none";
         document.getElementById(v_streng).style.borderRight = "0";
     }
+    sideNavDivs[id].style.backgroundColor = "rgb(265, 165, 0)";
+    side[id].style.color = "white";
     var streng2 = "indreSide" + id;
     var v_streng2 = "v" + id;
     document.getElementById(streng2).style.display = "inherit";
