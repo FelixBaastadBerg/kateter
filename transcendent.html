@@ -3,10 +3,167 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="test.css">
+<title>Kateter</title>
+<link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="changeDisplay(0, 4)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_j59Vq2.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
+        <div id="header">
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/transcendente.png" height="100px">
+                    <h2>Transcendente funksjoner</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 4)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 4)">Eksponential- og logaritmefunksjoner
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(2, 4)">Inverse trigonometriske funksjoner
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 4)">Hyperbolske funksjoner
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/transcendente.png" height="100px">
+                    <h2>Transcendente funksjoner</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 4)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1 ,4)"><h3 class="sideH">Eksponential- og logaritmefunksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 4)"><h3 class="sideH">Inverse trigonometriske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 4)"><h3 class="sideH">Hyperbolske funksjoner</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til transcendente funksjoner</h1>
+                <p>Derivasjon... </p>
+                    <h2>Video - Introduksjon</h2>
+                    <video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Intro grenser">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+            </div>
+            
+            <div id="indreSide1" class="indreSide">
+                <h1>Eksponential- og logaritmefunksjoner</h1>
+                <h2>Video - Definisjon av deriverte</h2>
+                <video width="400" controls>
+                    <source src="videoer/02defAvDer.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_grenser" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+             </div>
+            <div id="indreSide2" class="indreSide">
+                <h1>Inverse trigonometriske funksjoner</h1>
+                <h2>Video - Derivasjonsregler</h2>
+                <video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_kontinuitet" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+              </div>
+            <div id="indreSide3" class="indreSide">
+                <h1>Hyperbolske funksjoner</h1>
+                <h2>Video - Sekantsetning og kristisk punkt</h2>
+                <video width="400" controls>
+                    <source src="videoer/02sekant.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekstremalverdi" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+                </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
 </body>
 </html> 

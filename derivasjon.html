@@ -102,7 +102,9 @@
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon til Derivasjon</h1>
-                <p>Derivasjon... </p>
+                <p>Den deriverte til en funksjon \(f\)sier noe om hvor mye funksjonsverdien endrer seg ved endringer av funksjonens frie variabler. I dette kurset ser vi kun på funksjoner av én variabel (ofte \(x\)), så for vårt formål kan vi se på derivasjon som forholdet i endringen av \(f(x)\) og \(x\).</p>
+                <p>Grafisk er den deriverte stigningstallet (tangenten) i et punkt langs grafen til funksjonen, og sier noe om hvor mye en funksjon vokser i verdi gitt en \(x\)-verdi.</p>
+                <p>Derivasjon er et meget sentralt tema innenfor dette kurset, og kommer til å prege mange fremtidig kurs.</p>
                     <h2>Video - Introduksjon</h2>
                     <video width="400" controls>
                         <source src="videoer/02intro.mp4" type="video/mp4">
@@ -113,7 +115,7 @@
 
                             <input type="hidden" name="_subject" value="Intro grenser">
                             
-                            <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                            <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                             <div class="form">
                             <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
                             <label for="name" class="label-name">
@@ -126,199 +128,202 @@
             
             <div id="indreSide1" class="indreSide">
                 <h1>Definisjonen av den deriverte som grenseverdi</h1>
-                <p>En grense er funksjonsverdien \(L\) som funksjonen \(f(x)\) nærmer seg når \(x\) går mot \(a\). 
-                    Vi kan skrive at </p>
-                <div class="boks">
-                    \[
-                    L = \lim_{x \rightarrow a} f(x).
-                    \]
-                </div>
-                <h2>Video - Grenser</h2>
+                <p>Når vi senere anvende derivasjon kommer det stort sett til å gjøres ved bruk av regneregler (som gjennomgåes i neste delkapittel). Ved å gjennomføre derivasjon via definisjonen til den deriverte ønsker vi å bruke algebraiske manipulasjoner og grenseverdier for å komme til samme resultat, men "uten å bruke regler".</p>
+                <h2>Video - Definisjon av deriverte</h2>
                 <video width="400" controls>
-                    <source src="videoer/01Grenser.mp4" type="video/mp4">
+                    <source src="videoer/02defAvDer.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
                     <input type="hidden" name="_subject" value="Intro grenser">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_grenser" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_def_av_derivert" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
                     </div>
                </form>
-                <h2>Ensidige grenser</h2>
-            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra høyre eller venstre kalles det en ensidig grenseverdig og vi skriver henholdsvis</p>
-            <div class="boks">
-                \[
-                \lim_{x\to a^+}f(x)=L \quad \lor \quad \lim_{x\to a^-}f(x)=L.
-                \]
-            </div>
-            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra både høyre og venstre kalles det en tosidig grenseverdi. 
-                Grenseverdien eksisterer og er lik \(L\) hvis og bare hvis hvis begge de ensidige grenseneverdiene eksisterer og er lik \(L\).
-            </p>
-            <div class="boks">
-                \[
-                \lim_{x\to a}f(x)=L\iff \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L.
-                \]
-            </div>
-            <h2>Regneregler for grenser</h2>
-            Anta at de to funksjonene \(f\) og \(g\) begge er definert i nærheten av \(a\), og at \(\lim_{x\to a}f(x)=L\) og \(\lim_{x\to a}g(x)=M\). Da gjelder følgende:
-            <div class="boks">
-                \[
-                \lim_{x\to a}[f(x)\pm g(x)]=L\pm M
-                \]
-                \[
-                \lim_{x\to a}f(x)g(x)=LM
-                \]
-                \[
-                \lim_{x\to a}kf(x)=kL, \quad k = \text{konstant}
-                \]
-                \[
-                \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}, \quad M\neq 0.
-                \]
-            </div>
-            <h2>Flere regler</h2>
-            <ul class="a">
-                <li>Gitt heltallene \(p\) og \(q\), hvor \(q > 0\) kan vi si at \(\lim_{x\to a}[f(x)]^{m/n}=L^{p/q}\). Dette gjelder bare om \(L > 0\) dersom \(q\), grunnet at det ikke er mulig å ta kvadratrot, fjerderot, osv av et negativt tall. Det forutsetter også at \(L \neq 0\) hvis \(p < 0\) da det ikke er lov å dele på null. Enkelt fortalt kan forklares regelen som at eksponentialoperasjoner på et grenseverdi-uttrykk er det samme som eksponentialoperasjoner på verdien.</li>
-                <li>Dersom \(f(x)\leq g(x)\) i en omegn rundt \(a\), så medfører dette at \(L \leq M\). I omegn betyr i denne sammengeng potensielt uendelig nærme.</li>
-                <li><b>Skviseregelen:</b> Med forrige regel frisk i minnet kan vi formulere
-                <div class="boks">Hvis det for et intervall \(I\) (som kan være uendelig lite) der \(f, g\) og \(h\) er definert for alle verdier med mulighet for unntak i \(x = a\) har vi at dersom
-                    \[f(x)\leq g(x)\leq h(x) \text{ og } \lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\]
-                    \[\Downarrow\]
-                    \[\lim_{x\to a}g(x)=L.\]
-                </div>
-                Her kalles funksjonene \(g\) og \(h\) den nedre og øvre grensen til \(f\).
-                </li>
-              </ul>
-            <h2>Video - Skviseregelen</h2>
-            <video width="400" controls>
-                <source src="videoer/01skvise.mp4" type="video/mp4">
-                Your browser does not support HTML video.
-            </video>
-            <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-
-                <input type="hidden" name="_subject" value="Intro grenser">
-                
-                <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
-                <div class="form">
-                <input type="text" name="Tilbakemelding_skviseregel" autocomplete="off" required>
-                <label for="name" class="label-name">
-                    <span class="content-name">Tilbakemelding:</span>
-                </label>
-                </div>
-           </form>
-            <h2>Grenseverdier med uendelig</h2>
-            <p><b>Grenseverdier i uendelig:</b><br> \(f(x)\) går mot \(L\) som grenseverdi når \(x\) går mot \(\pm\infty\), dersom vi kan få avstanden mellom \(f(x)\) og \(L\) så liten vi måtte ønske ved å velge \(\pm x\) tilstrekkelig stor. Vi skriver</p>
-            \[\lim_{x\to\pm\infty}f(x)=L.\]
-            <p><b>Uendelige grenser:</b><br> Dersom grensen <span style="text-decoration: underline;">ikke eksisterer</span>, men går mot \(\pm\infty\), nå \(x\) går mot \(a\) skriver vi</p>
-            \[\lim_{x\to a}f(x)=\pm\infty.\]
-            <p>Et eksempel på en slik funksjon er \(2x/(1-x)\). Når \(x \rightarrow 1\) vil funksjonsverdien stige ubegrenset.</p>
-            <p>Her er det viktig å presisere at grensen ikke eksisterer, men at den uendelige grensen er årsaken.</p>
-        </div>
+               <h2>Definisjon</h2>
+               <p>Som nevnt i forrige delkapittel, er den deriverte til en funksjon forholdet mellom endringen i funksjonsverdien \(f\) og den frie variabelen \(x\) </p>
+               \[\frac{\Delta f}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}.\]
+               <p>Siden vi ønsker å evaluere stigningen i punktet \(x\), og ikke stigningen mellom punktene \(x\) og \(x + \Delta x\), ønsker vi å evaluere uttrykket når størrelsen \(\Delta x\) går mot null. Vi kan da skrive definisjonen av den deriverte som</p>
+               <div class="boks">
+                   \[
+                    f'(x) = \lim_{\Delta x \rightarrow 0}  \frac{f(x + \Delta x) - f(x)}{\Delta x}.
+                   \]
+               </div>
+               <h2>Deriverbarhet</h2>
+               <p>Vi sier at en funksjon er deriverbar i et punkt \(a\) eksisterer for definisjonen over med \(f'(a)\). Dersom funksjonen ikke er deriverbar i et punkt kan dette skyldes at funksjonen er diskontinuerlig i punktet \(a\) slik at funksjonen gjør et hopp. Endringen til funksjonen \(f\), \(\Delta f\), vil da være endelig, mens \(\Delta x\) vil være så og si null. \(\Delta f / \Delta x\) vil da bli uendelig og funksjonen vil ikke være deriverbar i punktet.</p>
+               <p>En funksjon med <b>knekkpunkt</b> vil heller ikke være deriverbar i punktet hvor funksjonen knekker. Dette skyldes at den deriverte (stigningen til funksjonen) er forskjellig fra høyre og venstre. Den ensidige grensen til definisjonen av den deriverte vil da være forskjellig fra høyre og venstre som medfører at grenseverdien ikke eksisterer.</p>
+             </div>
             <div id="indreSide2" class="indreSide">
                 <h1>Derivasjonsregler</h1>
-                En kontinuerlig funksjon er en funksjon uten diskrete og plutselige endringer i funksjonsverdi. En funksjon \(f\) er kontinuerlig i et punkt \(a\) dersom 
-                <div class="boks">
-                    \[\lim_{x \to a} \ f(x) = f(a).\]
-                </div>
-                For at en funksjon skal være kontinuerlig i et punkt må grenseverdien og den faktiske verdien i punktet være den samme.
-                <h2>Video - Kontinuitet</h2>
+                <p>Reglene som følger vil i hovedsak stå på formelarket til eksamen. Likevel er derivasjonsregler noe som burde sitte i fingerspissene og anbefales å lære seg utenat.</p>
+                <h2>Video - Derivasjonsregler</h2>
                 <video width="400" controls>
-                    <source src="videoer/01kontinuitet.mp4" type="video/mp4">
+                    <source src="videoer/02regneregler.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
                     <input type="hidden" name="_subject" value="Intro grenser">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_kontinuitet" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_derivasjonsregler" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
                     </div>
                </form>
-                <h2>Ensidig kontinuitet</h2>
-                For lukkede intervall er det hensiksmessig å evaluere kontinuiteten i endepunktet. Dersom en funksjon er kontinuerlig nedenfra (fra venstre) kan vi skrive
+               <h2>Regler</h2>
+               <p><b>Sum:</b></p>
+               <p>Ved derivasjon av en funksjon som består av flere ledd (dvs separert av addisjon eller subtraksjon) vil det være det samme som å derivere hvert ledd for seg.</p>
+               \[(f + g)'(x) = f'(x) + g'(x).\]
+               <p>Et enkelt eksempel vil være \((x^2 + 3)'(x) = (x^2)'(x) + (3)'(x) = 2x + 0 = 2x\).</p>
+               <p><b>Ganget med konstant:</b></p>
+               <p>Ved derivasjon av en konstant \(k\) multiplisert med en funksjon, kan konstanten trekkes utenfor derivasjonsoperatoren.</p>
+               \[(k \cdot f)'(x) = k \cdot f'(x). \]
+               <p><b>Produktregelen:</b></p>
+               <p>Ofte kan en funksjon \(f\) skrives som et produkt av to delfunksjoner som \(f(x) = g(x)h(x)\), for eksempel \(f(x) = 2x\cos{x}\) kan brytes opp i \(g(x) = 2x\) og \(h(x) = \cos{x}\).
+                   I situasjoner hvor kjente derivasjonidentiter ikke strekker til for \(f(x)\), men er tilstrekkelig for \(g(x)\) og \(h(x)\), ønsker vi å bruke produktregelen
+               </p>
+               <div class="boks">
+                   \[
+                   (g\cdot h)'(x) = g'(x)h(x) + g(x)h'(x)
+                   \]
+               </div>
+               <p><b>Brøkregelen:</b></p>
+              <p>Regelen brukes i situasjoner tilsvarende for produktregelen. Dersom et uttrykk kan skrives på brøkform der nevneren og telleren er enklere å derivere enn det opprinnelige uttrykket, kan det lønne seg å bruke brøkregelen</p>
+              <div class="boks">
+                  \[
+                  (\frac{g}{h})'(x) = \frac{g'(x)h(x) - g(x)h'(x)}{(h(x))^2}.
+                  \]
+              </div>
+              <p><b>Kjerneregelen:</b></p>
+              <p>Regelen brukes når et utrykk består av en funksjon som tar en annen funksjon som argument. Det vil si istede for \(f(x)\), der \(x\) er argument, får vi \(f(u(x))\).
+                Her kaller vi \(u(x)\) for kjernefunksjonen. Et eksempel kan være \(e^{x^2}\), der \(x^2\) er kjernen. Regelen skrives på formen
                 <div class="boks">
-                    \[\lim_{x\to a^-} f(x)=f(a).\]
+                    \[
+                    (f \circ u)'(x) = f'(g(x))g'(x).
+                    \]
                 </div>
-                Tilsvarende gjelder for grenser fra høyre.
-                <h2>Kontinuitet over intervall</h2>
-                En funksjon \(f\) er kontinuerlig over intervallet \([a, b]\) dersom \(f\) er kontinuerlig over i alle indre punkter \(c \in (a,b)\) samt ensidig kontinuerlig (fra siden til intervallet) i endepunktene. Med andre ord skal det for ingen punkter på intervallet være brudd eller diskrete endringer i funksjonsverdien \(f(x)\).
-            </div>
-            <div id="indreSide3" class="indreSide">
+                <p>På differensialform kan det være lettere å danne et bilde av hvordan dette stemmer </p>
+                \[
+                \frac{df}{dx} = \frac{df}{dx}\cdot \frac{du}{du} = \frac{df}{du}\cdot \frac{du}{dx}.
+                \]
+              </p>
+              <p>Alle reglene er mulige å utlede. Det er god trening på bruk av definisjonen av den deriverte å utlede formelen for produktregelen. Trikset er å bryte opp \(f(x + \Delta x) = g(x + \Delta x)h(x + \Delta x)\). Deretter må det legges til ledd i telleren. Løsningen finnes på nett dersom man står fast.</p>
+              <h2>Derivasjonsregler for transcendente funksjoner</h2>
+              <p>Akkurat hva transcendente funksjoner er og utledning av egenskaper og deriverte kommer i neste kapitell. Hvordan utrykkene deriveres listes likevel opp under slik at de er lette å slå opp senere.</p>
+              <div class="boks">
+                  <p><b>Eksponential- og logaritmefunksjoner</b></p>
+                  \[
+                  \frac{d}{dx}e^x = e^x
+                  \]
+                  \[
+                  \frac{d}{dx}a^x = \ln{(a)}a^x
+                  \]
+                  \[
+                  \frac{d}{dx}\ln{x} = \frac{1}{x}
+                  \]
+                  <p><b>Trigonometriske funksjoner og inverse</b></p>
+                  \[
+                  \sin'{(x)} = \cos{x}
+                  \]
+                  \[
+                  \cos'{(x)} = -\sin{x}
+                  \]
+                  \[
+                  \tan'(x) = \frac{1}{\cos^2 x}
+                  \]
+                  \[
+                  \arcsin'(x) = \frac{1}{\sqrt{1-x^2}}
+                  \]
+                  \[
+                  \arccos'(x) = \frac{-1}{\sqrt{1-x^2}}
+                  \]
+                  \[
+                  \arctan'(x) = \frac{1}{1+x^2}
+                  \]
+              </div>
+              </div>
+              
+              <div id="indreSide3" class="indreSide">
                 <h1>Sekantsetningen og teoremet om kristisk punkt</h1>
-                Ekstremalverdisetningen og skjæringssetningen er to nyttige verktøy i blant annet funksjonsanalyse og bevis. Ekstremalverdisetningen sier noe om eksistensen av topp- og bunnpunkter, mens skjæringssetningen sier noe om hvilke funksjonsverdier som MÅ befinne seg på et intervall.
-                <h2>Video - Ekstremalverdisetningen og Skjæringssetningen</h2>
+                <p>Begge reglene vi skal gjennom dette delkapittelet er matnyttige når det kommer til oppgaveregning. Sekantsetningen tar for seg eksistensen av unike sekanter mellom to punkter og teoremet om kritiske punkter tar for seg ekstremalpunkter.</p>
+                <h2>Video - Sekantsetning og kristisk punkt</h2>
                 <video width="400" controls>
-                    <source src="videoer/01ekstremalverdi.mp4" type="video/mp4">
+                    <source src="videoer/02sekant.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
                     <input type="hidden" name="_subject" value="Intro grenser">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_ekstremalverdi" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_sekantsetningen" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
                     </div>
                </form>
-                <h2>Ekstremalverdisetningen</h2>
-                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) har en maksimums og minimumsverdi. For \(f\) finnes det tall \(p\) og \(q\) i \([a, b]\) slik at 
-                \[f(p) \leq f(x) \leq f(q)\]
-                for alle \(x \in [a, b]\). Her vil \(f(p)\) være bunnpunktet på intervallet, mens \(f(q)\) vil være toppunktet på intervallet.
-                <h2>Skjæringssetningen</h2>
-                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) tar alle verdier mellom \(f(a)\) og \(f(b)\). Dersom \(f(-1) = -5\) og \(f(1) = 3\), så vet vi at i et punkt \(c \in (-1, 1)\) så vil \(f(c) = 0\). Vi skriver definisjonen som: 
-                <p>For en kontinuerlig \(f\) funksjon på \([a, b]\) så finnes det for enhver \(s \in (f(a), f(b))\) en \(c \in (a, b)\) slik at \(f(c) = s\).</p> 
-            </div>
+               <h2>Sekantsetningen</h2>
+               <p>Vi tar for oss et kontinuerlig funksjon \(f\) på intervallet \([a, b]\) som er deriverbart på det tilsvarende indre intervallet. Vi kan da si at stigningstallet til den rette linjen mellom ytterpunktene \((a, f(a))\) og \((b, f(b))\) er \(\Delta y / \Delta x = (f(b) - f(a)) / (b - a).\) Sekantsetningen sier at funksjonen \(f\) da vil ha et punkt \(c \in (a, b)\) der stigningstallet til sekanten er lik som denne rette linja</p>
+               <div class="boks">
+                   \[
+                   f'(c) = \frac{f(b) - f(a)}{b - a}.
+                   \]
+               </div>
+               <p>Dette teoremet kan brukes for å vise eksistensen av visse punkter. For eksempel kan man vise at for to punkter \(b \neq a\) der \(f(a) = f(b)\), så vil det eksistere et ekstremalpunkt mellom de da vi vil få \(f'(c) = (f(a) - f(a)) / (b -a) = 0\). Slike kritiske punkt er ekstremt viktige i funksjonsanalyse, noe vi snakker mer om under.</p>
+               <h2>Teoremet om kritisk punkt</h2>
+               <p>Som vi skal komme tilbake til i delkapitellet "Ekstremalverdier", finnes det i hovedsak tre forskjellige typer ekstremalverdier for et intervall. Et kritisk punkt er et punkt der den deriverte er lik null, det vil si tangenten til punktet er parallell med x-aksen. 
+                   Teoremet om kritisk punkt sier at dersom en deriverbar funksjon på et åpent intervall \((a, b)\) har et ekstremalpunkt i \(c\), så vil \(f'(c) = 0\).
+               </p>
+               <p>Det er viktig å merke seg at for at teoremet skal gjelde må funksjonen være <b>deriverbar</b> og over et <b>åpent intervall</b>. Dersom funksjonen ikke tilfredstiller disse kravene gir dette opphav til ekstremalpunkter som ikke nødvendigvis er kritiske punkter. Som nevnt vil dette diskuteres nærmere i delkapitellet "Ekstremalverdier".</p>
+                </div>
             <div id="indreSide4" class="indreSide">
                 <h1>Implisitt derivasjon</h1>
-               Den formelle definisjonen av grense (epsilon-delta bevis) er en matematisk metode for å bevise at en grenseverdi eksisterer i motsetning til den vanlige "jeg ser det på funksjonsuttrykket".
-               Beviset er noe av det vanskeligere i kurset (synes tidligere studenter), men når man først forstår er det ikke lenger så mystisk. 
-            <h2>Video - Formell definisjon av grense</h2>
+                <p>Mange funksjoner kan uttrykkes eksplisitt, det vil si at funksjonsverdien \(y\) kan beskrives alene av en fri variabel \(x\). Alle funksjoner vi har sett på til kurset i np har vært eksplisitte. I mange likningerer er det derimot ikke mulig å løse med hensyn på \(y(x)\), og uttrykket vi står igjen med er på formen \(f(x, y) = 0\).
+                    Denne implisitte representasjonen av funksjonen \(y\) krever implisitt derivasjon for å finne \(y'(x)\).
+                </p>
+               <h2>Video - Implisitt derivasjon</h2>
                <video width="400" controls>
-                <source src="videoer/epsdelt.mp4" type="video/mp4">
+                <source src="videoer/02implisitt.mp4" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
             <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
                 <input type="hidden" name="_subject" value="Intro grenser">
                 
-                <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                 <div class="form">
-                <input type="text" name="Tilbakemelding_epsdel" autocomplete="off" required>
+                <input type="text" name="Tilbakemelding_implisitt" autocomplete="off" required>
                 <label for="name" class="label-name">
                     <span class="content-name">Tilbakemelding:</span>
                 </label>
                 </div>
            </form>
-            <h2>Definisjon</h2>
-            <p>Gitt en funksjon \(f\) som er definert i omegn \(a\) kan vi si at grenseverdien 
-                \[L=\lim_{x\to a} \ f(x)\]
-                eksisterer dersom</p>
-            <div class="boks">
-                For enhver \(\varepsilon > 0\) finnes det en \(\delta > 0\) slik at 
-                \[
-                0 < | \, x - a \, | < \delta \Rightarrow | \, f(x) - L \, | < \varepsilon
-                \]
+           <h2>Fremgang</h2>
+           I en oppgave får man ofte et uttykk gitt i form av en likning som inneholder både \(x\) og \(y(x)\). Ved hjelp av implisitt derivasjon skal man da finne \(dy / dx\) i punktet \((x_0, y_0)\).
+           <ol>
+               <li><p>Første skrittet er å derivere begge sider av likningen (nesten alltid med hensyn på \(x\)). Uttrykk med \(x\) deriveres på helt vanlig vis. Deler av uttrykket som inneholder \(y\) må man derimot derivere med kjerneregelen. \(y\) er en funksjon av \(x\), som fører til at en funksjon av \(y\) har \(y\) som kjerne.
+                   \[\frac{d}{dx} y^2 = \frac{d}{dy}y^2 \cdot \frac{dy}{dx} = 2y \cdot \frac{dy}{dx}\]
+               For uttrykk som \(y^2x\) gjelder det derfor å holde tunga i munnen.</p></li>
+               <li><p>Likningen inneholder nå \(x, y\) og \(dy/dx\). Andre skrittet er å sette inn verdiene \(x = x_0\) og \(y = y_0\), slik at eneste ukjente er \(dy/dx\). </p></li>
+               <li><p>Siste skrittet er å løse likninen med hensyn på \(dy/dx\).</p></li>
+           </ol>
             </div>
-            I oppgavesammenheng går det ut på å finne \(\delta\) (ofte uttrykkt ved \(\varepsilon\)) som oppfyller implikasjonen for alle \(\varepsilon\). Sånn er det ja.
-        </div>
         <div id = "indreSide5" class="indreSide">
             <h1>Koblede hastigheter</h1>
-            <p>Derivasjon... </p>
-                <h2>Video - Introduksjon</h2>
+            <p>I mange likninger vil flere parametere være avhengig av samme variabel. Dersom et punkt beveger seg langs periferien til en sirkel vil både \(x\)- og \(y\)-posisjonen til punktet være avhengig av vinkelen \(\theta\). Hastigheten til punktet vil også potensielt være avhengig av posisjon. Dersom man har tilstrekkelig kunnskap om kula sin posisjon og hastighet vil det være mulig å finne resterende imformasjon gjennom koblede hastigheter.  </p>
+                <h2>Video - Koblede hastigheter</h2>
                 <video width="400" controls>
-                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    <source src="videoer/02kobla.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 
@@ -326,22 +331,35 @@
 
                         <input type="hidden" name="_subject" value="Intro grenser">
                         
-                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                         <div class="form">
-                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <input type="text" name="Tilbakemelding_koblede_hastigheter" autocomplete="off" required>
                         <label for="name" class="label-name">
                             <span class="content-name">Tilbakemelding:</span>
                         </label>
                         </div>
                    </form>
-                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+                   <h2>Fremgangsmåte</h2>
+                   <p>I oppgaver om koblede hastigheter inngår det ofte to størrelser \(A(t)\) og \(B(t)\) og man blir spurt om å finne en hastighet \(B'(t)\) i et tidspunkt \(t = T\).</p>
+                   <ol>
+                       <li><p>Første steg er å finne en likning som inneholder både \(A\) og \(B\). Dette er ofte geometriske identiterer som trekanter eller sirkler der \(A\) kan beskrive en sidelengde eller en radius.
+                           En mulig situasjon man kan ende i da er \(F(A(t), B(t)) = 0\).
+                       </p></li>
+                       <li><p>Andre steget er å implisitt derivere likningen med hensyn på \(t\). Vi sitter da igjen med et uttrykk avhengig av \(A(t), B(t), A'(t), B'(t)\), der alle unntatt én verdi forhåpentligvis er kjent.</p></li>
+                       <li><p>Tredje steget blir å sette inn verdiene som er gitt i oppgaveteksten eller funnet ved hjelp av geometriske identiteter. Det er for eksempel vanlig at kun \(A\) er gitt, men at \(B\) finnes via for eksempel Pythagoras setning.</p></li>
+                       <li><p>Siste steg er å løse likningen med hensyn på den ukjente hastigheten \(B'(t)\).</p></li>
+                   </ol>
         </div>
         <div id = "indreSide6" class="indreSide">
             <h1>Ubestemte former (L'Hopitals regel)</h1>
-            <p>Derivasjon... </p>
-                <h2>Video - Introduksjon</h2>
+            <p>Dersom et uttrykk kan skrives som \(f(x)/g(x)\) vet vi at dersom grenseverdiene er henholdsvis \(L\) og \(M\) når \(x\) går mot \(a\), så kan vi skrive </p>
+            \[
+            \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}
+            \]
+            <p>Hva skjer nå om verdiene av grensenverdiene er \(L = M = 0\) eller \(L = M = \infty\)?</p>
+                <h2>Video - L'Hopitals</h2>
                 <video width="400" controls>
-                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    <source src="videoer/02ubestemte.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 
@@ -349,22 +367,38 @@
 
                         <input type="hidden" name="_subject" value="Intro grenser">
                         
-                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                         <div class="form">
-                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <input type="text" name="Tilbakemelding_lhopital" autocomplete="off" required>
                         <label for="name" class="label-name">
                             <span class="content-name">Tilbakemelding:</span>
                         </label>
                         </div>
                    </form>
-                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
+                   <h2>L'Hopitals regel</h2>
+                   <p>Dersom et uttrykk kan skrives på formen "0/0" eller "\(\infty / \infty\)", så kan man bruke L'Hopitals regel for å finne grenseverdien. Regelen sier at dersom vi først deriverer telleren og nevneren hver for seg, og deretter evaluerer grenseverdien vil dette være den samme grenseverdien som til det opprinnelige uttrykket. Matematisk skrives det som </p>
+                   <div class="boks">
+                       <p>Dersom </p>
+                       \[
+                       \lim_{x \to a} f(x) = \lim_{x \to a+} g(x) = 0
+                       \]
+                       <p>og</p>
+                       \[\lim_{x \to a} \frac{f'(x) }{g'(x)} = L\]
+                       <p>så medfører dette at</p>
+                       \[
+                       \lim_{x \to a} \frac{f(x)}{g(x)} = L.
+                       \]
+                   </div>
+                   <p>Når man møter på et uttrykk på formen "0/0", bør man derfor derivere teller og nevner hver for seg og skjekke om grenseverdien blir lettere å evaluere. Det kan hende man må derivere flere ganger før grenseverdien skal eksistere, men dette er helt lovlig og vanlig. </p>
+                   <p><b>Manipulering før L'Hopitals:</b></p>
+                   <p>Ofte kan man få uttrykk på formen \(0 \cdot \infty\). Dette kan også i mange tilfeller løses ved hjelp av L'Hopitals ved hjelp av manipulering av uttrykket ved å for eksempel gjøre om til "\(\infty / \infty\)". For eksempel kan \(\lim_{x \to 0} x = \lim_{x \to 0} 1 / (1 / x)\). Vi har endret fra en grenseverdi som går mot 0 til en grenseverdi som går mot \(1 / \infty\).</p>
         </div>
         <div id = "indreSide7" class="indreSide">
             <h1>Ekstremalverdier</h1>
-            <p>Derivasjon... </p>
-                <h2>Video - Introduksjon</h2>
+            <p>Å kunne identifisere globale- og lokale ekstremalverdier over et intervall er viktige egenskaper innen funksjonsanalyse. I dette delkapitellet skal vi se på </p>
+                <h2>Video - Ekstremalverdier</h2>
                 <video width="400" controls>
-                    <source src="videoer/02intro.mp4" type="video/mp4">
+                    <source src="videoer/02ekstremalverdier.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 
@@ -372,15 +406,14 @@
 
                         <input type="hidden" name="_subject" value="Intro grenser">
                         
-                        <input type="hidden" name="_next" value="https://katetr.no/grenser.html">
+                        <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
                         <div class="form">
-                        <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                        <input type="text" name="Tilbakemelding_ekstremalverdier" autocomplete="off" required>
                         <label for="name" class="label-name">
                             <span class="content-name">Tilbakemelding:</span>
                         </label>
                         </div>
                    </form>
-                   <!--<iframe src="https://drive.google.com/file/d/15Ocipc1DlObSGckCCMP076wzNoUVbcIa/preview"  width="640" height="360" frameborder="0" cellspacing="0" allowfullscreen></iframe>-->
         </div>
         </div>
         

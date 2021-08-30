@@ -85,10 +85,10 @@
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon til Grenser & Kontinuitet</h1>
                 <p>To av de mest sentrale og grunnleggende prinsippene i Matematikk 1 er grenser og kontinuitet.
-                    Dette er byggesteiner for de aller fleste temaene som skal gjennomgås dette semesteret. 
+                    Dette er byggesteiner for de aller fleste temaene som skal gjennomgås dette semesteret. </p>
 
-                    Essensen av matematikk 1 handler i stor grad om å håndtere derivasjon og integrasjon, og disse temaene inngår i stort sett alt som  foretas.
-                    Grenseverdier  brukes i selve definisjonen av integrasjon og derivasjon, mens ikke-kontinuerlige funksjoner  og deriverte fører til spesielle egenskaper hos den integrerte. </p>
+                    <p>Essensen i matematikk 1 handler i stor grad om å håndtere derivasjon og integrasjon, og disse temaene inngår i stort sett alt som  foretas.
+                    Grenseverdier  brukes i selve definisjonen av integrasjon og derivasjon, mens kontinuitet og ikke-kontinuitet gir opphav til egenskaper for blant annet den integrerte.</p>
                     <h2>Video - Introduksjon</h2>
                     <video width="400" controls>
                         <source src="videoer/01intro.mp4" type="video/mp4">
@@ -113,12 +113,13 @@
             <div id="indreSide1" class="indreSide">
                 <h1>Grenser</h1>
                 <p>En grense er funksjonsverdien \(L\) som funksjonen \(f(x)\) nærmer seg når \(x\) går mot \(a\). 
-                    Vi kan skrive at </p>
+                    Matematisk kan vi skrive at </p>
                 <div class="boks">
                     \[
-                    L = \lim_{x \rightarrow a} f(x).
+                    \lim_{x \rightarrow a} f(x) = L.
                     \]
                 </div>
+                Dette vil si at i omegnet rundt \(x = a\) (gjerne uendelig nærme), så vil funksjonsverdien \(f(x)\) være så nærme \(L\), at vi sier at den blir lik \(L\).
                 <h2>Video - Grenser</h2>
                 <video width="400" controls>
                     <source src="videoer/01Grenser.mp4" type="video/mp4">
@@ -137,22 +138,24 @@
                     </div>
                </form>
                 <h2>Ensidige grenser</h2>
-            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra høyre eller venstre kalles det en ensidig grenseverdig og vi skriver henholdsvis</p>
+            <p>En grenseverdi vil ikke alltid eksistere fra begge sider av \(x = a\). Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra høyre <b>eller</b> venstre, kalles det en ensidig grenseverdi og vi skriver henholdsvis</p>
             <div class="boks">
                 \[
                 \lim_{x\to a^+}f(x)=L \quad \lor \quad \lim_{x\to a^-}f(x)=L.
                 \]
             </div>
-            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra både høyre og venstre kalles det en tosidig grenseverdi. 
+            <p>Dersom \(f(x)\) går mot \(L\) når \(x\) går mot \(a\) fra både høyre <b>og</b> venstre kalles det en tosidig grenseverdi. 
                 Grenseverdien eksisterer og er lik \(L\) hvis og bare hvis hvis begge de ensidige grenseneverdiene eksisterer og er lik \(L\).
             </p>
             <div class="boks">
                 \[
-                \lim_{x\to a}f(x)=L\iff \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L.
+                \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L \iff \lim_{x\to a}f(x)=L.
                 \]
             </div>
+            <p>Oppsummert, eksisterer en grenseverdi bare dersom den ensidige grenseverdien eksisterer fra begge sider.</p>
             <h2>Regneregler for grenser</h2>
-            Anta at de to funksjonene \(f\) og \(g\) begge er definert i nærheten av \(a\), og at \(\lim_{x\to a}f(x)=L\) og \(\lim_{x\to a}g(x)=M\). Da gjelder følgende:
+            Elementære operasjoner som addisjon og multiplikasjon fungerer på normalt vis for grenseverdier. For å demonstrere regnereglene tar vi for oss to funksjoner \(f(x)\) og \(g(x)\) som begge har eksisterende grenseverdi for \(x = a\):
+            \(\lim_{x\to a}f(x)=L\) og \(\lim_{x\to a}g(x)=M\). Reglene vil da være følgende:
             <div class="boks">
                 \[
                 \lim_{x\to a}[f(x)\pm g(x)]=L\pm M
@@ -169,15 +172,15 @@
             </div>
             <h2>Flere regler</h2>
             <ul class="a">
-                <li>Gitt heltallene \(p\) og \(q\), hvor \(q > 0\) kan vi si at \(\lim_{x\to a}[f(x)]^{m/n}=L^{p/q}\). Dette gjelder bare om \(L > 0\) dersom \(q\), grunnet at det ikke er mulig å ta kvadratrot, fjerderot, osv av et negativt tall. Det forutsetter også at \(L \neq 0\) hvis \(p < 0\) da det ikke er lov å dele på null. Enkelt fortalt kan forklares regelen som at eksponentialoperasjoner på et grenseverdi-uttrykk er det samme som eksponentialoperasjoner på verdien.</li>
-                <li>Dersom \(f(x)\leq g(x)\) i en omegn rundt \(a\), så medfører dette at \(L \leq M\). I omegn betyr i denne sammengeng potensielt uendelig nærme.</li>
+                <li>Gitt heltallene \(p\) og \(q\), hvor \(q > 0\) kan vi si at \(\lim_{x\to a}[f(x)]^{p/q}=L^{p/q}\). Dette gjelder bare om \(L > 0\), grunnet at det ikke er mulig å ta kvadratrot, fjerderot, osv av et negativt tall. Det forutsetter også at \(L \neq 0\) hvis \(p < 0\) da det ikke er lov å dele på null. Enkelt fortalt kan forklares regelen som at eksponentialoperasjoner på et grenseverdi-uttrykk er det samme som eksponentialoperasjoner på verdien.</li>
+                <li>Dersom \(f(x)\leq g(x)\) i området rundt \(x = a\), så vil \(L \leq M\). I området betyr i denne sammengeng potensielt uendelig nærme.</li>
                 <li><b>Skviseregelen:</b> Med forrige regel frisk i minnet kan vi formulere
-                <div class="boks">Hvis det for et intervall \(I\) (som kan være uendelig lite) der \(f, g\) og \(h\) er definert for alle verdier med mulighet for unntak i \(x = a\) har vi at dersom
-                    \[f(x)\leq g(x)\leq h(x) \text{ og } \lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\]
-                    \[\Downarrow\]
+                <div class="boks">Vi har et intervall \(I\) i omegn rundt \(x = a\) der funksjonene \(f, g\) og \(h\) er definert for alle verdier, men ikke nødvendigvis for akkurat \(x = a\). Da har vi at dersom 
+                    \[f(x)\leq g(x)\leq h(x) \] \[\text{ og }\] \[ \lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\]
+                    \[\text{så medfører dette at}\]
                     \[\lim_{x\to a}g(x)=L.\]
                 </div>
-                Her kalles funksjonene \(g\) og \(h\) den nedre og øvre grensen til \(f\).
+                Her kalles funksjonene \(g\) og \(h\) den nedre og øvre grensen til \(f\) og vil være funksjonene som "skviser" \(f\).
                 </li>
               </ul>
             <h2>Video - Skviseregelen</h2>
@@ -198,12 +201,12 @@
                 </div>
            </form>
             <h2>Grenseverdier med uendelig</h2>
-            <p><b>Grenseverdier i uendelig:</b><br> \(f(x)\) går mot \(L\) som grenseverdi når \(x\) går mot \(\pm\infty\), dersom vi kan få avstanden mellom \(f(x)\) og \(L\) så liten vi måtte ønske ved å velge \(\pm x\) tilstrekkelig stor. Vi skriver</p>
+            <p><b>Grenseverdier i uendelig:</b><br>En horisontal asymptote er en linje parallell med x-aksen som funksjonsverdien nærmer seg når \(x \rightarrow \pm \infty\). Hvis denne eksisterer (og har verdien L) kan vi definere grenser i det uendelige som </p>
             \[\lim_{x\to\pm\infty}f(x)=L.\]
-            <p><b>Uendelige grenser:</b><br> Dersom grensen <span style="text-decoration: underline;">ikke eksisterer</span>, men går mot \(\pm\infty\), nå \(x\) går mot \(a\) skriver vi</p>
+            <p><b>Uendelige grenser:</b><br>En vertikal asymptote er en linje parallell med y-aksen som representerer at funksjonsverdien divergerer mot uendelig for denne x-verdien. Hvis denne eksisterer (og har verdien a) vil ikke funksjonen ha noe grenseverdi for \(x = a\). Vi skriver dette som</p>
             \[\lim_{x\to a}f(x)=\pm\infty.\]
             <p>Et eksempel på en slik funksjon er \(2x/(1-x)\). Når \(x \rightarrow 1\) vil funksjonsverdien stige ubegrenset.</p>
-            <p>Her er det viktig å presisere at grensen ikke eksisterer, men at den uendelige grensen er årsaken.</p>
+            <p>Her er det viktig å presisere at grensen ikke eksisterer, og at den uendelige grensen er årsaken.</p>
         </div>
             <div id="indreSide2" class="indreSide">
                 <h1>Kontinuitet</h1>
@@ -236,7 +239,7 @@
                 </div>
                 Tilsvarende gjelder for grenser fra høyre.
                 <h2>Kontinuitet over intervall</h2>
-                En funksjon \(f\) er kontinuerlig over intervallet \([a, b]\) dersom \(f\) er kontinuerlig over i alle indre punkter \(c \in (a,b)\) samt ensidig kontinuerlig (fra siden til intervallet) i endepunktene. Med andre ord skal det for ingen punkter på intervallet være brudd eller diskrete endringer i funksjonsverdien \(f(x)\).
+                En funksjon \(f\) er kontinuerlig over intervallet \([a, b]\) dersom \(f\) er kontinuerlig for alle indre punkter \(c \in (a,b)\) samt ensidig kontinuerlig (fra siden til intervallet) i endepunktene. Med andre ord skal det for ingen punkter på intervallet være brudd eller diskrete endringer i funksjonsverdien \(f(x)\).
             </div>
             <div id="indreSide3" class="indreSide">
                 <h1>Ekstremalverdisetningen og Skjæringssetningen</h1>
@@ -263,7 +266,7 @@
                 \[f(p) \leq f(x) \leq f(q)\]
                 for alle \(x \in [a, b]\). Her vil \(f(p)\) være bunnpunktet på intervallet, mens \(f(q)\) vil være toppunktet på intervallet.
                 <h2>Skjæringssetningen</h2>
-                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) tar alle verdier mellom \(f(a)\) og \(f(b)\). Dersom \(f(-1) = -5\) og \(f(1) = 3\), så vet vi at i et punkt \(c \in (-1, 1)\) så vil \(f(c) = 0\). Vi skriver definisjonen som: 
+                Enhver kontinuerlig funksjon \(f\) på det <b>lukkede</b> intervallet \([a, b]\) tar alle verdier mellom \(f(a)\) og \(f(b)\). Dersom \(f(-1) = -5\) og \(f(1) = 3\), så vet vi at det eksisterer et punkt \(c \in (-1, 1)\) som oppfyller \(f(c) = 0\). Vi skriver definisjonen som: 
                 <p>For en kontinuerlig \(f\) funksjon på \([a, b]\) så finnes det for enhver \(s \in (f(a), f(b))\) en \(c \in (a, b)\) slik at \(f(c) = s\).</p> 
             </div>
             <div id="indreSide4" class="indreSide">
@@ -297,7 +300,7 @@
                 0 < | \, x - a \, | < \delta \Rightarrow | \, f(x) - L \, | < \varepsilon
                 \]
             </div>
-            I oppgavesammenheng går det ut på å finne \(\delta\) (ofte uttrykkt ved \(\varepsilon\)) som oppfyller implikasjonen for alle \(\varepsilon\). Sånn er det ja.
+            I oppgavesammenheng går det ut på å finne \(\delta\) (ofte uttrykkt ved \(\varepsilon\)) som oppfyller implikasjonen for alle \(\varepsilon\).
             </div>
         </div>
     </div>
