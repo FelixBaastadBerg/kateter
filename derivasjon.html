@@ -7,6 +7,11 @@
 <link rel="icon" href="bilder/kateterSymbol.png">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<style>
+    .q{
+       list-style-type: lower-roman;
+    }
+</style>
 </head>
 <body onload="changeDisplay(0, 8)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -395,7 +400,9 @@
         </div>
         <div id = "indreSide7" class="indreSide">
             <h1>Ekstremalverdier</h1>
-            <p>Å kunne identifisere globale- og lokale ekstremalverdier over et intervall er viktige egenskaper innen funksjonsanalyse. I dette delkapitellet skal vi se på </p>
+            <p>Å kunne identifisere globale- og lokale ekstremalverdier over et intervall er viktige egenskaper innen funksjonsanalyse. I dette delkapitellet skal vi se på 
+                fremgangsmåter for å identifisere disse punktene.
+            </p>
                 <h2>Video - Ekstremalverdier</h2>
                 <video width="400" controls>
                     <source src="videoer/02ekstremalverdier.mp4" type="video/mp4">
@@ -414,6 +421,33 @@
                         </label>
                         </div>
                    </form>
+                   <h2>Fremgangsmåte</h2>
+                   <p>En typisk eksamensoppgave innebærer å finne det globale topp- og bunnpunktet til en funksjon over et intervall-
+                        \([a,b]\). Fremgangsmåten vil da være å finne lokale ekstremalpunkter og deretter sammenlikne disse for å finne hvilke punkter som er størst eller minst globalt. 
+                   </p>
+                   <p>Det finnes tre typer ekstremalverdier som alle må skjekkes som potensielle globale topp- eller bunnpunkter</p>
+                   <ol>
+                       <li class="q">
+                           <p><b>Kritiske punkter:</b></p>
+                           <p>Dette er punkter der \(f'(x) = 0\). Vi ønsker å finne alle kritiske punkter \({x_i} \in [a, b]\).
+                               At punktet er kritisk betyr at stigningstallet er til sekanten som skjærer funksjonen i dette punktet er null.
+                               Med andre ord kan punktet representere et bunnpunkt, toppunkt eller terrassepunkt. For å bekrefte at et punkt ikke er et terrassepunkt kan man enten kjøre førstederiverttesten eller andrederiverttesten: 
+                           </p>
+                           <p><b>Førstederiverttesten</b> går ut på å skjekke den deriverte på hver sin side av et kritisk punkt. Dersom fortegnet på den deriverte er forskjellig på hver sin side av punktet vet man at det er et topp- eller bunnpunkt.</p>
+                           <p><b>Andrederiverttesten</b> går ut på å skjekke hvordan akserelasjonen i kurven er i det kritiske punktet. Dersom \(f''(x_i)>0\) er det et bunnpunkt, mens dersom \(f''(x_i) < 0\) er det et toppunkt. Om den er lik null vil akselerasjonen til grafen være null og det vil være et terrassepunkt.</p>
+                       </li>
+                       <li class="q">
+                           <p><b>Endepunkter:</b></p>
+                           <p>For <span style="text-decoration: underline;">lukkede</span> intervaller er endepunkter lokale ekstremalpunkter. I delvis åpne intervaller evaluerer man den lukkede siden; i \([a, b)\) skjekker vi verdien til \(f(a)\).</p>
+                       </li>
+                       <li class="q">
+                           <p><b>Singulære punkter:</b></p>
+                           <p>Dette er punkter der den deriverte ikke er definert. Det vil si grenseverdien som beskriver definisjonen av den deriverte eksisterer ikke. Som utdypt i kapitellet om grenseverdier må grenseverdien fra begge sider av et punkt ha samme verdi for at grensen skal eksistere. Vi leter derfor etter punkter der den deriverte er ulik avhengig av hvilken side man angriper punktet.
+                               Dette fenomenet utfolder seg i form av et "knekkpunkt". 
+                           </p>
+                           <p>Geometrisk er et knekkpunkt et hjørne i en graf der stigningen endres plutselig. Matematisk oppstår gjerne knekkpunkter ved at den deriverte endrer funksjonsuttrykk ved en gitt \(x\)-verdi. Dette kan for eksempel komme av absoluttverdi tegn; \(f(x) = |x|\) medfører at \(f'(x) = -1\) for \(x < 0\) og \(f'(x) = 1\) for \(x > 0\)</p>
+                       </li>
+                   </ol>
         </div>
         </div>
         

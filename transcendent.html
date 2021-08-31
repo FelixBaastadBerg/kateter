@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onload="changeDisplay(0, 4)" onload="limitFunc()">
+<body onload="changeDisplay(0, 5)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -38,23 +38,28 @@
                     <img src="bilder/transcendente.png" height="100px">
                     <h2>Transcendente funksjoner</h2>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0, 4)">Introduksjon
+                <div class="venstreBoks"  onclick="changeDisplay(0, 5)">Introduksjon
                     <div class="triangle-left" id= "v0">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1, 4)">Eksponential- og logaritmefunksjoner
+                <div class="venstreBoks"  onclick="changeDisplay(1, 5)">Inverse funksjoner
                     <div class="triangle-left" id= "v1">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(2, 4)">Inverse trigonometriske funksjoner
+                <div class="venstreBoks"  onclick="changeDisplay(2, 5)">Eksponential- og logaritmefunksjoner
                     <div class="triangle-left" id= "v2">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(3, 4)">Hyperbolske funksjoner
+                <div class="venstreBoks" onclick="changeDisplay(3, 5)">Inverse trigonometriske funksjoner
                     <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 5)">Hyperbolske funksjoner
+                    <div class="triangle-left" id= "v4">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
@@ -69,15 +74,16 @@
                     <img src="bilder/transcendente.png" height="100px">
                     <h2>Transcendente funksjoner</h2>
                 </div>
-                <div class="barListe" onclick="changeDisplay(0, 4)"><h3 class="sideH">Introduksjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(1 ,4)"><h3 class="sideH">Eksponential- og logaritmefunksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(2, 4)"><h3 class="sideH">Inverse trigonometriske funksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(3, 4)"><h3 class="sideH">Hyperbolske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(0, 5)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 5)"><h3 class="sideH">Inverse funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,5)"><h3 class="sideH">Eksponential- og logaritmefunksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 5)"><h3 class="sideH">Inverse trigonometriske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 5)"><h3 class="sideH">Hyperbolske funksjoner</h3></div>
             </div>
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon til transcendente funksjoner</h1>
-                <p>Derivasjon... </p>
+                <p>Vi skal i dette kapitellet bli godt kjent med "ikke-algebraiske funksjoner" som trigonometriske funksjoner, eksponentialfunksjoner, logaritmiske funksjoner og hyperbolske funksjoner. Dette er funksjoner og identiteter som har mange kjerneområder innen matematikken, og noe alle matematikere skal kunne beherske. </p>
                     <h2>Video - Introduksjon</h2>
                     <video width="400" controls>
                         <source src="videoer/03intro.mp4" type="video/mp4">
@@ -97,12 +103,13 @@
                             </div>
                        </form>
             </div>
-            
             <div id="indreSide1" class="indreSide">
-                <h1>Eksponential- og logaritmefunksjoner</h1>
-                <h2>Video - Definisjon av deriverte</h2>
+                <h1>Inverse funksjoner</h1>
+                <p>Helt enkelt kan vi si at en invers funksjon \(f^{-1}(x)\) er funksjonen som gjør det motsatte av \(f(x)\). Dersom \(f(a) = b\), så vil \(f^{-1}(b) = a\) av definisjon.</p>
+                <p>Geometrisk er en invers funksjon også lett å se for seg som \(f(x)\), bare speilet over linjen \(y = x\). Dette er likevel ikke helt riktig. For mange funksjoner vil speiling over \(y = x\) resultere i en funksjon som strider med grunnleggende prinsipper om hva en funksjon er. I dette delkapitellet skal vi diskutere hvilke krav som må stilles til en invers funksjon og hvordan man kan finne en inversfunksjon gitt \(f(x)\).</p>
+                <h2>Video - Inverse funksjoner</h2>
                 <video width="400" controls>
-                    <source src="videoer/02defAvDer.mp4" type="video/mp4">
+                    <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
@@ -111,16 +118,70 @@
                     
                     <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_grenser" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_inverse_funksjoner" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
                     </div>
                </form>
+               <h2>Krav til inverser</h2>
+               <p>I definisjonen til en funksjon ligger kravet om entydighet. Gitt én \(x\)-verdi skal det kun eksistere én verdi \(y = f(x)\). Tilsvarende krav gjelder en invers til en funksjon. Den inverse operasjonen av \(y = x^2\) er \(x = \pm \sqrt{y}\). Dette er ikke en gyldig funksjon fra \(y\) til \(x\), da man for hver \(y\)-verdi har to mulige \(x\)-verdier. </p>
+               <p>Vi krever derfor at funksjoner må være <b>injektive</b>, eller "en-til-en", for at den skal ha en invers. Dette betyr at dersom vi har to distinkte \(x\)-verdier, så må også korresponderende \(y\)-verdier være forskjellige. Matematisk skriver vi</p>
+               <div class="boks">
+                   \[
+                   x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2).
+                   \]
+               </div>
+               <p>En annen måte å skjekke om en funksjon er injektiv på er gjennom derivasjonstesten. Dersom den deriverte til en funksjon ikke endrer fortegn over et intervall, så vil funksjonen være injektiv over dette intervallet.</p>
+               <p>Det er dermed mulig å postulere to fremgangsmåter å vise at en funksjon er inverterbar i dette kurset:</p>
+               <ol>
+                   <li>Gitt en funksjon \(f(x)\). Sett opp likningen \(f(a) = f(b)\) og vis at dette medfører at \(a = b\).</li>
+                   <li>Gitt en funksjon \(f(x)\). Deriver \(f(x)\) og vis at den deriverte ikke endrer fortegn over intervallet i fokus.</li>
+               </ol>
+               <h2>Derivasjon av inverse funksjoner</h2>
+               <p>Dersom en funksjon \(f(x)\) har en invers \(f^{-1}(x)\) kan man skrive den deriverte av den inverse på formen</p>
+               <div class="boks">
+                   \[
+                   \frac{d}{dx}f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}.
+                   \]
+               </div>
+               <p><b>Utledelsen</b> tar utgangspunkt i definisjonen av en invers funksjon: \(f^{-1}(f(x)) = x\). Vi kan herfra bruke det vi har lært om implisitt derivasjon til å derivere begge sider med hensyn på \(x\).</p>
+               \[
+               f'(f^{-1}(x)) \cdot \frac{d}{dx} f^{-1}(x) = 1.
+               \]
+               <p>Denne likningen løses med hensyn på \(d/dx f^{-1}(x)\) for å finne likningen som beskriver derivasjon av inverse funksjoner.</p>
              </div>
+             
+            
             <div id="indreSide2" class="indreSide">
+                <h1>Eksponential- og logaritmefunksjoner</h1>
+                <p>Eksponentialfunksjoner er funksjoner på formen \(a^x\) der \(a\) er en konstant. Den inverse funksjonen er \(\log_a{x}\) slik at vi kan skrive identiteten \(\log_a{a^x} = x\).</p>
+                <p>På samme måte som \(\pi\) dukker opp hele tiden i geometri, dukker Eulerstallet \(e\) opp hele tiden når det er snakk om vekst. Vi definerer derfor den naturlige eksponentialfunksjonen \(e^x\) med dens invers \(\ln{x}\). Den naturlige eksponentialfunksjonen har mange unike egenskaper og er opprinnelig definert som en grenseverdi og som en uendelig sum. Dette skal vi blant annet titte mer på når vi kommer til kapitlene "følger og rekker" og "taylorpolynomer".</p>
+                <h2>Video - Logaritme og eksponential</h2>
+                <video width="400" controls>
+                    <source src="videoer/03logeksp.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Intro grenser">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Regneregler</h2>
+               <p>Nedenfor følger noen viktige algebraiske regler for logaritme- og eksponentialfunksjoner, samt viktige grenseverdier og derivasjonsregler. </p>
+               <h3>Potensregler (eksponentialfunksjoner)</h3>
+               \[\]
+             </div>
+            <div id="indreSide3" class="indreSide">
                 <h1>Inverse trigonometriske funksjoner</h1>
-                <h2>Video - Derivasjonsregler</h2>
+                <h2>Video - Inverse trigonometriske funksjoner</h2>
                 <video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -131,18 +192,18 @@
                     
                     <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_kontinuitet" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
                     </div>
                </form>
               </div>
-            <div id="indreSide3" class="indreSide">
+            <div id="indreSide4" class="indreSide">
                 <h1>Hyperbolske funksjoner</h1>
-                <h2>Video - Sekantsetning og kristisk punkt</h2>
+                <h2>Video - Hyperbolske funksjoner</h2>
                 <video width="400" controls>
-                    <source src="videoer/02sekant.mp4" type="video/mp4">
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
@@ -151,7 +212,7 @@
                     
                     <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
                     <div class="form">
-                    <input type="text" name="Tilbakemelding_ekstremalverdi" autocomplete="off" required>
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
                     <label for="name" class="label-name">
                         <span class="content-name">Tilbakemelding:</span>
                     </label>
