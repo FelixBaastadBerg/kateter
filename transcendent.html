@@ -124,7 +124,7 @@
                     </label>
                     </div>
                </form>
-               <h2>Krav til inverser</h2>
+               <h2>Krav til eksistens av inverse funksjoner</h2>
                <p>I definisjonen til en funksjon ligger kravet om entydighet. Gitt én \(x\)-verdi skal det kun eksistere én verdi \(y = f(x)\). Tilsvarende krav gjelder en invers til en funksjon. Den inverse operasjonen av \(y = x^2\) er \(x = \pm \sqrt{y}\). Dette er ikke en gyldig funksjon fra \(y\) til \(x\), da man for hver \(y\)-verdi har to mulige \(x\)-verdier. </p>
                <p>Vi krever derfor at funksjoner må være <b>injektive</b>, eller "en-til-en", for at den skal ha en invers. Dette betyr at dersom vi har to distinkte \(x\)-verdier, så må også korresponderende \(y\)-verdier være forskjellige. Matematisk skriver vi</p>
                <div class="boks">
@@ -155,8 +155,9 @@
             
             <div id="indreSide2" class="indreSide">
                 <h1>Eksponential- og logaritmefunksjoner</h1>
-                <p>Eksponentialfunksjoner er funksjoner på formen \(a^x\) der \(a\) er en konstant. Den inverse funksjonen er \(\log_a{x}\) slik at vi kan skrive identiteten \(\log_a{a^x} = x\).</p>
-                <p>På samme måte som \(\pi\) dukker opp hele tiden i geometri, dukker Eulerstallet \(e\) opp hele tiden når det er snakk om vekst. Vi definerer derfor den naturlige eksponentialfunksjonen \(e^x\) med dens invers \(\ln{x}\). Den naturlige eksponentialfunksjonen har mange unike egenskaper og er opprinnelig definert som en grenseverdi og som en uendelig sum. Dette skal vi blant annet titte mer på når vi kommer til kapitlene "følger og rekker" og "taylorpolynomer".</p>
+                <p>Eksponentialfunksjoner er funksjoner på formen \(a^x\) der \(a\) er en konstant. Den inverse funksjonen er \(\log_a{x}\) slik at vi kan skrive identiteten \(\log_a{a^x} = x\).  </p>
+                <p>Tilsvarende som \(\pi\) stadig dukker opp i geometrien, vil Eulers tall \(e\) til stadighet dukke opp i kalkulus. Vi definerer derfor den naturlige eksponentialfunksjonen \(e^x\) og dens invers \(\ln{x}\). Den naturlige eksponentialfunksjonen skal vi se mer på når vi kommer til kapittelet "følger og rekker".</p>
+                
                 <h2>Video - Logaritme og eksponential</h2>
                 <video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
@@ -177,10 +178,46 @@
                <h2>Regneregler</h2>
                <p>Nedenfor følger noen viktige algebraiske regler for logaritme- og eksponentialfunksjoner, samt viktige grenseverdier og derivasjonsregler. </p>
                <h3>Potensregler (eksponentialfunksjoner)</h3>
-               \[\]
+               \[
+               \begin{align}
+a^0 &= 1,                   & \qquad a^{x+y} &= a^x a^y, \\[1em]
+a^{-x} &= \frac{1}{a^x},    & \qquad a^{x-y} &= \frac{a^x}{a^y}, \\[1em]
+(a^x)^y &= a^{xy},          & \qquad (ab)^x  &= a^x b^x.
+\end{align}\]
+               <h3>Logaritmeregler</h3>
+               \[
+               \begin{align}
+\log_a 1 &= 0,           & \qquad \log_a(xy) &= \log_a x + \log_a y, \\[1em]
+\log_a\left(\frac{1}{x}\right)&=-\log_a x, & \qquad \log_a \left(\frac{x}{y}\right) &= \log_a x-\log_a y. \\[1em]
+\log_a (x^y) &= y \log_a x,  & \qquad \log_a x &= \frac{\log_b x}{\log_b a}.
+\end{align}
+               \]
+               <h3>Uendelige grenseverdier for potenser og logaritmer</h3>
+               \[
+               \begin{align}
+&\lim_{x\to -\infty}a^x = 0, & \qquad \lim_{x\to \infty}a^x = \infty, \\[1em]
+&\lim_{x\to 0+} \log_a x = -\infty, &\qquad \lim_{x\to \infty} \log_a x = \infty.
+\end{align}
+               \]
+               <h3>Deriverte</h3>
+               <p>Eksponentialfunksjoner og logaritmefunksjoner er kontinuerlig deriverbare over definisjonsmengden. I videoen over utledes begge formlene; her representeres bare resultete.</p>
+               <div class="boks">
+                \[
+                \frac{d}{dx} a^x = \ln{a} \cdot a^x.
+                \]
+               </div>
+               <p>Vi merker oss at dersom \(a = e\) vil \(\ln{a} = \ln{e} = 1\), som medfører at \(d/dx \, e^x = e^x\).</p>
+               <div class="boks">
+                   \[
+                   \frac{d}{dx} \log_a{x} = \frac{1}{x\cdot \ln{a}}. 
+                   \]
+               </div>
+               <p>Vi merker også her at dersom \(a = e\), så vil \(\ln{a} = \ln{e} = 1\), som medfører at \(d/dx \ln{x} = 1/x\).</p>
              </div>
             <div id="indreSide3" class="indreSide">
                 <h1>Inverse trigonometriske funksjoner</h1>
+                <p>Trigonometriske har grunnet sitt opphav i enhetssirkelen en periodisk oppførel. Gitt én \(y\)-verdi kan det finnes uendelig mange tilhørende \(x\)-verdier. Dette byr på problemer når vi skal finne deres invers, da en invers funksjon går fra verdimengden til den opprinnelige funksjonen.</p>
+                <p>For å forsikre oss om at en invers eksisterer for de trigometriske funksjonene reduserer vi definisjonsmengden til et mindre intervall der funksjonen er injektiv over hele intervallet.</p>
                 <h2>Video - Inverse trigonometriske funksjoner</h2>
                 <video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
@@ -198,9 +235,34 @@
                     </label>
                     </div>
                </form>
+               <h2>Identiteter</h2>
+               <p><b>arcsin:</b><br>
+                \[f(x) = \sin{x} \Rightarrow f^{-1}(x) = \arcsin{x}, \quad f^{-1}(x) \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad x \in [-1, 1]\]
+            </p>
+            <p><b>arccos:</b><br>
+                \[f(x) = \cos{x} \Rightarrow f^{-1}(x) = \arccos{x}, \quad f^{-1}(x) \in \left[0, \pi\right], \quad x \in [-1, 1]\]
+            </p>
+            <p><b>arctan:</b><br>
+                \[f(x) = \tan{x} \Rightarrow f^{-1}(x) = \arctan{x}, \quad f^{-1}(x) \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad x \in (-\infty, \infty)\]
+            </p>
+            <p>Da vi snakker om inverser gjelder \(f^{-1}(f(x)) = x\) for alle identitene over slik at \(\sin{(\arcsin{x})} = x\).</p>
+            <p>Merk også at \(\arctan{x}\) har uendelige grenseverdien i begge ender mot \(\pm \pi/2\).</p>
+            <h2>Deriverte</h2>
+            <div class="boks">
+                \[
+                \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
+                \]
+                \[
+                \frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1-x^2}}
+                \]
+                \[
+                \frac{d}{dx} \arctan(x) = \frac{1}{1+x^2}
+                \]
+            </div>
               </div>
             <div id="indreSide4" class="indreSide">
                 <h1>Hyperbolske funksjoner</h1>
+                <p>Hyperbolske funksjoner er eksponentialfunksjoner satt sammen på en slik måte at den blir nært beslektet med trigonometriske funksjoner. Funksjonene vi skal se på i dette kapitellet har navnene \(sinh(x)\), \(\cosh(x)\) og \(\tanh(x)\) og har mange av de samme egenskapene som trigonometriske funksjoner.</p>
                 <h2>Video - Hyperbolske funksjoner</h2>
                 <video width="400" controls>
                     <source src="videoer/03hyperbolske.mp4" type="video/mp4">
@@ -218,6 +280,43 @@
                     </label>
                     </div>
                </form>
+               <h2>Definisjon</h2>
+               <div class="boks">
+                   \[
+                   \cosh(x) = \frac{e^x+e^{-x}}{2}
+                   \]
+                   \[
+                   \sinh(x) = \frac{e^x-e^{-x}}{2}
+                   \]
+                   \[
+                   \tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x-e^{-x}}{e^x+e^{-x}}
+                   \]
+               </div>
+               <p>Det kan se tilfeldig ut at slike kombinasjoner av eksponentialfunksjoner skal gi opphav til nye uttrykk med egenskaper som minner om trigonometriske uttrykk. 
+                   For spesielt interesserte kan det være givende å ta en titt på <i>Eulers formel</i> (som ikke er pensum i kurset) og se på definisjonene til de trigonometriske funksjonene. For eksempel kan
+                   \(\cos{x} = 1/2(e^{ix} + e^{-ix})\), der \(i\) beskriver at eksponenten er imaginær. Her ser vi at sammenhengen mellom \(\cosh{x}\) og \(\cos{x}\) blir tydelig.
+               </p>
+               <h2>Identitet</h2>
+               <p>I vanlig trigonometri kan man ved hjelp av pythagoras' setning utlede \(\cos^2 + \sin^2 = 1\). Nesten tilsvarende kan vi definere en liknende identitet for hyperbolske funksjoner. Vi skriver at</p>
+               <div class="boks">
+                   \[
+                   \cosh^2{x} - \sinh^2{x} = 1
+                   \]
+               </div>
+            <p>Denne likningen kan bevises ved å ta utgangspunkt i eksponentialformen til de hyperbolske funksjonene.</p>
+            <h2>Deriverte</h2>
+            <p>De deriverte til hyperbolske funksjoner har også <b>nesten</b> like resultater som trigonometriske funksjoner.</p>
+            <div class="boks">
+                \[
+                \frac{d}{dx} \sinh{x} = \cosh{x}
+                \]
+                \[
+                \frac{d}{dx} \cosh{x} = \sinh{x}
+                \]
+                \[
+                \frac{d}{dx} \tanh{x} = \frac{1}{\cosh^2(x)}
+                \]
+            </div>
                 </div>
         </div>
         

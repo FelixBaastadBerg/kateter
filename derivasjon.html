@@ -107,9 +107,9 @@
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon til Derivasjon</h1>
-                <p>Den deriverte til en funksjon \(f\)sier noe om hvor mye funksjonsverdien endrer seg ved endringer av funksjonens frie variabler. I dette kurset ser vi kun på funksjoner av én variabel (ofte \(x\)), så for vårt formål kan vi se på derivasjon som forholdet i endringen av \(f(x)\) og \(x\).</p>
-                <p>Grafisk er den deriverte stigningstallet (tangenten) i et punkt langs grafen til funksjonen, og sier noe om hvor mye en funksjon vokser i verdi gitt en \(x\)-verdi.</p>
-                <p>Derivasjon er et meget sentralt tema innenfor dette kurset, og kommer til å prege mange fremtidig kurs.</p>
+                <p>Den deriverte til en funksjon \(f\) sier noe om hvor mye funksjonsverdien endrer seg <i>per</i> endring i den frie variable \(x\). Med andre ord kan vi se på derivasjon som forholdet mellom endringen av \(f(x)\) og endringen \(x\).</p>
+                <p>Grafisk er den deriverte stigningstallet til tangenten i et punkt langs grafen til funksjonen.</p>
+                <p>Derivasjon er et meget sentralt tema innenfor dette kurset, og kommer til å spille en viktig rolle i mange fremtidig kurs.</p>
                     <h2>Video - Introduksjon</h2>
                     <video width="400" controls>
                         <source src="videoer/02intro.mp4" type="video/mp4">
@@ -157,16 +157,18 @@
                <p>Siden vi ønsker å evaluere stigningen i punktet \(x\), og ikke stigningen mellom punktene \(x\) og \(x + \Delta x\), ønsker vi å evaluere uttrykket når størrelsen \(\Delta x\) går mot null. Vi kan da skrive definisjonen av den deriverte som</p>
                <div class="boks">
                    \[
-                    f'(x) = \lim_{\Delta x \rightarrow 0}  \frac{f(x + \Delta x) - f(x)}{\Delta x}.
+                    f'(x) = \lim_{\Delta x \rightarrow 0}  \frac{f(x + \Delta x) - f(x)}{\Delta x} = \lim_{h \rightarrow 0}  \frac{f(x + h) - f(x)}{h}.
                    \]
                </div>
                <h2>Deriverbarhet</h2>
-               <p>Vi sier at en funksjon er deriverbar i et punkt \(a\) eksisterer for definisjonen over med \(f'(a)\). Dersom funksjonen ikke er deriverbar i et punkt kan dette skyldes at funksjonen er diskontinuerlig i punktet \(a\) slik at funksjonen gjør et hopp. Endringen til funksjonen \(f\), \(\Delta f\), vil da være endelig, mens \(\Delta x\) vil være så og si null. \(\Delta f / \Delta x\) vil da bli uendelig og funksjonen vil ikke være deriverbar i punktet.</p>
-               <p>En funksjon med <b>knekkpunkt</b> vil heller ikke være deriverbar i punktet hvor funksjonen knekker. Dette skyldes at den deriverte (stigningen til funksjonen) er forskjellig fra høyre og venstre. Den ensidige grensen til definisjonen av den deriverte vil da være forskjellig fra høyre og venstre som medfører at grenseverdien ikke eksisterer.</p>
+               <p>Vi sier at en funksjon er deriverbar i et punkt \(a\) dersom grenseverdien over eksisterer når vi evaluerer i \(x = a\). Her er det viktig å huske at det er \(\Delta x\) (eller \(h\)), som er grensevariabel. Derfor må vi studere de ensidige grensene fra høyre og venstre for \(h\) når \(h\) går mot null. Altså vil \(h\) være negativ for den ensidige grensen fra venstre, og positiv for den ensidige grensen fra høyre. Dersom funksjonen har et såkalt "knekkpunkt", altså at funksjonen plutselig endrer derivert, eller funksjonen er diskontinuerlig i punktet, vil <i>ikke</i> funksjonen være deriverbar.</p>
+               <p>Vi kan si at dersom en funksjon er deriverbar i et punkt, så vil dette medføre at funksjonen også er kontinuerlig i punktet. Dette gjelder ikke nødvendigvis motsatt vei. En kontinuerlig funksjon kan ha knekkpunkt som medfører at den deriverte <i>ikke</i> er kontinuerlig.</p>
+               <!--<p>Vi sier at en funksjon er deriverbar i et punkt \(a\) eksisterer for definisjonen over med \(f'(a)\). Dersom funksjonen ikke er deriverbar i et punkt kan dette skyldes at funksjonen er diskontinuerlig i punktet \(a\) slik at funksjonen gjør et hopp. Endringen til funksjonen \(f\), \(\Delta f\), vil da være endelig, mens \(\Delta x\) vil være så og si null. \(\Delta f / \Delta x\) vil da bli uendelig og funksjonen vil ikke være deriverbar i punktet.</p>
+               <p>En funksjon med <b>knekkpunkt</b> vil heller ikke være deriverbar i punktet hvor funksjonen knekker. Dette skyldes at den deriverte (stigningen til funksjonen) er forskjellig fra høyre og venstre. Den ensidige grensen til definisjonen av den deriverte vil da være forskjellig fra høyre og venstre som medfører at grenseverdien ikke eksisterer.</p>-->
              </div>
             <div id="indreSide2" class="indreSide">
                 <h1>Derivasjonsregler</h1>
-                <p>Reglene som følger vil i hovedsak stå på formelarket til eksamen. Likevel er derivasjonsregler noe som burde sitte i fingerspissene og anbefales å lære seg utenat.</p>
+                <p>Reglene som følger vil i hovedsak stå på formelarket til eksamen. Likevel er derivasjonsregler noe som burde sitte i fingerspissene og anbefales å lære seg utenatt.</p>
                 <h2>Video - Derivasjonsregler</h2>
                 <video width="400" controls>
                     <source src="videoer/02regneregler.mp4" type="video/mp4">
@@ -281,19 +283,19 @@
                <p>Vi tar for oss et kontinuerlig funksjon \(f\) på intervallet \([a, b]\) som er deriverbart på det tilsvarende indre intervallet. Vi kan da si at stigningstallet til den rette linjen mellom ytterpunktene \((a, f(a))\) og \((b, f(b))\) er \(\Delta y / \Delta x = (f(b) - f(a)) / (b - a).\) Sekantsetningen sier at funksjonen \(f\) da vil ha et punkt \(c \in (a, b)\) der stigningstallet til sekanten er lik som denne rette linja</p>
                <div class="boks">
                    \[
-                   f'(c) = \frac{f(b) - f(a)}{b - a}.
+                   f'(c) = \underbrace{\frac{f(b) - f(a)}{b - a}}_{\text{stigningstall til sekant}}.
                    \]
                </div>
-               <p>Dette teoremet kan brukes for å vise eksistensen av visse punkter. For eksempel kan man vise at for to punkter \(b \neq a\) der \(f(a) = f(b)\), så vil det eksistere et ekstremalpunkt mellom de da vi vil få \(f'(c) = (f(a) - f(a)) / (b -a) = 0\). Slike kritiske punkt er ekstremt viktige i funksjonsanalyse, noe vi snakker mer om under.</p>
+               <p>Dette teoremet kan brukes for å vise eksistensen av visse punkter. For eksempel kan man vise at for to punkter \(b \neq a\) der \(f(a) = f(b)\), så vil det eksistere et ekstremalpunkt mellom de da vi vil få \(f'(c) = (f(a) - f(a)) / (b -a) = 0\). Slike kritiske punkt er viktige i funksjonsanalyse, noe vi snakker mer om under.</p>
                <h2>Teoremet om kritisk punkt</h2>
                <p>Som vi skal komme tilbake til i delkapitellet "Ekstremalverdier", finnes det i hovedsak tre forskjellige typer ekstremalverdier for et intervall. Et kritisk punkt er et punkt der den deriverte er lik null, det vil si tangenten til punktet er parallell med x-aksen. 
                    Teoremet om kritisk punkt sier at dersom en deriverbar funksjon på et åpent intervall \((a, b)\) har et ekstremalpunkt i \(c\), så vil \(f'(c) = 0\).
                </p>
-               <p>Det er viktig å merke seg at for at teoremet skal gjelde må funksjonen være <b>deriverbar</b> og over et <b>åpent intervall</b>. Dersom funksjonen ikke tilfredstiller disse kravene gir dette opphav til ekstremalpunkter som ikke nødvendigvis er kritiske punkter. Som nevnt vil dette diskuteres nærmere i delkapitellet "Ekstremalverdier".</p>
+               <p>Det er viktig å merke seg at for at teoremet skal gjelde må funksjonen være <b>deriverbar</b> og over et <b>åpent intervall</b>. Dersom funksjonen ikke tilfredstiller disse kravene åpner dette for at ekstremalpunkter ikke nødvendigvis er kritiske punkter. Som nevnt vil dette diskuteres nærmere i delkapitellet "Ekstremalverdier".</p>
                 </div>
             <div id="indreSide4" class="indreSide">
                 <h1>Implisitt derivasjon</h1>
-                <p>Mange funksjoner kan uttrykkes eksplisitt, det vil si at funksjonsverdien \(y\) kan beskrives alene av en fri variabel \(x\). Alle funksjoner vi har sett på til kurset i np har vært eksplisitte. I mange likningerer er det derimot ikke mulig å løse med hensyn på \(y(x)\), og uttrykket vi står igjen med er på formen \(f(x, y) = 0\).
+                <p>Mange funksjoner kan uttrykkes eksplisitt, det vil si at funksjonsverdien \(y\) kan beskrives alene av en fri variabel \(x\). Alle funksjoner vi har sett på til nå i kurset har vært eksplisitte. I mange likningerer er det derimot ikke mulig å løse med hensyn på \(y(x)\), og uttrykket vi står igjen med er på formen \(f(x, y) = 0\).
                     Denne implisitte representasjonen av funksjonen \(y\) krever implisitt derivasjon for å finne \(y'(x)\).
                 </p>
                <h2>Video - Implisitt derivasjon</h2>
@@ -318,14 +320,14 @@
            <ol>
                <li><p>Første skrittet er å derivere begge sider av likningen (nesten alltid med hensyn på \(x\)). Uttrykk med \(x\) deriveres på helt vanlig vis. Deler av uttrykket som inneholder \(y\) må man derimot derivere med kjerneregelen. \(y\) er en funksjon av \(x\), som fører til at en funksjon av \(y\) har \(y\) som kjerne.
                    \[\frac{d}{dx} y^2 = \frac{d}{dy}y^2 \cdot \frac{dy}{dx} = 2y \cdot \frac{dy}{dx}\]
-               For uttrykk som \(y^2x\) gjelder det derfor å holde tunga i munnen.</p></li>
+               For uttrykk som \(y^2x\) gjelder det derfor å holde tunga rett i munnen.</p></li>
                <li><p>Likningen inneholder nå \(x, y\) og \(dy/dx\). Andre skrittet er å sette inn verdiene \(x = x_0\) og \(y = y_0\), slik at eneste ukjente er \(dy/dx\). </p></li>
                <li><p>Siste skrittet er å løse likninen med hensyn på \(dy/dx\).</p></li>
            </ol>
             </div>
         <div id = "indreSide5" class="indreSide">
             <h1>Koblede hastigheter</h1>
-            <p>I mange likninger vil flere parametere være avhengig av samme variabel. Dersom et punkt beveger seg langs periferien til en sirkel vil både \(x\)- og \(y\)-posisjonen til punktet være avhengig av vinkelen \(\theta\). Hastigheten til punktet vil også potensielt være avhengig av posisjon. Dersom man har tilstrekkelig kunnskap om kula sin posisjon og hastighet vil det være mulig å finne resterende imformasjon gjennom koblede hastigheter.  </p>
+            <p>I mange likninger vil flere parametere være avhengig av samme variabel. Dersom et punkt beveger seg langs periferien til en sirkel vil både \(x\)- og \(y\)-posisjonen til punktet være avhengig av vinkelen \(\theta\). Hastigheten til punktet vil også potensielt være avhengig av posisjon. Dersom man har tilstrekkelig kunnskap om kula sin posisjon og hastighet vil det være mulig å finne resterende informasjon gjennom koblede hastigheter.  </p>
                 <h2>Video - Koblede hastigheter</h2>
                 <video width="400" controls>
                     <source src="videoer/02kobla.mp4" type="video/mp4">
@@ -430,11 +432,11 @@
                        <li class="q">
                            <p><b>Kritiske punkter:</b></p>
                            <p>Dette er punkter der \(f'(x) = 0\). Vi ønsker å finne alle kritiske punkter \({x_i} \in [a, b]\).
-                               At punktet er kritisk betyr at stigningstallet er til sekanten som skjærer funksjonen i dette punktet er null.
+                               At punktet er kritisk betyr at stigningstallet til tangenten som skjærer funksjonen i dette punktet er null.
                                Med andre ord kan punktet representere et bunnpunkt, toppunkt eller terrassepunkt. For å bekrefte at et punkt ikke er et terrassepunkt kan man enten kjøre førstederiverttesten eller andrederiverttesten: 
                            </p>
                            <p><b>Førstederiverttesten</b> går ut på å skjekke den deriverte på hver sin side av et kritisk punkt. Dersom fortegnet på den deriverte er forskjellig på hver sin side av punktet vet man at det er et topp- eller bunnpunkt.</p>
-                           <p><b>Andrederiverttesten</b> går ut på å skjekke hvordan akserelasjonen i kurven er i det kritiske punktet. Dersom \(f''(x_i)>0\) er det et bunnpunkt, mens dersom \(f''(x_i) < 0\) er det et toppunkt. Om den er lik null vil akselerasjonen til grafen være null og det vil være et terrassepunkt.</p>
+                           <p><b>Andrederiverttesten</b> går ut på å skjekke hvordan akserelasjonen (endringsraten til den deriverte) i kurven er i det kritiske punktet. Dersom \(f''(x_i)>0\) er det et bunnpunkt, mens dersom \(f''(x_i) < 0\) er det et toppunkt. Om den er lik null vil akselerasjonen til grafen være null og det vil være et terrassepunkt.</p>
                        </li>
                        <li class="q">
                            <p><b>Endepunkter:</b></p>
