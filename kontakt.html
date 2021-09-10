@@ -9,14 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 <style>
-    #pictures{display: grid; grid-template-columns: 1fr 1fr; width: 600px; margin: auto;}
-    @media only screen and (max-width: 630px){
-  #pictures{
-      display: inherit;
-      width: 300px;
-      margin: auto;
-  }
-}
+    @media only screen and (max-width: 700px){
+        #picture img{
+            width: calc(100vw - 100px);
+        }
+    }
 </style>
 </head>
 <body onload="limitFunc()">
@@ -51,6 +48,7 @@
         <p>Denne siden er laget av Felix Baastad Berg og Ulrik Unneberg fra 3. året i sivilingeniørstudiet fysikk og matematikk ved NTNU. Begge går studieretningen industriell matematikk.</p>
     <p>Vi setter pris på henvendelser, både angående spørsmål og tilbakemeldinger, til contact.kateter@gmail.com. Tilbakemeldinger under videoer i løpet av kurset er anonymt og sendes til denne mailen.</p>
     </div>
+    <div id="picture" style="margin-left: 50px; margin-bottom: 50px;"><img src="bilder/ulrikOgMeg.jpg" alt="" width="600px"></div>
     <!--<div id="pictures">
         <div id="felixImg" style="text-align: center; margin-bottom: 50px;"><img src="bilder/felixprofil.jpg" alt="" style="border-radius: 50%; width: 200px;"><p>Felix Baastad Berg</p></div>
         <div id="ulrikImg" style="text-align: center; margin-bottom: 50px;"><img src="bilder/ulrikprofil.jpg" alt="" style="border-radius: 50%; width: 200px;"><p>Ulrik Unneberg</p></div>
