@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onload="changeDisplay(0, 5)" onload="limitFunc()">
+<body onload="changeDisplay(0, 6)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -38,28 +38,33 @@
                     <img src="bilder/transcendente.png" height="100px">
                     <h2>Transcendente funksjoner</h2>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0, 5)">Introduksjon
+                <div class="venstreBoks"  onclick="changeDisplay(0, 6)">Introduksjon
                     <div class="triangle-left" id= "v0">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1, 5)">Inverse funksjoner
+                <div class="venstreBoks"  onclick="changeDisplay(1, 6)">Inverse funksjoner
                     <div class="triangle-left" id= "v1">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(2, 5)">Eksponential- og logaritmefunksjoner
+                <div class="venstreBoks"  onclick="changeDisplay(2, 6)">Eksponential- og logaritmefunksjoner
                     <div class="triangle-left" id= "v2">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(3, 5)">Inverse trigonometriske funksjoner
+                <div class="venstreBoks" onclick="changeDisplay(3, 6)">Inverse trigonometriske funksjoner
                     <div class="triangle-left" id= "v3">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(4, 5)">Hyperbolske funksjoner
+                <div class="venstreBoks" onclick="changeDisplay(4, 6)">Hyperbolske funksjoner
                     <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 6)">Oppgaver
+                    <div class="triangle-left" id= "v5">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
@@ -74,11 +79,12 @@
                     <img src="bilder/transcendente.png" height="100px">
                     <h2>Transcendente funksjoner</h2>
                 </div>
-                <div class="barListe" onclick="changeDisplay(0, 5)"><h3 class="sideH">Introduksjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(1, 5)"><h3 class="sideH">Inverse funksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(2 ,5)"><h3 class="sideH">Eksponential- og logaritmefunksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(3, 5)"><h3 class="sideH">Inverse trigonometriske funksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(4, 5)"><h3 class="sideH">Hyperbolske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(0, 6)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 6)"><h3 class="sideH">Inverse funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,6)"><h3 class="sideH">Eksponential- og logaritmefunksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 6)"><h3 class="sideH">Inverse trigonometriske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 6)"><h3 class="sideH">Hyperbolske funksjoner</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 6)"><h3 class="sideH">Oppgaver</h3></div>
             </div>
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
@@ -338,6 +344,31 @@ a^{-x} &= \frac{1}{a^x},    & \qquad a^{x-y} &= \frac{a^x}{a^y}, \\[1em]
                 \]
             </div>
                 </div>
+                <div id="indreSide5" class="indreSide">
+                    <h1>Oppgaver</h1>
+                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
+                    <h2>Video - Oppgaver</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                            
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/D6W0FBieWfA?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+    
+                        <input type="hidden" name="_subject" value="Transcendente">
+                        
+                        <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                        <div class="form">
+                        <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Tilbakemelding:</span>
+                        </label>
+                        </div>
+                   </form>
+                    </div>
         </div>
         
     </div>

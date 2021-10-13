@@ -8,7 +8,7 @@
 <link rel="icon" href="bilder/kateterSymbol.png">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body  onload="limitFunc()">
+<body  onload="changeDisplay(0, 2)" onload="limitFunc()">
     <!--Add: onload="changeDisplay(0, 5)"-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -33,12 +33,112 @@
         
     </div>
     <div id="siden">
-        <div>
-            <h1>Taylorpolynomer</h1>
-        <h3>Innhold kommer snart...</h3>
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/Taylorrekker.png" height="100px">
+                    <h2>Taylorpolynomer</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 2)">Approksimasjon ved taylorpolynomer
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 2)">Taylors teorem
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
         </div>
-        <div></div>
         <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/Taylorrekker.png" height="100px">
+                    <h2>Taylorpolynomer</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 2)"><h3 class="sideH">Approksimasjon ved taylorpolynomer</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 2)"><h3 class="sideH">Taylors teorem</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Approksimasjon ved taylorpolynomer</h1>
+                <p>Taylorpolynomer er en måte å approksimere glatte funksjoner med polynomer og det er et verktøy som brukes flittig i både matematiske og fysiske utregninger i senere kurs. Ideen er å evaluere en funksjon i et punkt \(x = a\) og deretter approksimere funksjonen til beste evne med en sum av polynomer rundt dette punktet.</p>
+
+                <p></p>
+                    <h2>Video - Taylorpolynomer</h2>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/K32gVcwtzXo?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Taylor">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/taylorrekker.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_Taylor" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                       <h2>Utledelse</h2>
+               <p>For å forstå hvordan en taylorrekke (taylorutvikling sier man ofte) av en funksjon fungerer et det enklest å ta utgangspunkt i et første grads taylor polynom</p>
+               \[
+               p_1(x) = f(a) + f'(a)(x-a). 
+               \]
+               <p>Dette er tangenten til funksjonen i punktet \(x = a\). Vi kan sjekke på utrykket over ved innsetting at \(p_1(a) = f(a) + f(a)(a-a) = f(a)\), og at \(p_1'(a) = (f'(a)(x-a))' = f'(a)\). Vi ser dermed at \(p_1(a) = f(a)\) og \(p_1'(a) = f'(a)\). At de alle deriverte opp til første deriverte stemmer overens er grunnen til at det kalles Taylorutviklingen av første orden.</p>
+                   
+                <p>For veldig små avstander \(x - a =\delta x\) er dette en relativt god tilnærming, men den kan gjøres bedre! Ved å la taylorpolynomet \(p^{(k)}(a) = f^{(k)}(a)\) for alle \(k = 0, 1, ..., n\) sier vi at vi har et taylorpolynom av grad \(n\) og vi skriver</p>
+                <div class="boks">
+                    \[
+                    P_n(x) = f(a) + f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n.
+                    \]
+                </div>
+                <p>Vi merker at \(p_n^{(k)}(a) = f^{(k)}(a)\) fordi det \(k\)'te leddet er det eneste som gjenstår etter \(k\) derivasjoner og innsetting. Leddene som inneholder \((x-a)^r\), der \(r < k\) vil bli derivert bort etter \(k\) derivasjoner. Ledd som inneholder \((x-a)^R\), der \(R > k\) vil inneholde minst en faktor \((x-a)\) etter \(k\) derivasjor. Leddet vil da bli null etter innsettingen \(a - a = 0\). Det eneste som gjenstår er det \(k\)'te elementet.</p>
+                <h2>Eksempler på bruk</h2>
+                <p>Som nevnt er det utrolig mange bruksområder taylorpolynomer, og vi skal i dette eksempelet ta dere gjennom et eksempel som viser hvor effektive taylorpolynomer kan være.</p>
+                <p>Vi har funksjonen</p>
+                \[
+                f(x) = \sqrt{1 - 2x} - \cos{(x)}
+                \]
+                <p>der \(x << 1\). Dette vil si at \(x\) er et veldig lite tall og en taylorutvikling rundt \(x = 0\) er ofte en god nok tilnærmelse. Taylorpolynomet av grad to av \(\sqrt{1 + x}\) er \(1 + x/2 -x^2/8\) og tilsvarende taylorpolynom for \(\cos{x}\) er \(1 - x^2/2\). Dersom vi substituerer inn riktige parametre og tayrlorutvikler \(f(x)\) til grad 2 får vi</p>
+                \[
+                P_2(x) = 1 - x + \frac{x^2}{2} - 1 - \frac{x^2}{2} = -x.
+                \]
+                <p>For små verdier av x kan vi derfor si at \(f(x) \approx -x\) som vi ser er en enorm forenkling.</p>
+            </div>
+            <div id="indreSide1" class="indreSide">
+                <h1>Taylors teorem</h1>
+                <p>Taylors teorem sier noe om feilen til en Taylorutvikling av grad \(n\). Vi skriver</p>
+                <div class="boks">
+                    \[
+                    f(x) = p_n(x) + \underbrace{\frac{f^{(n+1)}(s)}{(n+1)!}(x-a)^{n+1}}_{E_n(x)},
+                    \]
+                </div>
+                <p>der \(E_n(x)\) kalles feilleddet. Vi begrenser \(s\) til å befinne seg på intervallet mellom \(a\) og \(x\). Dersom vi taylorutvikler rundt punktet \(a = 1\) og vi ønsker å evaluere feilen i \(x = 2\), vil verdien til \(s\) (som gir eksakt feil) ligge på intervallet \((1, 2)\).</p>
+                <h2>Video - Taylors teorem</h2>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/teZ_c9550cc?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Taylorpolynomer">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/taylorrekker.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_Taylor_teorem" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               
+             </div>
     </div>
 </div>
 

@@ -8,7 +8,7 @@
 <link rel="icon" href="bilder/kateterSymbol.png">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body  onload="limitFunc()">
+<body  onload="changeDisplay(0, 2)" onload="limitFunc()">
     <!--Add: onload="changeDisplay(0, 5)"-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -33,12 +33,134 @@
         
     </div>
     <div id="siden">
-        <div>
-            <h1>Numerikk</h1>
-        <h3>Innhold kommer snart...</h3>
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/numerikk.png" height="100px">
+                    <h2>Numerikk</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 2)">Likningsløsere
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 2)">Numerisk integrasjon
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
         </div>
-        <div></div>
         <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/numerikk.png" height="100px">
+                    <h2>Numerikk</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 2)"><h3 class="sideH">Likningsløsere</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 2)"><h3 class="sideH">Numerisk integrasjon</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Likningsløsere</h1>
+                    <p>Vi skal i dette kapitellet se nærmere på numeriske metoder for å løse likninger. Ofte vil ikke likninger la seg løse analytisk og eksplisitt. Det vil si at vi ikke klarer å sette \(x\) alene på en side av likhetstegnet. Vi ønsker å løse denne likningen iterativt, som vil si at vi ved hjelp av gjentatte kalkulasjoner vil finne en mer og mer nøyaktig \(x\). Vi skal nå se på to måter å approksimere \(x\) på: fikspunktiterasjon og newtons metod.</p>
+                    <h2>Video - Likningsløsere</h2>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4pVl3diZqTQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Numerikk">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/numerikk.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_Likningsløsere" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                       <h2>Fikspunktiterasjon</h2>
+                       <p>Gitt utrykket \(x = g(x)\) kan fikspunktiterasjonen skrives som</p>
+                       \[
+                       x_{n+1} = g(x_n).
+                       \]
+                       <p>Visuelt er det enklest å se for seg linjene \(y = x\) og \(y = g(x)\). Vi ønsker å finne skjæringspunktet / skjæringspunktene mellom disse funksjonene.</p>
+                       <p><b>Konvergens:</b></p>
+                       <p>For at fikspunktiterasjonen skal konvergere mot fikspunktet \(x = x_f\) må \(|g'(x_f)| < 1\). Det gjelder derfor å velge funksjonen \(g(x)\) slik at den konvergerer mot roten vi ønsker å finne. For likningen \(4 = x^2\) med fikspunkt \(\pm 2\) vil mulige kandidater for \(g\) være \(g_1(x) = x - (x^2 - 4)/2x\) og \(g_1(x) = x^2 + x - 4\). De deriverte er \(g_1'(x) = (x^2 - 4)/2x^2\) og \(g_2'(x) = 2x+1\). \(|g_1(\pm 2)| = 0 < 1\) er mindre enn 1 for begge fikspunktene og konvergerer derfor mot begge fikspunktene. \(g_2\) derimot, er større enn 1 for begge fikspunkter og vil derfor ikke konvergere.</p>
+                       <h2>Newton metode</h2>
+                       <p>Newtons metode er et spesialtilfelle av fikspunktiterasjon. Gitt likningen \(f(x) = 0\) ønsker vi å finne roten / røttene \(r\). Vi finner den iterativt med</p>
+                       <div class="boks">
+                           \[
+                           x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} = g(x_n).
+                           \]
+                       </div>
+                       <p>Vi ser at formen på likningen er skrevet som \(x = g(x)\). Grunnen til at vi ønsker å skrive fikspunktiterasjonen på denne formen er gode konvergensegenskaper.</p>
+                       <p><b>Konvergens:</b></p>
+                       <p>Vi husker fra konvergens til fikspunktiterasjon at \(|g'(x)| < 1\) for at metoden skulle konvergere for likningen. Vi skriver derfor</p>
+                       \[
+                       g'(x) = 1 - \frac{f'(x)^2 - f(x)f''(x)}{f'(x)^2} = \frac{f(x)f''(x)}{f'(x)^2}.
+                       \]
+                       <p>Dersom vi evaluerer denne funksjonen i roten \(r\) vet vi at \(f(r) = 0\) som medfører at \(g'(r) = 0\). I de fleste tilfeller vil Newtons metode derfor konvergere veldig raskt. </p>
+                </div>
+            <div id="indreSide1" class="indreSide">
+                <h1>Numerisk integrasjon</h1>
+                <p>Når integraler er for vanskelige til å løse ved hjelp av regnereglene vi har lært i kapittel 4, ønsker vi å benytte numerisk integrasjon. I numerisk integrasjon summerer vi opp arealet under et endelig antall delintervaller, i motsetning til vanlige integraler der vi summerer uendelig mange infitesimalt tynne intervaller. For hvert delintervall i numerisk integrasjon ønsker vi å approksimere arealet under grafen. Vi skal i dette delkapittelet studere tre metoder: midtpunktsmetoden, trapesmetoden og Simpsons metode.</p>
+                <h2>Video - Numerisk integrasjon</h2>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/T7c7dFJ076o?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Numerikk">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/numerikk.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_numerisk_integrasjon" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Midtpunktsmetoden (grad 0)</h2>
+               <p>Gitt et delintervall \([x_i,x_{i+1}] \) ønsker vi å approksimere funksjonen over dette intervallet med et polynom av grad null, det vil si en konstant. Arealet under grafen på delintervallet former et rektangel. Vi velger at den konstante funksjonen skal ha samme verdi som midtpunktet til intervallet \(m_i = (x_i + x_{i+1})/2\). Med \(\Delta x = h\) får vi har da \(\Delta A = f(m_i)h\). På intervallet \([x_0, x_N]\) får vi det totale arealet </p>
+               <div class="boks">
+                   \[
+                   \int_a^b f(x) \, dx \approx h\sum_{i = 0}^{N-1}f(m_i).
+                   \]
+               </div>
+               <p><b>Feilestimat:</b></p>
+               \[
+               E_n = \frac{1}{24}h^2f''(\lambda)(b-a), \quad \lambda \in (a, b).
+               \]
+               <p>Vi kjenner alle størrelsene i feilen unntatt \(f''(\lambda)\). For å finne en øvre skranke for feilen \(\max |E_n|\) må vi derfor sette inn \(\max_{x \in (a, b)} f''(x)\) for \(f''(\lambda)\). Tilsvarende gjelder for de neste metodene.</p>
+               <h2>Trapesmetoden (grad 1)</h2>
+               <p>Gitt et delintervall \([x_i,x_{i+1}] \) ønsker vi å approksimere funksjonen over dette intervallet med et polynom av grad null, det vil si en lineær funksjon som starter i \(f(x_i)\) og ender i \(f(x_{i+1})\). Arealet under grafen på delintervallet former et trapes med areal \(\Delta A = (f(x_i) + f(x_{i+1}))h/2\). Det totale arealet blir da</p>
+               <div class="boks">
+                \[
+                \int_a^b f(x) \, dx \approx \frac{h}{2}\sum_{i = 0}^{N-1} f(x_i) + f(x_{i+1}) = \frac{h}{2} \left(f(x_0) + 2\sum_{i = 1}^{N-1} f(x_i) + f(x_N) \right).
+                \]
+            </div>
+            <p><b>Feilestimat:</b></p>
+               \[
+               E_n = -\frac{1}{12}h^2f''(\lambda)(b-a), \quad \lambda \in (a, b).
+               \]
+            <h2>Simpsons metode (grad 2)</h2>
+            <p>Gitt et delintervall \([x_i,x_{i+2}] \) ønsker vi å approksimere funksjonen over dette intervallet med et polynom av grad to: \(p_2(x) = ax^2 + bx + c\). Dersom vi finner konstantene \(a, b, c\) som gjør at \(p_2(x)\) interpolerer (krysser) alle punktene \((x_i, f(x_i)),(x_{i+1}, f(x_{i+1})),(x_{i+2}, f(x_{i+2}))\). Det går ann å vise at arealet under denne funksjonen er \( \Delta A = \int p_2(x)dx = h/3(f(x_i) + 4f(x_{i+1}) + f(x_{i+2})\). Vi kan summere over hele intervallet for partallsindekser og få</p>
+               <div class="boks">
+                \[
+                \int_a^b f(x) \, dx \approx \frac{h}{3}\sum_{i = 2n} f(x_i) + 4f(x_{i+1}) + f(x_{i+2}) = \frac{h}{3}\left( f(x_0) + 4\sum_{i = 1}^{n/2}f(x_{2i-1}) + 2\sum_{i = 1}^{n/2-1}f(x_{2i}) +f(x_n) \right).
+                \]
+               </div>
+               <p><b>Feilestimat:</b></p>
+               \[
+               E_n = -\frac{1}{180}h^4f^{(4)}(\lambda)(b-a), \quad \lambda \in (a, b).
+               \]
+             </div>
     </div>
 </div>
 
