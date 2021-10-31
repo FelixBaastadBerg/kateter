@@ -3,13 +3,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="test.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <title>Kateter</title>
 <link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body  onload="limitFunc()">
-    <!--Add: onload="changeDisplay(0, 5)"-->
+<body onload="changeDisplay(0, 5)" onload="limitFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -33,12 +32,324 @@
         
     </div>
     <div id="siden">
-        <div>
-            <h1>Følger & Rekker</h1>
-        <h3>Innhold kommer snart...</h3>
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/rekker.png" height="100px">
+                    <h2>Følger & rekker</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 5)">Følger
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 5)">Rekker
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 5)">Alternerende rekker
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 5)">Potensrekker
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 5)">Taylorrekker
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
         </div>
-        <div></div>
         <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/rekker.png" height="100px">
+                    <h2>Følger & rekker</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 5)"><h3 class="sideH">Følger</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 5)"><h3 class="sideH">Rekker</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,5)"><h3 class="sideH">Alternerende rekker</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 5)"><h3 class="sideH">Potensrekker</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 5)"><h3 class="sideH">Taylorrekker</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Følger</h1>
+                <p>Vi skriver en følge som \(\{a_n\} = a_1, a_2, a_3, ...\) som en liste med ordnede tall. I dette kurset ser vi i all hovedsak på uendelige følger, som vil si at det ikke eksisterer et siste ledd i følgen.</p>
+                    <h2>Video - Følger</h2>
+                    
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/c5HtMdr0_sM?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Rekker">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/rekker.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_følger" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                       <h2>Fagbegreper</h2>
+                       <ul>
+                           <li><p>En følge \(\{a_n\}\) er <b>øvre begrenset</b> av \(L\) dersom alle elementer i \(\{a_n\} \leq L\). Tilsvarende er rekker <b>nedre begrenset</b> om det eksisterer en \(L\) som begrenser rekken fra nedsiden.</p></li>
+                           <li><p>En følge \(\{a_n\}\) er <b>positiv</b> eller <b>negativ</b> om følgen er henholdsvis nedre eller øvre begrenset av \(L = 0\).</p></li>
+                           <li><p>En følge \(\{a_n\}\) er <b>voksende</b> eller <b>avtakende</b> om elementene hendholdsvis vokser i verdi \((a_{n+1} \geq a_n)\) eller synker i verdi \((a_{n+1} \leq a_n)\). En rekke som enten synker eller vokser kalles <b>monoton</b>.</p></li>
+                           <li><p>En følge \(\{a_n\}\) er <b>alternerende</b> dersom påfølgende elementer i følgen har forskjellig fortegn. Matematisk beskriver vi det som at \(a_{n+1}a_n < 0\).</p></li>
+                       </ul>
+                       <h2>Konvergens</h2>
+                       <p>En følge kan tenkes på som en funksjon \(a_n = a(n)\), der definisjonsmengen kun er heltall \(n \in \{1, 2, 3, ...\}\). Når vi nå snakker om konvergens av en følge ser vi for oss en horisontal linje \(L\) som \(\{a_n\}\) kommer nærmere når \(n \to \infty\). Vi skriver at en følge konvergerer dersom</p>
+                       \[
+                       \lim_{n \to \infty} a_n = L.
+                       \]
+                       <p>Intuitivt kan vi tenke oss når følgen konvergerer, betyr det at den ikke divergerer, og det må finne en nedre og øvre grense på følgen. Enhver følge som konvergerer er derfor også <b>begrenset</b>.</p>
+            </div>
+            <div id="indreSide1" class="indreSide">
+                <h1>Rekker</h1>
+                <p>En rekke er en sum av en følge \(\{a_n\}\). Vi skriver summen som</p>
+                \[
+                S_N = a_1 + a_2 + ... + a_N = \sum_{i = 1}^N a_i,
+                \]
+                <p>og vi skriver den uendelige rekken som grenseverdien</p>
+                \[
+                S = \lim_{N \to \infty} S_N= \lim_{N \to \infty}\sum_{i = 1}^N a_i.
+                \]
+                <p>I dette delkapitellet skal vi i stor grad diskutere hvordan konvergens kan evalueres.</p>
+                <h2>Video - Rekker</h2>
+             
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BSQcKBVX4ng?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Rekker">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/rekker.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_rekker" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+                <h2>Konvergensteoremer</h2>
+                <p>At en rekke konvergerer er det samme som at summen av en rekke ikke blir uendelig. For at en rekke skal konvergere må</p>
+                \[
+                \sum_{i = 1}^\infty a_i < \infty.
+                \]
+                <p>Under følger teoremer som gjelder for konvergens.</p>
+                <ul>
+                    <li><p>For at en rekke skal konvergere må elementene i rekken gå mot null for store verdier av \(n\). Matematisk skriver vi</p>
+                    \[
+                    \sum_{i = 0}^\infty a_i < \infty \Rightarrow \lim_{n \to \infty} a_n = 0.
+                    \]
+                </li>
+                <li><p>For to uendelige summer \(\sum a_i, \sum b_i\) som begge konvergerer gjelder</p>
+                    \[
+                    \sum_{i = 1}^\infty (c a_i + b_i) = c\sum_{i = 1}^\infty a_i + \sum_{i = 1}^\infty b_i.
+                    \]
+                </li>
+                <li><p>For to uendelige summer \(\sum a_i, \sum b_i\) som begge konvergerer gjelder</p>
+                    \[
+                    a_n < b_n, \text{ for alle } n \Rightarrow \sum_{i = 1}^\infty a_i < \sum_{i = 1}^\infty b_i.
+                    \]
+                </li>
+                </ul>
+                <h2>Konvergenstester for positive rekker</h2>
+                <p>At elementene i en rekke går mot null når \(n \to \infty\) betyr ikke direkte at rekkesummen vil eksistere. For at summen skal konvergere må følgen gå "fort nok" mot null. Nedenfor følger tester som skjekker hvor fort en følge går mot null, og kan dermed bestemme om rekken konvergerer eller ikke.</p>
+                <p><b>Integraltesten:</b><br>
+                Som nevnt i delkapitellet om følger kan en følge skrives som en funksjon \(a_n = a(n)\) med heltall som definisjonsmengde: \(n = 1, 2, ...\). Dersom vi antar (for et øyeblikk) at definisjonsmengden er kontinuerlig og at funksjonen tar alle reelle verdier langs tallinjen, vil summen skrives om til et integral. Integraltesten sier at dersom det bestemte integralet mellom et vilkårlig tall \(N\) og \(\infty\) eksisterer, så vil summen til \(a_n\) konvergere (eksistere) 
+                </p>
+                \[
+                \sum_{i = 1}^\infty a_i < \infty \iff \int_N^\infty a(n)dn < \infty.
+                \]
+                <p><b>Ratiotesten:</b><br>
+                Denne testen går ut på at vi ønsker å sjekke om påfølgende elementer avtar selv når \(n \to \infty\). Vi ønsker å finne</p>
+                \[
+                \rho = \lim_{n \to \infty} \frac{a_{n+1}}{a_n}.
+                \]
+                <p>Dersom \(\rho \in [0, 1)\) vil rekken konvergere. Dersom \(\rho \in (1, \infty)\) vil rekken divergere.</p>
+                <p><b>Rottesten:</b><br>
+                Tilsvarende som for ratiotesten ønsker vi her å sjekke om elementene går raskt nok mot null når \(n \to \infty\). Vi finner</p>
+                \[
+                \sigma = \lim_{n \to \infty} (a_n)^{1/n}.
+                \]
+                <p>Dersom \(\sigma \in [0, 1)\) vil rekken konvergere. Dersom \(\sigma \in (1, \infty)\) vil rekken divergere.</p>
+                <p><b>Sammenlikningstesten:</b><br>
+                Vi ønsker å finne ut om \(\sum a_n\) konvergerer. Ofte er det lettere vise at en større sum \(\sum k\cdot b_n\) konvergerer og dermed blir \(\sum a_n\) sin konvergens bevist. Vi viser hvordan sammenlikningstesten funker med et eksempel: Konvergerer summen av \(a_n = 1/(n^2 + 3)\)? Vi vet at</p>
+                \[
+                 \frac{1}{n^2 - 3} \leq \frac{2}{n^2}, \quad n > 3.
+                \]
+                Vi vet at 
+                \[
+                \sum_{n = 4}^\infty \frac{2}{n^2} < \infty
+                \]
+                ved for eksempel integraltesten. Dermed kan vi slå fast at den opprinnelige summen konvergerer.
+             </div>
+             
+            
+            <div id="indreSide2" class="indreSide">
+                <h1>Alternerende rekker</h1>
+                <p>Alternerende rekker har andre konvergensbettingelser og egenskaper enn strengt positive rekker. I dette delkapitellet ønsker vi å snakke om betinget og absolutt konvergens, som er egenskaper alternerende rekker kan ha.</p>
+                <h2>Video - Alternerende rekker</h2>
+                
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l8rYsAf14QQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Rekker">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/rekker.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_Alternerende_Rekker" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Betinget konvergens</h2>
+               <p>Som nevnt er under delkapittelet om følger er alternerende rekker slik at etterfølgende ledd oppfyller \(a_{n+1}a_n < 1\). Dette medfører at vi stiller enklere krav til konvergens av alternerende rekker siden påfølgende ledd vil kanselere store deler av hverandre. For at en alternerende rekke skal konvergere må følgende krav være oppfylt</p>
+               <ul style="list-style-type: lower-roman;">
+                   <li>\(|a_{n+1}| \leq |a_n|\)</li>
+                   <li>\(\lim_{n \to \infty} a_n = 0\)</li>
+               </ul>
+               <p>Vi slipper dermed kravet om at rekken må gå til null "fort nok". Så lenge den går til null, vil rekken konvergere. Vi kaller dette <b>bettinget konvergens</b>, dersom rekka ikke hadde konvergert om alle leddene hadde vært positive. Rekken konvergerer bare under <b>bettingelsen</b> av at annenhvert ledd er positivt og negativt.</p>
+               <h2>Absolutt konvergens</h2>
+               <p>En alternerende rekke er absolutt konvergent dersom rekka konvergerer selv om vi adderer elementene med absoluttverdi. Matematisk kan vi skrive at en rekke er absolutt konvergent som</p>
+               \[
+               \sum_{i = 1}^\infty |a_i| < \infty.
+               \]
+               <p>Her vil de samme reglene for konvergens av positive rekker gjelde.</p>
+               <h2>Viktig å forstå</h2>
+               <p>Dersom en alternerende rekke konvergerer vil påfølgende elementer ha motsatt fortegn og \(|a_{n+1}| \leq |a_n|\). Dette vil si at dersom vi har \(a_N\) og legger til \(a_{N+1}\) vil vi ende opp med en sum som er lavere i absoluttverdi enn \(a_N\). Matematisk skriver vi</p>
+               \[
+               \left|\sum_{i = N}^{\infty} a_i\right| \leq |a_N|.
+               \]
+               <p>Dette kan du fint sjekke for deg selv ved å evaluere summen \(S = 16 - 8 + 4 - 2 + 1 + ... \)</p>
+             </div>
+            <div id="indreSide3" class="indreSide">
+                <h1>Potensrekker</h1>
+                <p>En rekke på formen</p>
+                \[
+                S(x) = \sum_{n = 0}^\infty a_n(x-c)^n
+                \]
+                <p>kalles potensrekker. Her kan \(a_n\) være en hvilken som helst følge. I dette delkapittelet skal vi nærmere på når rekken konvergerer.</p>
+                 <h2>Video - Potensrekker</h2>
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9ddh4t8kGro?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Rekker">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/rekker.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_potensrekker" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Konvergensradius</h2>
+               <p>Vi ønsker å finne ut hvilke \(x\)-verdier som gjør at rekken konvergerer. Vi ser på \(c\) som sentrum av en "sirkel" og bestemmer dermed konvergensradiusen \(R\) som maksimal avstand mellom \(x\) og \(c\) uten at rekka skal divergere. Her finnes det i hovedsak tre grupper av verdier \(R\) kan ha</p>
+               <ol>
+                   <li><p>\(R = 0\): <br>
+                    Dersom \(a_n\) vokser veldig mye fortere enn \((x - c)^n\) klarer å avta, er \(x = c\) eneste måte rekken konvergerer på. Et eksempel er \(a_n = n!\).
+                   </p></li>
+                   <li>
+                       <p>
+                           \(R = \infty\): <br>
+                           Dersom \(a_n\) avtar mye raskere enn \((x - c)^n\) klarer å vokse, kan \(x\) ha alle verdier. Et eksempel er \(a_n = 1/n!\).
+                       </p>
+                   </li>
+                   <li>
+                       <p>
+                           \(0 < R < \infty\): <br>
+                           Her vil \(x\) sin verdi avgjøre om rekken konvergerer eller ikke. Rekken konvergerer bare dersom \(|x - c| < R\).
+                       </p>
+                   </li>
+               </ol>
+               <h2>Bestemme konvergensradius</h2>
+               <p>Det er ofte lett å finne konvergensradius gjennom <i>ratiotesten</i>, som ble gjennomgått i delkapittelet om rekker. Vi skriver da opp to påfølgende ledd og krever at forholdet deres skal være under 1 når \(n \to \infty\). Vi bruker eksempelet over der \(a_n = 1/n!\):</p>
+               \[
+               \rho = \lim_{n \to \infty} \frac{|a_{n+1}|}{|a_n|} = \lim_{n \to \infty} \frac{|(x-c)^{n+1}|}{(n-1)!}\cdot \frac{n!}{|(x-c)^n|} = \lim_{n \to \infty} \frac{|x - c|}{n+1} < 1.
+               \]
+               <p>Vi observerer at nevneren går mot uendelig når \(n \to \infty\). For at \(\rho < 1\) kan \(x\) derfor ha alle verdier. </p>
+              </div>
+            <div id="indreSide4" class="indreSide">
+                <h1>Taylorrekker</h1>
+                <p>En taylorrekke er et taylorpolynom med uendelig mange ledd. Det er et spesialtilfelle av potensrekker med</p>
+                \[
+                a_n = \frac{f'(c)}{n!}.
+                \]
+                <p>Vi legger merke til at nevneren \(n!\) vokser raskere enn \((x-c)^n\), så taylorrekken konvergerer for alle \(x\).</p>
+                <h2>Video - Taylorrekker</h2>
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kplyH_7yC1Y?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Rekker">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/rekker.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_taylorrekker" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Definisjon</h2>
+               <p>En taylorrekke er definert som</p>
+               <div class="boks">
+                   \[
+                   f(x) = \sum_{n = 0}^\infty \frac{f'(c)}{n!}(x-c)^n.
+                   \]
+               </div>
+               <p>Vi legger merke til likhetstegnet (\(=\)) som betyr at alle uendelig deriverbare analytiske funksjoner kan skriver <b>nøyaktig</b> som en taylorrekke.</p>
+               <p>Det er også verdt å merke seg at \(c\) er en valgfri konstant. Det er vanlig å velge \(c = 0\) slik at \((x - c)^n = x^n\).</p>
+               <h2>Manipulering av uttrykk</h2>
+               <p>Det kan lønne seg å være venn med kjente taylorrekker og hvilke manipulasjoner som er vanlige å gjøre. Vi viser dette gjennom et eksempel. Vi ønsker å finne verdien av</p>
+               \[
+               S = \sum_{n = 0}^\infty (n+1)\frac{3^n}{n!}.
+               \]
+               <p>Her må man vite at dette minner om taylorrekken til \(e^x\) som er på formen</p>
+               \[
+               e^x = \sum_{n = 0}^\infty \frac{x^n}{n!}.
+               \]
+               <p>Her kan vi multiplisere begge sider med \(x\) får å få et uttykk med leddet \((n+1)\)</p>
+               \[
+               xe^x = \sum_{n = 0}^\infty \frac{x^{n+1}}{n!}.
+               \]
+               <p>Vi ser at dersom vi deriverer begge sider av likhetstegnet vil vi få </p>
+               \[
+               e^x(1+x) = \sum_{n = 0}^\infty (n+1)\frac{x^{n}}{n!} 
+               \]
+               <p>Summen som vi ønsker å finne vil nå være denne funksjonen evaluert i \(x = 3\)</p>
+               \[
+               S = \sum_{n = 0}^\infty (n+1)\frac{3^{n}}{n!} = e^3(1+3) \approx 80,34.
+               \]
+            </div>
+        </div>
+        
     </div>
 </div>
 
