@@ -8,7 +8,7 @@
 <link rel="icon" href="bilder/kateterSymbol.png">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body  onload="limitFunc()">
+<body  onload="changeDisplay(0, 2)" onload="limitFunc()">
     <!--Add: onload="changeDisplay(0, 5)"-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -33,12 +33,159 @@
         
     </div>
     <div id="siden">
-        <div>
-            <h1>Difflikninger</h1>
-        <h3>Innhold kommer snart...</h3>
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/difflikninger.png" height="100px">
+                    <h2>Difflikninger</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 2)">1. ordens differensiallikninger
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 2)">Numeriske metoder
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
         </div>
-        <div></div>
         <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/difflikninger.png" height="100px">
+                    <h2>Difflikninger</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 2)"><h3 class="sideH">1. ordens differensiallikninger</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 2)"><h3 class="sideH">Numeriske metoder</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Førsteordens differensiallikninger</h1>
+                <p>En førsteordens differensiallikning er en likningpå formen</p>
+                \[
+                g(x, y(x), y'(x)) = 0.
+                \]
+                <p>Endringen til \(y(x)\) er avhengig av funksjonsverdien. Målet med løsninger på differensiallikninger er å finne \(y(x)\) uttrykt eksplisitt med hensyn på \(x\).</p>
+                    <h2>Video - Differensiallikninger</h2>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kCUFV2hSTYc?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Difflikninger">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/difflikninger.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_forste_orden" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                      <h2>Separable differensiallikninger</h2>
+                      <p>Dersom vi har en likning på formen</p>
+                      \[
+                      \frac{dy}{dx} = f(x)g(y),
+                      \]
+                      <p>kan vi skrive om til formen</p>
+                      \[
+                      \frac{dy}{g(y)} = f(x)dx.
+                      \]
+                      <p>Vi integrerer nå begge sider og får</p>
+                      \[
+                      G(y) = F(x) + C,
+                      \]
+                      <p>der \(G\) og \(F\) er de integrerte av \(g\) og \(f\). Likningen overfor løser vi med hensyn på \(y\) og vi oppnår et eksplisitt uttrykk av \(y(x)\).</p>
+                      <h2>Førsteordens, lineær differensiallikning</h2>
+                      <p>Dersom vi får en differensiallikning på formen</p>
+                      \[
+                      \frac{dy}{dx}+p(x)y = q(x),
+                      \]
+                      <p>så kaller vi den lineær grunnet at \(y^1\) inngår i likningen. Med \(P(x) = \int p(x)dx\) multipliserer vi likningen med \(e^{P(x)}\)</p>
+                      \[
+                      \frac{dy}{dx}e^{P(x)} + yp(x)e^{P(x)} = q(x)e^{P(x)}.
+                      \]
+                      <p>Vi observerer at venstre siden av likhetstegnet er den deriverte av et produkt, og vi skriver om likningen til</p>
+                      \[
+                      \frac{d}{dx}\left( ye^{P(x)} \right) = q(x)e^{P(x)}.
+                      \]
+                      <p>Derivasjon og integrasjon er motsatte operasjoner, så for å eliminere den deriverte på venstresiden integrerer vi nå likningen over</p>
+                      \[
+                      ye^{P(x)} = \int q(x)e^{P(x)}dx + C.
+                      \]
+                      <p>Vi løser likningen med hensyn på \(y\) og får</p>
+                      \[
+                      y(x) = e^{-P(x)}\left( \int q(x)e^{P(x)}dx + C \right).
+                      \]
+                      <h2>Entydighet og eksistens</h2>
+                      <p>Begge integrasjonsmetodene overfor ender med en løsning der konstanten \(C\) inngår. \(C\) kan være alle reelle tall og vi har derfor uendelig mange løsninger som varierer med \(C\). Dersom vi sammen med differensiallikningen får oppgitt en initialbettingelse, sier vi at vi har et initialverdiproblem. Initialverdien gir informasjon om startpunktet og skrives på formen</p>
+                      \[
+                      y(x_0) = y_0.
+                      \]
+                      <p>Dersom funksjonen \(y'(x) = f(x, y)\) er kontinuerlig deriverbar med hensyn på \(x\) og \(y\) så har vi en unik løsning på initialverdiproblemet. Ved å sette inn \(y_0\) og \(x_0\) i løsningen på differensiallikningen finner vi konstanten \(C\). Det finnes kun én \(C\) som oppfyller initialverdien.</p>
+            </div>
+            <div id="indreSide1" class="indreSide">
+                <h1>Numeriske metoder</h1>
+                <p>Ofte er ikke initialverdiproblemet vi skal løse på formene gitt i forrige delkapittel, og det går ikke an å løse analytisk. I dette delkapitellet skal vi se på initialverdiproblemer på formen</p>
+                \[
+                \frac{dy}{dx} = f(x,y) \, , \qquad y(x_0) = y_0,
+                \]
+                <p>og hvordan vi kan løse disse numerisk.</p>
+                <h2>Video - Numeriske metoder</h2>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YlOT56XT4C4?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Difflikninger">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/difflikninger.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_numeriske_metoder" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Modell</h2>
+               <p>Når vi skal løse differensiallikninger i dette kurset definerer vi skrittlengden \(h\) som avstanden mellom to påfølgende \(x\)-verdier. Vi starter med intialverdien \(x_0\) og itererer dermed</p>
+               \[
+               \begin{align}
+&x_0 , \\
+&x_1 = x_0+ h, \\
+&x_2= x_0 + 2h, \ldots\\
+\end{align}
+               \]
+               <p>Numeriske løsninger på differensiallikninger går ut på å approksimere \(y_i\)-verdiene til tilhørende \(x_i\) verdier ved hjelp av den deriverte \(f(x,y)\).</p>
+               <h2>Eulers metode</h2>
+               <p>Tangenten til en funksjon \(y(x)\) i et punkt \((x_i, y_i)\) skrives på formen: \(l(x) = y'(x_i)(x-x_i) + y_i\). Dersom vi evaluerer tangenten i et punkt en lengde \(\Delta x = h\) unna, kan vi skrive om likningen til</p>
+               \[
+               l(x_i + h) = y'(x_i)(x_i + h - x_i) + y_i = y'(x_i)h + y_i.
+               \]
+               <p>Vi vet fra modellen at \(x_{i+1} = x_i + h\) og vi definerer tangenten sin verdi i dette punktet til å være den approksimerte løsningen \(y_{i+1}\). Vi vet også at den deriverte i punktet \(x_i\) kan skrives som \(y'(x_i) = f(x_i, y_i)\). Vi kan nå formulere Eulers metode som </p>
+               <div class="boks">
+                   \[
+                   y_{i+1} = y_i + hf(x_i, y_i).
+                   \]
+               </div>
+               <h2>Heuns metode</h2>
+               <p>Denne metoden er en forbedring av Eulers metode. Vi regner først ut </p>
+               \[
+               u_{i+1} = y_i + hf(x_i, y_i),
+               \]
+               <p>som er et skritt med Eulers metode. Derretter bruker vi det approksimerte punktet \((x_{i+1}, u_{i+1})\) til å finne en mer nøyaktig approksimasjon av verdien i punktet; nemlig \(y_{i+1}\). Vi gjør dette ved å finne gjennomsnittet av den deriverte i \(x_i\) og \(x_{i+1}) og så gå et skritt \(h\), med denne forbedrete deriverte. Heus metode skrives som</p>
+               <div class="boks">
+                \[
+                y_{i+1} = y_i + h\frac{f(x_i, y_i) + f(x_{i+1}, u_{i+1})}{2}.
+                \]
+               </div> 
+             </div>
     </div>
 </div>
 
