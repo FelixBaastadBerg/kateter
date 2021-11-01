@@ -29,3 +29,31 @@
     left: 0;
     z-index: 1;
   }
+
+  #matte2:hover h3{
+    transform: scale(1);
+    transition-duration: 200ms;
+  }
+  #matte2{
+    cursor: default;
+    margin-left: 20px;
+  }
+
+  #outerBox{
+    display: grid; 
+    grid-template-columns: auto 1fr;
+    padding-bottom: 40px;
+  }
+
+  @media only screen and (max-width: 550px){
+    #outerBox{
+        grid-template-columns: 1fr;
+    }
+    #matte2{
+      margin: auto;
+      margin-top: 20px;
+    }
+    .temaboks{
+      margin: auto;
+    }
+}
