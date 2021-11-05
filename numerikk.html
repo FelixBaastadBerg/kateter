@@ -39,13 +39,18 @@
                     <img src="bilder/numerikk.png" height="100px">
                     <h2>Numerikk</h2>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0, 2)">Likningsløsere
+                <div class="venstreBoks"  onclick="changeDisplay(0, 3)">Likningsløsere
                     <div class="triangle-left" id= "v0">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1, 2)">Numerisk integrasjon
+                <div class="venstreBoks"  onclick="changeDisplay(1, 3)">Numerisk integrasjon
                     <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 3)">Numerisk integrasjon
+                    <div class="triangle-left" id= "v2">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
@@ -60,8 +65,9 @@
                     <img src="bilder/numerikk.png" height="100px">
                     <h2>Numerikk</h2>
                 </div>
-                <div class="barListe" onclick="changeDisplay(0, 2)"><h3 class="sideH">Likningsløsere</h3></div>
-                <div class="barListe" onclick="changeDisplay(1, 2)"><h3 class="sideH">Numerisk integrasjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(0, 3)"><h3 class="sideH">Likningsløsere</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 3)"><h3 class="sideH">Numerisk integrasjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 3)"><h3 class="sideH">Oppgaver</h3></div>
             </div>
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
             <div id = "indreSide0" class="indreSide">
@@ -161,6 +167,27 @@
                E_n = -\frac{1}{180}h^4f^{(4)}(\lambda)(b-a), \quad \lambda \in (a, b).
                \]
              </div>
+             <div id="indreSide2" class="indreSide">
+                <h1>Oppgaver</h1>
+               <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
+            <h2>Video - Oppgaver</h2>
+            <div class="iframe-container">
+                        
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pdyJbUsIrX0?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                <input type="hidden" name="_subject" value="Numerikk">
+                
+                <input type="hidden" name="_next" value="https://katetr.no/numerikk.html">
+                <div class="form">
+                <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content-name">Tilbakemelding:</span>
+                </label>
+                </div>
+           </form>
+            </div>
     </div>
 </div>
 
