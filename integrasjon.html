@@ -1,678 +1,920 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="test.css">
-<title>Kateter</title>
-<link rel="icon" href="bilder/kateterSymbol.png">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="test.css">
+    <title>Kateter</title>
+    <link rel="icon" href="bilder/kateterSymbol.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
+
 <body onload="changeDisplay(0, 10)" onload="limitFunc()">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
-<div class="main">
-    <div id="dropdown">
-        <div id="innerDropdown">
-            <div id="inInIn">
-                <div><a href="kurs.html">Kurs</a></div>
-            <div><a href="kontakt.html">Kontakt</a></div>
-            <div><a href="forord.html">Forord</a></div>
-            </div>
-        </div>
-    </div>
-    <div id="rel">
-        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
-        <div id="header">
-            <div class="valg"><a href="kurs.html">Kurs</a></div>
-            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
-        </div>
-        
-    </div>
-    <div id="siden">
-        <div id="venstreSide">
-            <div id="indreVenstre">
-                <div id="venstreTema">
-                    <img src="bilder/integraler.png" height="100px">
-                    <h2>Integrasjon</h2>
-                </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0, 10)">Riemannintegralet
-                    <div class="triangle-left" id= "v0">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1, 10)">Sentrale egenskaper
-                    <div class="triangle-left" id= "v1">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks"  onclick="changeDisplay(2, 10)">Substitusjon
-                    <div class="triangle-left" id= "v2">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks"  onclick="changeDisplay(3, 10)">Delvis integrasjon
-                    <div class="triangle-left" id= "v3">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(4, 10)">Integral av rasjonale funksjoner
-                    <div class="triangle-left" id= "v4">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(5, 10)">Invers substitusjon
-                    <div class="triangle-left" id= "v5">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(6, 10)">Uegentlig integral
-                    <div class="triangle-left" id= "v6">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(7, 10)">Omdregningslegemer
-                    <div class="triangle-left" id= "v7">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(8, 10)">Buelengder og rotasjonsflater
-                    <div class="triangle-left" id= "v8">
-                        <div class="inner-triangle"></div>
-                    </div>
-                </div>
-                <div class="venstreBoks" onclick="changeDisplay(9, 10)">Oppgaver
-                    <div class="triangle-left" id= "v9">
-                        <div class="inner-triangle"></div>
-                    </div>
+    <div class="main">
+        <div id="dropdown">
+            <div id="innerDropdown">
+                <div id="inInIn">
+                    <div><a href="kurs.html">Kurs</a></div>
+                    <div><a href="kontakt.html">Kontakt</a></div>
+                    <div><a href="forord.html">Forord</a></div>
                 </div>
             </div>
-        
         </div>
-        <div>
+        <div id="rel">
+            <div id="logo1"><a href="index.html">
+                    <div id="innerLogo"><img src="bilder/kateterLogo.png" style="height: 27px; width: auto;"></div>
+                </a></div>
+            <div id="header">
+                <div class="valg"><a href="kurs.html">Kurs</a></div>
+                <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+            </div>
 
-            <div id="sideNavBar">
-                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
-                <div id="toppen">
-                    <img src="bilder/integraler.png" height="100px">
-                    <h2>Integrasjon</h2>
+        </div>
+        <div id="siden">
+            <div id="venstreSide">
+                <div id="indreVenstre">
+                    <div id="venstreTema">
+                        <img src="bilder/integraler.png" height="100px">
+                        <h2>Integrasjon</h2>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(0, 10)">Riemannintegralet
+                        <div class="triangle-left" id="v0">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(1, 10)">Sentrale egenskaper
+                        <div class="triangle-left" id="v1">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(2, 10)">Substitusjon
+                        <div class="triangle-left" id="v2">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(3, 10)">Delvis integrasjon
+                        <div class="triangle-left" id="v3">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(4, 10)">Integral av rasjonale funksjoner
+                        <div class="triangle-left" id="v4">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(5, 10)">Invers substitusjon
+                        <div class="triangle-left" id="v5">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(6, 10)">Uegentlig integral
+                        <div class="triangle-left" id="v6">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(7, 10)">Omdregningslegemer
+                        <div class="triangle-left" id="v7">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(8, 10)">Buelengder og rotasjonsflater
+                        <div class="triangle-left" id="v8">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
+                    <div class="venstreBoks" onclick="changeDisplay(9, 10)">Oppgaver
+                        <div class="triangle-left" id="v9">
+                            <div class="inner-triangle"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="barListe" onclick="changeDisplay(0, 10)"><h3 class="sideH">Riemannintegralet</h3></div>
-                <div class="barListe" onclick="changeDisplay(1, 10)"><h3 class="sideH">Sentrale egenskaper</h3></div>
-                <div class="barListe" onclick="changeDisplay(2, 10)"><h3 class="sideH">Substitusjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(3 ,10)"><h3 class="sideH">Delvis integrasjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(4, 10)"><h3 class="sideH">Integral av rasjonale funksjoner</h3></div>
-                <div class="barListe" onclick="changeDisplay(5, 10)"><h3 class="sideH">Invers substitusjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(6, 10)"><h3 class="sideH">Uegentlig integral</h3></div>
-                <div class="barListe" onclick="changeDisplay(7, 10)"><h3 class="sideH">Omdregningslegemer</h3></div>
-                <div class="barListe" onclick="changeDisplay(8, 10)"><h3 class="sideH">Buelengder og rotasjonsflater</h3></div>
-                <div class="barListe" onclick="changeDisplay(9, 10)"><h3 class="sideH">Oppgaver</h3></div>
+
             </div>
-            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
-            <div id = "indreSide0" class="indreSide">
-                <h1>Riemannintegralet</h1>
-                <p>Integrasjon er det samme som en uendelig sum. Summen kan være over mange forskjellige parametere og, men brukes i dette kurset i hovedsak til å regne ut areal og volum ved å summere over mindre areal- og volumsegmenter. </p>
-                <p>I dette første delkapitellet under integrasjon skal vi se på nettopp denne summen som bygger opp et integral, og ved hjelpe av dette kunne definere integralet til en funksjon.</p>
+            <div>
+
+                <div id="sideNavBar">
+                    <div id="aroundArrow" onclick="closeSideBar()"><i class="arrow left"></i></div>
+                    <div id="toppen">
+                        <img src="bilder/integraler.png" height="100px">
+                        <h2>Integrasjon</h2>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(0, 10)">
+                        <h3 class="sideH">Riemannintegralet</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(1, 10)">
+                        <h3 class="sideH">Sentrale egenskaper</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(2, 10)">
+                        <h3 class="sideH">Substitusjon</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(3 ,10)">
+                        <h3 class="sideH">Delvis integrasjon</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(4, 10)">
+                        <h3 class="sideH">Integral av rasjonale funksjoner</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(5, 10)">
+                        <h3 class="sideH">Invers substitusjon</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(6, 10)">
+                        <h3 class="sideH">Uegentlig integral</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(7, 10)">
+                        <h3 class="sideH">Omdregningslegemer</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(8, 10)">
+                        <h3 class="sideH">Buelengder og rotasjonsflater</h3>
+                    </div>
+                    <div class="barListe" onclick="changeDisplay(9, 10)">
+                        <h3 class="sideH">Oppgaver</h3>
+                    </div>
+                </div>
+                <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+                <div id="indreSide0" class="indreSide">
+                    <h1>Riemannintegralet</h1>
+                    <p>Integrasjon er det samme som en uendelig sum. Summen kan være over mange forskjellige parametere
+                        og, men brukes i dette kurset i hovedsak til å regne ut areal og volum ved å summere over mindre
+                        areal- og volumsegmenter. </p>
+                    <p>I dette første delkapitellet under integrasjon skal vi se på nettopp denne summen som bygger opp
+                        et integral, og ved hjelpe av dette kunne definere integralet til en funksjon.</p>
                     <h2>Video - Riemannintegralet</h2>
                     <!--<video width="400" controls>
                         <source src="videoer/04riemann.mp4" type="video/mp4">
                         Your browser does not support HTML video.
                     </video>-->
                     <div class="iframe-container">
-                        
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V1ion1GRz6M?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    
-                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                            <input type="hidden" name="_subject" value="Integrasjon">
-                            
-                            <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                            <div class="form">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/V1ion1GRz6M?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
                             <input type="text" name="Tilbakemelding_riemann" autocomplete="off" required>
                             <label for="name" class="label-name">
                                 <span class="content-name">Tilbakemelding:</span>
                             </label>
-                            </div>
-                       </form>
-                       <h2>Konstruksjon av integral</h2>
-                       <p>Dersom vi har en funksjon \(f(x)\) og vi ønsker å finne arealet under grafen mellom \(x = a\) og \(x = b\) kan vi approksimere dette ved å dele opp \(x\)-aksen mellom \(a\) og \(b\) i en partisjon \(p = \{x_0, x_1, ..., x_n\}\). Dette vil kun si at vi deler opp \(x\)-aksen i mindre intervaller separert av punkter. Her setter vi \(x_0 = a\) og \(x_n = b\) som ytterpunkene slik at vi tilsammen har \(n+1\) punkter med \(n\) delintervaller.</p>
-                       <p>En måte vi kan estimere arealet under funksjonen på da vil være å finne arealet under grafen for hver av disse delintervallene. En approksimasjon for delintervallet nummer \(i\) er et rektangel med høyde \(f(x_i) \) og lengde \(\Delta x_i = x_{i+1} - x_i\). Areal til rektangel nummer \(i\) kan dermed skrives som \(A_i = f(x_i) \cdot \Delta x_i\). Da gjenstår det bare å summere over alle delintervallene på intervallet \([a, b]\) for å finne det approksimerte arealet.</p>
-                       \[
-                       A_n = \sum_{i = 0}^n f(x_i) \Delta x_i.
-                       \]
-                       <p>Når antall delintervaller går mot uendelig vil feilen gå mot null og vi sier at den uendelige summen ER arealet under grafen og \(A_n \to A\). Avstanden \(\Delta x_i \) blir infidesimal liten og vi erstatter notasjonen med \(dx\). Dette er også definisjonen på et integral. Da integraler tar for seg mye mer enn bare arealer skriver vi \(I\) istedenfor \(A\) og vi definerer</p>
-                       <div class="boks">
-                           \[
-                           I = \int_a^b f(x) dx = \lim_{n \to \infty} \sum_{i = 0}^n f(x_i) \Delta x_i.
-                           \]
-                       </div>
-                       <h2>Hvordan løse oppgaver med Riemannintegral?</h2>
-                       <p>Gitt en uendelig sum av uttrykk er det ofte veldig vanskelig å regne ut totalsum direkte. En mulig måte å løse rekkesummen er ved å finne integralet som beskriver riemannsummen. Dersom man kan skrive summen på formen \(\sum_{i=0}^\infty f(x_i) \Delta x_i\), kan man gjøre det om det et integral og dermed regne ut summen ved bruk av integralregning (som vi kommer til i de neste delkapitlene). Hvert av leddene i summen inneholder to elementer; \(f(x_i)\) og \(\Delta x_i\) og det er disse som må identifiseres i riemannsumuttrykket.</p>
-                       <p>Det første man gjør er å identifisere \(\Delta x_i\). Vi antar ekvidistante punkter slik at \(\Delta x_i = \Delta x\), dvs at alle delintervallene er like store. Vi kan da si at lengden på hvert intervall er lengden på hele intervallet delt på antall intervaller</p>
-                       \[
-                       \Delta x = \frac{b-a}{n}.
-                       \]
-                       <p>Deretter ønsker man å finne \(x_i\). Det vil si vi ønsker å finne \(x\)-posisjonen til punkt nummer \(i\) som er begynnelsen på delintervall nummer \(i\). Hvis vi begynner i posisjon \(x = x_0 = a\) kan vi si at \(x_1 = a + \Delta x\) og vi kan videre si at \(x_2 = 2 \Delta x\). Generelt kan man skrive at </p>
-                       \[
-                       x_i = a + i\Delta x = a + i \frac{b-a}{n}.
-                       \]
-                       <p>Vi ønsker da med andre ord å finne et uttrykk på formen</p>
-                       <div class="boks">
-                           \[
-                           \lim_{n \to \infty} \sum_{i = 0}^n f\left( a + i\frac{b-a}{n} \right) \cdot \frac{b-a}{n}.
-                           \]
-                       </div>
-                       <p>Her er noen tips for å gjøre det lettere å identifisere \(f(x_i)\) og \(\Delta x\)</p>
-                       <ul>
-                            <li><p>Man kan selv velge hva funksjonen, \(a\) og \(b\) skal være. I de fleste tilfeller blir problemet veldig mye lettere ved å starte med å anta at \(a = 0\). Da blir \(Delta x = b/n\) og \(x_i = ib/n\). Her er det ofte også hennsiktsmessig å anta at \(b = 1\) slik at intervallet vi evaluerer blir \([a, b]\). Da har vi \(\Delta x = 1/n\) og \(x_i = i/n\). </p><p>Det er helt lov å bestemme disse grensene selv om det virker rart at det skal integralet skal bli det samme uavhengig av grensene til intervallet. Dette er fordi funksjonen man finner og integrerer \(f(x_i)\) avhenger av grensene man velger. Resultatet vil derfor bli det samme uavhengig av valg av intervall.</p></li>
-                            <li><p>Man ønsker å manipulere uttrykket man starter med slik \(n\) alltid er i nevneren der den inngår. For eksempel kan man skrive om \(n/i = 1/(i/n) = 1/x_i\).</p></li>
-                            <li><p>Det er kun TO ting vi ønsker å identifisere: \(1/n\) og \(i/n\). Dersom man ser \(1/n\) bør man umidelbart tenke \(\Delta x\) og se om dette kan trekkes ut av uttrykket. Dersom man ser \(i/n\) bør man tenke \(x_i\) og begynne å se for seg hvilken funksjon denne inngår i.</p></li>
-                       </ul>
-                       <h2>Eksempel</h2>
-                       <p>Løs Riemannintegralet:</p>
-                       \[
-                       \lim_{n \to \infty} \sum_{i = 0}^n \frac{1/n + i/n^2}{(2 + i/n)^2}
-                       \]
-                       <p><b>Løsning:</b> Vi starter med å anta intervallet \(b-a = 1\) slik at \(\Delta x = (b-a)/n = 1/n\). Vi ser at \(i / n^2\) kan faktoriseres til \(i / n \cdot 1/n\) og at man videre kan faktorisere ut \(1/n\) slik at vi får</p>
-                       \[
-                       \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{1+ i/n}{(2 + i/n)^2}}_{f(x_i)} \cdot \underbrace{\frac{1}{n}}_{\Delta x}.
-                       \]
-                       <p>Her står man overfor et valg. I de fleste situasjoner er det ofte lurt å velge intervallet \([0, 1]\), men akkurat denne situasjonen vil det nok være et enda lettere integral å velge intervallet \([1, 2]\). Dette er fordi da får man \(x_i = a + i(b-a)/n = 1 + i/n\). Erstatter vi dette med \(x_i\) i riemannsummen får vi</p>
-                       \[
-                       \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{x_i}{(1+x_i)^2}}_{f(x_i)} \cdot \underbrace{\frac{1}{n}}_{\Delta x} = \int_1^2 \frac{x}{(1+x)^2}dx.
-                       \]
-                       <p>Eventuelt kunne man valgt intervallet \([0,1]\) og fått integralet</p>
-                       \[
-                       \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{1+x_i}{(2+x_i)^2}}_{f(x_i)} \cdot \underbrace{\frac{1}{n}}_{\Delta x} = \int_0^1 \frac{1+x}{(2+x)^2}dx.
-                       \]
-                       <p>Løsningen av begge integralene hadde gitt riktig svar noe vi skal lære i neste delkapittel.</p>
-            </div>
-            <div id="indreSide1" class="indreSide">
-                <h1>Sentrale egenskaper</h1>
-                <p>Dette delkapitellet tar for seg <i>Analysens fundamentalteorem</i> og generelle <i>regneregler</i> som er nyttige å kunne for å løse integraler.</p>
-                <h2>Analysens fundamentalteorem</h2>
-                <p>Analysens fundamentalteorem slår fast at derivasjon og integrasjon er inverse operasjoner. Slik som vi lærte i forrige kapittel om inverse funksjoner (\(f(f^{-1}(x)) = x\)) ser vi nå at integrasjon etterfulgt av derivasjon vil resultere i funksjonen vi startet med. Matematisk skriver vi</p>
-                <div class="boks">
+                        </div>
+                    </form>
+                    <h2>Konstruksjon av integral</h2>
+                    <p>Dersom vi har en funksjon \(f(x)\) og vi ønsker å finne arealet under grafen mellom \(x = a\) og
+                        \(x = b\) kan vi approksimere dette ved å dele opp \(x\)-aksen mellom \(a\) og \(b\) i en
+                        partisjon \(p = \{x_0, x_1, ..., x_n\}\). Dette vil kun si at vi deler opp \(x\)-aksen i mindre
+                        intervaller separert av punkter. Her setter vi \(x_0 = a\) og \(x_n = b\) som ytterpunkene slik
+                        at vi tilsammen har \(n+1\) punkter med \(n\) delintervaller.</p>
+                    <p>En måte vi kan estimere arealet under funksjonen på da vil være å finne arealet under grafen for
+                        hver av disse delintervallene. En approksimasjon for delintervallet nummer \(i\) er et rektangel
+                        med høyde \(f(x_i) \) og lengde \(\Delta x_i = x_{i+1} - x_i\). Areal til rektangel nummer \(i\)
+                        kan dermed skrives som \(A_i = f(x_i) \cdot \Delta x_i\). Da gjenstår det bare å summere over
+                        alle delintervallene på intervallet \([a, b]\) for å finne det approksimerte arealet.</p>
                     \[
-                    f(x) = \frac{d}{dx}\int_a^x f(t) dt.
+                    A_n = \sum_{i = 0}^n f(x_i) \Delta x_i.
                     \]
-                </div>
-                <p>Her er \(f(t)\) samme funksjon som \(f(x)\). Hvilken parameter funksjonen tar spiller ingen rolle. Dette er grunnen til at integrasjon også blir kaldt antiderivasjon; når vi integrerer spør vi oss selv hvilken funksjon \(F(x)\) er det vi kan derivere for å få \(f(x)\). Vi har sammenhengen</p>
-                \[
-                F(x) = \int_a^x f(t)dt.
-                \]
-                <p>Med innsatte grenser kan vi også definere hva vi mener med et bestemt integral</p>
-                <div class="boks">
-                    \[
-                    \int_a^b f(x)dx = F(b) - F(a).
-                    \]
-                </div>
-                <h2>Regneregler</h2>
-                <p>Vi ønsker nå studere det bestemte integralet yttligere ved å se hvilke regler og manipulasjoner vi kan gjøre med uttrykk før selve integrasjonen. For å intuitivt forstå noen av disse reglene er det lurt å se for seg en graf som ligger over x-aksen der vi ønsker å finne arealet under grafen mellom øvre og nedre intergasjonsgrense.</p>
-                <ol>
-                    <li>\[
-                        \int_a^a f(x)dx=0.
-                        \]</li>
-                    <li>
+                    <p>Når antall delintervaller går mot uendelig vil feilen gå mot null og vi sier at den uendelige
+                        summen ER arealet under grafen og \(A_n \to A\). Avstanden \(\Delta x_i \) blir infidesimal
+                        liten og vi erstatter notasjonen med \(dx\). Dette er også definisjonen på et integral. Da
+                        integraler tar for seg mye mer enn bare arealer skriver vi \(I\) istedenfor \(A\) og vi
+                        definerer</p>
+                    <div class="boks">
                         \[
-                \int_b^a f(x) \, dx=-\int_a^b f(x) \, dx.
-                \]
-                    </li>
-                    <li>\[
-                        \int_a^b \left(Af(x)+Bg(x)\right) \, dx=A\int_a^b f(x) \, dx+B\int_a^b g(x)\, dx.
-                        \]</li>
-                    <li>
-                        \[
-                \int_a^c f(x) \, dx  = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx.
-                \]
-                    </li>
-                    <li>
-                        \[
-                        \int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx, \quad f(x) \leq g(x) \text{ for alle } x \in (a, b).
+                        I = \int_a^b f(x) dx = \lim_{n \to \infty} \sum_{i = 0}^n f(x_i) \Delta x_i.
                         \]
-                    </li>
-                    
-                </ol>
-              </div>
-             
-            <div id="indreSide2" class="indreSide">
-                <h1>Substitusjon</h1>
-                <p>I dette kurset skal vi gjennomgå fire forskjellige integrasjonsteknikker: substitusjon, delvis integrasjon, delbrøksoppspaltning og invers substitusjon. Dette delkapittelet tar for seg substitusjon og de neste tre delkapitlene tar for seg resterende teknikker.</p>
-                <h2>Video - Substitusjon</h2>
-                <!--<video width="400" controls>
+                    </div>
+                    <h2>Hvordan løse oppgaver med Riemannintegral?</h2>
+                    <p>Gitt en uendelig sum av uttrykk er det ofte veldig vanskelig å regne ut totalsum direkte. En
+                        mulig måte å løse rekkesummen er ved å finne integralet som beskriver riemannsummen. Dersom man
+                        kan skrive summen på formen \(\sum_{i=0}^\infty f(x_i) \Delta x_i\), kan man gjøre det om det et
+                        integral og dermed regne ut summen ved bruk av integralregning (som vi kommer til i de neste
+                        delkapitlene). Hvert av leddene i summen inneholder to elementer; \(f(x_i)\) og \(\Delta x_i\)
+                        og det er disse som må identifiseres i riemannsumuttrykket.</p>
+                    <p>Det første man gjør er å identifisere \(\Delta x_i\). Vi antar ekvidistante punkter slik at
+                        \(\Delta x_i = \Delta x\), dvs at alle delintervallene er like store. Vi kan da si at lengden på
+                        hvert intervall er lengden på hele intervallet delt på antall intervaller</p>
+                    \[
+                    \Delta x = \frac{b-a}{n}.
+                    \]
+                    <p>Deretter ønsker man å finne \(x_i\). Det vil si vi ønsker å finne \(x\)-posisjonen til punkt
+                        nummer \(i\) som er begynnelsen på delintervall nummer \(i\). Hvis vi begynner i posisjon \(x =
+                        x_0 = a\) kan vi si at \(x_1 = a + \Delta x\) og vi kan videre si at \(x_2 = 2 \Delta x\).
+                        Generelt kan man skrive at </p>
+                    \[
+                    x_i = a + i\Delta x = a + i \frac{b-a}{n}.
+                    \]
+                    <p>Vi ønsker da med andre ord å finne et uttrykk på formen</p>
+                    <div class="boks">
+                        \[
+                        \lim_{n \to \infty} \sum_{i = 0}^n f\left( a + i\frac{b-a}{n} \right) \cdot \frac{b-a}{n}.
+                        \]
+                    </div>
+                    <p>Her er noen tips for å gjøre det lettere å identifisere \(f(x_i)\) og \(\Delta x\)</p>
+                    <ul>
+                        <li>
+                            <p>Man kan selv velge hva funksjonen, \(a\) og \(b\) skal være. I de fleste tilfeller blir
+                                problemet veldig mye lettere ved å starte med å anta at \(a = 0\). Da blir \(Delta x =
+                                b/n\) og \(x_i = ib/n\). Her er det ofte også hennsiktsmessig å anta at \(b = 1\) slik
+                                at intervallet vi evaluerer blir \([a, b]\). Da har vi \(\Delta x = 1/n\) og \(x_i =
+                                i/n\). </p>
+                            <p>Det er helt lov å bestemme disse grensene selv om det virker rart at det skal integralet
+                                skal bli det samme uavhengig av grensene til intervallet. Dette er fordi funksjonen man
+                                finner og integrerer \(f(x_i)\) avhenger av grensene man velger. Resultatet vil derfor
+                                bli det samme uavhengig av valg av intervall.</p>
+                        </li>
+                        <li>
+                            <p>Man ønsker å manipulere uttrykket man starter med slik \(n\) alltid er i nevneren der den
+                                inngår. For eksempel kan man skrive om \(n/i = 1/(i/n) = 1/x_i\).</p>
+                        </li>
+                        <li>
+                            <p>Det er kun TO ting vi ønsker å identifisere: \(1/n\) og \(i/n\). Dersom man ser \(1/n\)
+                                bør man umidelbart tenke \(\Delta x\) og se om dette kan trekkes ut av uttrykket. Dersom
+                                man ser \(i/n\) bør man tenke \(x_i\) og begynne å se for seg hvilken funksjon denne
+                                inngår i.</p>
+                        </li>
+                    </ul>
+                    <h2>Eksempel</h2>
+                    <p>Løs Riemannintegralet:</p>
+                    \[
+                    \lim_{n \to \infty} \sum_{i = 0}^n \frac{1/n + i/n^2}{(2 + i/n)^2}
+                    \]
+                    <p><b>Løsning:</b> Vi starter med å anta intervallet \(b-a = 1\) slik at \(\Delta x = (b-a)/n =
+                        1/n\). Vi ser at \(i / n^2\) kan faktoriseres til \(i / n \cdot 1/n\) og at man videre kan
+                        faktorisere ut \(1/n\) slik at vi får</p>
+                    \[
+                    \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{1+ i/n}{(2 + i/n)^2}}_{f(x_i)} \cdot
+                    \underbrace{\frac{1}{n}}_{\Delta x}.
+                    \]
+                    <p>Her står man overfor et valg. I de fleste situasjoner er det ofte lurt å velge intervallet \([0,
+                        1]\), men akkurat denne situasjonen vil det nok være et enda lettere integral å velge
+                        intervallet \([1, 2]\). Dette er fordi da får man \(x_i = a + i(b-a)/n = 1 + i/n\). Erstatter vi
+                        dette med \(x_i\) i riemannsummen får vi</p>
+                    \[
+                    \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{x_i}{(1+x_i)^2}}_{f(x_i)} \cdot
+                    \underbrace{\frac{1}{n}}_{\Delta x} = \int_1^2 \frac{x}{(1+x)^2}dx.
+                    \]
+                    <p>Eventuelt kunne man valgt intervallet \([0,1]\) og fått integralet</p>
+                    \[
+                    \lim_{n \to \infty} \sum_{i = 0}^n \underbrace{\frac{1+x_i}{(2+x_i)^2}}_{f(x_i)} \cdot
+                    \underbrace{\frac{1}{n}}_{\Delta x} = \int_0^1 \frac{1+x}{(2+x)^2}dx.
+                    \]
+                    <p>Løsningen av begge integralene hadde gitt riktig svar noe vi skal lære i neste delkapittel.</p>
+                </div>
+                <div id="indreSide1" class="indreSide">
+                    <h1>Sentrale egenskaper</h1>
+                    <p>Dette delkapitellet tar for seg <i>Analysens fundamentalteorem</i> og generelle
+                        <i>regneregler</i> som er nyttige å kunne for å løse integraler.
+                    </p>
+                    <h2>Analysens fundamentalteorem</h2>
+                    <p>Analysens fundamentalteorem slår fast at derivasjon og integrasjon er inverse operasjoner. Slik
+                        som vi lærte i forrige kapittel om inverse funksjoner (\(f(f^{-1}(x)) = x\)) ser vi nå at
+                        integrasjon etterfulgt av derivasjon vil resultere i funksjonen vi startet med. Matematisk
+                        skriver vi</p>
+                    <div class="boks">
+                        \[
+                        f(x) = \frac{d}{dx}\int_a^x f(t) dt.
+                        \]
+                    </div>
+                    <p>Her er \(f(t)\) samme funksjon som \(f(x)\). Hvilken parameter funksjonen tar spiller ingen
+                        rolle. Dette er grunnen til at integrasjon også blir kaldt antiderivasjon; når vi integrerer
+                        spør vi oss selv hvilken funksjon \(F(x)\) er det vi kan derivere for å få \(f(x)\). Vi har
+                        sammenhengen</p>
+                    \[
+                    F(x) = \int_a^x f(t)dt.
+                    \]
+                    <p>Med innsatte grenser kan vi også definere hva vi mener med et bestemt integral</p>
+                    <div class="boks">
+                        \[
+                        \int_a^b f(x)dx = F(b) - F(a).
+                        \]
+                    </div>
+                    <h2>Regneregler</h2>
+                    <p>Vi ønsker nå studere det bestemte integralet yttligere ved å se hvilke regler og manipulasjoner
+                        vi kan gjøre med uttrykk før selve integrasjonen. For å intuitivt forstå noen av disse reglene
+                        er det lurt å se for seg en graf som ligger over x-aksen der vi ønsker å finne arealet under
+                        grafen mellom øvre og nedre intergasjonsgrense.</p>
+                    <ol>
+                        <li>\[
+                            \int_a^a f(x)dx=0.
+                            \]</li>
+                        <li>
+                            \[
+                            \int_b^a f(x) \, dx=-\int_a^b f(x) \, dx.
+                            \]
+                        </li>
+                        <li>\[
+                            \int_a^b \left(Af(x)+Bg(x)\right) \, dx=A\int_a^b f(x) \, dx+B\int_a^b g(x)\, dx.
+                            \]</li>
+                        <li>
+                            \[
+                            \int_a^c f(x) \, dx = \int_a^b f(x) \, dx + \int_b^c f(x) \, dx.
+                            \]
+                        </li>
+                        <li>
+                            \[
+                            \int_a^b f(x) \, dx \leq \int_a^b g(x) \, dx, \quad f(x) \leq g(x) \text{ for alle } x \in
+                            (a, b).
+                            \]
+                        </li>
+
+                    </ol>
+                </div>
+
+                <div id="indreSide2" class="indreSide">
+                    <h1>Substitusjon</h1>
+                    <p>I dette kurset skal vi gjennomgå fire forskjellige integrasjonsteknikker: substitusjon, delvis
+                        integrasjon, delbrøksoppspaltning og invers substitusjon. Dette delkapittelet tar for seg
+                        substitusjon og de neste tre delkapitlene tar for seg resterende teknikker.</p>
+                    <h2>Video - Substitusjon</h2>
+                    <!--<video width="400" controls>
                     <source src="videoer/04substitution.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
-                <div class="iframe-container">
-                        
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/32zEGv7VVk8?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+                    <div class="iframe-container">
 
-                    <input type="hidden" name="_subject" value="Integrasjon">
-                    
-                    <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                    <div class="form">
-                    <input type="text" name="Tilbakemelding_substitusjon" autocomplete="off" required>
-                    <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
-                    </label>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/32zEGv7VVk8?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-               </form>
-               <h2>Metode</h2>
-               <p>Substitusjon er en metode som fungerer på funksjoner \(f(x)\) der man kan identifisere en kjerne \(u(x)\) i utrykket der kjernens deriverte er en faktor i uttrykket \(f(x) = u'(x)g(u(x))\). Et eksempel er \(f(x) = 2x\cdot e^{x^2}\), der vi kan erstatte \(u(x) = x^2 \Rightarrow u'(x) = 2x\) og \(g(u(x)) = e^{u(x)}\).</p>
-               <p>Ved hjelp av infitesimale størrelser kan vi skrive om et integral til en enklere form ved hjelp av substitusjon. <b>Merk</b> at man skal være forsiktig med å stryke infitesimale størrelser mot hverandre slik som under, men det funker ofte som et hjelpemiddel til å forstå metoder.</p>
-               \[
-               \int_{x = a}^{x = b} u'(x)g(u(x))dx = \int_{x = a}^{x = b} \frac{du}{dx}g(u(x))dx =  \int_{u(x) = u(a)}^{u(x) = u(b)} g(u(x)) du.
-               \]
-               <p>Vi ser at i andre likhet endrer vi integrand fra \(dx\) til \(du\). Når vi gjør dette må vi også endre grensene i integralet fra \(x = a\) til \(u(x) = u(a)\) siden vi nå integrerer over \(u\)-verdier, og ikke lenger \(x\)-verdier. Vi kan oppsummere utregningene overfor med \(u = u(x)\) som</p>
-               <div class="boks">
-                   \[
-                   \int_a^b \frac{du}{dx} g(u)dx = \int_{u(a)}^{u(b)} g(u) du
-                   \]
-               </div>
-               <h2>Fremgangsmåte</h2>
-               <ol>
-                   <li>
-                       <p>Finn kjernen i uttrykket \(u = u(x)\)</p>
-                   </li>
-                   <li>
-                       <p>Deriver \(u\) og finn \(dx\): \[\frac{du}{dx} = u'(x) \Rightarrow dx = \frac{du}{u'(x)}.\]</p>
-                   </li>
-                   <li>
-                       <p>Finn grensene til integralet i u-verden, det vil si \(u(a)\) og \(u(b)\).</p>
-                   </li>
-                   <li>
-                       <p>Vi har nå funnet uttrykk for \(u(a)\) og \(u(b)\), \(u(x)\) og \(dx\). Vi setter dissse uttrykkene inn i integralet:</p>
-                       \[
-                       \int_{a}^b u'(x) g(u(x)) dx = \int_{u(a)}^{u(b)} u'(x) g(u) \frac{du}{u'(x)} = \int_{u(a)}^{u(b)} g(u)du.
-                       \]
-                   </li>
-                   <li><p>Løs integralet.</p></li>
-               </ol>
-              </div>
-             
-            
-            <div id="indreSide3" class="indreSide">
-                <h1>Delvis integrasjon</h1>
-                <p>I dette delkapittelet (under videoen) tar vi først for oss resultatet av delvis integrasjon, deretter utledelse av resulatet, og til slutt i hvilke situasjoner det lønner seg å bruke resultatet.</p>
-                <h2>Video - Delvis integrasjon</h2>
-                <!--<video width="400" controls>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
+                            <input type="text" name="Tilbakemelding_substitusjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                        </div>
+                    </form>
+                    <h2>Metode</h2>
+                    <p>Substitusjon er en metode som fungerer på funksjoner \(f(x)\) der man kan identifisere en kjerne
+                        \(u(x)\) i utrykket der kjernens deriverte er en faktor i uttrykket \(f(x) = u'(x)g(u(x))\). Et
+                        eksempel er \(f(x) = 2x\cdot e^{x^2}\), der vi kan erstatte \(u(x) = x^2 \Rightarrow u'(x) =
+                        2x\) og \(g(u(x)) = e^{u(x)}\).</p>
+                    <p>Ved hjelp av infitesimale størrelser kan vi skrive om et integral til en enklere form ved hjelp
+                        av substitusjon. <b>Merk</b> at man skal være forsiktig med å stryke infitesimale størrelser mot
+                        hverandre slik som under, men det funker ofte som et hjelpemiddel til å forstå metoder.</p>
+                    \[
+                    \int_{x = a}^{x = b} u'(x)g(u(x))dx = \int_{x = a}^{x = b} \frac{du}{dx}g(u(x))dx = \int_{u(x) =
+                    u(a)}^{u(x) = u(b)} g(u(x)) du.
+                    \]
+                    <p>Vi ser at i andre likhet endrer vi integrand fra \(dx\) til \(du\). Når vi gjør dette må vi også
+                        endre grensene i integralet fra \(x = a\) til \(u(x) = u(a)\) siden vi nå integrerer over
+                        \(u\)-verdier, og ikke lenger \(x\)-verdier. Vi kan oppsummere utregningene overfor med \(u =
+                        u(x)\) som</p>
+                    <div class="boks">
+                        \[
+                        \int_a^b \frac{du}{dx} g(u)dx = \int_{u(a)}^{u(b)} g(u) du
+                        \]
+                    </div>
+                    <h2>Fremgangsmåte</h2>
+                    <ol>
+                        <li>
+                            <p>Finn kjernen i uttrykket \(u = u(x)\)</p>
+                        </li>
+                        <li>
+                            <p>Deriver \(u\) og finn \(dx\): \[\frac{du}{dx} = u'(x) \Rightarrow dx =
+                                \frac{du}{u'(x)}.\]</p>
+                        </li>
+                        <li>
+                            <p>Finn grensene til integralet i u-verden, det vil si \(u(a)\) og \(u(b)\).</p>
+                        </li>
+                        <li>
+                            <p>Vi har nå funnet uttrykk for \(u(a)\) og \(u(b)\), \(u(x)\) og \(dx\). Vi setter dissse
+                                uttrykkene inn i integralet:</p>
+                            \[
+                            \int_{a}^b u'(x) g(u(x)) dx = \int_{u(a)}^{u(b)} u'(x) g(u) \frac{du}{u'(x)} =
+                            \int_{u(a)}^{u(b)} g(u)du.
+                            \]
+                        </li>
+                        <li>
+                            <p>Løs integralet.</p>
+                        </li>
+                    </ol>
+                </div>
+
+
+                <div id="indreSide3" class="indreSide">
+                    <h1>Delvis integrasjon</h1>
+                    <p>I dette delkapittelet (under videoen) tar vi først for oss resultatet av delvis integrasjon,
+                        deretter utledelse av resulatet, og til slutt i hvilke situasjoner det lønner seg å bruke
+                        resultatet.</p>
+                    <h2>Video - Delvis integrasjon</h2>
+                    <!--<video width="400" controls>
                     <source src="videoer/04delvisint.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
-                <div class="iframe-container">
-                        
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CMW_byeJWsM?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+                    <div class="iframe-container">
 
-                    <input type="hidden" name="_subject" value="Integrasjon">
-                    
-                    <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                    <div class="form">
-                    <input type="text" name="Tilbakemelding_delvis_integrasjon" autocomplete="off" required>
-                    <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
-                    </label>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/CMW_byeJWsM?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-               </form>
-               <h2>Resultat</h2>
-               <p>Dersom et integral kan skrives som et produkt av to funksjoner \(u(x)\) og \v'(x)(\) kan vi utnytte resultatet nedenfor</p>
-               <div class="boks">
-                    \[\int u(x)v'(x)\mathrm{d}x=u(x)v(x)-\int v(x)u'(x)\mathrm{d}x.\]
-               </div>
-               <h2>Utledelse</h2>
-               <p>Vi husker produktregelen fra derivasjonskapittelet: \((u\cdot v)'(x) = u'(x)v(x) + u(x)v'(x)\). Vi integrerer derretter begge sider av likningen og bruker analysens fundamentalteorem på venstre side av likheten</p>
-               \[
-               \underbrace{\int \frac{d}{dx} (u(x)v(x) dx)}_{u(x)v(x)} = \int u'(x)v(x) dx + \int u(x)v'(x) dx.
-               \]
-               <p>Her kan vi trekke fra \(\int u'(x)v(x)dx\) på begge sider og vi ender opp med resultatet.</p>
-               <h2>Bruksområder</h2>
-               <p>Formålet med denne metoden er å gjøre det andre integralet man ender opp med enklere å løse. Under er tre tilfeller der det kan lønne seg å bruke delvis integrasjon hvis utrykket man skal integrere er</p>
-               <ul>
-                   <li>
-                    <p>Uttrykk på formen \(u(x)v'(x) = x^n f(x)\), der \(f(x)\) er periodiske deriverte funksjoner. Det vil si \(f(x) = \cos{ax}, \sin{ax}, e{ax}\). Med periodisk deriverte mener vi for \(\cos\) og \(\sin\) at \(f''(x) = -a^2f(x)\) og for \(e^{ax}\) har vi \(f''(x) = af'(x) = a^2f(x)\).</p>
-                    <p>For eksempel integralet av \(u(x)v'(x) = xe^{2x}\) gir etter omskrivning at vi må løse integralet av \(u'(x)v(x) = 1\cdot e^{2x}/2\). Dette integralet går helt fint ann å løse med vanlig antiderivasjon.</p>
-                    </li>
-                    <li>
-                        <p>Utrykk på formen \(u(x)v'(x) = \ln{x} x^n\). Her ser vi at det neste integralet som må løses blir \(u'(x)v(x) = 1/x nx^{n-1} = nx^{n-2}\). Dette er et polynom av grad \(n-2\) som kan integreres ved vanlig antiderivasjonsregler.</p>
-                    </li>
-                    <li>
-                        <p>Uttrykk på formen \(u(x)v'(x) = f_1(x) f_2(x)\), der \(f_i(x)\) er periodiske deriverte funksjoner slik som overfor. Dette fungerer fordi etter å ha brukt delvis integrasjon to ganger vil det nye integralet man må løse være en skalert versjon av det opprinnelige integralet.</p>
-                        <p>For eksempel integralet av \(u(x)v'(x) = e^{3x}\cos{2x}\). Vi kan da utføre delvis integrasjon to ganger slik at </p>
-                        \[
-                        I = \int e^{3x}\cos{2x}dx = e^{3x}\frac{\sin{2x}}{2} - \int \frac{3}{2}e^{3x}\sin{2x}dx 
-                        \]
-                        \[
-                        =  \underbrace{e^{3x}\frac{\sin{2x}}{2} + \frac{3}{2}e^{3x}\frac{\cos{2x}}{2}}_{\text{Definerer dette lik } r(x)} - \underbrace{\int \frac{9}{4}e^{3x}\cos{2x}dx}_{9/4\cdot I}.
-                        \]
-                        <p>Vi har nå likningen \(I = r(x) - 9/4 \cdot I \Rightarrow I = 4/13\cdot f(x) \). Vi kan altså finne løsningen på integralet uten å løse et eneste integral!</p>
-                    </li>
-                </ul>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
+                            <input type="text" name="Tilbakemelding_delvis_integrasjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                        </div>
+                    </form>
+                    <h2>Resultat</h2>
+                    <p>Dersom et integral kan skrives som et produkt av to funksjoner \(u(x)\) og \v'(x)(\) kan vi
+                        utnytte resultatet nedenfor</p>
+                    <div class="boks">
+                        \[\int u(x)v'(x)\mathrm{d}x=u(x)v(x)-\int v(x)u'(x)\mathrm{d}x.\]
+                    </div>
+                    <h2>Utledelse</h2>
+                    <p>Vi husker produktregelen fra derivasjonskapittelet: \((u\cdot v)'(x) = u'(x)v(x) + u(x)v'(x)\).
+                        Vi integrerer derretter begge sider av likningen og bruker analysens fundamentalteorem på
+                        venstre side av likheten</p>
+                    \[
+                    \underbrace{\int \frac{d}{dx} (u(x)v(x) dx)}_{u(x)v(x)} = \int u'(x)v(x) dx + \int u(x)v'(x) dx.
+                    \]
+                    <p>Her kan vi trekke fra \(\int u'(x)v(x)dx\) på begge sider og vi ender opp med resultatet.</p>
+                    <h2>Bruksområder</h2>
+                    <p>Formålet med denne metoden er å gjøre det andre integralet man ender opp med enklere å løse.
+                        Under er tre tilfeller der det kan lønne seg å bruke delvis integrasjon hvis utrykket man skal
+                        integrere er</p>
+                    <ul>
+                        <li>
+                            <p>Uttrykk på formen \(u(x)v'(x) = x^n f(x)\), der \(f(x)\) er periodiske deriverte
+                                funksjoner. Det vil si \(f(x) = \cos{ax}, \sin{ax}, e{ax}\). Med periodisk deriverte
+                                mener vi for \(\cos\) og \(\sin\) at \(f''(x) = -a^2f(x)\) og for \(e^{ax}\) har vi
+                                \(f''(x) = af'(x) = a^2f(x)\).</p>
+                            <p>For eksempel integralet av \(u(x)v'(x) = xe^{2x}\) gir etter omskrivning at vi må løse
+                                integralet av \(u'(x)v(x) = 1\cdot e^{2x}/2\). Dette integralet går helt fint ann å løse
+                                med vanlig antiderivasjon.</p>
+                        </li>
+                        <li>
+                            <p>Utrykk på formen \(u(x)v'(x) = \ln{x} x^n\). Her ser vi at det neste integralet som må
+                                løses blir \(u'(x)v(x) = 1/x nx^{n-1} = nx^{n-2}\). Dette er et polynom av grad \(n-2\)
+                                som kan integreres ved vanlig antiderivasjonsregler.</p>
+                        </li>
+                        <li>
+                            <p>Uttrykk på formen \(u(x)v'(x) = f_1(x) f_2(x)\), der \(f_i(x)\) er periodiske deriverte
+                                funksjoner slik som overfor. Dette fungerer fordi etter å ha brukt delvis integrasjon to
+                                ganger vil det nye integralet man må løse være en skalert versjon av det opprinnelige
+                                integralet.</p>
+                            <p>For eksempel integralet av \(u(x)v'(x) = e^{3x}\cos{2x}\). Vi kan da utføre delvis
+                                integrasjon to ganger slik at </p>
+                            \[
+                            I = \int e^{3x}\cos{2x}dx = e^{3x}\frac{\sin{2x}}{2} - \int \frac{3}{2}e^{3x}\sin{2x}dx
+                            \]
+                            \[
+                            = \underbrace{e^{3x}\frac{\sin{2x}}{2} +
+                            \frac{3}{2}e^{3x}\frac{\cos{2x}}{2}}_{\text{Definerer dette lik } r(x)} - \underbrace{\int
+                            \frac{9}{4}e^{3x}\cos{2x}dx}_{9/4\cdot I}.
+                            \]
+                            <p>Vi har nå likningen \(I = r(x) - 9/4 \cdot I \Rightarrow I = 4/13\cdot f(x) \). Vi kan
+                                altså finne løsningen på integralet uten å løse et eneste integral!</p>
+                        </li>
+                    </ul>
                 </div>
-            <div id="indreSide4" class="indreSide">
-                <h1>Integral av rasjonale funksjoner</h1>
-                <p>Delbrøksoppspaltning er en teknikk som brukes dersom vi støter på rasjonale funksjoner (brøk med polynomer over og under brøkstreken) der integralet er for vanskelig til å løse direkte. Ved å bryte opp brøken i en sum av mindre brøker med nevnere av lavere grad, kan vi deretter integrere leddene hver for seg. </p>
-                <h2>Video - Delbrøksoppspaltning</h2>
-                <!--<video width="400" controls>
+                <div id="indreSide4" class="indreSide">
+                    <h1>Integral av rasjonale funksjoner</h1>
+                    <p>Delbrøksoppspaltning er en teknikk som brukes dersom vi støter på rasjonale funksjoner (brøk med
+                        polynomer over og under brøkstreken) der integralet er for vanskelig til å løse direkte. Ved å
+                        bryte opp brøken i en sum av mindre brøker med nevnere av lavere grad, kan vi deretter integrere
+                        leddene hver for seg. </p>
+                    <h2>Video - Delbrøksoppspaltning</h2>
+                    <!--<video width="400" controls>
                     <source src="videoer/04delbroks.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
-                <div class="iframe-container">
-                        
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8MHl6AjRj5M?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+                    <div class="iframe-container">
 
-                    <input type="hidden" name="_subject" value="Integrasjon">
-                    
-                    <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                    <div class="form">
-                    <input type="text" name="Tilbakemelding_delbroksoppstaltning" autocomplete="off" required>
-                    <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
-                    </label>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/8MHl6AjRj5M?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-               </form>
-               <h2>Metode</h2>
-               <p>Vi ønsker å integrere funksjonen \(f(x) = P(x) / Q(x)\) ved å omskrive funksjonen til en sum av enklere brøker. Det vil si \(P(x) / Q(x) = p_1(x) / q_1(x) + ... + p_n(x) / q_n(x)\). Hvor mange ledd, \(n\), vi bryter det opprinnelige uttrykket ned til, avhenger av hvor mange lineære og kvadratiske faktorer \(Q(x)\) kan brytes ned til.</p>
-               <p>Polynomet \(Q(x)\) kan skrives som \(q_1(x) \cdot q_2(x) \cdot ... \cdot q_n(x)\), der \(q_i(x)\) er enten lineære eller kvadratiske polynomer. For eksempel kan vi skrive \(x^4 - 3x^3 + 5x^2 - 9x + 6 = (x-1)(x-2)(x^2+3)\). Hver av disse lineære og kvadratiske faktorene til \(Q(x)\) blir \(q_1(x), q_2(x), q_3(x)\). Utfordringen med delbrøksoppspaltning er å finne de tilhørende tellerene \(p_1(x), p_2(x), p_3(x)\).</p>
-               <p>Graden til \(p_i(x)\) skal alltid være én lavere enn tilhørende grad til nevneren \(q_i(x)\). For eksempelet overfor blir de tilhørende ukjente tellerene på formen</p>
-               \[
-               \int \frac{P(x)}{(x-1)(x-2)(x^2+3)}dx = \int \frac{A}{x-1} + \frac{B}{x-2} + \frac{Cx+D}{x^2+3}dx
-               \]
-               <p>Vi ønsker nå å finne de ukjente konstantene. Første steg for å finne konstantene er å sette alle leddene vi har laget med felles nevner som det opprinnelige utrykket vi ønsker å integrere. Dette vises enklest ved å fortsette på eksempelet:</p>
-               \[
-               \int \frac{P(x)}{(x-1)(x-2)(x^2+3)}dx = \int \frac{A(x-2)(x^2+3) + B(x-1)(x^2+3) + (Cx+D)(x-1)(x-2)}{(x-1)(x-2)(x^2+3)} dx
-               \]
-               <p>Vi kan må nå sette tellerene fra de to integralene lik hverandre for å finne konstantene:</p>
-               \[
-               P(x) = (-6A - 3B + 2D) + (3A + 3B + 2C - 3D)x + (-2A - B - 3C + D)x^2 + (A + B + C)x^3
-               \]
-               <p>\(P(x)\) er på formen \(a_3x^3 + a_2x^2 + a_1x + a_0\), der \(a_0, a_1, a_2, a_3\) er kjente størrelser. Vi setter disse konstantene lik konstantene foran \(x^n\) og får et likningssystem med fire ukjente og fire likninger. Likning nummer to vil for eksempel være \(a_1 = 3A + 3B + 2C - 3D\). Etter man har løst likningssystemet kan og funnet \(A, B, C, D\) kan disse settes inn i integralet og vi kan løse vanlig.</p>
-               <h2>Tips</h2>
-               <b>Polynomdivisjon først:</b><br>
-               <p>Dersom telleren til utrykket man ønsker å integrere er av høyere grad enn nevneren, må man først gjennomføre polynomdivisjon. Etter polynomdivisjonen vil man ha skrevet om integralet til</p>
-               \[
-               \int \frac{P(x)}{Q(x)}dx = \int h(x) + \frac{r(x)}{Q(x)}.
-               \]
-               <p>Her er \(h(x)\) "det hele" polynomet som deler \(Q(x)\), mens \(r(x)\) er resten. Denne er nå av grad lavere enn \(Q(x)\) og vi kan bruke delvis integrasjon på dette restleddet.</p>
-               <br>
-               <b>Typiske løsninger av integraler etter vi har funnet \(A, B, C, ...\):</b><br>
-               <p>Dersom delvis integrasjon gir oss integralet har lineær nevner kan vi bruke u-substitusjon med \(u = x - x_0\)</p>
-               \[
-               \int \frac{A}{x - x_0} dx = A \int \frac{1}{u}du = A\ln{u} = A\ln{(x - x_0)}. 
-               \]
-               <p>Dersom delvis integrasjon gir oss integralet har kvadratisk nevner kan vi dele opp brøken i to nye brøker og sette \(u = x + k/2 + r, \, du = dx\)</p>
-               \[
-               \int \frac{Ax + B}{x^2 + kx + r}dx = \int \frac{A(x + k/2) + \overbrace{B - Ak/2}^{K_s}}{(x + k/2)^2 + \underbrace{r - k^2/4}_{K_d}}dx = A\int \frac{u}{u^2 + K_d}du + \int\frac{K_s}{u^2 + K_d}du.
-               \]
-               <p>Det første integralet løses nå med ny substitusjon med \(w = u^2 + K_d\) slik at \(du = dw / 2u\). Det andre integralet løses ved å dele på \(K_d\) over og under brøkstreken slik at vi gjenkjenner et integral som blir arctan.</p>
-              </div>
-            <div id="indreSide5" class="indreSide">
-                <h1>Invers substitusjon</h1>
-                <p>Målet med invers substitusjon er å gjøre et variabelskifte fra \(x\)-domenet til \(\theta\)-domenet. Med andre ord ønsker vi ikke å integrere over en lengde \(x\), men over en vinkel \(\theta\). Grunnen til integralet blir enklere etter denne substitusjonen er trigonometriske identiteter som vi lærte i forrige kapittel.</p>
-                <h2>Video - Invers substitusjon</h2>
-                <!--<video width="400" controls>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
+                            <input type="text" name="Tilbakemelding_delbroksoppstaltning" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                        </div>
+                    </form>
+                    <h2>Metode</h2>
+                    <p>Vi ønsker å integrere funksjonen \(f(x) = P(x) / Q(x)\) ved å omskrive funksjonen til en sum av
+                        enklere brøker. Det vil si \(P(x) / Q(x) = p_1(x) / q_1(x) + ... + p_n(x) / q_n(x)\). Hvor mange
+                        ledd, \(n\), vi bryter det opprinnelige uttrykket ned til, avhenger av hvor mange lineære og
+                        kvadratiske faktorer \(Q(x)\) kan brytes ned til.</p>
+                    <p>Polynomet \(Q(x)\) kan skrives som \(q_1(x) \cdot q_2(x) \cdot ... \cdot q_n(x)\), der \(q_i(x)\)
+                        er enten lineære eller kvadratiske polynomer. For eksempel kan vi skrive \(x^4 - 3x^3 + 5x^2 -
+                        9x + 6 = (x-1)(x-2)(x^2+3)\). Hver av disse lineære og kvadratiske faktorene til \(Q(x)\) blir
+                        \(q_1(x), q_2(x), q_3(x)\). Utfordringen med delbrøksoppspaltning er å finne de tilhørende
+                        tellerene \(p_1(x), p_2(x), p_3(x)\).</p>
+                    <p>Graden til \(p_i(x)\) skal alltid være én lavere enn tilhørende grad til nevneren \(q_i(x)\). For
+                        eksempelet overfor blir de tilhørende ukjente tellerene på formen</p>
+                    \[
+                    \int \frac{P(x)}{(x-1)(x-2)(x^2+3)}dx = \int \frac{A}{x-1} + \frac{B}{x-2} + \frac{Cx+D}{x^2+3}dx
+                    \]
+                    <p>Vi ønsker nå å finne de ukjente konstantene. Første steg for å finne konstantene er å sette alle
+                        leddene vi har laget med felles nevner som det opprinnelige utrykket vi ønsker å integrere.
+                        Dette vises enklest ved å fortsette på eksempelet:</p>
+                    \[
+                    \int \frac{P(x)}{(x-1)(x-2)(x^2+3)}dx = \int \frac{A(x-2)(x^2+3) + B(x-1)(x^2+3) +
+                    (Cx+D)(x-1)(x-2)}{(x-1)(x-2)(x^2+3)} dx
+                    \]
+                    <p>Vi kan må nå sette tellerene fra de to integralene lik hverandre for å finne konstantene:</p>
+                    \[
+                    P(x) = (-6A - 3B + 2D) + (3A + 3B + 2C - 3D)x + (-2A - B - 3C + D)x^2 + (A + B + C)x^3
+                    \]
+                    <p>\(P(x)\) er på formen \(a_3x^3 + a_2x^2 + a_1x + a_0\), der \(a_0, a_1, a_2, a_3\) er kjente
+                        størrelser. Vi setter disse konstantene lik konstantene foran \(x^n\) og får et likningssystem
+                        med fire ukjente og fire likninger. Likning nummer to vil for eksempel være \(a_1 = 3A + 3B + 2C
+                        - 3D\). Etter man har løst likningssystemet kan og funnet \(A, B, C, D\) kan disse settes inn i
+                        integralet og vi kan løse vanlig.</p>
+                    <h2>Tips</h2>
+                    <b>Polynomdivisjon først:</b><br>
+                    <p>Dersom telleren til utrykket man ønsker å integrere er av høyere grad enn nevneren, må man først
+                        gjennomføre polynomdivisjon. Etter polynomdivisjonen vil man ha skrevet om integralet til</p>
+                    \[
+                    \int \frac{P(x)}{Q(x)}dx = \int h(x) + \frac{r(x)}{Q(x)}.
+                    \]
+                    <p>Her er \(h(x)\) "det hele" polynomet som deler \(Q(x)\), mens \(r(x)\) er resten. Denne er nå av
+                        grad lavere enn \(Q(x)\) og vi kan bruke delvis integrasjon på dette restleddet.</p>
+                    <br>
+                    <b>Typiske løsninger av integraler etter vi har funnet \(A, B, C, ...\):</b><br>
+                    <p>Dersom delvis integrasjon gir oss integralet har lineær nevner kan vi bruke u-substitusjon med
+                        \(u = x - x_0\)</p>
+                    \[
+                    \int \frac{A}{x - x_0} dx = A \int \frac{1}{u}du = A\ln{u} = A\ln{(x - x_0)}.
+                    \]
+                    <p>Dersom delvis integrasjon gir oss integralet har kvadratisk nevner kan vi dele opp brøken i to
+                        nye brøker og sette \(u = x + k/2 + r, \, du = dx\)</p>
+                    \[
+                    \int \frac{Ax + B}{x^2 + kx + r}dx = \int \frac{A(x + k/2) + \overbrace{B - Ak/2}^{K_s}}{(x + k/2)^2
+                    + \underbrace{r - k^2/4}_{K_d}}dx = A\int \frac{u}{u^2 + K_d}du + \int\frac{K_s}{u^2 + K_d}du.
+                    \]
+                    <p>Det første integralet løses nå med ny substitusjon med \(w = u^2 + K_d\) slik at \(du = dw /
+                        2u\). Det andre integralet løses ved å dele på \(K_d\) over og under brøkstreken slik at vi
+                        gjenkjenner et integral som blir arctan.</p>
+                </div>
+                <div id="indreSide5" class="indreSide">
+                    <h1>Invers substitusjon</h1>
+                    <p>Målet med invers substitusjon er å gjøre et variabelskifte fra \(x\)-domenet til
+                        \(\theta\)-domenet. Med andre ord ønsker vi ikke å integrere over en lengde \(x\), men over en
+                        vinkel \(\theta\). Grunnen til integralet blir enklere etter denne substitusjonen er
+                        trigonometriske identiteter som vi lærte i forrige kapittel.</p>
+                    <h2>Video - Invers substitusjon</h2>
+                    <!--<video width="400" controls>
                     <source src="videoer/04inverssubst.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
-                <div class="iframe-container">
-                        
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gm7_t9Jkl04?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+                    <div class="iframe-container">
 
-                    <input type="hidden" name="_subject" value="Integrasjon">
-                    
-                    <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                    <div class="form">
-                    <input type="text" name="Tilbakemelding_invers_substitusjon" autocomplete="off" required>
-                    <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
-                    </label>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/gm7_t9Jkl04?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-               </form>
-               <h2>Trigonometriske identiter</h2>
-               <p>Fra pythagoras setning i identitetssirkelen følger en av de viktigste trigonometriske identitene, nemlig</p>
-               \[
-               \sin^2{x} + \cos^2{x} = 1.
-               \]
-               <p>Fra dette kan vi utlede en annen viktig identitet. Vi deler begge sider av likhetstegnet med \(\cos^2{x}\) og ender opp med</p>
-               \[
-               \tan^2{x} + 1 = \frac{1}{\cos^2{x}} = \sec^2{x}.
-               \]
-               <p>Fra disse identitetene kan vi gjøre algebraiske operasjoner og utlede følgende likheter:</p>
-               \[
-               \cos{x} = \sqrt{1 - \sin^2{x}}.
-               \]
-               \[
-               \sec{x} = \sqrt{1 + \tan^2{x}}.
-               \]
-               \[
-               |\tan{x}| = \sqrt{\sec^2{x} - 1}.
-               \]
-               <p>Det er disse tre identitetne som gir opphav til invers substitusjon.</p>
-               <h2>Metode</h2>
-               <b>Invers sinussubstitusjon:</b><br>
-               <p>Integrasjon av uttrykket \(\sqrt{a^2 - x^2}\) løses ved substitusjonen \(x = a\sin{\theta}\). Vi må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\cos{\theta} \Rightarrow dx = a\cos{\theta}\,d\theta\).</p>
-               <div class="boks">
-                   \[
-                   \sqrt{a^2 - x^2} = \sqrt{a^2 - a^2\sin^2{\theta}} = a\sqrt{1 - \sin^2{\theta}} = a\cos{\theta}.
-                   \]
-               </div>
-               <b>Invers sekantsubstitusjon:</b><br>
-               <p>Integrasjon av uttrykket \(\sqrt{x^2 - a^2}\) løses ved substitusjonen \(x = a\sec{\theta}\). Vi må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\sec{\theta}\tan{\theta} \Rightarrow dx = a\sec{\theta}\tan{\theta}\,d\theta\).</p>
-               <div class="boks">
-                   \[
-                   \sqrt{x^2 - a^2} = \sqrt{a^2\sec^2{\theta} - a^2} = a^\sqrt{sec^2{\theta} - 1} = a|\tan{\theta}|.
-                   \]
-               </div>
-               <b>Invers tangentsubstitusjon:</b><br>
-               <p>Integrasjon av uttrykket \(\sqrt{a^2 + x^2}\) løses ved substitusjonen \(x = a\tan{\theta}\). Vi må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\sec^2{\theta} \Rightarrow dx = a\sec^2{\theta}\,d\theta\).</p>
-               <div class="boks">
-                   \[
-                   \sqrt{a^2 + x^2} = \sqrt{a^2 + a^2\tan^2{\theta}} = a\sqrt{1 + \tan^2{\theta}} = a\sec{\theta}.
-                   \]
-               </div>
-               <h2>Tips</h2>
-               <p>De fleste integraler man ender opp med etter invers substitusjon er mulig å løse ved bruk av kjerneregel eller ved vanlig antiderivasjon. I noen tilfeller må man derimot bruke enda flere trogonometriske identiteter for å kunne komme frem til et løselig integral.</p>
-               <b>Cosinus eller Sinus i annen</b><br>
-               <p>Dersom man får integralet </p>
-               \[
-               \int \sqrt{a^2 - x^2} dx = \int a\cos{x} \cdot a\cos{\theta}\, d\theta = a^2 \int \cos^2{\theta} \, d\theta. 
-               \]
-               <p>I slike situasjoner lønner det seg å bruke dobbeltvinkel-regelen samt å huske \(\sin^2{x} + \cos^2{x} = 1\). Da følger \(cos{2x}\) = \cos^2{x} - \sin^2{x} = 2\cos^2{x} - 1. Tilsvarende kan vi gjøre ved å løse samme likning med hensyn på \(\sin^2{x}\). Ved algebraisk manipulasjon får vi resultatene</p>
-               <div class="boks">
-                   \[
-                   \cos^2{x} = \frac{1}{2} + \frac{1}{2}\cos{2x}, \quad \sin^2{x} = \frac{1}{2} - \frac{1}{2}\cos{2x}.
-                   \]
-               </div>
-               <p>Dette er uttrykk som kan integreres.</p>
-               <b>Cosinus eller Sinus i tredje</b><br>
-               <p>Dette er også integral som kan dukke opp etter invers substitusjon. Vi viser hvordan det gjøres for \(\cos^3{x}\), men det er tilsvarende for sinus.</p>
-               <div class="boks">
-                   \[
-                   \cos^3{x}dx = \cos{x}(1 - \sin^2{x})dx = \cos{x}(1 - u^2)\frac{du}{\cos{x}} = (1-u^2)du.
-                   \]
-               </div>
-               <p>Her har vi brukt substitusjonen \(u = \sin{x}\).</p>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
+                            <input type="text" name="Tilbakemelding_invers_substitusjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                        </div>
+                    </form>
+                    <h2>Trigonometriske identiter</h2>
+                    <p>Fra pythagoras setning i identitetssirkelen følger en av de viktigste trigonometriske identitene,
+                        nemlig</p>
+                    \[
+                    \sin^2{x} + \cos^2{x} = 1.
+                    \]
+                    <p>Fra dette kan vi utlede en annen viktig identitet. Vi deler begge sider av likhetstegnet med
+                        \(\cos^2{x}\) og ender opp med</p>
+                    \[
+                    \tan^2{x} + 1 = \frac{1}{\cos^2{x}} = \sec^2{x}.
+                    \]
+                    <p>Fra disse identitetene kan vi gjøre algebraiske operasjoner og utlede følgende likheter:</p>
+                    \[
+                    \cos{x} = \sqrt{1 - \sin^2{x}}.
+                    \]
+                    \[
+                    \sec{x} = \sqrt{1 + \tan^2{x}}.
+                    \]
+                    \[
+                    |\tan{x}| = \sqrt{\sec^2{x} - 1}.
+                    \]
+                    <p>Det er disse tre identitetne som gir opphav til invers substitusjon.</p>
+                    <h2>Metode</h2>
+                    <b>Invers sinussubstitusjon:</b><br>
+                    <p>Integrasjon av uttrykket \(\sqrt{a^2 - x^2}\) løses ved substitusjonen \(x = a\sin{\theta}\). Vi
+                        må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\cos{\theta} \Rightarrow dx
+                        = a\cos{\theta}\,d\theta\).</p>
+                    <div class="boks">
+                        \[
+                        \sqrt{a^2 - x^2} = \sqrt{a^2 - a^2\sin^2{\theta}} = a\sqrt{1 - \sin^2{\theta}} = a\cos{\theta}.
+                        \]
+                    </div>
+                    <b>Invers sekantsubstitusjon:</b><br>
+                    <p>Integrasjon av uttrykket \(\sqrt{x^2 - a^2}\) løses ved substitusjonen \(x = a\sec{\theta}\). Vi
+                        må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\sec{\theta}\tan{\theta}
+                        \Rightarrow dx = a\sec{\theta}\tan{\theta}\,d\theta\).</p>
+                    <div class="boks">
+                        \[
+                        \sqrt{x^2 - a^2} = \sqrt{a^2\sec^2{\theta} - a^2} = a^\sqrt{sec^2{\theta} - 1} =
+                        a|\tan{\theta}|.
+                        \]
+                    </div>
+                    <b>Invers tangentsubstitusjon:</b><br>
+                    <p>Integrasjon av uttrykket \(\sqrt{a^2 + x^2}\) løses ved substitusjonen \(x = a\tan{\theta}\). Vi
+                        må også huske substitasjon av \(dx\) slik at vi får \(dx/d\theta = a\sec^2{\theta} \Rightarrow
+                        dx = a\sec^2{\theta}\,d\theta\).</p>
+                    <div class="boks">
+                        \[
+                        \sqrt{a^2 + x^2} = \sqrt{a^2 + a^2\tan^2{\theta}} = a\sqrt{1 + \tan^2{\theta}} = a\sec{\theta}.
+                        \]
+                    </div>
+                    <h2>Tips</h2>
+                    <p>De fleste integraler man ender opp med etter invers substitusjon er mulig å løse ved bruk av
+                        kjerneregel eller ved vanlig antiderivasjon. I noen tilfeller må man derimot bruke enda flere
+                        trogonometriske identiteter for å kunne komme frem til et løselig integral.</p>
+                    <b>Cosinus eller Sinus i annen</b><br>
+                    <p>Dersom man får integralet </p>
+                    \[
+                    \int \sqrt{a^2 - x^2} dx = \int a\cos{x} \cdot a\cos{\theta}\, d\theta = a^2 \int \cos^2{\theta} \,
+                    d\theta.
+                    \]
+                    <p>I slike situasjoner lønner det seg å bruke dobbeltvinkel-regelen samt å huske \(\sin^2{x} +
+                        \cos^2{x} = 1\). Da følger \(cos{2x}\) = \cos^2{x} - \sin^2{x} = 2\cos^2{x} - 1. Tilsvarende kan
+                        vi gjøre ved å løse samme likning med hensyn på \(\sin^2{x}\). Ved algebraisk manipulasjon får
+                        vi resultatene</p>
+                    <div class="boks">
+                        \[
+                        \cos^2{x} = \frac{1}{2} + \frac{1}{2}\cos{2x}, \quad \sin^2{x} = \frac{1}{2} -
+                        \frac{1}{2}\cos{2x}.
+                        \]
+                    </div>
+                    <p>Dette er uttrykk som kan integreres.</p>
+                    <b>Cosinus eller Sinus i tredje</b><br>
+                    <p>Dette er også integral som kan dukke opp etter invers substitusjon. Vi viser hvordan det gjøres
+                        for \(\cos^3{x}\), men det er tilsvarende for sinus.</p>
+                    <div class="boks">
+                        \[
+                        \cos^3{x}dx = \cos{x}(1 - \sin^2{x})dx = \cos{x}(1 - u^2)\frac{du}{\cos{x}} = (1-u^2)du.
+                        \]
+                    </div>
+                    <p>Her har vi brukt substitusjonen \(u = \sin{x}\).</p>
                 </div>
                 <div id="indreSide6" class="indreSide">
                     <h1>Uegentlig integral</h1>
-                    <p>Vi har til nå bare sett på integraler med endelig størrelse. I dette delkapittelet skal vi ta en titt på integraler der integrand (funksjonsuttrykk) og intervall går mot uendelig.</p>
+                    <p>Vi har til nå bare sett på integraler med endelig størrelse. I dette delkapittelet skal vi ta en
+                        titt på integraler der integrand (funksjonsuttrykk) og intervall går mot uendelig.</p>
                     <h2>Video - Uegentlig integral</h2>
                     <!--<video width="400" controls>
                         <source src="videoer/04uegentlige.mp4" type="video/mp4">
                         Your browser does not support HTML video.
                     </video>-->
                     <div class="iframe-container">
-                        
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fziwLawrOZs?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/fziwLawrOZs?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                     <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-    
+
                         <input type="hidden" name="_subject" value="Integrasjon">
-                        
+
                         <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
                         <div class="form">
-                        <input type="text" name="Tilbakemelding_uegentlig_integral" autocomplete="off" required>
-                        <label for="name" class="label-name">
-                            <span class="content-name">Tilbakemelding:</span>
-                        </label>
+                            <input type="text" name="Tilbakemelding_uegentlig_integral" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
                         </div>
-                   </form>
-                   <h2>"Uendelig" intervall</h2>
-                   <p>Dersom vi skal integrere med grenser i det uendelige skriver vi det som</p>
-                   \[
-                   \int_a^\infty f(x)\, dx = \lim_{R \to \infty} \int_a^R f(x)\, dx = \lim_{R \to \infty} F(R) - F(a).
-                   \]
-                   <p> Tilsvarende formel holder for negative uendeligheter også.</p>
-                   <p>Integralet eksisterer dersom grenseverdien eksisterer. For at denne skal eksistere må \(f(x) \to 0\) når \(x \to \infty\) "i en stor nok rate" til at arealet under grafen ikke divergerer mot uendelig. Vi kan formulere</p>
-                   \[
-                   \int_a^{\infty}x^{-p}dx = \lim_{R \to \infty} \frac{R^{1-p}}{1-p} - \frac{a^{1-p}}{1-p}
-\quad
-\begin{cases}
-    \mbox{konvergerer mot } \frac{a^{1-p}}{p-1} & \mbox{if } p>1, \\
-    \mbox{divergerer mot } \infty & \mbox{if } p \le 1.
-\end{cases}\\
-                   \]
-                   <h2>"Uendelig" integrand</h2>
-                   <p>Dersom vi skal integrere en funksjon over et intervall \([a, b]\) der funksjonen ikke er begrenset i en verdi \(c \in (a, b)\), skriver vi om integralet til en grenseverdi</p>
-                   \[
-                   \int_a^b f(x)\, dx = \lim_{R \to c^-} \int_a^R f(x)\,dx +  \lim_{R \to c^+} \int_R^b f(x)\, dx
-                   \]
-                   <p>Alle funksjoner med vertikale asymptoter må derfor brytes opp, og skrives om til en grenseverdi. Et eksempel er integral over \(\tan{x}\). Tangens har har asymptoter (funksjonen går mot uendelig) ved \(\pi / 2, 3\pi/2, ...\)</p>
-                    </div>
-                    <div id="indreSide7" class="indreSide">
-                        <h1>Omdreiningslegemer</h1>
-                        <p>Som nevnt tidlig i kapitellet er et integral en uendelig sum av infitesimale størrelser. Til nå har vi sett på \(A = \int dA = \int f(x) dx\) som gir oss et areal. I dette delkapitellet skal vi se på volum som en uendelig som av infitesimale delvolumer.</p>
-                        <h2>Video - Omdreiningslegemer</h2>
-                        <!--<video width="400" controls>
+                    </form>
+                    <h2>"Uendelig" intervall</h2>
+                    <p>Dersom vi skal integrere med grenser i det uendelige skriver vi det som</p>
+                    \[
+                    \int_a^\infty f(x)\, dx = \lim_{R \to \infty} \int_a^R f(x)\, dx = \lim_{R \to \infty} F(R) - F(a).
+                    \]
+                    <p> Tilsvarende formel holder for negative uendeligheter også.</p>
+                    <p>Integralet eksisterer dersom grenseverdien eksisterer. For at denne skal eksistere må \(f(x) \to
+                        0\) når \(x \to \infty\) "i en stor nok rate" til at arealet under grafen ikke divergerer mot
+                        uendelig. Vi kan formulere</p>
+                    \[
+                    \int_a^{\infty}x^{-p}dx = \lim_{R \to \infty} \frac{R^{1-p}}{1-p} - \frac{a^{1-p}}{1-p}
+                    \quad
+                    \begin{cases}
+                    \mbox{konvergerer mot } \frac{a^{1-p}}{p-1} & \mbox{if } p>1, \\
+                    \mbox{divergerer mot } \infty & \mbox{if } p \le 1.
+                    \end{cases}\\
+                    \]
+                    <h2>"Uendelig" integrand</h2>
+                    <p>Dersom vi skal integrere en funksjon over et intervall \([a, b]\) der funksjonen ikke er
+                        begrenset i en verdi \(c \in (a, b)\), skriver vi om integralet til en grenseverdi</p>
+                    \[
+                    \int_a^b f(x)\, dx = \lim_{R \to c^-} \int_a^R f(x)\,dx + \lim_{R \to c^+} \int_R^b f(x)\, dx
+                    \]
+                    <p>Alle funksjoner med vertikale asymptoter må derfor brytes opp, og skrives om til en grenseverdi.
+                        Et eksempel er integral over \(\tan{x}\). Tangens har har asymptoter (funksjonen går mot
+                        uendelig) ved \(\pi / 2, 3\pi/2, ...\)</p>
+                </div>
+                <div id="indreSide7" class="indreSide">
+                    <h1>Omdreiningslegemer</h1>
+                    <p>Som nevnt tidlig i kapitellet er et integral en uendelig sum av infitesimale størrelser. Til nå
+                        har vi sett på \(A = \int dA = \int f(x) dx\) som gir oss et areal. I dette delkapitellet skal
+                        vi se på volum som en uendelig som av infitesimale delvolumer.</p>
+                    <h2>Video - Omdreiningslegemer</h2>
+                    <!--<video width="400" controls>
                             <source src="videoer/04omdreiningslegeme.mp4" type="video/mp4">
                             Your browser does not support HTML video.
                         </video>-->
-                        <div class="iframe-container">
-                        
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JRbL4J6kXaY?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-        
-                            <input type="hidden" name="_subject" value="Integrasjon">
-                            
-                            <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                            <div class="form">
+                    <div class="iframe-container">
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/JRbL4J6kXaY?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
                             <input type="text" name="Tilbakemelding_omdreiningslegemer" autocomplete="off" required>
                             <label for="name" class="label-name">
                                 <span class="content-name">Tilbakemelding:</span>
                             </label>
-                            </div>
-                       </form>
-                       <h2>Rotasjon om x-aksen</h2>
-                       <p>Gitt en funksjon \(f(x)\) på intervallet \([a, b]\). Vi roterer denne flaten rundt x-aksen over hele intervallet. Vi ønsker å finne volumet av dette omdreiningslegemet. Vi kan da dele opp volumet i skiver langs x-aksen med bredde \(dx\). Hvert delvolum blir da en sylinder med radius \(f(x)\) og høyde \(dx\). Volumet av hvert sylinderelement blir da \(\pi f(x)^2 dx\). Vi ønsker å integrere over alle sylinderene langs x-aksen og vi kan skrive det totale volumet som</p>
-                       <div class="boks">
-                           \[
-                           V = \pi \int_a^b (f(x))^2 \, dx.
-                           \]
-                       </div>
-                       <p>Dersom rotasjonen ikke skjer om \(y = 0\), men en vilkårlig verdi \(y = y_0\) vil radiusen bli \(r = f(x) - y_0\). Vi skriver da volumet til omdreiningslegemet som</p>
-                       \[
-                       V = \pi \int_a^b (f(x) - y_0)^2 \, dx.
-                       \]
-                       <h2>Rotasjon om y-aksen</h2>
-                       <p>Gitt en funksjon \(f(x)\) på intervallet \([a, b]\). Vi roterer denne flaten rundt y-aksen over hele intervallet. Vi ønsker å finne volumet av dette omdreiningslegemet. Vi ser da på en skive under funksjonen med høyde \(f(x)\) og bredde \(dx\). Avstanden til y-aksen (radiusen) er \(x\) slik at volumet av arealsegmentet rotert rundt y-aksen blir \(2\pi x f(x)\,dx\). Dersom vi integrerer over intervallet langs x-aksen får vi totale volum</p>
-                       <div class="boks">
-                           \[
-                           V = 2 \pi \int_a^b x f(x) \, dx.
-                           \]
-                       </div>
-                       <p>Dersom rotasjonen ikke skjer om \(x = 0\), men en vilkårlig verdi \(x = x_0\) vil radiusen bli \(r = x - x_0\). Vi skriver da volumet til omdreiningslegemet som</p>
-                       \[
-                           V = 2 \pi \int_a^b (x - x_0) f(x) \, dx.
-                           \]
-                    </div>
-                    <div id="indreSide8" class="indreSide">
-                        <h1>Buelengder og rotasjonsflater</h1>
-                        <p>I forrige delkapittel så vi på området mellom en graf og x-aksen. I to dimensjoner blir dette et areal, og i tre dimensjoner (omdreiningslegeme) blir det et volum. I dette delkapittelet skal vi kun se på størrelsen av selve funksjonen (og ikke området under). I to dimensjoner blir dette lengden av en graf, mens i tre dimensjoner ser vi på overflatearealet til et rotasjonslegeme. </p>
-                        <h2>Video - Buelengder og rotasjonsflater</h2>
-                        <div class="iframe-container">
-                        
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/73VUIjw9BgM?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-        
-                            <input type="hidden" name="_subject" value="Integrasjon">
-                            
-                            <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
-                            <div class="form">
+                    </form>
+                    <h2>Rotasjon om x-aksen</h2>
+                    <p>Gitt en funksjon \(f(x)\) på intervallet \([a, b]\). Vi roterer denne flaten rundt x-aksen over
+                        hele intervallet. Vi ønsker å finne volumet av dette omdreiningslegemet. Vi kan da dele opp
+                        volumet i skiver langs x-aksen med bredde \(dx\). Hvert delvolum blir da en sylinder med radius
+                        \(f(x)\) og høyde \(dx\). Volumet av hvert sylinderelement blir da \(\pi f(x)^2 dx\). Vi ønsker
+                        å integrere over alle sylinderene langs x-aksen og vi kan skrive det totale volumet som</p>
+                    <div class="boks">
+                        \[
+                        V = \pi \int_a^b (f(x))^2 \, dx.
+                        \]
+                    </div>
+                    <p>Dersom rotasjonen ikke skjer om \(y = 0\), men en vilkårlig verdi \(y = y_0\) vil radiusen bli
+                        \(r = f(x) - y_0\). Vi skriver da volumet til omdreiningslegemet som</p>
+                    \[
+                    V = \pi \int_a^b (f(x) - y_0)^2 \, dx.
+                    \]
+                    <h2>Rotasjon om y-aksen</h2>
+                    <p>Gitt en funksjon \(f(x)\) på intervallet \([a, b]\). Vi roterer denne flaten rundt y-aksen over
+                        hele intervallet. Vi ønsker å finne volumet av dette omdreiningslegemet. Vi ser da på en skive
+                        under funksjonen med høyde \(f(x)\) og bredde \(dx\). Avstanden til y-aksen (radiusen) er \(x\)
+                        slik at volumet av arealsegmentet rotert rundt y-aksen blir \(2\pi x f(x)\,dx\). Dersom vi
+                        integrerer over intervallet langs x-aksen får vi totale volum</p>
+                    <div class="boks">
+                        \[
+                        V = 2 \pi \int_a^b x f(x) \, dx.
+                        \]
+                    </div>
+                    <p>Dersom rotasjonen ikke skjer om \(x = 0\), men en vilkårlig verdi \(x = x_0\) vil radiusen bli
+                        \(r = |x - x_0|\). Vi skriver da volumet til omdreiningslegemet som</p>
+                    \[
+                    V = 2 \pi \int_a^b |x - x_0| f(x) \, dx.
+                    \]
+                </div>
+                <div id="indreSide8" class="indreSide">
+                    <h1>Buelengder og rotasjonsflater</h1>
+                    <p>I forrige delkapittel så vi på området mellom en graf og x-aksen. I to dimensjoner blir dette et
+                        areal, og i tre dimensjoner (omdreiningslegeme) blir det et volum. I dette delkapittelet skal vi
+                        kun se på størrelsen av selve funksjonen (og ikke området under). I to dimensjoner blir dette
+                        lengden av en graf, mens i tre dimensjoner ser vi på overflatearealet til et rotasjonslegeme.
+                    </p>
+                    <h2>Video - Buelengder og rotasjonsflater</h2>
+                    <div class="iframe-container">
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/73VUIjw9BgM?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Integrasjon">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/integrasjon.html">
+                        <div class="form">
                             <input type="text" name="Tilbakemelding_buelengder" autocomplete="off" required>
                             <label for="name" class="label-name">
                                 <span class="content-name">Tilbakemelding:</span>
                             </label>
-                            </div>
-                       </form>
-                       <h2>Buelengde</h2>
-                       <p>Lengden til en graf \(S\) kan skrives som en sum av del-lengder til grafen. Vi skriver at \(S = \int dS\). Utfordringen blir da å finne ut hva \(dS\) uttrykket som en funksjon av x slik at vi kan integrere buelengden over x-aksen</p>
-                       <p>Buelengden til et til et infitesimalt lite intervall kan approksimeres til en lineær funksjon. Bredden på intervallet er \(dx\) og høydeforskjellen mellom bunnen og toppen av \(dS\) kaller vi \(dy\). Dette utgjør en rettvinklet trekant og vi kan benytte pythagoras og skrive </p>
-                       \[
-                       dS = \sqrt{dx^2 + dy^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2}dx.
-                       \]
-                       <p>\(dy/dx\) er den deriverte av funksjon \(f\) og vi kan uttrykke den totale buelengden på intervallet \(x \in [a, b]\) som</p>
-                       <div class="boks">
-                           \[
-                           S = \int dS = \int_a^b \sqrt{1 + (f'(x))^2}\, dx.
-                           \]
-                       </div>
-                       <h2>Rotasjonsflate</h2>
-                       <p>Utledningen er veldig tilsvarende som for volum av rotasjonslegemer, men istede for at vi roterer arealet under en graf rundt en akse, så roterer vi buelengden av en graf rundt en akse. Her bruker vi resultatet overfor om lengde av en buelengde. </p>
-                       <b>Rotasjon om x-aksen:</b><br>
-                       <p>Formelen for omkrets av en sirkel er \(2\pi r\). Når vi roterer \(dS\) rundt x-aksen vil radiusen være \(r = |f(x)|\) og overflatearealet av delsegmentet blir \(dA = 2\pi|f(x)|dS\). Total areal blir \(dA\) integrert over alle x-verdier vi betrakter</p>
-                       <div class="boks">
-                           \[
-                           A = \int dA = \int 2\pi |f(x)|dS = 2\pi \int_a^b |f(x)| \sqrt{1 + (f'(x))^2}dx.
-                           \]
-                       </div>
-                       <p>Dersom funksjonen roteres om \(y = y_0\) i stede for \(y = 0\) vil radiusen til rotasjonsflaten endres og vi skriver radiusen om til \(r = |f(x) - y_0|\) og setter dette inn i uttrykket før vi integrerer.</p>
-                       <b>Rotasjon om y-aksen:</b><br>
-                       <p>Formelen for omkrets av en sirkel er \(2\pi r\). Når vi roterer \(dS\) rundt y-aksen vil radiusen være \(r = |x|\) og overflatearealet av delsegmentet blir \(dA = 2\pi|x|dS\). Total areal blir \(dA\) integrert over alle x-verdier vi betrakter</p>
-                       <div class="boks">
+                        </div>
+                    </form>
+                    <h2>Buelengde</h2>
+                    <p>Lengden til en graf \(S\) kan skrives som en sum av del-lengder til grafen. Vi skriver at \(S =
+                        \int dS\). Utfordringen blir da å finne ut hva \(dS\) uttrykket som en funksjon av x slik at vi
+                        kan integrere buelengden over x-aksen</p>
+                    <p>Buelengden til et til et infitesimalt lite intervall kan approksimeres til en lineær funksjon.
+                        Bredden på intervallet er \(dx\) og høydeforskjellen mellom bunnen og toppen av \(dS\) kaller vi
+                        \(dy\). Dette utgjør en rettvinklet trekant og vi kan benytte pythagoras og skrive </p>
+                    \[
+                    dS = \sqrt{dx^2 + dy^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2}dx.
+                    \]
+                    <p>\(dy/dx\) er den deriverte av funksjon \(f\) og vi kan uttrykke den totale buelengden på
+                        intervallet \(x \in [a, b]\) som</p>
+                    <div class="boks">
+                        \[
+                        S = \int dS = \int_a^b \sqrt{1 + (f'(x))^2}\, dx.
+                        \]
+                    </div>
+                    <h2>Rotasjonsflate</h2>
+                    <p>Utledningen er veldig tilsvarende som for volum av rotasjonslegemer, men istede for at vi roterer
+                        arealet under en graf rundt en akse, så roterer vi buelengden av en graf rundt en akse. Her
+                        bruker vi resultatet overfor om lengde av en buelengde. </p>
+                    <b>Rotasjon om x-aksen:</b><br>
+                    <p>Formelen for omkrets av en sirkel er \(2\pi r\). Når vi roterer \(dS\) rundt x-aksen vil radiusen
+                        være \(r = |f(x)|\) og overflatearealet av delsegmentet blir \(dA = 2\pi|f(x)|dS\). Total areal
+                        blir \(dA\) integrert over alle x-verdier vi betrakter</p>
+                    <div class="boks">
+                        \[
+                        A = \int dA = \int 2\pi |f(x)|dS = 2\pi \int_a^b |f(x)| \sqrt{1 + (f'(x))^2}dx.
+                        \]
+                    </div>
+                    <p>Dersom funksjonen roteres om \(y = y_0\) i stede for \(y = 0\) vil radiusen til rotasjonsflaten
+                        endres og vi skriver radiusen om til \(r = |f(x) - y_0|\) og setter dette inn i uttrykket før vi
+                        integrerer.</p>
+                    <b>Rotasjon om y-aksen:</b><br>
+                    <p>Formelen for omkrets av en sirkel er \(2\pi r\). Når vi roterer \(dS\) rundt y-aksen vil radiusen
+                        være \(r = |x|\) og overflatearealet av delsegmentet blir \(dA = 2\pi|x|dS\). Total areal blir
+                        \(dA\) integrert over alle x-verdier vi betrakter</p>
+                    <div class="boks">
                         \[
                         A = \int dA = \int 2\pi |x|dS = 2\pi \int_a^b |x| \sqrt{1 + (f'(x))^2}dx.
                         \]
                     </div>
-                    <p>Igjen vil radiusen endres dersom rotasjon skjer om \(x = x_0\) og radiusen endre til \(r = |x - x_0|\).</p>
+                    <p>Igjen vil radiusen endres dersom rotasjon skjer om \(x = x_0\) og radiusen endre til \(r = |x -
+                        x_0|\).</p>
+                </div>
+                <div id="indreSide9" class="indreSide">
+                    <h1>Oppgaver</h1>
+                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
+                    <h2>Video - Oppgaver</h2>
+                    <div class="iframe-container">
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/cVMunA1ypVI?modestbranding=1&color=white&rel=0&vq=hd720"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <div id="indreSide9" class="indreSide">
-                        <h1>Oppgaver</h1>
-                        <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
-                        <h2>Video - Oppgaver</h2>
-                        <div class="iframe-container">
-                                
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cVMunA1ypVI?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-        
-                            <input type="hidden" name="_subject" value="Transcendente">
-                            
-                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
-                            <div class="form">
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                        <input type="hidden" name="_subject" value="Transcendente">
+
+                        <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                        <div class="form">
                             <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
                             <label for="name" class="label-name">
                                 <span class="content-name">Tilbakemelding:</span>
                             </label>
-                            </div>
-                       </form>
                         </div>
-        </div>
-        
-    </div>
-</div>
+                    </form>
+                </div>
+            </div>
 
-<script type="text/javascript" src="test.js"></script> 
+        </div>
+    </div>
+
+    <script type="text/javascript" src="test.js"></script>
 
 </body>
-</html> 
+
+</html>
