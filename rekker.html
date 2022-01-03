@@ -303,9 +303,10 @@
                 <h1>Taylorrekker</h1>
                 <p>En taylorrekke er et taylorpolynom med uendelig mange ledd. Det er et spesialtilfelle av potensrekker med</p>
                 \[
-                a_n = \frac{f'(c)}{n!}.
+                a_n = \frac{f^{(n)}(c)}{n!} (x-c)^n,
                 \]
-                <p>Vi legger merke til at nevneren \(n!\) vokser raskere enn \((x-c)^n\), så taylorrekken konvergerer for alle \(x\).</p>
+
+                <p>der \(f^{(n)}(c) \) angir den \(n\)-te deriverte til \(f\) evaluert i punktet \(c\). Vi legger merke til at nevneren \(n!\) vokser raskere enn \((x-c)^n\), så taylorrekken konvergerer for alle \(x\).</p>
                 <h2>Video - Taylorrekker</h2>
                 <div class="iframe-container">
                         
@@ -327,11 +328,11 @@
                <p>En taylorrekke er definert som</p>
                <div class="boks">
                    \[
-                   f(x) = \sum_{n = 0}^\infty \frac{f'(c)}{n!}(x-c)^n.
+                   f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n.
                    \]
                </div>
                <p>Vi legger merke til likhetstegnet (\(=\)) som betyr at alle uendelig deriverbare analytiske funksjoner kan skriver <b>nøyaktig</b> som en taylorrekke.</p>
-               <p>Det er også verdt å merke seg at \(c\) er en valgfri konstant. Det er vanlig å velge \(c = 0\) slik at \((x - c)^n = x^n\).</p>
+               <p>\(c\) er x-verdien man taylorutvikler rundt, og det er vanlig å velge \(c = 0\) slik at \((x - c)^n = x^n\) (da kalles rekken alternativt for en Maclaurin-rekke).</p>
                <h2>Manipulering av uttrykk</h2>
                <p>Det kan lønne seg å være venn med kjente taylorrekker og hvilke manipulasjoner som er vanlige å gjøre. Vi viser dette gjennom et eksempel. Vi ønsker å finne verdien av</p>
                \[

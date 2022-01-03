@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<title>Kateter</title>
+<link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload="changeDisplay(0, 6)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
+        <div id="header">
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/transcendente.png" height="100px">
+                    <h2>Kurver i planet</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 6)">Stigningstall
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 6)">Buelengde og areal i kartesiske koord.
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 6)">Polarkoordinater
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 6)">Buelengde og areal i polarkoordinater
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 6)">Kjeglesnitt
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 6)">Oppgaver
+                    <div class="triangle-left" id= "v5">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/transcendente.png" height="100px">
+                    <h2>Transcendente funksjoner</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 6)"><h3 class="sideH">Stigningstall</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 6)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,6)"><h3 class="sideH">Polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(3, 6)"><h3 class="sideH">Buelengde og areal i polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 6)"><h3 class="sideH">Kjeglesnitt</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 6)"><h3 class="sideH">Oppgaver</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+            <div id = "indreSide0" class="indreSide">
+                <h1>Stigningstall</h1>
+                <p>Vi skal i dette kapitellet bli kjent med stigningstall til kurver i planet.</p>
+                    <h2>Video - Stigningstall</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+            </div>
+            <div id="indreSide1" class="indreSide">
+                <h1>Buelengde og areal i kartesiske koordinater</h1>
+                <p>Buelengde og areal i kartesiske koordinater er akkurat det det høres ut som. Kartesiske koordinater er koordinatsystemet du er kjent med, der vi i planet beskriver et punkt med en x-verdi og en y-verdi.</p>
+                <h2>Video - Buelengde og areal i kartesiske koordinater</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3j1o02i0XL4?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_inverse_funksjoner" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Polarkoordinater</h2>
+               <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en x-, og y-verdi heller beskriver et punkt med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Vinkelen \(\theta\) angir retningen, og \(r\) angir distanse fra origo. </p>
+               <div class="boks">
+                   \[
+                   x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2).
+                   \]
+               </div>
+               <p>En annen måte å skjekke om en funksjon er injektiv på er gjennom derivasjonstesten. Dersom den deriverte til en funksjon ikke endrer fortegn over et intervall, så vil funksjonen være injektiv over dette intervallet.</p>
+               <p>Det er dermed mulig å postulere to fremgangsmåter å vise at en funksjon er inverterbar i dette kurset:</p>
+               <ol>
+                   <li>Gitt en funksjon \(f(x)\). Sett opp likningen \(f(a) = f(b)\) og vis at dette medfører at \(a = b\).</li>
+                   <li>Gitt en funksjon \(f(x)\). Deriver \(f(x)\) og vis at den deriverte ikke endrer fortegn over intervallet i fokus.</li>
+               </ol>
+               <h2>Derivasjon av inverse funksjoner</h2>
+               <p>Dersom en funksjon \(f(x)\) har en invers \(f^{-1}(x)\) kan man skrive den deriverte av den inverse på formen</p>
+               <div class="boks">
+                   \[
+                   \frac{d}{dx}f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}.
+                   \]
+               </div>
+               <p><b>Utledelsen</b> tar utgangspunkt i definisjonen av en invers funksjon: \(f^{-1}(f(x)) = x\). Vi kan herfra bruke det vi har lært om implisitt derivasjon til å derivere begge sider med hensyn på \(x\).</p>
+               \[
+               f'(f^{-1}(x)) \cdot \frac{d}{dx} f^{-1}(x) = 1.
+               \]
+               <p>Denne likningen løses med hensyn på \(d/dx f^{-1}(x)\) for å finne likningen som beskriver derivasjon av inverse funksjoner.</p>
+             </div>
+             
+            
+            <div id="indreSide2" class="indreSide">
+                
+                <h1>Polarkoordinater</h1>
+               <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en x-, og y-verdi heller beskriver et punkt med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Vinkelen \(\theta\) angir retningen, og \(r\) angir distanse fra origo. </p>
+                <h2>Video - Polarkoordinater</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03logeksp.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcbJGE9_Zaw?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+              
+               
+             </div>
+            <div id="indreSide3" class="indreSide">
+                <h1>Buelengde og areal i polarkoordinater</h1>
+                <p>Nå som vi har blitt kjent med polarkoordinater er det kanskje ikke så overraskende at alle operasjoner alternativt kan uttrykkes ved polarkoordinater. I dette delkapittelet skal vi se på nettopp buelengde og areal i polarkoordinater. </p>
+                <h2>Video - Buelengde og areal i polarkoordinater</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tRWc1x4nlrk?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Identiteter</h2>
+               <p><b>Invers sinus:</b><br>
+                \[f(x) = \sin{x} \Rightarrow f^{-1}(x) = \arcsin{x}, \quad f^{-1}(x) \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad x \in [-1, 1]\]
+            </p>
+            <p><b>Invers cosinus:</b><br>
+                \[f(x) = \cos{x} \Rightarrow f^{-1}(x) = \arccos{x}, \quad f^{-1}(x) \in \left[0, \pi\right], \quad x \in [-1, 1]\]
+            </p>
+            <p><b>Invers tangens:</b><br>
+                \[f(x) = \tan{x} \Rightarrow f^{-1}(x) = \arctan{x}, \quad f^{-1}(x) \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad x \in (-\infty, \infty)\]
+            </p>
+            <p>Da vi snakker om inverser gjelder \(f^{-1}(f(x)) = f(f^{-1}(x)) = x\) for alle identitene over slik at \(\sin{(\arcsin{x})} = x\).</p>
+            <p>Merk også at \(\lim_{x \to \pm \infty}\arctan{x} = \pm \pi / 2\). </p>
+            <h2>Deriverte</h2>
+            <div class="boks">
+                \[
+                \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
+                \]
+                \[
+                \frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1-x^2}}
+                \]
+                \[
+                \frac{d}{dx} \arctan(x) = \frac{1}{1+x^2}
+                \]
+            </div>
+              </div>
+            <div id="indreSide4" class="indreSide">
+                <h1>Kjeglesnitt</h1>
+                <p>Kjeglesnitt betegner ulike kurver vi får dersom vi studerer skjæringskurven et plan lager med en kjegle. Vinkelen normalvektoren til planet har med kjeglens symmetriakse bestemmer hva slags kurve vi får. De tre ulike kurvene vi kan få kalles ellipse (sirkel faller inn under ellipse), parabel og hyperbel. </p>
+                <h2>Video - Kjeglesnitt</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Definisjon</h2>
+               
+                </div>
+                <div id="indreSide5" class="indreSide">
+                    <h1>Oppgaver</h1>
+                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
+                    <h2>Video - Oppgaver</h2>
+                    <div class="iframe-container">
+                            
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/D6W0FBieWfA?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+    
+                        <input type="hidden" name="_subject" value="Transcendente">
+                        
+                        <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                        <div class="form">
+                        <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Tilbakemelding:</span>
+                        </label>
+                        </div>
+                   </form>
+                    </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
+</body>
+</html> 
