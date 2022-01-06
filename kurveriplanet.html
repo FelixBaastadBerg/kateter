@@ -77,7 +77,7 @@
                 <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
                 <div id="toppen">
                     <img src="bilder/transcendente.png" height="100px">
-                    <h2>Transcendente funksjoner</h2>
+                    <h2>Kurver i planet</h2>
                 </div>
                 <div class="barListe" onclick="changeDisplay(0, 6)"><h3 class="sideH">Stigningstall</h3></div>
                 <div class="barListe" onclick="changeDisplay(1, 6)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
@@ -87,9 +87,17 @@
                 <div class="barListe" onclick="changeDisplay(5, 6)"><h3 class="sideH">Oppgaver</h3></div>
             </div>
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+
+
             <div id = "indreSide0" class="indreSide">
                 <h1>Stigningstall</h1>
-                <p>Vi skal i dette kapitellet bli kjent med stigningstall til kurver i planet.</p>
+                <p>Stigningstallet til en parametrisert kurve gis som ved ordinære funksjoner, \( \frac{dy}{dx} \), men her må vi huske på at \(x=f(t)\) og \(y=g(t)\) er funksjoner. Vi får
+                </p>
+                <div class="boks">
+                    \[
+                    \text{Stigningstall} = \frac{dy}{dx} = \frac{ \frac{dy}{dt}  } { \frac{dx}{dt}} = \frac{g'(t)}{f'(t)}
+                    \]
+                </div>
                     <h2>Video - Stigningstall</h2>
                     <!--<video width="400" controls>
                         <source src="videoer/03intro.mp4" type="video/mp4">
@@ -113,9 +121,10 @@
                             </div>
                        </form>
             </div>
+
             <div id="indreSide1" class="indreSide">
                 <h1>Buelengde og areal i kartesiske koordinater</h1>
-                <p>Buelengde og areal i kartesiske koordinater er akkurat det det høres ut som. Kartesiske koordinater er koordinatsystemet du er kjent med, der vi i planet beskriver et punkt med en x-verdi og en y-verdi.</p>
+                <p>Buelengde og areal i kartesiske koordinater er akkurat det det høres ut som. Buelengde angir lengden på en kurve på et gitt \(t\)-intervall, og arealene vi er interessert i er enten overflatearealet til et omdreiningslegeme (som du husker fra Matematikk 1), eller arealet omsluttet av en parametrisk kurve.</p>
                 <h2>Video - Buelengde og areal i kartesiske koordinater</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
@@ -137,36 +146,40 @@
                     </label>
                     </div>
                </form>
-               <h2>Polarkoordinater</h2>
-               <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en x-, og y-verdi heller beskriver et punkt med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Vinkelen \(\theta\) angir retningen, og \(r\) angir distanse fra origo. </p>
+
+               <h2>Buelengde</h2>
+               <p>Buelengden til en glatt, parametrisert kurve gitt ved \(x=f(t)\), \(y=g(t)\) på \(t\)-intervallet \([a, b]\) er gitt ved </p>
                <div class="boks">
                    \[
-                   x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2).
+                   S = \int_a^b \sqrt{(f'(t))^2 + (g'(t))^2} dt
                    \]
                </div>
-               <p>En annen måte å skjekke om en funksjon er injektiv på er gjennom derivasjonstesten. Dersom den deriverte til en funksjon ikke endrer fortegn over et intervall, så vil funksjonen være injektiv over dette intervallet.</p>
-               <p>Det er dermed mulig å postulere to fremgangsmåter å vise at en funksjon er inverterbar i dette kurset:</p>
-               <ol>
-                   <li>Gitt en funksjon \(f(x)\). Sett opp likningen \(f(a) = f(b)\) og vis at dette medfører at \(a = b\).</li>
-                   <li>Gitt en funksjon \(f(x)\). Deriver \(f(x)\) og vis at den deriverte ikke endrer fortegn over intervallet i fokus.</li>
-               </ol>
-               <h2>Derivasjon av inverse funksjoner</h2>
-               <p>Dersom en funksjon \(f(x)\) har en invers \(f^{-1}(x)\) kan man skrive den deriverte av den inverse på formen</p>
+               <h2>Areal av omdreiningslegeme</h2>
+               <p>Vi skal finne arealet av omdreiningslegeme gitt ved den parametrisert kurven \(x=(f(t)\), \(y=g(t)\), \(t \in [a, b]\). </p>
+               <p><b>Dreie om x-akse:</b></p>
                <div class="boks">
                    \[
-                   \frac{d}{dx}f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}.
+                   S = 2 \pi  \int_a^b |g(t)| \sqrt{(f'(t))^2 + (g'(t))^2} dt
                    \]
                </div>
-               <p><b>Utledelsen</b> tar utgangspunkt i definisjonen av en invers funksjon: \(f^{-1}(f(x)) = x\). Vi kan herfra bruke det vi har lært om implisitt derivasjon til å derivere begge sider med hensyn på \(x\).</p>
-               \[
-               f'(f^{-1}(x)) \cdot \frac{d}{dx} f^{-1}(x) = 1.
-               \]
-               <p>Denne likningen løses med hensyn på \(d/dx f^{-1}(x)\) for å finne likningen som beskriver derivasjon av inverse funksjoner.</p>
-             </div>
-             
+               <p><b>Dreie om y-akse:</b></p>
+               <div class="boks">
+                \[
+                S = 2 \pi  \int_a^b |f(t)| \sqrt{(f'(t))^2 + (g'(t))^2} dt
+                \]
+            </div>
+            <h2>Areal omsluttet av parametrisk kurve</h2>
+            <p>Vi skal nå finne arealet av område \(A\). \(A\) er området som er avgrenset av \(x\)-aksen, de vertikale linjene \(x=f(a)\), \(x=f(b)\) og kurven \( C \). </p>
+            <div class="boks">
+                \[
+                A = \bigg| \int_a^b g(t) f'(t) dt \bigg|,
+                \]
+            </div>
+            <p>der absoluttverdien sørger for at arealet er et positivt tall.</p>
+
+            </div>
             
             <div id="indreSide2" class="indreSide">
-                
                 <h1>Polarkoordinater</h1>
                <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en x-, og y-verdi heller beskriver et punkt med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Vinkelen \(\theta\) angir retningen, og \(r\) angir distanse fra origo. </p>
                 <h2>Video - Polarkoordinater</h2>
@@ -190,8 +203,29 @@
                     </label>
                     </div>
                </form>
-              
-               
+               <h2>Omgjøring fra det ene til det andre</h2>
+               <p>For å omgjøre et punkt gitt ved de kartesiske koordinatene \((x, y)\) til \((r, \theta)\), bruker vi </p>
+               <div class="boks" >
+                   \[
+                   r = \sqrt{x^2 + y^2}, \qquad \theta = \tan^{-1}(\frac{y}{x}),
+                   \]
+               </div>
+               <p>og for å omgjøre fra \((r, \theta)\) til \((x, y)\) bruker vi </p>
+               <div class="boks">
+                   \[
+                   x = r \cos \theta, \qquad y = r \sin \theta.
+                   \]
+               </div>
+
+               <h2>Envariabel funksjon i polarkoordinater</h2>
+               <p>Tilsvarende som i kartesiske koordinater har vi også envariable funksjoner
+                   der \(r\) er gitt som en funksjon av \(\theta \). Da er vinkelen \(\theta \) input / argument,
+                   og output / funksjonsverdi blir radiusen. Vi skriver \(r = f(\theta)\). For å illustrere
+                   konseptet vil for eksempel en sirkel med radius \(R\) skrives enkelt og greit som \(r=R\), altså \(f(\theta) = R\), en konstant.
+               </p>
+
+
+            
              </div>
             <div id="indreSide3" class="indreSide">
                 <h1>Buelengde og areal i polarkoordinater</h1>
@@ -217,30 +251,27 @@
                     </label>
                     </div>
                </form>
-               <h2>Identiteter</h2>
-               <p><b>Invers sinus:</b><br>
-                \[f(x) = \sin{x} \Rightarrow f^{-1}(x) = \arcsin{x}, \quad f^{-1}(x) \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad x \in [-1, 1]\]
+               <h2>Buelengde i polarkoordinater</h2>
+             <p> Anta \(C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i intervallet, \([\alpha, \beta ].\) Buelengden
+                 er tilsvarende som i kartesiske koordinater gitt ved </p>
+               <div class="boks">
+                   \[
+                   S = \int_{\alpha}^{\beta} \sqrt{f(\theta)^2 +  f'(\theta)^2} d \theta,
+                   \]
+               </div>
+               <p>utledet fra det ordinære uttrykket for buelengde i kartesiske koordinater, med \(x=f(\theta)\cos \theta\), og \(y=f(\theta)\sin \theta\). </p>
+            <h2>Areal i polarkoordinater</h2>
+            <p>Anta \( C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i intervallet \([\alpha, \beta ].\)
+                Arealet \(A\) gitt av områdene avgrenset av de to strålene ut fra origo \(\theta = \alpha\) og \(\theta = \beta\), samt av  \( C\), er gitt ved
             </p>
-            <p><b>Invers cosinus:</b><br>
-                \[f(x) = \cos{x} \Rightarrow f^{-1}(x) = \arccos{x}, \quad f^{-1}(x) \in \left[0, \pi\right], \quad x \in [-1, 1]\]
-            </p>
-            <p><b>Invers tangens:</b><br>
-                \[f(x) = \tan{x} \Rightarrow f^{-1}(x) = \arctan{x}, \quad f^{-1}(x) \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad x \in (-\infty, \infty)\]
-            </p>
-            <p>Da vi snakker om inverser gjelder \(f^{-1}(f(x)) = f(f^{-1}(x)) = x\) for alle identitene over slik at \(\sin{(\arcsin{x})} = x\).</p>
-            <p>Merk også at \(\lim_{x \to \pm \infty}\arctan{x} = \pm \pi / 2\). </p>
-            <h2>Deriverte</h2>
             <div class="boks">
                 \[
-                \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
-                \]
-                \[
-                \frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1-x^2}}
-                \]
-                \[
-                \frac{d}{dx} \arctan(x) = \frac{1}{1+x^2}
+                A = \frac{1}{2} \int_{\alpha}^{\beta} f(\theta)^2 d \theta
                 \]
             </div>
+
+
+
               </div>
             <div id="indreSide4" class="indreSide">
                 <h1>Kjeglesnitt</h1>
@@ -266,7 +297,35 @@
                     </label>
                     </div>
                </form>
-               <h2>Definisjon</h2>
+               <h2>Ellipse (og sirkel)</h2>
+               Ligningen for en ellipse er
+               <div class="boks">
+                   \[
+                   \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
+                   \]
+               </div>
+               <p> \(a\) og \(b\) er størrelsen på henholdsvis halvaksen i horisontal retning (\(x\)-retning), og vertikal retning (\(y\)-retning).
+                   Det gir da mening at når halvaksene er like store, \(a=b\), får vi en sirkel med radius \(R= a\). 
+                   Sirkel er således et spesialtilfelle av en ellipse.  </p>
+
+               <h2>Parabel</h2>
+               Ligningen for en parabel, som du kjenner som en kvadratisk envariabel funksjon, er
+               <div class="boks">
+                   \[
+                   y= ax^2 + bx + c.
+                   \]
+               </div>
+               <p>Dette er den eneste av de tre kjeglesnittene som kan uttrykkes som en funksjon \(y= f(x).\) </p>
+
+               <h2>Hyperbel</h2>
+               Ligningen for en hyperbel er
+               <div class="boks">
+                   \[
+                   \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+                   \]
+               </div>
+
+
                
                 </div>
                 <div id="indreSide5" class="indreSide">
