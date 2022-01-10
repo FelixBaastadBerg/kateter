@@ -45,7 +45,7 @@
             <div id="venstreSide">
                 <div id="indreVenstre">
                     <div id="venstreTema">
-                        <img src="bilder/derivasjon.png" height="100px">
+                        <img src="bilder/ikoner_matte2/vektorval.png" height="100px">
                         <h2>Vektorvaluerte funksjoner av én variabel</h2>
                     </div>
                     <div class="venstreBoks" onclick="changeDisplay(0, 8)">Introduksjon
@@ -97,7 +97,7 @@
                 <div id="sideNavBar">
                     <div id="aroundArrow" onclick="closeSideBar()"><i class="arrow left"></i></div>
                     <div id="toppen">
-                        <img src="bilder/derivasjon.png" height="100px">
+                        <img src="bilder/ikoner_matte2/vektorval.png" height="100px">
                         <h2>Derivasjon</h2>
                     </div>
                     <div class="barListe" onclick="changeDisplay(0, 8)">
@@ -394,7 +394,18 @@
 
                 <div id="indreSide3" class="indreSide">
                     <h1>Parametrisering og skjæringskurver</h1>
-                    <p>I dette delkapittelet ønsker vi å parametrisere skjæringskurver</p>
+                    <p>
+                        I dette delkapittelet ønsker vi å parametrisere skjæringskurver mellom to flater. Det vi kaller en <i>flate</i> er 
+                    et todimensjonalt objekt i \( \mathbb R^3 \) beskrevet ved en ligning bestående av \(x,y\) og \(z\). Et eksempel på en flate er
+                    en kjegle, med ligning \( z=\sqrt{x^2 + y^2}\). Et annet eksempel er en kuleflate med radius \(R\), med ligning 
+                    \(R^2 = x^2 + y^2 + z^2.\) For noen er det å beskrive en flate med en ligning noe forvirrende, men konseptuelt består en 
+                    flate av <b>alle punkter</b> på formen \((x,y,z)\) som <i>tilfredsstiller</i> ligningen.
+                  </p>
+                  <p>
+                      To flater som skjærer hverandre vil danne en <b>skjæringskurve.</b> Skjæringskurven består av alle punktene som inngår i 
+                      <i>begge flater</i>. Hvis hver flate er beskrevet hver sin ligning
+                       burde det gi mening at skjæringskurven består av de punktene som tilfredsstiller <b>begge ligningene.</b>
+                  </p>
                     <h2>Video - Sekantsetning og kristisk punkt</h2>
                     <!--<video width="400" controls>
                     <source src="videoer/02sekant.mp4" type="video/mp4">
@@ -420,8 +431,118 @@
                             </label>
                         </div>
                     </form>
+                <h2>Parametrisering av skjæringskurve</h2>
+                <p>Som vi husker kan enhver kurve parametriseres som en vektorvaluert funksjon \(\vec r(t),\) og vi husker også 
+                    at denne ikke trenger å være unikt representert. For eksempel kan en enhetssirkel i planet både beskrives ved 
+                    \(\vec r(t) = [\cos t, \sin t] \) og \(\vec r(t) = [-\sin t, \cos t]\). Altså vil det være flere måter å nå 
+                    en valid parametrisering. Likevel har vi noen tips til hvordan gå frem. 
+                </p>
+                <p>
+                    Anta du er gitt to ligninger til to flater. Da punktene i skjæringskurven skal tilfredsstille begge
+                    ligningene, kan det være lurt å finne "felles elementer" i begge ligningene, og sette 
+                    ligningene lik hverandre.
+                </p>
+                <h3>Eksempel 1</h3>
+                <p>
+                    Om vi har de to flatene \(x^2 - z = y\) og \( 4x + z = 0\), og vi skal finne parametriseringen til 
+                    skjæringskurven mellom de to flatene.
+                    Vi ser at \(z\) står i første potens i begge to. Ved å sette \(z\) alene i begge ligningene blir de 
+                    henholdsvis \[z= x^2 - y \quad  \text{og} \quad  z=-4x.\] Da kan vi sette høyresidene lik hverandre, da begge ligningene 
+                    skal oppfylles. Dermed har vi ligningen \[x^2 - y = -4x\] som beskriver relasjonen mellom \(x\) og \(y\).
+                    Herfra har vi mange muligheter til å parametrisere, men la oss for eksempel bare bestemme at \(x(t) = t.\)
+                    Vi setter inn dette i ligningen og finner \(y(t)\). \[t^2 - y = -4t \implies y(t) =t^2 + 4t. \] Da har vi funnet 
+                    \(x(t)\) og \(y(t)\). Da gjenstår det å finne \(z(t)\) fra én av ligningene \(z= x^2 - y\) eller \(z=-4x\), og det spiller 
+                    ingen rolle hvilken vi tar utgangspunkt i, svaret vil bli det samme. La oss ta \(z=-4x \implies z(t) = -4t.\)
+                    For å illustrere at det ikke hadde spilt noen rolle kan vi også sjekke den andre: 
+                    \(z= x^2 - y \implies z(t) = t^2 - ( t^2 + 4t ) = -4t. \)
+                    Vi har 
+                    \[
+                    x(t) = t, \quad y(t) = t^2 + 4t, \quad z(t) = -4t \implies \underline{\underline{ \vec r(t) = [t, t^2 + 4t, -4t]}}
+                    \]
+                </p>
+
+                <h3>Eksempel 2</h3>
+                <p>Anta vi har de to flatene \(x^2 + (y-1)^2 =1 \) og \(z =\sqrt{ x^2 + y^2}\). Her har vi ikke 
+                    en enkeltvariabel som inngår i begge og som vi kan løse med hensyn på. Likevel kjenner vi igjen 
+                    \[
+                    x^2 + (y-1)^2 =1 \iff \text{Sirkel med radius $1$, og med sentrum i }(0, 1).
+                    \]
+                    Dette er en sirkel i xy-planet, men blir en sylinder i \(\mathbb R^3\). <br> <br>
+
+                    Som i forrige eksempel er det greit å begynne med en ligning hvor kun to av variablene inngår, og 
+                    selv om vi kanskje ikke nøyaktig vet hvordan vi parametriserer en sirkel med sentrum i (0,1), vet vi 
+                    at sinus og cosinus inngår. I tillegg vet vi at \(\sin^2 t + \cos^2 t = 1\). Utifra dette ser vi at 
+
+                    \[
+                    \underbrace{x^2}_{\sin^2 t} + \underbrace{(y-1)^2}_{\cos^2 t} =1
+                    \]
+                    tilfredsstiller ligningen. Altså kan vi for eksempel la \(x(t) = \sin t\) og 
+                    \(y(t) = 1 + \cos t\). Setter vi inn dette i ligningen blir ligningen tilfredsstilt, og siden vi 
+                    ikke går glipp av noen løsninger er det en gyldig parametrisering (mer om akkurat dette nedenfor).
+                </p>
+                <p>
+                    Når vi nå både har funnet \(x(t)\) og \(y(t)\) er det ikke verre enn å sette inn 
+                    disse uttrykkene i ligningen der \(z\) inngår, for å finne \(z(t)\).
+                    \[
+                    z =\sqrt{ x^2 + y^2} \implies z(t) = \sqrt{ \sin^2 t + (1 + \cos t)^2} = \sqrt{ \sin^2 t + 1 + 2 \cos t + \cos^2 t}
+                    \]
+                    \[
+                    =\sqrt{ 2 \cos t + 1+   \sin^2 t  + \cos^2 t} =\sqrt{ 2 \cos t + 1+ 1} = \sqrt{2\cos t + 2}.
+                    \]
+                    Dermed har vi 
+                    \[
+                    x(t) = \sin t, \quad y(t) =1 + \cos t, \quad z(t) = \sqrt{2 \cos t + 2} \implies \underline{\underline{\vec r(t) = [\sin t, \cos t + 1, \sqrt{2 \cos t + 2}]}}
+                    \]
+                </p>
+                <h3>Adressering av forvirringsmomenter</h3>
+                <p>
+                    I eksempelet over valgte vi å parametrisere \(x^2 + (y-1)^2 = 1 \) med \(x(t) = \sin t\) og 
+                    \(y(t) = 1 + \cos t\). Annet enn at vi viftet med armene å sa at "vi vet sinus og cosinus må med 
+                    fordi det er en sirkel", så virket det kanskje rart å anta dette. Her hjelper erfaring og intuisjon veldig. 
+                    Ved å bli eksponert for mange oppgaver kjenner man igjen ligninger, noe som gjør det enklere å begynne.
+                </p>
+                <p>
+                    Men hvorfor kan man ikke her, som i første eksempel, bare la \(x(t)=t\) for eksempel? Problemet her 
+                    er at både \(x\) og \(y\) er kvadrerte i denne ligningen, så dersom vi lar \(x(t)=t\) finnes det <b>ingen reell</b>
+                    funksjon \(y(t)\) som tilfredsstiller \( t^2 + (y(t)-1)^2 = 1 \) <b>for alle </b> \(t\). 
+                </p>
+                <p>
+                    Hva med å la \(x(t) = 1\) og \(y(t)=1\)? Det er riktig at disse funksjonene vil løse ligningen 
+                    \(x^2 + (y-1)^2 = 1 \), problemet er at det er mange andre løsninger vi går glipp av. Dette er jo 
+                    bare et av mange punkter som utgjør sirkelen. Når vi parametriserer en ligning er det viktig at 
+                    <i>alle</i> løsninger inkluderes. 
+                </p>
+                <p>
+                    Dette er også grunnen til at en ikke kan "løse" for \(y\) ved å 
+                    gjøre følgende: 
+                    \[
+                    x^2 + (y-1)^2 = 1 \implies y-1 = \sqrt{1 - x^2} \implies  y= \sqrt{1 - x^2} + 1
+                    \]
+                    fordi vi da utelater løsningen \(y-1 = - \sqrt{1 - x^2} \).
+                </p>
+                <p>
+                    Vi oppsummerer denne diskusjonen til to hovedpoeng å merke seg.
+                </p>
+                <ol>
+                    <li>
+                        Dersom du har en ligning med <i>to</i> variabler der du <i>kan</i> løse for én av dem,
+                        kan du la den andre variabelen defineres som \(t\).
+                    </li>
+                    <li>
+                        Dersom du har ligninger med kun kvadratiske variabler, finn ut hvilket kjeglesnitt det er,
+                        å parametriser etter det. Bli 
+                    </li>
+                </ol>
+                    
+              
+
+
+
+
 
                 </div>
+
+                
 
                 <div id="indreSide4" class="indreSide">
                     <h1>Buelengde</h1>
