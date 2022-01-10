@@ -35,39 +35,40 @@
         <div id="venstreSide">
             <div id="indreVenstre">
                 <div id="venstreTema">
-                    <img src="bilder/transcendente.png" height="100px">
+                    <img src="bilder/ikoner_matte2/parameter.png" height="100px">
                     <h2>Kurver i planet</h2>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(0, 6)">Stigningstall
+                <div class="venstreBoks"  onclick="changeDisplay(0, 6)">Introduksjon
                     <div class="triangle-left" id= "v0">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(1, 6)">Buelengde og areal i kartesiske koord.
+                <div class="venstreBoks"  onclick="changeDisplay(1, 6)">Stigningstall
                     <div class="triangle-left" id= "v1">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks"  onclick="changeDisplay(2, 6)">Polarkoordinater
+                <div class="venstreBoks"  onclick="changeDisplay(2, 6)">Buelengde og areal i kartesiske koord.
                     <div class="triangle-left" id= "v2">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(3, 6)">Buelengde og areal i polarkoordinater
+                <div class="venstreBoks"  onclick="changeDisplay(3, 6)">Polarkoordinater
                     <div class="triangle-left" id= "v3">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(4, 6)">Kjeglesnitt
+                <div class="venstreBoks" onclick="changeDisplay(4, 6)">Buelengde og areal i polarkoordinater
                     <div class="triangle-left" id= "v4">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
-                <div class="venstreBoks" onclick="changeDisplay(5, 6)">Oppgaver
+                <div class="venstreBoks" onclick="changeDisplay(5, 6)">Kjeglesnitt
                     <div class="triangle-left" id= "v5">
                         <div class="inner-triangle"></div>
                     </div>
                 </div>
+                
             </div>
         
         </div>
@@ -79,19 +80,119 @@
                     <img src="bilder/transcendente.png" height="100px">
                     <h2>Kurver i planet</h2>
                 </div>
-                <div class="barListe" onclick="changeDisplay(0, 6)"><h3 class="sideH">Stigningstall</h3></div>
-                <div class="barListe" onclick="changeDisplay(1, 6)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(2 ,6)"><h3 class="sideH">Polarkoordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(3, 6)"><h3 class="sideH">Buelengde og areal i polarkoordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(4, 6)"><h3 class="sideH">Kjeglesnitt</h3></div>
-                <div class="barListe" onclick="changeDisplay(5, 6)"><h3 class="sideH">Oppgaver</h3></div>
+                <div class="barListe" onclick="changeDisplay(0, 7)"><h3 class="sideH">Stigningstall</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 7)"><h3 class="sideH">Stigningstall</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 7)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(3 ,7)"><h3 class="sideH">Polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 7)"><h3 class="sideH">Buelengde og areal i polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Kjeglesnitt</h3></div>
+                
             </div>
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
 
-
             <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til Matematikk 2</h1>
+                <p>Velkommen til Kateters kurs i Matematikk 2! Matematikk 2 omhandler flervariabel kalkulus (eng: multivariable calculus), 
+                    og er på mange måter en 
+                    videreføring av det du lærte i Matte 1, bare tatt "opp av planet og ut i rommet". I dette avsnittet skal vi prøve å 
+                    oppsummere Matte 2, slik at studenten kan få et helhetsbilde av pensum. Det er nok forvirrende å lese første
+                    gang, men tanken er at du kan komme tilbake til oppsumeringen underveis i semesteret for å sette ting i kontekst,
+                    og for å forstå hva som er hovedlinjene i pensum.
+                </p>
+                <p>
+                    Vi skal i <b>første kapittel</b> bli kjent med parametriserte kurver i planet. 
+                    Det vil helt enkelt si at vi har ett input-argument, og får ut et todimensjonalt punkt \((x,y)\) 
+                    (i xy-planet) som output. Dette skiller seg fra en-variable funksjoner
+                \(y = f(x)\) ved at outputtet ikke lenger er éndimensjonalt. Hovedkonseptet i dette 
+                kapittelet er parametriserte, men du skal også bli kjent med polarkoordinater, og noen 
+                arealoperasjoner tilknyttet kurver i planet.
+                </p>
+                <p>
+                    I <b>kapittel 2</b> vil du se en videreføring av kurver i planet; 
+                    det viser seg at det går an å representere en parametrisert kurve ved <i>vektorer.</i> 
+                    Disse funksjonene kalles <i>vektorvaluerte funksjoner</i> , og er rett og slett funksjoner med flerdimensjonalt 
+                    output (vi holder oss stort sett til to- eller tredimensjonalt output som maksimum).
+                    Inputtdimensjonen vil i dette kapittelet være én.
+                </p>
+                <p>
+                    Vi skal i <b>kapittel 3</b> bli kjent med skalarfunksjoner av flere variable, som på mange måter er det motsatte av det vi så i kapittel 2.
+                    Her vil vi ha flerdimensjonal input, \( (x,y,z) \), men outputtet er éndimensjonalt, altså en skalar.
+                    Her gjennomgås meget sentrale konsepter som grenseverdi i flere dimensjoner, partiellderivasjon og gradient.
+                </p>
+                <p>I <b>kapittel 4</b> skal vi bruke det vi har lært om gradient til å finne ekstremalverdier til flervariable funksjoner.
+                </p>
+                <p>
+                    I <b>kapittel 5</b> begynner vi med integrasjon av flervariable funksjoner. Da funksjonen har flerdimensjonalt input,
+                    betyr det også at vi må integrere over flere variable. Med todimensjonalt input, blir dette et dobbeltintegral.
+                    Vi kommer her tilbake til polarkoordinater, da dets symmetriegenskaper kan gjøre integrasjonen vesentlig enklere.
+                </p>
+                <p>
+                    I <b>kapittel 6</b> skal vi begynne å integrere funksjoner med tredimensjonalt input \(f(x,y,z)\), og dermed inføres trippelintegralet.
+                    Merk at både dobbelt- og trippelintegraler gjelder funksjoner med skalar (éndimensjonal) output.
+                </p>
+                <p>
+                    <b>Kapittel 7</b> tar for seg noen nye operatorer, nemlig divergens og curl. Dette er operatorer som kan brukes på 
+                    <i>vektorvaluerte funksjoner av flere variable</i>, altså en kombinasjon av funksjonene som ble introdusert i kapittel
+                    2 og funksjonene introdusert i kapittel 3; her er både inputdimensjon og outputdimensjon flervariabel!
+                    I dette kapittelet vil du også lære de tre store teoremene i multivariabel kalkulus: Greens teorem, Stokes teorem og Divergensteoremet.
+                </p>
+                <p>
+                    I <b>siste kapittel</b> skal vi begynne med linjeintegral, flateintegral og fluksintegral. Istedenfor å integrere innenfor et fast domene
+                    med integrasjonsgrenser skal vi nå integrere langs bestemte kurver eller langs bestemte flater.
+                </p>
+
+
+                    <h2>Video - Introduksjon</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XBMuxoxNkEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                <h2>Introduksjon - kurver i planet</h2>
+                <p>
+                    En parametrisering av en kurve i planet er å tilordne hver koordinat-variabel \((x, y) \) hver sin funksjon av
+                    en parameter \(t\),
+                </p>
+                <div class="boks">
+                    \[
+                    x = f(t), \quad y = g(t).
+                    \]
+                </div>
+                <p>
+                    Dette gjør at vi kan lage kurver som ikke kan beskrives av en funksjon \(y=f(x)\). Vi husker jo at
+                    en funksjon aldri kan være vertikal, da vi ikke kan ha flere \(y\)-verdier for samme \(x\). Denne begrensningen
+                    gjelder ikke for parametriserte kurver. Vi kan foreksempel la \(x=2\), \(y=t\). Dette vil være en vertikal linje
+                    i \(x=2.\)
+                </p>
+                <p>
+                    Altså får du et punkt \((x,y)\), gitt en \(t\)-verdi. Ved å "prikke opp" alle punktene for \(t \in [a,b]\),
+                    vil vi få en sammenhengende kurve (gitt at \(f(t), g(t)\) begge er kontinuerlige). Det som kan være
+                    forvirrende, er at vi ikke lenger har input-variabelen \(t\) visualisert på en akse, som vi hadde for \(y=f(x)\).
+                </p>
+
+
+            </div>
+
+            <div id = "indreSide1" class="indreSide">
                 <h1>Stigningstall</h1>
-                <p>Stigningstallet til en parametrisert kurve gis som ved ordinære funksjoner, \( \frac{dy}{dx} \), men her må vi huske på at \(x=f(t)\) og \(y=g(t)\) er funksjoner. Vi får
+                <p>Stigningstallet til en parametrisert kurve gis som ved ordinære funksjoner, \( \frac{dy}{dx} \), 
+                    men her må vi huske på at \(x=f(t)\) og \(y=g(t)\) er funksjoner. Vi får
                 </p>
                 <div class="boks">
                     \[
@@ -105,7 +206,7 @@
                     </video>-->
                     <div class="iframe-container">
                         
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3AvMscnQwLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     
                         <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
@@ -122,9 +223,13 @@
                        </form>
             </div>
 
-            <div id="indreSide1" class="indreSide">
+            <div id="indreSide2" class="indreSide">
                 <h1>Buelengde og areal i kartesiske koordinater</h1>
-                <p>Buelengde og areal i kartesiske koordinater er akkurat det det høres ut som. Buelengde angir lengden på en kurve på et gitt \(t\)-intervall, og arealene vi er interessert i er enten overflatearealet til et omdreiningslegeme (som du husker fra Matematikk 1), eller arealet omsluttet av en parametrisk kurve.</p>
+                <p>Buelengde og areal i kartesiske koordinater er akkurat det det høres ut som. 
+                    Buelengde angir lengden på en kurve på et gitt \(t\)-intervall, og arealene vi er interessert 
+                    i er enten overflatearealet til et omdreiningslegeme (som du husker fra Matematikk 1), eller arealet 
+                    omsluttet av en parametrisk kurve.</p>
+                  
                 <h2>Video - Buelengde og areal i kartesiske koordinater</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
@@ -132,7 +237,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3j1o02i0XL4?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/APOqWu_OFOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -148,14 +253,16 @@
                </form>
 
                <h2>Buelengde</h2>
-               <p>Buelengden til en glatt, parametrisert kurve gitt ved \(x=f(t)\), \(y=g(t)\) på \(t\)-intervallet \([a, b]\) er gitt ved </p>
+               <p>Buelengden til en glatt, parametrisert kurve gitt ved \(x=f(t)\), \(y=g(t)\) på 
+                   \(t\)-intervallet \([a, b]\) er gitt ved </p>
                <div class="boks">
                    \[
                    S = \int_a^b \sqrt{(f'(t))^2 + (g'(t))^2} dt
                    \]
                </div>
                <h2>Areal av omdreiningslegeme</h2>
-               <p>Vi skal finne arealet av omdreiningslegeme gitt ved den parametrisert kurven \(x=(f(t)\), \(y=g(t)\), \(t \in [a, b]\). </p>
+               <p>Vi skal finne arealet av omdreiningslegeme gitt ved den parametriserte kurven \(x=f(t)\), 
+                   \(y=g(t)\), \(t \in [a, b]\). </p>
                <p><b>Dreie om x-akse:</b></p>
                <div class="boks">
                    \[
@@ -169,7 +276,9 @@
                 \]
             </div>
             <h2>Areal omsluttet av parametrisk kurve</h2>
-            <p>Vi skal nå finne arealet av område \(A\). \(A\) er området som er avgrenset av \(x\)-aksen, de vertikale linjene \(x=f(a)\), \(x=f(b)\) og kurven \( C \). </p>
+            <p>Vi skal nå finne arealet av området \(A\). \(A\) er området som er avgrenset av \(x\)-aksen, 
+                de vertikale linjene \(x=f(a)\), \(x=f(b)\) 
+                og kurven \( C \). </p>
             <div class="boks">
                 \[
                 A = \bigg| \int_a^b g(t) f'(t) dt \bigg|,
@@ -179,9 +288,11 @@
 
             </div>
             
-            <div id="indreSide2" class="indreSide">
+            <div id="indreSide3" class="indreSide">
                 <h1>Polarkoordinater</h1>
-               <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en x-, og y-verdi heller beskriver et punkt med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Vinkelen \(\theta\) angir retningen, og \(r\) angir distanse fra origo. </p>
+               <p>Polarkoordinater er en ny type koordinater, der vi i stedet for en \(x\)-, og \(y\)-verdi heller beskriver et punkt 
+                   med en radius fra origo, \(r\), sammen med en vinkel utifra positiv x-retning \(\theta \). Altså; vinkelen \(\theta\) 
+                   angir retningen, og \(r\) angir distanse fra origo. </p>
                 <h2>Video - Polarkoordinater</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
@@ -189,7 +300,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcbJGE9_Zaw?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p6670fS4Go0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -221,13 +332,18 @@
                <p>Tilsvarende som i kartesiske koordinater har vi også envariable funksjoner
                    der \(r\) er gitt som en funksjon av \(\theta \). Da er vinkelen \(\theta \) input / argument,
                    og output / funksjonsverdi blir radiusen. Vi skriver \(r = f(\theta)\). For å illustrere
-                   konseptet vil for eksempel en sirkel med radius \(R\) skrives enkelt og greit som \(r=R\), altså \(f(\theta) = R\), en konstant.
+                   konseptet vil for eksempel en sirkel med radius \(R\) skrives enkelt og greit som \(r=R\), 
+                   altså \(f(\theta) = R\), en konstant.
                </p>
-
+               <p>Under ser du funksjonen \(r = 2 \sin (\theta)^2 \) plottet. Ved \(\theta = \pi/2\) og 
+                   \(\theta = 3\pi / 2\) er \(\sin(\theta)^2 = 1\), og dermed blir 
+                   radiusen \(r\) (av funksjonsdefinisjonen) for disse verdiene lik \(2\). </p>
+               <center><img src="bilder/polargraf.png" alt="" width="300px"></center>
+               
 
             
              </div>
-            <div id="indreSide3" class="indreSide">
+            <div id="indreSide4" class="indreSide">
                 <h1>Buelengde og areal i polarkoordinater</h1>
                 <p>Nå som vi har blitt kjent med polarkoordinater er det kanskje ikke så overraskende at alle operasjoner alternativt kan uttrykkes ved polarkoordinater. I dette delkapittelet skal vi se på nettopp buelengde og areal i polarkoordinater. </p>
                 <h2>Video - Buelengde og areal i polarkoordinater</h2>
@@ -237,7 +353,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tRWc1x4nlrk?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -252,17 +368,21 @@
                     </div>
                </form>
                <h2>Buelengde i polarkoordinater</h2>
-             <p> Anta \(C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i intervallet, \([\alpha, \beta ].\) Buelengden
+             <p> Anta \(C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i intervallet,
+                  \([\alpha, \beta ].\) Buelengden
                  er tilsvarende som i kartesiske koordinater gitt ved </p>
                <div class="boks">
                    \[
                    S = \int_{\alpha}^{\beta} \sqrt{f(\theta)^2 +  f'(\theta)^2} d \theta,
                    \]
                </div>
-               <p>utledet fra det ordinære uttrykket for buelengde i kartesiske koordinater, med \(x=f(\theta)\cos \theta\), og \(y=f(\theta)\sin \theta\). </p>
+               <p>utledet fra det ordinære uttrykket for buelengde i kartesiske koordinater, med \(x=f(\theta)\cos \theta\), 
+                   og \(y=f(\theta)\sin \theta\). </p>
             <h2>Areal i polarkoordinater</h2>
-            <p>Anta \( C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i intervallet \([\alpha, \beta ].\)
-                Arealet \(A\) gitt av områdene avgrenset av de to strålene ut fra origo \(\theta = \alpha\) og \(\theta = \beta\), samt av  \( C\), er gitt ved
+            <p>Anta \( C \) er kurven gitt ved funksjonen \(r=f(\theta) \), og vi lar \(\theta\) ta verdier i
+                 intervallet \([\alpha, \beta ].\)
+                Arealet \(A\) gitt av områdene avgrenset av de to strålene ut fra origo \(\theta = \alpha\) 
+                og \(\theta = \beta\), samt av  \( C\), er gitt ved
             </p>
             <div class="boks">
                 \[
@@ -273,30 +393,12 @@
 
 
               </div>
-            <div id="indreSide4" class="indreSide">
+            <div id="indreSide5" class="indreSide">
                 <h1>Kjeglesnitt</h1>
-                <p>Kjeglesnitt betegner ulike kurver vi får dersom vi studerer skjæringskurven et plan lager med en kjegle. Vinkelen normalvektoren til planet har med kjeglens symmetriakse bestemmer hva slags kurve vi får. De tre ulike kurvene vi kan få kalles ellipse (sirkel faller inn under ellipse), parabel og hyperbel. </p>
-                <h2>Video - Kjeglesnitt</h2>
-                <!--<video width="400" controls>
-                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                </video>-->
-                <div class="iframe-container">
-                        
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-
-                    <input type="hidden" name="_subject" value="Transcendente">
-                    
-                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
-                    <div class="form">
-                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
-                    <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
-                    </label>
-                    </div>
-               </form>
+                <p>Kjeglesnitt betegner ulike kurver vi får dersom vi studerer skjæringskurven et plan lager med en kjegle. 
+                    Vinkelen normalvektoren til planet har med kjeglens symmetriakse bestemmer hva slags kurve vi får. 
+                    De tre ulike kurvene vi kan få kalles ellipse (sirkel faller inn under ellipse), parabel og hyperbel. </p>
+                
                <h2>Ellipse (og sirkel)</h2>
                Ligningen for en ellipse er
                <div class="boks">
@@ -304,7 +406,8 @@
                    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
                    \]
                </div>
-               <p> \(a\) og \(b\) er størrelsen på henholdsvis halvaksen i horisontal retning (\(x\)-retning), og vertikal retning (\(y\)-retning).
+               <p> \(a\) og \(b\) er størrelsen på henholdsvis halvaksen i horisontal retning (\(x\)-retning), 
+                   og vertikal retning (\(y\)-retning).
                    Det gir da mening at når halvaksene er like store, \(a=b\), får vi en sirkel med radius \(R= a\). 
                    Sirkel er således et spesialtilfelle av en ellipse.  </p>
 
@@ -315,7 +418,7 @@
                    y= ax^2 + bx + c.
                    \]
                </div>
-               <p>Dette er den eneste av de tre kjeglesnittene som kan uttrykkes som en funksjon \(y= f(x).\) </p>
+               <p>Dette er den eneste av de tre kjeglesnittene som kan uttrykkes som en envariabel funksjon \(y= f(x).\) </p>
 
                <h2>Hyperbel</h2>
                Ligningen for en hyperbel er
@@ -327,28 +430,9 @@
 
 
                
-                </div>
-                <div id="indreSide5" class="indreSide">
-                    <h1>Oppgaver</h1>
-                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
-                    <h2>Video - Oppgaver</h2>
-                    <div class="iframe-container">
-                            
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/D6W0FBieWfA?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-    
-                        <input type="hidden" name="_subject" value="Transcendente">
-                        
-                        <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
-                        <div class="form">
-                        <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
-                        <label for="name" class="label-name">
-                            <span class="content-name">Tilbakemelding:</span>
-                        </label>
-                        </div>
-                   </form>
-                    </div>
+        </div>
+                
+                
         </div>
         
     </div>

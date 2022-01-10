@@ -31,7 +31,7 @@
 }
 
 #matte2:hover h3 {
-  transform: scale(1);
+  transform: scale(1.2);
   transition-duration: 200ms;
 }
 #matte2 {
