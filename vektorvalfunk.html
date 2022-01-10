@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body onload="changeDisplay(0, 9)" onload="limitFunc()">
+<body onload="changeDisplay(0, 8)" onload="limitFunc()">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -48,51 +48,47 @@
                         <img src="bilder/derivasjon.png" height="100px">
                         <h2>Vektorvaluerte funksjoner av én variabel</h2>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(0, 9)">Introduksjon
+                    <div class="venstreBoks" onclick="changeDisplay(0, 8)">Introduksjon
                         <div class="triangle-left" id="v0">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(1, 9)">Hastighet, fart og akselerasjon
+                    <div class="venstreBoks" onclick="changeDisplay(1, 8)">Hastighet, fart og akselerasjon
                         <div class="triangle-left" id="v1">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(2, 9)">Derivasjonsregler
+                    <div class="venstreBoks" onclick="changeDisplay(2, 8)">Derivasjonsregler
                         <div class="triangle-left" id="v2">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(3, 9)">Parametrisering og skjæringskurver
+                    <div class="venstreBoks" onclick="changeDisplay(3, 8)">Parametrisering og skjæringskurver
                         <div class="triangle-left" id="v3">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(4, 9)">Buelengde
+                    <div class="venstreBoks" onclick="changeDisplay(4, 8)">Buelengde
                         <div class="triangle-left" id="v4">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(5, 9)">Buelengdeparametrisering
+                    <div class="venstreBoks" onclick="changeDisplay(5, 8)">Buelengdeparametrisering
                         <div class="triangle-left" id="v5">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(6, 9)">Enhetstangent, enhetsnormal og krumning
+                    <div class="venstreBoks" onclick="changeDisplay(6, 8)">Enhetstangent, enhetsnormal og krumning
                         <div class="triangle-left" id="v6">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(7, 9)">Oppgaver
+                    <div class="venstreBoks" onclick="changeDisplay(7, 8)">Oppgaver
                         <div class="triangle-left" id="v7">
                             <div class="inner-triangle"></div>
                         </div>
                     </div>
-                    <div class="venstreBoks" onclick="changeDisplay(8, 9)">Søppel (skal vekk)
-                        <div class="triangle-left" id="v8">
-                            <div class="inner-triangle"></div>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
@@ -104,32 +100,29 @@
                         <img src="bilder/derivasjon.png" height="100px">
                         <h2>Derivasjon</h2>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(0, 9)">
+                    <div class="barListe" onclick="changeDisplay(0, 8)">
                         <h3 class="sideH">Introduksjon</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(1 ,9)">
+                    <div class="barListe" onclick="changeDisplay(1 ,8)">
                         <h3 class="sideH">Hastighet, fart og akselerasjon</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(2, 9)">
+                    <div class="barListe" onclick="changeDisplay(2, 8)">
                         <h3 class="sideH">Derivasjonsregler</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(3, 9)">
+                    <div class="barListe" onclick="changeDisplay(3, 8)">
                         <h3 class="sideH">Parametrisering av skjæringskurver</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(4, 9)">
+                    <div class="barListe" onclick="changeDisplay(4, 8)">
                         <h3 class="sideH">Buelengde</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(5, 9)">
+                    <div class="barListe" onclick="changeDisplay(5, 8)">
                         <h3 class="sideH">Buelengdeparametrisering</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(6, 9)">
+                    <div class="barListe" onclick="changeDisplay(6, 8)">
                         <h3 class="sideH">Enhetstangent, enhetsnormal og krumning</h3>
                     </div>
-                    <div class="barListe" onclick="changeDisplay(7, 9)">
+                    <div class="barListe" onclick="changeDisplay(7, 8)">
                         <h3 class="sideH">Oppgaver</h3>
-                    </div>
-                    <div class="barListe" onclick="changeDisplay(8, 9)">
-                        <h3 class="sideH">Søppel</h3>
                     </div>
                 </div>
                 <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
@@ -141,7 +134,7 @@
                     <p>Vi skriver \( \vec r (t) = [f(t), g(t)] \), som, helt identisk med vanlig parametrisering, gir et punkt som output ved innsatt \(t\)-verdi.
                         Istedenfor å beskrive punktet i en tuppel / parentes \( (f(t),g(t)) \), beskriver vi punktet som en vektor \( [f(t), g(t)] \) med rot i origo. Se repitisjon på vektor nedenfor. </p>
                     <p>Hvis \(t \in [a, b]\), ser vi for oss at vektoren \( \vec r (t) \) "tegner" en kurve når \(t\) løper fra \(a\) til \(b\).</p>
-                    <p> <b>Notasjon:</b> Det hender man skriver vektorer med tjukk skrift, \( \mathbf r(t) \) istedenfor \(\vec r\), men det betyr det samme. </p>
+                    <p> <b>Notasjon:</b> Det hender man skriver vektorer med tjukk skrift, \( \mathbf r \) istedenfor \(\vec r\), men det betyr det samme. </p>
 
                     <h2>Video - Introduksjon</h2>
                     <!--<video width="400" controls>
@@ -183,20 +176,82 @@
                         Dette rommet visualiseres ofte som \(xy\)-planet.
                     </p>
                     <p>
-                        \(\mathbb R^3\) er således det tredimensjonale rommet. Alle punkter i dette rommet beskrives på formen \(\vec v = [x,y,z]\), der \(x,y,z \in \mathbb R\).
+                        \(\mathbb R^3\) er således det tredimensjonale rommet. Alle punkter/vektorer i dette rommet beskrives på formen \(\vec v = [a,b,c]\), der \(a,b,c \in \mathbb R\).
+                        Standardnotasjon på disse tre uavhengige variablene er \(x, y\) og \(z\).
                     </p>
                    
                     <h2>Repetisjon på vektorer</h2>
                     <p>
-                        En vektor \(\vec v\) er et matematisk objekt med en <i>lengde</i> og en <i>retning.</i> Den tegnes ofte som en pil for å angi retningen.
-                        Selv om det finnes mange måter å representere en vektor på, er det vanligste å representere den som et punkt, som angir vektorens "hode", også tas det for gitt at den har rot i origo. Det vil si at vektoren \(\vec v = [2, 3]\) har roten i origo og hodet i punktet \((2,3)\).
-                        Det er lite som skiller et "punkt" og en vektor. Ethvert punkt kan beskrives som en vektor med rot i origo og hode i punktet, og motsatt kan en vektor enkelt omgjøres til et punkt ved å plassere roten i origo og studere hvor hodet ender.
+                        En vektor \(\vec v\) er et matematisk objekt med en <i>lengde</i> og en <i>retning.</i> 
+                        Den tegnes ofte som en pil for å angi retningen.
+                        Selv om det finnes mange måter å representere en vektor på, er det vanligste å representere den som 
+                        koordinatene til et punkt \((x,y)\)
+                        som angir koordinatene til vektorens "hode", også tas det for gitt at den har rot (hale) i origo. 
+                        Det vil si at vektoren \(\vec v = [2, 3]\) har roten i origo og hodet i punktet \((2,3)\).
+                        Vi skal senere se at det er lite som skiller et "punkt" og en vektor. Ethvert punkt kan beskrives som en 
+                        vektor med rot i origo og hode i punktet, 
+                        og motsatt kan en vektor enkelt omgjøres til et punkt ved å plassere roten i origo og studere hvor hodet ender.
                     </p>
                     <p>
                         På samme måte vil en vektor i tre dimensjoner skrives som \(\vec v = [x, y, z]\).
                     </p>
-    
-                    <p><b>Notasjon:</b> Det er valgfritt å skrive vektorer med firkantparentes eller ordinærparantes. </p>
+
+                    <h2>Enkle vektoroperasjoner</h2>
+                    <p><b>Vektoraddisjon</b></p>
+                    <p>
+                        \[
+                        \begin{bmatrix} a \\ b \\ c \end{bmatrix} + \begin{bmatrix} d \\ e \\ f \end{bmatrix} = \begin{bmatrix} a+d \\ b+e \\ c+f \end{bmatrix}
+                        \]
+                    </p>
+                    <p><b>Skalarmultiplikasjon,</b> la \(k\) være en skalar. </p>
+                    <p>
+                        \[
+                        k \begin{bmatrix} a \\ b \\ c \end{bmatrix} = \begin{bmatrix} a \\ b \\ c \end{bmatrix}k = \begin{bmatrix} ka \\ kb \\ kc \end{bmatrix} 
+                        \]
+                    </p>
+                    <p> <b>Prikkprodukt / skalarprodukt</b></p>
+                    <p>
+                        \[
+                        \begin{bmatrix} a \\ b \\ c \end{bmatrix} \cdot \begin{bmatrix} d \\ e \\ f \end{bmatrix} =  ad + be + cf
+                        \]
+                    </p>
+
+
+
+                    <h2>Ulik vektornotasjon</h2>
+
+                    <p>Det er valgfritt å skrive vektorer med firkantparentes eller ordinærparantes. De vanligste alternative
+                     skrivemåtene er  
+                    \[
+                        \vec v = [a,b,c] = (a,b,c) = \begin{bmatrix} a \\ b \\ c \end{bmatrix} = \begin{pmatrix} a \\ b \\ c \end{pmatrix}
+                    \]
+                    </p>
+
+                    <p>
+                        <b>Til deg som har Matte 3</b> så skilles det i det faget mellom såkalt radvektor \([a,b,c] \) og kolonnevektor \(\begin{bmatrix} a \\ b \\ c \end{bmatrix} \),
+                        men dette ser vi bort ifra i Matte 2.
+                    </p>
+                    <p><b>Enhetsvektorer</b> er en annen måte å representere en vektor på. Disse brukes mye i 
+                        fysikk, men også i dette kurset,
+                        så de bør du bli kjent med. I \(\mathbb R^3 \) definerer vi standardenhetsvektorene slik:
+                        \[
+                        \hat i = [1,0,0] = \text{Enhetsvektoren i } x \text{-retning,}
+                        \]
+                        \[
+                        \hat j = [0,1,0]= \text{Enhetsvektoren i } y \text{-retning,}
+                        \]
+                        \[
+                        \hat k = [0,0,1]= \text{Enhetsvektoren i } z \text{-retning.}
+                        \]
+                    </p> 
+                    <p>Dermed vil en vektor \(\vec v = [a,b,c]\) enkelt kunne skrives på enhetsvektorformat ved å skille hver komponent
+                        \[
+                        \vec v = \begin{bmatrix} a \\ b \\ c \end{bmatrix} =   \begin{bmatrix} a \\ 0 \\ 0 \end{bmatrix}+ \begin{bmatrix} 0 \\ b \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \\ c \end{bmatrix}=
+                        a \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}+ b \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + c \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = a \hat i + b \hat j + c \hat k.
+                        \]
+                    </p>
+                    
+                    
 
 
                     <h2>Kontinuitet og deriverbarhet</h2>
@@ -207,16 +262,17 @@
                     <p>
                         \[ \frac{d}{dt} \vec r (t) = \frac{ \vec r(t+ \Delta t) - \vec  r(t) }{\Delta t} \]
                         eksisterer. Her er det verdt å merke seg at \( \vec r'(t) \) ikke er et tall, men en vektor det óg. 
-                        Det er altså endringsraten til vektoren \(\vec r(t)\).
+                        Altså er endringsraten til vektoren \(\vec r(t)\) også en vektor.
                     </p>
-
-
-
-                    
                 </div>
 
                 <div id="indreSide1" class="indreSide">
                     <h1>Hastighet, fart og akselerasjon</h1>
+                    <p> Dette kapittelet skal forsøke å trekke en parallell fra vektorvaluerte funksjoners til 
+                        fysikkens verden. Vi kan nemlig se for oss en partikels posisjon ved tiden
+                        \(t\) som \(\vec r(t)\). Om du har hatt fysikk på videregående vet du kanskje at hastighet er den 
+                        tidsderiverte av posisjon, og at akselerasjon er den tidsderiverte av hastigheten. Dette skal vi her vise.
+                    </p>
 
                     
                     <h2>Video - Hastighet, fart og akselerasjon</h2>
@@ -244,17 +300,44 @@
                             </label>
                         </div>
                     </form>
-                    <h2>Definisjon</h2>
-                    
+                    <h2>Hastighet</h2>
+                    <p>Det kan kanskje virke rart å skille mellom hastighet og fart, som er synonymer i dagligtalen, men det gjør vi altså. 
+                        <b>Hastighet</b> er <i>vektoren</i> en får ved å tidsderivere retningsvektoren \(\vec r(t)\).
+                    </p>
+                    <div class="boks">
+                        \[
+                        \text{Hastighet} = \vec v(t) = \frac{\vec r(t + \Delta t) - \vec r(t)}{\Delta t} =  \vec r'(t)
+                        \]
+                    </div>
+
+                    <p>
+                        <b>Eksempel:</b> La \(\vec r(t) = [3t^2, e^{3t}]\). Da er hastighetsvektoren lik 
+                        \[
+                            \frac{d}{dt} \vec r(t) = \frac{d}{dt} [3t^2, e^{3t}] = [\frac{d}{dt} 3t^2, \frac{d}{dt} e^{3t}]
+                            = [6t, 3e^{3t}]
+                        \]
+                    </p>
+                    <h2>Fart</h2>
+                    <p>Fart betegner her det vi i dagligtalen mener med fart, nemlig et <i>tall</i>. Dermed er fart naturligvis
+                        <i>størrelsen</i> på hastighetsvektoren, det som vi kaller absoluttverdien / lengden til vektoren. <br>
+                        <b>Absoluttverdi</b> betegnes med symbolet \(| \cdot | \), der vi erstatter \(\cdot \) med vektoren vi tar absoluttverdien av.
+                    </p>
+                    <div class="boks">
+                        \[
+                        \text{Fart} = |\vec v(t)|
+                        \]
+                    </div>
+                    <p> <b>Regne ut absoluttverdi til en vektor:</b> La \(\vec v = [a, b, c].\) Vi regner ut absoluttverdien/lengden til vektoren \( |\vec v|\)
+                    ved Pytagoras:
+                \[
+                |\vec v| = \sqrt{a^2 + b^2 + c^2}.
+                \] </p>
 
 
                 </div>
-
-
                 <div id="indreSide2" class="indreSide">
                     <h1>Derivasjonsregler</h1>
-                    <p>Reglene som følger vil i hovedsak stå på formelarket til eksamen. Likevel er derivasjonsregler
-                        noe som burde sitte i fingerspissene og anbefales å lære seg utenatt.</p>
+                    <p>Derivasjonsreglene som følger er relativt enkle å forholde seg til, men en bør bli vant til å bruke de.</p>
                     <h2>Video - Derivasjonsregler</h2>
                     <!--<video> width="400" controls>
                     <source src="videoer/02regneregler.mp4" type="video/mp4">
@@ -281,96 +364,37 @@
                         </div>
                     </form>
                     <h2>Regler</h2>
-                    <p><b>Sum:</b></p>
-                    <p>Ved derivasjon av en funksjon som består av flere ledd (dvs separert av addisjon eller
-                        subtraksjon) vil det være det samme som å derivere hvert ledd for seg.</p>
-                    \[(f + g)'(x) = f'(x) + g'(x).\]
-                    <p>Et enkelt eksempel vil være \((x^2 + 3)'(x) = (x^2)'(x) + (3)'(x) = 2x + 0 = 2x\).</p>
-                    <p><b>Ganget med konstant:</b></p>
-                    <p>Ved derivasjon av en konstant \(k\) multiplisert med en funksjon, kan konstanten trekkes utenfor
-                        derivasjonsoperatoren.</p>
-                    \[(k \cdot f)'(x) = k \cdot f'(x). \]
-                    <p><b>Produktregelen:</b></p>
-                    <p>Ofte kan en funksjon \(f\) skrives som et produkt av to delfunksjoner som \(f(x) = g(x)h(x)\),
-                        for eksempel \(f(x) = 2x\cos{x}\) kan brytes opp i \(g(x) = 2x\) og \(h(x) = \cos{x}\).
-                        I situasjoner hvor kjente derivasjonidentiter ikke strekker til for \(f(x)\), men er
-                        tilstrekkelig for \(g(x)\) og \(h(x)\), ønsker vi å bruke produktregelen
-                    </p>
+                    <p>Vi lar \(\vec u(t)\) og \(\vec v(t)\) være vektorvaluerte funksjoner. Vi lar \(f(t)\) være en vanlig skalarfunksjon.
+                        Mange av disse reglene vil du kjenne igjen som helt analogt med reglene i envariabel kalkulus. Likevel er det 
+                    viktigere her å passe på at rekkefølgen blir riktig. For eksempel: \( \vec u(t) \times \vec v(t) \neq \vec v(t) \times \vec u(t) .  \) </p>
+                
                     <div class="boks">
+                        <p><b>Linearitet:</b></p>
                         \[
-                        (g\cdot h)'(x) = g'(x)h(x) + g(x)h'(x)
+                        \frac{d}{dt}\bigg( \vec u(t) + \vec v(t) \bigg) = \vec u'(t) + \vec v'(t)
                         \]
-                    </div>
-                    <p><b>Brøkregelen:</b></p>
-                    <p>Regelen brukes i situasjoner tilsvarende for produktregelen. Dersom et uttrykk kan skrives på
-                        brøkform der nevneren og telleren er enklere å derivere enn det opprinnelige uttrykket, kan det
-                        lønne seg å bruke brøkregelen</p>
-                    <div class="boks">
+                        <p><b>Produktregel for skalar- og vektorfunksjon:</b></p>
                         \[
-                        (\frac{g}{h})'(x) = \frac{g'(x)h(x) - g(x)h'(x)}{(h(x))^2}.
+                        \frac{d}{dt}\bigg( f(t) \vec u(t) \bigg) = f'(t) \vec u(t) + f(t) \vec u'(t)
                         \]
-                    </div>
-                    <p><b>Kjerneregelen:</b></p>
-                    <p>Regelen brukes når et utrykk består av en funksjon som tar en annen funksjon som argument. Det
-                        vil si istede for \(f(x)\), der \(x\) er argument, får vi \(f(u(x))\).
-                        Her kaller vi \(u(x)\) for kjernefunksjonen. Et eksempel kan være \(e^{x^2}\), der \(x^2\) er
-                        kjernen. Regelen skrives på formen
-                    <div class="boks">
+                        <p><b>Prikkproduktregel (vektorfunksjoner):</b></p>
                         \[
-                        (f \circ u)'(x) = f'(g(x))g'(x).
+                        \frac{d}{dt}\bigg( \vec u(t) \cdot \vec v(t) \bigg) = \vec u'(t) \cdot \vec v(t) + \vec u(t) \cdot \vec v'(t)
                         \]
-                    </div>
-                    <p>På differensialform kan det være lettere å danne et bilde av hvordan dette stemmer </p>
-                    \[
-                    \frac{df}{dx} = \frac{df}{dx}\cdot \frac{du}{du} = \frac{df}{du}\cdot \frac{du}{dx}.
-                    \]
-                    </p>
-                    <p>Alle reglene er mulige å utlede. Det er god trening på bruk av definisjonen av den deriverte å
-                        utlede formelen for produktregelen. Trikset er å bryte opp \(f(x + \Delta x) = g(x + \Delta
-                        x)h(x + \Delta x)\). Deretter må det legges til ledd i telleren. Løsningen finnes på nett dersom
-                        man står fast.</p>
-                    <h2>Derivasjonsregler for transcendente funksjoner</h2>
-                    <p>Akkurat hva transcendente funksjoner er og utledning av egenskaper og deriverte kommer i neste
-                        kapitell. Hvordan utrykkene deriveres listes likevel opp under slik at de er lette å slå opp
-                        senere.</p>
-                    <div class="boks">
-                        <p><b>Eksponential- og logaritmefunksjoner</b></p>
+                        <p><b>Kryssproduktregel (vektorfunksjoner):</b></p>
                         \[
-                        \frac{d}{dx}e^x = e^x
+                        \frac{d}{dt}\bigg( \vec u(t) \times \vec v(t) \bigg) = \vec u'(t) \times \vec v(t) + \vec u(t) \times \vec v'(t)
                         \]
+                        <p><b>Kjerneregel for skalarfunksjon i vektorfunksjonsargument:</b></p>
                         \[
-                        \frac{d}{dx}a^x = \ln{(a)}a^x
-                        \]
-                        \[
-                        \frac{d}{dx}\ln{x} = \frac{1}{x}
-                        \]
-                        <p><b>Trigonometriske funksjoner og inverse</b></p>
-                        \[
-                        \sin'{(x)} = \cos{x}
-                        \]
-                        \[
-                        \cos'{(x)} = -\sin{x}
-                        \]
-                        \[
-                        \tan'(x) = \frac{1}{\cos^2 x}
-                        \]
-                        \[
-                        \arcsin'(x) = \frac{1}{\sqrt{1-x^2}}
-                        \]
-                        \[
-                        \arccos'(x) = \frac{-1}{\sqrt{1-x^2}}
-                        \]
-                        \[
-                        \arctan'(x) = \frac{1}{1+x^2}
+                        \frac{d}{dt}\bigg( \vec u(f(t))) \bigg) = f'(t) \vec u'(f(t))
                         \]
                     </div>
                 </div>
 
                 <div id="indreSide3" class="indreSide">
-                    <h1>Sekantsetningen og teoremet om kristisk punkt</h1>
-                    <p>Begge reglene vi skal gjennom dette delkapittelet er matnyttige når det kommer til
-                        oppgaveregning. Sekantsetningen tar for seg eksistensen av unike sekanter mellom to punkter og
-                        teoremet om kritiske punkter tar for seg ekstremalpunkter.</p>
+                    <h1>Parametrisering og skjæringskurver</h1>
+                    <p>I dette delkapittelet ønsker vi å parametrisere skjæringskurver</p>
                     <h2>Video - Sekantsetning og kristisk punkt</h2>
                     <!--<video width="400" controls>
                     <source src="videoer/02sekant.mp4" type="video/mp4">
@@ -396,41 +420,12 @@
                             </label>
                         </div>
                     </form>
-                    <h2>Sekantsetningen</h2>
-                    <p>Vi tar for oss et kontinuerlig funksjon \(f\) på intervallet \([a, b]\) som er deriverbart på det
-                        tilsvarende indre intervallet. Vi kan da si at stigningstallet til den rette linjen mellom
-                        ytterpunktene \((a, f(a))\) og \((b, f(b))\) er \(\Delta y / \Delta x = (f(b) - f(a)) / (b -
-                        a).\) Sekantsetningen sier at funksjonen \(f\) da vil ha et punkt \(c \in (a, b)\) der
-                        stigningstallet til sekanten er lik som denne rette linja</p>
-                    <div class="boks">
-                        \[
-                        f'(c) = \underbrace{\frac{f(b) - f(a)}{b - a}}_{\text{stigningstall til sekant}}.
-                        \]
-                    </div>
-                    <p>Dette teoremet kan brukes for å vise eksistensen av visse punkter. For eksempel kan man vise at
-                        for to punkter \(b \neq a\) der \(f(a) = f(b)\), så vil det eksistere et ekstremalpunkt mellom
-                        de da vi vil få \(f'(c) = (f(a) - f(a)) / (b -a) = 0\). Slike kritiske punkt er viktige i
-                        funksjonsanalyse, noe vi snakker mer om under.</p>
-                    <h2>Teoremet om kritisk punkt</h2>
-                    <p>Som vi skal komme tilbake til i delkapitellet "Ekstremalverdier", finnes det i hovedsak tre
-                        forskjellige typer ekstremalverdier for et intervall. Et kritisk punkt er et punkt der den
-                        deriverte er lik null, det vil si tangenten til punktet er parallell med x-aksen.
-                        Teoremet om kritisk punkt sier at dersom en deriverbar funksjon på et åpent intervall \((a, b)\)
-                        har et ekstremalpunkt i \(c\), så vil \(f'(c) = 0\).
-                    </p>
-                    <p>Det er viktig å merke seg at for at teoremet skal gjelde må funksjonen være <b>deriverbar</b> og
-                        over et <b>åpent intervall</b>. Dersom funksjonen ikke tilfredstiller disse kravene åpner dette
-                        for at ekstremalpunkter ikke nødvendigvis er kritiske punkter. Som nevnt vil dette diskuteres
-                        nærmere i delkapitellet "Ekstremalverdier".</p>
+
                 </div>
+
                 <div id="indreSide4" class="indreSide">
-                    <h1>Implisitt derivasjon</h1>
-                    <p>Mange funksjoner kan uttrykkes eksplisitt, det vil si at funksjonsverdien \(y\) kan beskrives
-                        alene av en fri variabel \(x\). Alle funksjoner vi har sett på til nå i kurset har vært
-                        eksplisitte. I mange likningerer er det derimot ikke mulig å løse med hensyn på \(y(x)\), og
-                        uttrykket vi står igjen med er på formen \(f(x, y) = 0\).
-                        Denne implisitte representasjonen av funksjonen \(y\) krever implisitt derivasjon for å finne
-                        \(y'(x)\).
+                    <h1>Buelengde</h1>
+                    <p>
                     </p>
                     <h2>Video - Implisitt derivasjon</h2>
                     <!--<video width="400" controls>
@@ -457,34 +452,13 @@
                             </label>
                         </div>
                     </form>
-                    <h2>Fremgang</h2>
-                    I en oppgave får man ofte et uttykk gitt i form av en likning som inneholder både \(x\) og \(y(x)\).
-                    Ved hjelp av implisitt derivasjon skal man da finne \(dy / dx\) i punktet \((x_0, y_0)\).
-                    <ol>
-                        <li>
-                            <p>Første skrittet er å derivere begge sider av likningen (nesten alltid med hensyn på
-                                \(x\)). Uttrykk med \(x\) deriveres på helt vanlig vis. Deler av uttrykket som
-                                inneholder \(y\) må man derimot derivere med kjerneregelen. \(y\) er en funksjon av
-                                \(x\), som fører til at en funksjon av \(y\) har \(y\) som kjerne.
-                                \[\frac{d}{dx} y^2 = \frac{d}{dy}y^2 \cdot \frac{dy}{dx} = 2y \cdot \frac{dy}{dx}\]
-                                For uttrykk som \(y^2x\) gjelder det derfor å holde tunga rett i munnen.</p>
-                        </li>
-                        <li>
-                            <p>Likningen inneholder nå \(x, y\) og \(dy/dx\). Andre skrittet er å sette inn verdiene \(x
-                                = x_0\) og \(y = y_0\), slik at eneste ukjente er \(dy/dx\). </p>
-                        </li>
-                        <li>
-                            <p>Siste skrittet er å løse likninen med hensyn på \(dy/dx\).</p>
-                        </li>
-                    </ol>
+                    
+
                 </div>
+
                 <div id="indreSide5" class="indreSide">
-                    <h1>Koblede hastigheter</h1>
-                    <p>I mange likninger vil flere parametere være avhengig av samme variabel. Dersom et punkt beveger
-                        seg langs periferien til en sirkel vil både \(x\)- og \(y\)-posisjonen til punktet være avhengig
-                        av vinkelen \(\theta\). Hastigheten til punktet vil også potensielt være avhengig av posisjon.
-                        Dersom man har tilstrekkelig kunnskap om kula sin posisjon og hastighet vil det være mulig å
-                        finne resterende informasjon gjennom koblede hastigheter. </p>
+                    <h1>Buelengdeparametrisering</h1>
+                    <p></p>
                     <h2>Video - Koblede hastigheter</h2>
                     <!--<video width="400" controls>
                     <source src="videoer/02kobla.mp4" type="video/mp4">
@@ -517,40 +491,14 @@
                             </label>
                         </div>
                     </form>
-                    <h2>Fremgangsmåte</h2>
-                    <p>I oppgaver om koblede hastigheter inngår det ofte to størrelser \(A(t)\) og \(B(t)\) og man blir
-                        spurt om å finne en hastighet \(B'(t)\) i et tidspunkt \(t = T\).</p>
-                    <ol>
-                        <li>
-                            <p>Første steg er å finne en likning som inneholder både \(A\) og \(B\). Dette er ofte
-                                geometriske identiterer som trekanter eller sirkler der \(A\) kan beskrive en sidelengde
-                                eller en radius.
-                                En mulig situasjon man kan ende i da er \(F(A(t), B(t)) = 0\).
-                            </p>
-                        </li>
-                        <li>
-                            <p>Andre steget er å implisitt derivere likningen med hensyn på \(t\). Vi sitter da igjen
-                                med et uttrykk avhengig av \(A(t), B(t), A'(t), B'(t)\), der alle unntatt én verdi
-                                forhåpentligvis er kjent.</p>
-                        </li>
-                        <li>
-                            <p>Tredje steget blir å sette inn verdiene som er gitt i oppgaveteksten eller funnet ved
-                                hjelp av geometriske identiteter. Det er for eksempel vanlig at kun \(A\) er gitt, men
-                                at \(B\) finnes via for eksempel Pythagoras setning.</p>
-                        </li>
-                        <li>
-                            <p>Siste steg er å løse likningen med hensyn på den ukjente hastigheten \(B'(t)\).</p>
-                        </li>
-                    </ol>
+
+                    
                 </div>
+
+
                 <div id="indreSide6" class="indreSide">
-                    <h1>Ubestemte former (L'Hopitals regel)</h1>
-                    <p>Dersom et uttrykk kan skrives som \(f(x)/g(x)\) vet vi at dersom grenseverdiene er henholdsvis
-                        \(L\) og \(M\) når \(x\) går mot \(a\), så kan vi skrive </p>
-                    \[
-                    \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}
-                    \]
-                    <p>Hva skjer nå om verdiene av grensenverdiene er \(L = M = 0\) eller \(L = M = \infty\)?</p>
+                    <h1>Enhetstangent, enhetsnormal og krumning</h1>
+                    <p></p>
                     <h2>Video - L'Hopitals</h2>
                     <!--<video width="400" controls>
                     <source src="videoer/02ubestemte.mp4" type="video/mp4">
@@ -577,34 +525,10 @@
                             </label>
                         </div>
                     </form>
-                    <h2>L'Hopitals regel</h2>
-                    <p>Dersom et uttrykk kan skrives på formen "0/0" eller "\(\infty / \infty\)", så kan man bruke
-                        L'Hopitals regel for å finne grenseverdien. Regelen sier at dersom vi først deriverer telleren
-                        og nevneren hver for seg, og deretter evaluerer grenseverdien vil dette være den samme
-                        grenseverdien som til det opprinnelige uttrykket. Matematisk skrives det som </p>
-                    <div class="boks">
-                        <p>Dersom </p>
-                        \[
-                        \lim_{x \to a} f(x) = \lim_{x \to a+} g(x) = 0
-                        \]
-                        <p>og</p>
-                        \[\lim_{x \to a} \frac{f'(x) }{g'(x)} = L\]
-                        <p>så medfører dette at</p>
-                        \[
-                        \lim_{x \to a} \frac{f(x)}{g(x)} = L.
-                        \]
-                    </div>
-                    <p>Når man møter på et uttrykk på formen "0/0", bør man derfor derivere teller og nevner hver for
-                        seg og sjekke om grenseverdien blir lettere å evaluere. Det kan hende man må derivere flere
-                        ganger før grenseverdien skal eksistere, men dette er helt lovlig og vanlig. </p>
-                    <p><b>Manipulering før L'Hopitals:</b></p>
-                    <p>Ofte kan man få uttrykk på formen \(0 \cdot \infty\). Dette kan også i mange tilfeller løses ved
-                        hjelp av L'Hopitals ved hjelp av manipulering av uttrykket ved å for eksempel gjøre om til
-                        "\(\infty / \infty\)". For eksempel kan \(\lim_{x \to 0} x = \lim_{x \to 0} 1 / (1 / x)\). Vi
-                        har endret fra en grenseverdi som går mot 0 til en grenseverdi som går mot \(1 / \infty\).</p>
+                    
                 </div>
                 <div id="indreSide7" class="indreSide">
-                    <h1>Ekstremalverdier</h1>
+                    <h1>Oppgaver</h1>
                     <p>Å kunne identifisere globale- og lokale ekstremalverdier over et intervall er viktige egenskaper
                         innen funksjonsanalyse. I dette delkapitellet skal vi se på
                         fremgangsmåter for å identifisere disse punktene.
@@ -635,88 +559,10 @@
                             </label>
                         </div>
                     </form>
-                    <h2>Fremgangsmåte</h2>
-                    <p>En typisk eksamensoppgave innebærer å finne det globale topp- og bunnpunktet til en funksjon over
-                        et intervall-
-                        \([a,b]\). Fremgangsmåten vil da være å finne lokale ekstremalpunkter og deretter sammenlikne
-                        disse for å finne hvilke punkter som er størst eller minst globalt.
-                    </p>
-                    <p>Det finnes tre typer ekstremalverdier som alle må sjekkes som potensielle globale topp- eller
-                        bunnpunkter</p>
-                    <ol>
-                        <li class="q">
-                            <p><b>Kritiske punkter:</b></p>
-                            <p>Dette er punkter der \(f'(x) = 0\). Vi ønsker å finne alle kritiske punkter \({x_i} \in
-                                [a, b]\).
-                                At punktet er kritisk betyr at stigningstallet til tangenten som skjærer funksjonen i
-                                dette punktet er null.
-                                Med andre ord kan punktet representere et bunnpunkt, toppunkt eller terrassepunkt. For å
-                                bekrefte at et punkt ikke er et terrassepunkt kan man enten kjøre førstederiverttesten
-                                eller andrederiverttesten:
-                            </p>
-                            <p><b>Førstederiverttesten</b> går ut på å sjekke den deriverte på hver sin side av et
-                                kritisk punkt. Dersom fortegnet på den deriverte er forskjellig på hver sin side av
-                                punktet vet man at det er et topp- eller bunnpunkt.</p>
-                            <p><b>Andrederiverttesten</b> går ut på å sjekke hvordan akserelasjonen (endringsraten til
-                                den deriverte) i kurven er i det kritiske punktet. Dersom \(f''(x_i)>0\) er det et
-                                bunnpunkt, mens dersom \(f''(x_i) < 0\) er det et toppunkt. Om den er lik null vil
-                                    akselerasjonen til grafen være null og det vil være et terrassepunkt.</p>
-                        </li>
-                        <li class="q">
-                            <p><b>Endepunkter:</b></p>
-                            <p>For <span style="text-decoration: underline;">lukkede</span> intervaller er endepunkter
-                                lokale ekstremalpunkter. I delvis åpne intervaller evaluerer man den lukkede siden; i
-                                \([a, b)\) sjekker vi verdien til \(f(a)\).</p>
-                        </li>
-                        <li class="q">
-                            <p><b>Singulære punkter:</b></p>
-                            <p>Dette er punkter der den deriverte ikke er definert. Det vil si grenseverdien som
-                                beskriver definisjonen av den deriverte eksisterer ikke. Som utdypt i kapitellet om
-                                grenseverdier må grenseverdien fra begge sider av et punkt ha samme verdi for at grensen
-                                skal eksistere. Vi leter derfor etter punkter der den deriverte er ulik avhengig av
-                                hvilken side man angriper punktet.
-                                Dette fenomenet utfolder seg i form av et "knekkpunkt".
-                            </p>
-                            <p>Geometrisk er et knekkpunkt et hjørne i en graf der stigningen endres plutselig.
-                                Matematisk oppstår gjerne knekkpunkter ved at den deriverte endrer funksjonsuttrykk ved
-                                en gitt \(x\)-verdi. Dette kan for eksempel komme av absoluttverdi tegn; \(f(x) = |x|\)
-                                medfører at \(f'(x) = -1\) for \(x < 0\) og \(f'(x)=1\) for \(x> 0\)</p>
-                        </li>
-                    </ol>
-                </div>
-                <div id="indreSide8" class="indreSide">
-                    <h1>Oppgaver</h1>
-                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.
-                    </p>
-                    <h2>Video - Oppgaver</h2>
-
-                    <div class="iframe-container">
-
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/auDxFUBgkR0?modestbranding=1&color=white&rel=0&vq=hd720"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div style="border: 1px #999 solid; width: 90%; margin: auto; border-radius: 4px;">
-                        <div style="padding: 5px;"><b>NB: </b>
-                            Her er det flere feil, så her skal vi legge ut en revidert versjon så fort som mulig.
-                        </div>
-                    </div>
-                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-
-                        <input type="hidden" name="_subject" value="Derivasjon">
-
-                        <input type="hidden" name="_next" value="https://katetr.no/derivasjon.html">
-                        <div class="form">
-                            <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
-                            <label for="name" class="label-name">
-                                <span class="content-name">Tilbakemelding:</span>
-                            </label>
-                        </div>
-                    </form>
+                    
 
                 </div>
+              
             </div>
 
         </div>
