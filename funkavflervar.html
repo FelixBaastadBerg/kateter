@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<title>Kateter</title>
+<link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload="changeDisplay(0, 7)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
+        <div id="header">
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/ikoner_matte2/multivar.png" height="100px">
+                    <h2>Funksjoner av flere variable</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 7)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 7)">Grenser og kontinuitet
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 7)">Partiellderivasjon
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(3, 7)">Linearisering og deriverbarhet
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 7)">Retningsderiverte
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 7)">Implisitt funksjonsteorem
+                    <div class="triangle-left" id= "v5">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(6, 7)">Oppgaver
+                    <div class="triangle-left" id= "v6">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/ikoner_matte2/parameter.png" height="100px">
+                    <h2>Kurver i planet</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 7)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 7)"><h3 class="sideH">Stigningstall</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 7)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(3 ,7)"><h3 class="sideH">Polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 7)"><h3 class="sideH">Buelengde og areal i polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Kjeglesnitt</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Oppgaver</h3></div>
+                
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon</h1>
+                <p>Vi skal nå bli kjent med funksjoner av flere variable. Dette er <i>skalare</i> funksjoner, 
+                altså er outputtet av funksjonen et <i>tall</i>. Inputtet er derimot flervariabelt, og funksjonene
+            i dette kurset vil maksimalt ha input i \(\mathbb R^3\), altså på formen \(f(x,y,z)\). </p>
+           
+                    <h2>Video - Introduksjon</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XBMuxoxNkEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                    <h2>Visualisering av flervariable funksjoner</h2>
+                    <p> Funksjoner med input i \(\mathbb R^2\), på formen \(f(x,y)\) kan enkelt visualiseres i 
+                        \(\mathbb R^3\) ved å plotte \(z=f(x,y)\). På den måten visualiseres inputtet som 
+                    et punkt på xy-planet, og outputtet vil være \(z\)-verdien til punktet på flaten \(z=f(x,y)\). </p>
+
+                    <p>Funksjoner med input i \(\mathbb R^3\), \(f(x,y,z)\) er ikke like enkelt å visualisere. Det enkleste her 
+                        er å se for seg er at ethvert punkt \((x,y,z)\) i rommet har en tallverdi. Et eksempel for visualisering
+                        er temperaturmål i et rom.
+                        
+                    </p>
+                    
+
+                    <h2>Funksjonsdefinisjoner (nyttig for forståelsen)</h2>
+                    <p>
+                        I Matte 2 blir du kjent med funksjoner som har domene og/eller kodomene i fler dimensjoner, og 
+                        det er ikke sikkert du kjenner den formelle måten å definere en funksjon på. Dette er valgfritt 
+                        stoff, men det kan være en kjekk notasjon å bli kjent med. Vi illustrerer måten å gjøre det på
+                        med et eksempel. Vi har den flervariable funksjonen \(f(x,y,z)=x^3\sin(z) + e^y \). Den formelle 
+                        måten å definere denne funksjonen på er som følger:
+                    </p>
+                    <div class="boks">
+                        <ol>
+                            <li>
+                                \(f: \mathbb R^3 \to \mathbb R \) indikerer hvilke <b>rom</b> funksjonen fungerer mellom. 
+                                Her er domenet/inputrommet \(\mathbb R^3\) og kodomenet/outputrommet \(\mathbb R\).
+                            </li>
+                            <li>
+                                \(f(x,y,z) = x^3\sin(z) + e^y \) angir selve definisjonen, nemlig uttrykket for funksjonen.
+                            </li>
+                        </ol>
+                    </div>
+                    <p>Vi ser på et annet eksempel. Den vektorvaluerte funksjonen \(\vec r(t) = [t\cos t, \sin 4t ]\) defineres som
+                    <ol>
+                        <li>
+                            \(\vec r: \mathbb R \to \mathbb R^2\)
+                        </li>
+                        <li>
+                            \(\vec r(t) = [t\cos t, \sin 4t ]\).
+                        </li>
+                    </ol>
+                    </p>
+                    <p>
+                        Med denne notasjonen i bunn, kan vi generelt si at <b>vektorfunksjoner av én variabel</b>, som vi studerte 
+                        i kapittel 2, er funksjoner på formen
+                        \[
+                        f: \mathbb R \to \mathbb R^n,
+                        \]
+                        og i dette kapittelet skal vi studere <b>funksjoner av flere variable</b>, på formen 
+                        \[
+                        f: \mathbb R^n \to \mathbb R.
+                        \]
+                        Vi studerer hovedsakelig \(n \leq 3\).
+                    </p>
+                        
+
+            </div>
+
+
+            <div id = "indreSide1" class="indreSide">
+                <h1>Grenser og kontinuitet</h1>
+                <p>Der kom endelig grenser og kontinuitet! Vi skal ta en snartur innom den flervariable 
+                    \(\epsilon \delta\)-definisjonen som du kan fra Matte 1. Vi skal her se 
+                    hva som skjer med grenserverdien når vi har flere variable i vårt domene.
+                </p>
+                
+                    <h2>Video - Grenser og kontinuitet</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3AvMscnQwLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                <h2>Formell definisjon av grenseverdi</h2>
+                <p>Avstand mellom to punkter \((a,b)\) og \((c,d)\) er \(|(a,b) - (c,d)|\), altså lengden av 
+                    vektoren som går fra det ene punktet til det andre. Vi sier at 
+                      \(\lim_{(x,y) \to (a,b)} f(x,y) = L\) dersom følgende to punkter er oppfylt: </p>
+                <ol>
+                    <li>
+                        For enhver \(\rho>0\) eksisterer det minst ett punkt \((x,y) \) i nærheten av \((a,b)\) slik at 
+                            \( 0<|(x,y) - (a,b) | < \rho \). <br> <br>
+                            <i>Dette punktet så vi ikke i Matte 1. Dette kriteriet 
+                             er sjeldent relevant, og forsikrer bare at uansett hvor liten radius du velger utfra 
+                            \((a,b)\) så vil det eksistere minst et annet punkt i input-rommet innenfor denne radiusen.
+                            </i> 
+                    </li>
+                    <li>
+                        For enhver \(\epsilon>0\) eksisterer det en \(\delta >0\) slik at dersom
+                            \( 0<|(x,y) - (a,b) | < \delta \implies |f(x,y) - L| < \epsilon \). <br> <br>
+                            <i>Denne kjenner du igjen fra Matte 1, og er den multivariable varianten. Forskjellen 
+                                er at du her verifiserer at funksjonen går mot \(L\) fra alle retninger i xy-planet, 
+                                 fremfor bare fra høyre og venstre som i det envariable tilfellet.
+                            </i>
+                    </li>
+                </ol>
+
+                <h2>Sjekke at en grenseverdi eksisterer</h2>
+                <p>Hvis du blir bedt om å sjekke at en grenseverdi eksisterer er det som regel en 
+                    rasjonal funksjon du skal evaluere, som blir \( \frac00 \) når \((x,y) \to (a,b)\). Dersom 
+                    dette ikke er tilfelle, og du får et tall når \((x,y) \to (a,b)\) er funksjonen kontinuerlig,
+                    og dermed eksisterer grensen.
+                </p>
+                <p>For rasjonale funksjoner som blir \(\frac00) , eller for funksjoner med delt forskrift, er det generelt
+                    vanskeligere å vise at en grenseverdi eksisterer enn å vise at den <i>ikke</i> eksisterer. 
+                    For å vise at en grense ikke eksisterer er det bare å finne to retninger mot \((a,b)\) hvor grensene ikke blir like. 
+                </p>
+                
+
+            <p>La oss sjekke om følgende grense eksisterer,
+            \[
+            \lim_{(x,y) \to (0,0)} \frac{x^2y^2}{x^4 + 3y^4}.
+            \]
+            La oss først sjekke langs linjen \(y=0,\) altså langs x-aksen. Da lar vi \(y=0\), og sjekker så når \(x \to 0\):
+            \[
+            \lim_{x \to 0} \frac{x^2\cdot 0^2}{x^4 + 3\cdot0^4} = \lim_{x \to 0} 0 = 0.
+            \]
+            En naturlig og enkel retning å sjekke er \(y=x\), da vi kun trenger å sette inn for \(y=x\) og lar
+            \(x \to 0\):
+            \[
+            \lim_{x \to 0} \frac{x^2\cdot x^2}{x^4 + 3x^4} = \lim_{x \to 0} \frac{x^4}{4x^4} = \lim_{x \to 0} \frac{1}{4} = \frac{1}{4} \neq 0.
+            \]
+            Grenseverdiene fra retningene \(y=0\) og \(y=x\) er ulike og dermed eksisterer ikke grensen. <br> <br>
+            Merk at vi ikke hadde funnet dette ved å for eksempel kun sjekke \(y=0 \) og \(x=0\), da begge blir \(0\).
+            Alle linjer \(y=mx + c\) er mulige retninger å sjekke for å finne ut om grenseverdiene blir forskjellige,
+            bare pass på at linjen går gjennom punktet som vurderes \((a,b)\); altså må \(b=ma + c\).
+            </p>
+
+
+
+
+            </div>
+
+            <div id="indreSide2" class="indreSide">
+                <h1>Partiellderivasjon</h1>
+                
+                <h2>Video - Partiellderivasjon</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/APOqWu_OFOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_inverse_funksjoner" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               <h2>Definisjon</h2>
+               <p>Partiellderivasjon er ikke veldig vanskelig. Du behandler alle andre variabler som konstanter, og 
+                   \(\partial\) (uttales "del") erstatter \(d\) i Leibniz' notasjon (\(d/dx\) ). 
+                   La oss ta to raske eksempler. </p>
+                <p>
+                    \[ \frac{\partial}{\partial x}( yx^3 + zx + y) = 3yx^2+z  \]
+                    \[
+                    \frac{\partial}{\partial z}( xe^{zy} - \sin(x+2z) ) = xy e^{zy} - 2\cos(x+2z)
+                    \]
+                </p>
+                <h2>Gradient</h2>
+                <p>Gradient er et <b>meget viktig</b> konsept med anvendelser innen alt fra fysikk til maskinlæring. Gradienten 
+                    er en <b>vektoroperator</b> som brukes på en <b>skalar flervariabel funksjon.</b> Symbolet for gradienten 
+                    kalles nabla, og ser slik \(\nabla\) ut. I \(\mathbb R^3\) er operatoren på formen 
+                    \[
+                    \nabla = \begin{bmatrix} \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} 
+                    \\ \frac{\partial}{\partial z} \end{bmatrix}.
+                    \]
+                </p>
+                <div class="boks">
+                    <b>Gradienten</b> til \(f(x,y,z)\) er vektoren 
+                    \[
+                    \nabla f(x,y,z) = \begin{bmatrix} \frac{\partial}{\partial x} f(x,y,z) \\ \frac{\partial}{\partial y} f(x,y,z)
+                    \\ \frac{\partial}{\partial z} f(x,y,z) \end{bmatrix}
+                    \]
+                </div>
+                <h2>Tangentplan og normalvektor</h2>
+                <p>
+                    Vi studerer flaten \(z=f(x,y).\) Tangentplanet til en flate i et punkt er planet som tangerer flaten i punktet. Normalvektoren til 
+                    en flate i et punkt er den vektoren som står normalt på flaten i punktet.
+                </p>
+                <div class="boks">
+                    Ligning for <b>tangentplan</b> i punktet \((a, b, f(a,b))\) er gitt ved 
+                    \[
+                    z= f(a,b) + \frac{\partial}{\partial x} f(a,b) (x-a) + \frac{\partial}{\partial y} f(a,b) (y-b)
+                    \]
+                </div>
+                    
+                <div class="boks">
+                    Ligning for <b>normalvektoren</b> til flaten i punktet \((a, b, f(a,b))\) er gitt ved 
+                    \[
+                    \vec n = [\frac{\partial}{\partial x} f(a,b), \frac{\partial}{\partial y} f(a,b), -1]
+                    \]
+                </div>
+
+                <h2>Høyere ordens deriverbarhet</h2>
+                <p>Dersom de partielderiverte av \(f(x,y)\) opp til andre orden er kontinuerlige vil
+                \[
+                \frac{\partial}{\partial x } \frac{\partial f}{\partial y } = \frac{\partial^2 f}{\partial x \partial y } = \frac{\partial^2 f}{\partial y \partial x }
+                \]
+                </p>
+                <p> <b>Totalt differensial</b></p>
+                <p>
+                    Totalt differensial til en kontinuerlig funksjon \(f(x,y)\) er på formen
+                    \[
+                    df(x,y) = \frac{\partial f(x,y)}{\partial x}dx + \frac{\partial f(x,y)}{\partial y}dy.
+                    \]
+                    Dersom \(x=x(t)\) og \(y=y(t)\) kan vi finne \(df/dt\) ved å "dele på \(dt\)",
+                    \[
+                    \frac{df(x,y)}{dt} = \frac{\partial f(x,y)}{\partial x}\frac{dx}{dt} + \frac{\partial f(x,y)}{\partial y}\frac{dy}{dt}.
+                    \]
+                </p>
+               
+
+                
+            </div>
+
+
+            
+            <div id="indreSide3" class="indreSide">
+                <h1>Linearisering og deriverbarhet</h1>
+                <p>Linearisering er et nyttig konsept for å approksimere funksjoner. Du husker linearisering 
+                    fra Matte 1 som de to første leddene i en Taylorutvikling. For en funksjon \(f(x)\) er 
+                    lineariseringen i punktet \(a\) lik \(L(x) = f(a) + f'(a)(x-a)\). I fler dimensjoner 
+                    er det helt tilsvarende.
+                </p>
+               
+                <h2>Video - Linearisering og deriverbarhet</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03logeksp.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p6670fS4Go0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Linearisering</h2>
+               <p>Vi ønsker å linearisere \(f(x,y,z)\) i punktet \((a,b,c).\) Dette blir </p>
+               <div class="boks">
+                   \[
+                   L(x,y,z) = f(a,b,c) + \frac{\partial f(a,b,c)}{\partial x} (x-a) + \frac{\partial f(a,b,c)}{\partial y} (y-b)
+                   + \frac{\partial f(a,b,c)}{\partial z} (z-c)
+                   \]
+               </div>
+
+               <h2>Deriverbarhet</h2>
+               <p>Funksjonen \(f(x,y,z)\) </p>
+
+
+             </div>
+
+
+
+            <div id="indreSide4" class="indreSide">
+                <h1>Retningsderiverte</h1>
+                
+                <h2>Video - Retningsderiverte</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               
+              </div>
+
+            <div id="indreSide5" class="indreSide">
+                <h1>Implisitt funksjonsteorem</h1>
+
+                <h2>Video - Implisitt funksjonsteorem</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+            </div>
+       
+
+        <div id="indreSide6" class="indreSide">
+            <h1>Oppgaver</h1>
+            
+            <h2>Video - Oppgaver</h2>
+            <div class="iframe-container">
+                    
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                <input type="hidden" name="_subject" value="Transcendente">
+                
+                <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                <div class="form">
+                <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content-name">Tilbakemelding:</span>
+                </label>
+                </div>
+           </form>
+
+          </div>
+                
+                
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
+</body>
+</html> 
