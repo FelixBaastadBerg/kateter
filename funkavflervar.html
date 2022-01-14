@@ -83,14 +83,14 @@
                 <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
                 <div id="toppen">
                     <img src="bilder/ikoner_matte2/parameter.png" height="100px">
-                    <h2>Kurver i planet</h2>
+                    <h2>Funksjoner av flere variable</h2>
                 </div>
                 <div class="barListe" onclick="changeDisplay(0, 7)"><h3 class="sideH">Introduksjon</h3></div>
-                <div class="barListe" onclick="changeDisplay(1, 7)"><h3 class="sideH">Stigningstall</h3></div>
-                <div class="barListe" onclick="changeDisplay(2, 7)"><h3 class="sideH">Buelengde og areal i kartesiske koordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(3 ,7)"><h3 class="sideH">Polarkoordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(4, 7)"><h3 class="sideH">Buelengde og areal i polarkoordinater</h3></div>
-                <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Kjeglesnitt</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 7)"><h3 class="sideH">Grenser og kontinuitet</h3></div>
+                <div class="barListe" onclick="changeDisplay(2, 7)"><h3 class="sideH">Partiellderivasjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(3 ,7)"><h3 class="sideH">Linearisering og deriverbarhet</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 7)"><h3 class="sideH">Retningsderiverte</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Implisitt funksjonsteorem</h3></div>
                 <div class="barListe" onclick="changeDisplay(5, 7)"><h3 class="sideH">Oppgaver</h3></div>
                 
             </div>
@@ -100,7 +100,8 @@
                 <h1>Introduksjon</h1>
                 <p>Vi skal nå bli kjent med funksjoner av flere variable. Dette er <i>skalare</i> funksjoner, 
                 altså er outputtet av funksjonen et <i>tall</i>. Inputtet er derimot flervariabelt, og funksjonene
-            i dette kurset vil maksimalt ha input i \(\mathbb R^3\), altså på formen \(f(x,y,z)\). </p>
+            i dette kurset vil maksimalt ha input i \(\mathbb R^3\), altså på formen \(f(x,y,z)\). Vi kan alternativt skriver 
+        vi \(f(\vec r)\), der \(\vec r=(x,y,z)\) er et punkt i \(\mathbb R^3\), og dette betyr det samme. </p>
            
                     <h2>Video - Introduksjon</h2>
                     <!--<video width="400" controls>
@@ -114,9 +115,9 @@
                     
                         <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                            <input type="hidden" name="_subject" value="Transcendente">
+                            <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                             
-                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                             <div class="form">
                             <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
                             <label for="name" class="label-name">
@@ -201,9 +202,9 @@
                     
                         <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                            <input type="hidden" name="_subject" value="Transcendente">
+                            <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                             
-                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                             <div class="form">
                             <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
                             <label for="name" class="label-name">
@@ -284,9 +285,9 @@
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                    <input type="hidden" name="_subject" value="Transcendente">
+                    <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                     <div class="form">
                     <input type="text" name="Tilbakemelding_inverse_funksjoner" autocomplete="off" required>
                     <label for="name" class="label-name">
@@ -339,7 +340,7 @@
                     \]
                 </div>
 
-                <h2>Høyere ordens deriverbarhet</h2>
+                <h2>Høyere ordens deriverte</h2>
                 <p>Dersom de partielderiverte av \(f(x,y)\) opp til andre orden er kontinuerlige vil
                 \[
                 \frac{\partial}{\partial x } \frac{\partial f}{\partial y } = \frac{\partial^2 f}{\partial x \partial y } = \frac{\partial^2 f}{\partial y \partial x }
@@ -382,9 +383,9 @@
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                    <input type="hidden" name="_subject" value="Transcendente">
+                    <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                     <div class="form">
                     <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
                     <label for="name" class="label-name">
@@ -403,7 +404,13 @@
                </div>
 
                <h2>Deriverbarhet</h2>
-               <p>Funksjonen \(f(x,y,z)\) </p>
+               <p>Funksjonen \(f(\vec r)\) er deriverbar i punktet \(\vec a \in \mathbb R^n\) dersom </p>
+               <p>
+                   \[
+                   \lim_{|\vec r| \to 0} \frac{f(\vec a + \vec r) - L(\vec a + \vec r)}{|\vec r|} = 0.
+                   \]
+               </p>
+               
 
 
              </div>
@@ -424,9 +431,9 @@
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                    <input type="hidden" name="_subject" value="Transcendente">
+                    <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                     <div class="form">
                     <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
                     <label for="name" class="label-name">
@@ -435,10 +442,52 @@
                     </div>
                </form>
                
+
+               <h2>Definisjon</h2>
+               <p>Den retningsderiverte er den deriverte i en retning. Vi har jo sett at den deriverte av 
+                   \(f\) i \(x\)-retning er den partiellderiverte \(\partial f/\partial x\), og at det i \(y\)
+                -retning er \(\partial f/\partial y\). Men hva om vi ønsker å se på en mellomting av de to retningene? Dette er 
+                hensikten med den retningsderiverte.
+             </p>
+             <p>
+                La \(f(\vec r)\) være en flervariabel funksjon, og la \(\vec r \in \mathbb R^n\). 
+                Vi lar \(\vec u \in \mathbb R^n\) være retningen vi ønsker å finne den retningsderiverte. \(\vec u\)
+                må være av lengde én, hvis ikke må den normaliseres.
+             </p>
+             <div class="boks">
+                \[
+                \text{Retningsderiverte i retning $\vec u $ i punktet $\vec a$} = D_u f(\vec a) = \nabla f(\vec a) \cdot \vec u
+                \]
+             </div>
+             <h2>Egenskaper</h2>
+             <p>Fra videregående husker du kanskje at prikkproduktet av \(\vec u\) og \(\vec v\) er gitt ved
+            \[
+            \vec u \cdot \vec v = |\vec u| |\vec v| \cos \theta 
+            \] 
+            der \(\theta \in [0, \pi]\) er vinkelen mellom vektorene. Anvender vi dette på den retningsderiverte 
+            får vi 
+            \[
+                 D_u f(\vec a) = \nabla f(\vec a) \cdot \vec u = |\nabla f(\vec a)| |\vec u| \cos \theta =  |\nabla f(\vec a)|\cos \theta.
+            \]
+            Fra dette kan vi slutte at den deriverte er størst ved \(\theta=0\), altså i gradientens retning. I tillegg 
+            er den minst i \(\theta = \pi \) (motsatt retning av gradienten), og null vinkelrett på gradienten, \(\theta = \pi / 2.\)
+            
+            </p>
+
+             
+               
               </div>
 
             <div id="indreSide5" class="indreSide">
                 <h1>Implisitt funksjonsteorem</h1>
+                <p>Det implisitte funksjonsteorem brukes for å lokalt uttrykke en variabel som funksjon av 
+                    en annen variabel, når deres relasjon er gitt fra en ligning. Ta for eksempel
+                    ligningen \(x^2 + y^2 = 1\), som er ligningen til en sirkel med radius 1. Alle punkter \((x,y)\) som 
+                    tilfredsstiller denne ligningen ligger på denne sirkelen. Men vi vet at vi <b>ikke</b> kan 
+                    løse for \(y\) og uttrykke en \(y=f(x)\) for sirkelen, da fler \(y\)-verdier 
+                    korresponderer til samme \(x\)-verdi. Likevel kan vi uttrykke den øvre delen av 
+                    sirkelen som \(y=\sqrt{1-x^2}\), og den nedre delen som \(y=-\sqrt{1-x^2}\).
+                </p>
 
                 <h2>Video - Implisitt funksjonsteorem</h2>
                 <!--<video width="400" controls>
@@ -451,9 +500,9 @@
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                    <input type="hidden" name="_subject" value="Transcendente">
+                    <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                     
-                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <input type="hidden" name="_next" value="https://katetr.no/funkavflervar.html">
                     <div class="form">
                     <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
                     <label for="name" class="label-name">
@@ -461,6 +510,65 @@
                     </label>
                     </div>
                </form>
+
+               <h2>Implisitt funksjonsteorem i \(\mathbb R^2\) </h2>
+            <p> Vi studerer punktet \((x_0, y_0) \in \mathbb R^2\) og den flervariable funksjonen \(f(x,y)\). Dersom 
+                <ol>
+                    <li>
+                        \(f(x_0, y_0) = 0\), og
+                    </li>
+                    <li>
+                        \(\frac{\partial f(x_0, y_0)}{\partial y} \neq 0,\)
+                    </li>
+                </ol>
+                så eksisterer det en funksjon \(g(x)\) i nærheten av \(x_0\) som lokalt beskriver \(y\) som 
+                en eksplisitt funksjon av \(x\), \(y=g(x)\). Det vil si at \(y_0 = g(x_0)\), og \( f(x_0, g(x_0))=0\).
+                Teoremet gir <i>i tillegg</i> et uttrykk for funksjonens deriverte:
+                \[
+                g'(x) = -\frac{ \frac{\partial f(x, g(x))}{\partial x} }{\frac{\partial f(x, g(x))}{\partial y}}
+                \]
+            </p>
+            <h3>Eksempel</h3>
+            <p>
+                Dette teoremet kan virke umotivert ved første øyekast, så la oss se på eksempelet med enhetssirkelen. 
+                Vi har ligningen \(x^2 + y^2 = 1\), og vi ønsker å <i>lokalt</i> beskrive \(y\) som en funksjon av \(x\)
+                rundt for eksempel \((0,1)\). La oss flytte alt over til en side i ligningen vår, slik at vi får en funksjon 
+                på formen \(f(x,y)=0\), nemlig \(f(x,y) = x^2 + y^2 - 1=0.\) Punktet vårt er \( (x_0, y_0)= (0,1) \).
+            </p>
+            <p>
+                La oss sjekke om de to kravene til det implisitte funksjonsteoremet holder. Per konstruksjon er 
+                \(f(0,1)=0\). Vi finner så 
+                \[
+                \frac{\partial f(x, y)}{\partial y} = \frac{\partial }{\partial y} (x^2 + y^2 - 1) = 2y \implies \frac{\partial f(0, 1)}{\partial y} = 2 \neq 0,
+                \]
+                så begge kravene er tilfredsstilt. Da vet vi at vi kan uttrykke \(y=g(x)\) lokalt rundt \((0,1)\). Denne 
+                er gitt ved 
+                \[
+                g'(x) = -\frac{ \frac{\partial f(x, g(x))}{\partial x} }{\frac{\partial f(x, g(x))}{\partial y}}
+                = - \frac{ \frac{\partial }{\partial x} (x^2 + y^2 - 1) \bigg|_{(x, g(x))} } {\frac{\partial }{\partial y} (x^2 + y^2 - 1) \bigg|_{(x, g(x))} }
+                = - \frac{ 2x |_{(x, g(x))}}{2y |_{(x, g(x))} } = - \frac{ 2x }{2g(x)} = - \frac{x }{g(x)} 
+                \]
+                Som er en første ordens differensialligning vi kan løse med separasjon. 
+                Ved å bytte plass på \(g\) og \(g'\) får vi
+                \[
+                \implies g(x) = - \frac{x }{g'(x)} = - \frac{x }{ \frac{dg}{dx}} = - \frac{x dx }{dg} \implies 
+                g(x) dg = - x dx \implies \int g(x) dg = - \int x dx
+                \implies \frac12 g(x)^2 = - \frac12 x^2 + C.
+                \]
+                Nå må vi bestemme \(C\). Fra det implisitte funksjonsteoremet vet vi at \(y_0 = g(x_0) \iff 1 = g(0) \).
+                Det betyr at 
+                \[
+                \frac12 g(0)^2 = \frac12 1^2 =  - \frac12 \cdot 0^2 + C \implies C=\frac12.
+                \]
+                Vi setter inn dette i uttrykket for \(g\) og stryker \(\frac12\) i alle ledd, og ender med
+                \[
+                g(x)^2 =1 - x^2 \implies g(x) = \sqrt{1 - x^2} \quad \text{eller} \quad g(x) = -\sqrt{1 -x^2}.
+                \]
+                Vi bruker igjen at \(1 = g(0) \), som må bety at \(g(x) = \sqrt{1 - x^2} \). Altså blir \(y\) lokalt 
+                beskrevet med funksjonen \(y=g(x) = \sqrt{1-x^2}\) i nærheten av \((0,1)\), som var det samme vi 
+                kom frem til i introduksjonen.
+            </p>
+            
 
             </div>
        
@@ -475,7 +583,7 @@
             </div>
             <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
-                <input type="hidden" name="_subject" value="Transcendente">
+                <input type="hidden" name="_subject" value="Funksjoner av fler variable">
                 
                 <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
                 <div class="form">
