@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<title>Kateter</title>
+<link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload="changeDisplay(0, 8)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
+        <div id="header">
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/ikoner_matte2/trippel.png" height="100px">
+                    <h2>Trippelintegraler og anvendelser</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 8)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 8)">Sylinderkoordinater
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 8)">Kulekoordinater
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 8)">Variabelskifte i trippelintegraler
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 8)">Trippelintegraler i sylinderkoordinater
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 8)">Trippelintegraler i kulekoordinater
+                    <div class="triangle-left" id= "v5">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(6, 8)">Moment og massesenter
+                    <div class="triangle-left" id= "v6">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(7, 8)">Oppgaver
+                    <div class="triangle-left" id= "v7">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/ikoner_matte2/trippel.png" height="100px">
+                    <h2>Trippelintegraler og anvendelser</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 8)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 8)"><h3 class="sideH">Sylinderkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,8)"><h3 class="sideH">Kulekoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(3 ,8)"><h3 class="sideH">Variabelskifte i trippelintegraler</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3 class="sideH">Trippelintegraler i sylinderkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 8)"><h3 class="sideH">Trippelintegraler i kulekoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(6, 8)"><h3 class="sideH">Moment og massesenter</h3></div>
+                <div class="barListe" onclick="changeDisplay(7, 8)"><h3 class="sideH">Oppgaver</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til trippelintegralet</h1>
+                <p>Da skal vi begynne å integrere i tre dimensjoner.</p>
+                    <h2>Video - Introduksjon</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                    
+                       
+                       
+
+            </div>
+
+
+            <div id="indreSide1" class="indreSide">
+                
+                <h1>Sylinderkoordinater</h1>
+                <h2>Video - Introduksjon</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+
+
+                
+                    <h2>Sylinderkoordinater</h2>
+                    <div class="boks">
+                        \[
+                        x= r \cos \theta
+                        \]
+                        \[
+                        y= r \sin \theta
+                        \]
+                        \[
+                        z = z.
+                        \]
+
+                    </div>
+            
+            </div>
+            
+            <div id="indreSide2" class="indreSide">
+                <h1>Kulekoordinater</h1>
+                <p>Iterert integrasjon er en teknikk for hakket mer kompliserte områder \(D\) enn bare rektangler. Vi integrerer over såkalt <b>enkle områder</b>. </p>
+                <h2>Video - Iterert integrasjon</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03logeksp.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcbJGE9_Zaw?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+
+               <h2>Kulekoordinater</h2>
+               <div class="boks">
+
+                \[
+                x= \underbrace{ \rho \sin \phi}_{r} \cos \theta
+                \]
+                \[
+                y= \underbrace{ \rho \sin \phi}_{r} \sin \theta
+                \]
+                \[
+                x= \rho \cos \phi
+                \]
+               </div>
+
+
+
+
+            </div>
+               
+               
+
+
+
+            <div id="indreSide3" class="indreSide">
+                <h1>Variabelskifte i trippelintegraler</h1>
+                <p>Tilsvarende som i dobbeltintegraler bruker vi Jacobideterminanten til å 
+                    omgjøre til nye koordinater, og finner volumdifferensialen \(dV\).
+                </p>
+                  
+                <h2>Video - Variabelskifte i trippelintegraler</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tRWc1x4nlrk?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Jacobideterminanten</h2>
+               <p>Jacobideterminanten er også her skaleringsfaktoren til volumdifferensialen</p>
+               <div class="boks">
+                   For \(x=x(u,v,w), y= y(u,v,w), z = z(u,v,w)\) har vi
+                \[
+                J(u,v,w) = \frac{\partial(x,y,z)}{\partial (u,v,w)}  = 
+                \begin{vmatrix}
+                \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w}
+                \\
+                \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w}
+                \\
+                \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
+                \end{vmatrix}
+                \]
+                \[
+                =  \frac{\partial x}{\partial u} 
+                \bigg( \frac{\partial y}{\partial v}\frac{\partial z}{\partial w}  -  \frac{\partial y}{\partial w}\frac{\partial z}{\partial v}\bigg)
+                -\frac{\partial x}{\partial v}
+                \bigg( \frac{\partial y}{\partial u} \frac{\partial z}{\partial w} - \frac{\partial y}{\partial w}\frac{\partial z}{\partial u} \bigg)
+                + \frac{\partial x}{\partial w}
+                \bigg(  \frac{\partial y}{\partial u} \frac{\partial z}{\partial v} - \frac{\partial y}{\partial v}\frac{\partial z}{\partial u} \bigg)
+                \]
+                Volumdifferensialen \(dV\) er gitt ved 
+                \[
+                dV = dxdydz = |J(u,v,w)| dudvdw
+                \]
+               </div>
+
+               
+              </div>
+
+            
+            <div id="indreSide4" class="indreSide">
+                <h1>Trippelintegraler i sylinderkoordinater</h1>
+                
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Volumdifferensial</h2>
+               <p>Sylinderkoordinater er polarkoordinater i xy-planet i tillegg til 
+                   dimensjonen i \(z\)-retning. Vi husker at \(dA=rdrd\theta\) i  polarkoordinater, 
+                   og dermed blir
+                    </p>
+               <div class="boks">
+                   \[
+                dV = dA \: dz =  r\: dr\: d\theta\: dz
+                   \]
+               </div>
+               
+            </div>
+
+            <div id="indreSide5" class="indreSide">
+                <h1>Trippelintegraler i kulekoordinater</h1>
+                
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+                </form>
+
+                <h2>Variabelskifte i dobbeltintegral</h2>
+               <div class="boks">
+                   Anta at vi har dobbeltintegralet 
+                   \[
+                   \iint_D f(x,y) dA.
+                   \]
+                   Variabelskifte fra kartesiske til polarkoordinater. Variablene husker vi omgjøres ved 
+                   \[
+                   x = r \cos \theta, \qquad y = r \sin \theta.
+                   \]
+                   I tillegg må vi gjøre om integrasjonsdifferensialen \(dA\)
+                   \[
+                   dA = dx dy = r dr d\theta.
+                   \]
+                
+               </div>
+               
+               
+            </div>
+
+            <div id="indreSide6" class="indreSide">
+                <h1>Variabelskifte i dobbeltintegral</h1>
+                
+                <h2>Video - Variabelskifte i dobbeltintegral</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Jacobideterminant</h2>
+               <p>Dersom vi ønsker å transformere integranden vår \(f(x,y)\) til integranden 
+                  \(g(u,v)\)  gjør vi om <b>differensialen</b> \(dA\) ved å finne Jacobideterminanten. </p>
+                <div class="boks">
+
+                    \[
+                    J(u,v) = \frac{\partial (x,y)}{\partial (u,v)} = 
+                    \begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} 
+                    \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{vmatrix}=
+                     \frac{\partial x}{\partial u}\frac{\partial y}{\partial v} - 
+                     \frac{\partial x}{\partial v} \frac{\partial y}{\partial u}
+                    \]
+                    og 
+                    \[
+                    dA = dxdy = |J(u,v)|dudv.
+                    \]
+                    
+                </div>
+                <h3>Eksempel - polarkoordinater</h3>
+                <p>Vi så i forrige delkapittel at vi i polarkoordinater bruker \(dA=rdrd\theta\), la oss vise det fra 
+                    formelen over. Vi har at \(x = r \cos \theta,\) \(y=r \sin \theta\). Dermed er 
+                    \[
+                    J(r, \theta) = \frac{\partial (x,y)}{\partial (r,\theta)} =  
+                    \begin{vmatrix} \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} 
+                    \\ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta} \end{vmatrix}=
+                    \begin{vmatrix} \frac{\partial r \cos \theta}{\partial r} & \frac{\partial r \cos \theta}{\partial \theta} 
+                    \\ \frac{\partial r \sin \theta}{\partial r} & \frac{\partial r \sin \theta}{\partial \theta} \end{vmatrix}
+                    \]
+
+                    \[
+                     =
+                     \frac{\partial r \cos \theta}{\partial r}\frac{\partial r \sin \theta}{\partial \theta} - 
+                     \frac{\partial r \cos \theta}{\partial \theta} \frac{\partial r \sin \theta}{\partial r}
+                     =
+                     (\cos \theta) (r \cos \theta) -  (-r \sin \theta) (\sin \theta) = r \cos^2 \theta + r \sin^2 \theta
+                     = r(\cos^2 \theta +  \sin^2 \theta) = r.
+                    \]
+                    Da får vi fra formelen at 
+                    \[
+                    dA = dxdy = |J(u,v)|dudv = |J(r,\theta)|drd\theta = rdr d\theta.
+                    \]
+                
+                </p>
+
+               
+            </div>
+
+            <div id="indreSide7" class="indreSide">
+                <h1>Oppgaver</h1>
+                <p>Under er oppgaver fra kapittelet.</p>
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               
+            </div>
+                
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
+</body>
+</html> 

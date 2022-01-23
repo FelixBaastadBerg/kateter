@@ -111,11 +111,18 @@
                        <h2>Lokalt ekstremalpunkt</h2>
                        <p>
                         Et lokalt topppunkt er et punkt \((x_0, y_0)\) der \( f(x,y) \leq f(x_0, y_0) \) for alle punkter
-                        \((x,y)\) <b>i nærheten av</b> \((x_0, y_0)\).
+                        \((x,y)\) <b>i nærheten av</b> \((x_0, y_0)\). "I nærheten" betyr her at det eksisterer en radius 
+                        \(\rho\) fra \((x_0, y_0)\), slik at \( f(x,y) \leq f(x_0, y_0) \) for alle punkter \((x,y)\)
+                        innenfor denne radiusen. Lokalt bunnpunkt er tilsvarende, bare ved å erstatte 
+                        ≤ med ≥.
                         </p>
                         <h2>
                             Globalt ekstremalpunkt
                         </h2>
+                        <p>Et lokalt toppunkt er akkurat det det høres ut som, et punkt \((x_0, y_0)\) slik at 
+                            \( f(x,y) \leq f(x_0, y_0) \) for alle punkter \((x,y)\). Globalt bunnpunkt er tilsvarende, bare ved å erstatte 
+                            ≤ med ≥. Ethvert globalt ekstremalpunkt er naturligvis også et lokalt ekstremalpunkt,
+                        </p>
             </div>
 
 
@@ -146,41 +153,40 @@
                     </label>
                     </div>
                </form>
-               <h2>Krav til eksistens av inverse funksjoner</h2>
-               <p>I definisjonen til en funksjon ligger kravet om entydighet. Gitt én \(x\)-verdi skal det kun eksistere én verdi \(y = f(x)\). Tilsvarende krav gjelder en invers til en funksjon. Den inverse operasjonen av \(y = x^2\) er \(x = \pm \sqrt{y}\). Dette er ikke en gyldig funksjon fra \(y\) til \(x\), da man for hver \(y\)-verdi har to mulige \(x\)-verdier. </p>
-               <p>Vi krever derfor at funksjoner må være <b>injektive</b>, eller "en-til-en", for at den skal ha en invers. Dette betyr at dersom vi har to distinkte \(x\)-verdier, så må også korresponderende \(y\)-verdier være forskjellige. Matematisk skriver vi</p>
+               
+               <h2>Inndeling av ekstremalpunkter</h2>
+               <p>Du husker kanskje ekstremalverdisetningen fra Matte 1. Helt tilsvarende er den for 
+                   det flervariable tilfelle. La \(f(x,y)\) være en funksjon. Dersom \(f(a, b)\) er 
+                   en ekstremalverdi for et punkt \((a,b) \in D_f\), så er \((a,b)\) enten 
+                   <ol>
+                       <li>
+                           et <b>kritisk punkt</b>, som vil si \(\nabla f(a,b) = \vec 0\), eller
+                       </li>
+                       <li>
+                           et <b>singulært punkt</b>, som vil si \(\nabla f(a,b) = \text{udefinert}\), eller 
+                       </li>
+                       <li>
+                           et <b>randpunkt</b>, som vil si at punktet \((a,b)\) er på randen av \(D_f\), 
+                           alstå at \((a,b) \in \partial D_f\).
+                       </li>
+                       Her er \(\partial D_f = \text{Randen til $D_f$}\), som er en vanlig notasjon. I Matte 1 
+                       var analogen til et randpunkt et <i>endepunkt</i> på et intervall.
+                   </ol>
+               </p>
+               <h2>Ekstremalverdisetningen</h2>
                <div class="boks">
-                   \[
-                   x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2).
-                   \]
+                   La \(f(x,y)\) være en kontinuerlig funksjon på et <b>lukket</b>, <b>begrenset</b> mengde
+                \(D_f\) i \(R^2\). Da har \(f\) både en maksumums- og en minimumsverdi på denne mengden.
                </div>
-               <p>En annen måte å skjekke om en funksjon er injektiv på er gjennom derivasjonstesten. Dersom den deriverte til en funksjon ikke endrer fortegn over et intervall, så vil funksjonen være injektiv over dette intervallet.</p>
-               <p>Det er dermed mulig å postulere to fremgangsmåter å vise at en funksjon er inverterbar i dette kurset:</p>
-               <ol>
-                   <li>Gitt en funksjon \(f(x)\). Sett opp likningen \(f(a) = f(b)\) og vis at dette medfører at \(a = b\).</li>
-                   <li>Gitt en funksjon \(f(x)\). Deriver \(f(x)\) og vis at den deriverte ikke endrer fortegn over intervallet i fokus.</li>
-               </ol>
-               <h2>Derivasjon av inverse funksjoner</h2>
-               <p>Dersom en funksjon \(f(x)\) har en invers \(f^{-1}(x)\) kan man skrive den deriverte av den inverse på formen</p>
-               <div class="boks">
-                   \[
-                   \frac{d}{dx}f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}.
-                   \]
-               </div>
-               <p><b>Utledelsen</b> tar utgangspunkt i definisjonen av en invers funksjon: \(f^{-1}(f(x)) = x\). Vi kan herfra bruke det vi har lært om implisitt derivasjon til å derivere begge sider med hensyn på \(x\).</p>
-               \[
-               f'(f^{-1}(x)) \cdot \frac{d}{dx} f^{-1}(x) = 1.
-               \]
-               <p>Denne likningen løses med hensyn på \(d/dx f^{-1}(x)\) for å finne likningen som beskriver derivasjon av inverse funksjoner.</p>
-             </div>
-             
+
+            </div>
             
             <div id="indreSide2" class="indreSide">
-                <h1>Eksponential- og logaritmefunksjoner</h1>
-                <p>Eksponentialfunksjoner er funksjoner på formen \(a^x\) der \(a\) er en konstant. Den inverse funksjonen er \(\log_a{x}\) slik at vi kan skrive identiteten \(\log_a{a^x} = x\).  </p>
-                <p>Tilsvarende som \(\pi\) stadig dukker opp i geometrien, vil Eulers tall \(e\) til stadighet dukke opp i kalkulus. Vi definerer derfor den naturlige eksponentialfunksjonen \(e^x\) og dens invers \(\ln{x}\). Den naturlige eksponentialfunksjonen skal vi se mer på når vi kommer til kapittelet "følger og rekker".</p>
-                
-                <h2>Video - Logaritme og eksponential</h2>
+                <h1>Klassifisering av kritiske punkter</h1>
+                <p>Vi vet at et kritisk punkt er et punkt der gradienten er null. Vi kan ha tre ulike 
+                    typer kritiske punkter; lokale toppunkter, lokale bunnpunkter eller sadelpunkter.
+                </p>
+                <h2>Video - Klassifiering av kritiske punkter</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -201,50 +207,57 @@
                     </label>
                     </div>
                </form>
-               <h2>Regneregler</h2>
-               <p>Nedenfor følger noen viktige algebraiske regler for logaritme- og eksponentialfunksjoner, samt viktige grenseverdier og derivasjonsregler. </p>
-               <h3>Potensregler (eksponentialfunksjoner)</h3>
-               \[
-               \begin{align}
-a^0 &= 1,                   & \qquad a^{x+y} &= a^x a^y, \\[1em]
-a^{-x} &= \frac{1}{a^x},    & \qquad a^{x-y} &= \frac{a^x}{a^y}, \\[1em]
-(a^x)^y &= a^{xy},          & \qquad (ab)^x  &= a^x b^x.
-\end{align}\]
-               <h3>Logaritmeregler</h3>
-               \[
-               \begin{align}
-\log_a 1 &= 0,           & \qquad \log_a(xy) &= \log_a x + \log_a y, \\[1em]
-\log_a\left(\frac{1}{x}\right)&=-\log_a x, & \qquad \log_a \left(\frac{x}{y}\right) &= \log_a x-\log_a y. \\[1em]
-\log_a (x^y) &= y \log_a x,  & \qquad \log_a x &= \frac{\log_b x}{\log_b a}.
-\end{align}
-               \]
-               <h3>Uendelige grenseverdier for potenser og logaritmer</h3>
-               \[
-               \begin{align}
-&\lim_{x\to -\infty}a^x = 0, & \qquad \lim_{x\to \infty}a^x = \infty, \\[1em]
-&\lim_{x\to 0+} \log_a x = -\infty, &\qquad \lim_{x\to \infty} \log_a x = \infty.
-\end{align}
-               \]
-               <h3>Deriverte</h3>
-               <p>Eksponentialfunksjoner og logaritmefunksjoner er kontinuerlig deriverbare over definisjonsmengden. I videoen over utledes begge formlene; her representeres bare resultete.</p>
+               <h2>Sadelpunkt</h2>
+               <p>
+                   Et sadelpunkt er et punkt som er et toppunkt i en retning og et bunnpunkt i en annen retning, og 
+                   er dermed verken eller. 
+               </p>
+               <h2>Annenderiverttesten</h2>
+               <p>Annenderiverttesten er en nyttig test for å bestemme hvorvidt et kritisk punkt til en funksjon \(f(x,y)\)
+                   er et toppunkt, bunnpunkt eller et sadelpunkt.
+               </p>
                <div class="boks">
-                \[
-                \frac{d}{dx} a^x = \ln{a} \cdot a^x.
-                \]
-               </div>
-               <p>Vi merker oss at dersom \(a = e\) vil \(\ln{a} = \ln{e} = 1\), som medfører at \(d/dx \, e^x = e^x\).</p>
-               <div class="boks">
+                   Anta \((a,b)\) er et kritisk punkt, altså \(\nabla f(a,b)=\vec 0\). Vi definerer følgende størrelser 
                    \[
-                   \frac{d}{dx} \log_a{x} = \frac{1}{x\cdot \ln{a}}. 
+                   A = \frac{\partial^2 f (a,b)}{\partial x^2}, \quad B = \frac{\partial^2 f (a,b)}{\partial x \partial y} 
+                   = \frac{\partial^2 f (a,b)}{\partial y \partial x}, \quad C = \frac{\partial^2 f (a,b)}{\partial y^2}.
                    \]
+                   Definerer så 
+                   \[
+                   D = AC - B^2.
+                   \]
+                   Dersom 
+                   <ol>
+                    <li>
+                        \( D < 0  \) så er \((a,b)\) et sadelpunkt.
+                    </li>
+                    <li>
+                        \( D > 0  \) og \(A > 0\) så er \((a,b)\) et minimumspunkt.
+                    </li>
+                    <li>
+                        \( D > 0  \) og \(A < 0\) så er \((a,b)\) et minimumspunkt.
+                    </li>
+                    <li>
+                        \( D = 0  \) gir ingen konklusjon.
+                    </li>
+                    </ol>
+                    
                </div>
-               <p>Vi merker også her at dersom \(a = e\), så vil \(\ln{a} = \ln{e} = 1\), som medfører at \(d/dx \ln{x} = 1/x\).</p>
-             </div>
+
+            </div>
+               
+               
+
+
+
             <div id="indreSide3" class="indreSide">
-                <h1>Inverse trigonometriske funksjoner</h1>
-                <p>Trigonometriske har grunnet sitt opphav i enhetssirkelen en periodisk oppførsel. Gitt én \(y\)-verdi kan det finnes uendelig mange tilhørende \(x\)-verdier. Dette byr på problemer når vi skal finne deres invers, da en invers funksjon går fra verdimengden til den opprinnelige funksjonen.</p>
-                <p>For å forsikre oss om at en invers eksisterer for de trigometriske funksjonene reduserer vi definisjonsmengden til et mindre intervall der funksjonen er injektiv over hele intervallet.</p>
-                <h2>Video - Inverse trigonometriske funksjoner</h2>
+                <h1>Lagranges multiplikatormetode</h1>
+                <p>Hensikten med Lagranges multiplikatormetode er å minimere / maksimere en funksjon 
+                    \(f(x,y)\) gitt en <i>bibetingelse</i> \(g(x,y)=0\). Det vil i praksis si at vi ønsker 
+                    å finne et ekstremalpunkt til \(f(x,Y)\) <i>langs kurven</i> gitt ved ligningen 
+                    \(g(x,y)=0.\)
+                </p>
+                <h2>Video - Lagranges multiplikatormetode</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -265,35 +278,156 @@ a^{-x} &= \frac{1}{a^x},    & \qquad a^{x-y} &= \frac{a^x}{a^y}, \\[1em]
                     </label>
                     </div>
                </form>
-               <h2>Identiteter</h2>
-               <p><b>Invers sinus:</b><br>
-                \[f(x) = \sin{x} \Rightarrow f^{-1}(x) = \arcsin{x}, \quad f^{-1}(x) \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \quad x \in [-1, 1]\]
-            </p>
-            <p><b>Invers cosinus:</b><br>
-                \[f(x) = \cos{x} \Rightarrow f^{-1}(x) = \arccos{x}, \quad f^{-1}(x) \in \left[0, \pi\right], \quad x \in [-1, 1]\]
-            </p>
-            <p><b>Invers tangens:</b><br>
-                \[f(x) = \tan{x} \Rightarrow f^{-1}(x) = \arctan{x}, \quad f^{-1}(x) \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right), \quad x \in (-\infty, \infty)\]
-            </p>
-            <p>Da vi snakker om inverser gjelder \(f^{-1}(f(x)) = f(f^{-1}(x)) = x\) for alle identitene over slik at \(\sin{(\arcsin{x})} = x\).</p>
-            <p>Merk også at \(\lim_{x \to \pm \infty}\arctan{x} = \pm \pi / 2\). </p>
-            <h2>Deriverte</h2>
-            <div class="boks">
+
+               <h2>Lagranges multiplikatormetode</h2>
+
+               <div class="boks">
+                   La \(C\) være kurven i xy-planet beskrevet av ligningen \(g(x,y)=0\), og la både \(f\) og \(g\) være kontinuerlige 
+                   funksjoner av to variable. La \((a,b)\) være et punkt på \(C\).
+                    Dersom
+                   <ol>
+                    <li>
+                        \(f(a,b)\) er en maksimumsverdi eller minimumsverdi til \(f\) langs \(C\), <br> <br>
+                        <i>(Å evaluere \(f\) langs \(C\) betyr at vi evaluerer
+                            \(f(x,y)\) i alle punktene \((x,y)\) på kurven \(C\))
+                         </i> <br> <br>
+                    </li>
+
+                       <li>
+                           \(f\) og \(g\) har kontinuerlige partiellderiverte i nærheten av \((a,b)\), og
+                       </li>
+                       <li>
+                           \((a,b)\) ikke er et endepunkt på \(C\) og \(\nabla g(x,y)\neq [0,0],\)
+                       </li>
+                   </ol>
+
+                så finnes det et tall \(\lambda_0\) slik at punktet \((a,b,\lambda_0)\) er et <b>kritisk punkt</b> for 
+                <b>Lagrangefunksjonen</b> 
                 \[
-                \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
+                L(x,y,\lambda) = f(x,y) - \lambda g(x,y).
                 \]
-                \[
-                \frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1-x^2}}
-                \]
-                \[
-                \frac{d}{dx} \arctan(x) = \frac{1}{1+x^2}
-                \]
-            </div>
+                </div>
+               <h3>Hva betyr dette?</h3>
+               <p>
+                Lagrangefunksjonen er ikke nødvendigvis så intuitiv å forstå sånn uten videre. Teoremet sier (dersom vi antar 
+                at \((a,b)\) ikke er et endepunkt på \(C\) og at de partiellderiverte til \(f\) og \(g\) er kontinuerlige ) at ekstremalpunktene til 
+                \(f\) langs \(C\) vil være kritiske punkter (der gradienten er null) til Lagrangefunksjonen. Lagrangefunksjonen 
+                er en funksjon av tre variable, \(x,y\) og \(\lambda\). Å finne de kritiske punktene til Lagrangefunksjonen er 
+                dermed en strategi for å finne alle ekstremalpunkter langs \(C\) som ikke er endepunkter. Ved å sammenligne 
+                disse i tillegg til endepunktene kan vi utifra verdiene finne de største og de minste verdiene til \(f\) langs 
+                \(C\).
+               </p>
+
+               <h3>Eksempel</h3>
+               <p>
+                La \(f(x,y) = \sqrt{x^2+ y^2}\) og vi ønsker å finne den største verdien til \(f\) langs kurven \(C\)
+                som vi lar være ligningen beskrevet av \(g(x,y) = x^2y - 16 = 0  = 0. \) Nå 
+                ønsker vi å finne det punktet \((x,y)\) på kurven \(C\) der \(f\) har minst verdi.
+               </p>
+
+               <p>
+                   Til det skal vi bruke Lagrangefunksjonen. Siden \(C\) er funksjonen i \(xy\)-planet gitt ved 
+                   \(y=16/x^2\) vet vi at kurven ikke har noen endepunkter og vil fortsette ut i det uendelige. Siden 
+                   \(f(x,y)\) vokser med økende \(x\) og \(y\) skjønner vi at den minste verdien ikke vil være der 
+                   kurven forsvinner uti det uendelige. Punkt 3 i teoremet over er dermed tilfredsstilt. Både \(f\) og \(g\) har 
+                   kontinuerlige partiellderiverte så lenge vi ikke er i origo, det kan du se hvis du partiellderiverer funksjonene. 
+                   Kurven \(C\) går ikke gjennom origo, så dette blir ikke et problem. Punkt 2 er også tilfredsstilt. Punkt 1 er per definisjon tilfredsstilt, da vi er 
+                   på utkikk etter nettopp punktet som gir minst verdi innsatt i \(f\). Vi vet at dette punktet vil 
+                   være et kritisk punkt på Lagrangefunksjonen, så la oss finne kritiske punkter og sammenligne de.
+               </p>
+
+               <p>
+                   \[
+                   L(x,y, \lambda) = f(x,y) - \lambda g(x,y) = \sqrt{x^2+ y^2} - \lambda(x^2y - 16),
+                   \]
+                   kritiske punkter er de punktene der gradienten er null. Her må vi huske at \(L: \mathbb R^3 \to \mathbb R\)
+                   er en funksjon av tre variabler, \((x,y,\lambda)\), så gradienten er på formen 
+                   \(\nabla =[\partial_x, \partial_y, \partial_{\lambda} ]\).
+                   \[
+                   \nabla L(x,y,\lambda) = 
+                   \begin{bmatrix} 
+                   \frac{\partial}{\partial x } L(x,y, \lambda) 
+                   \\ \frac{\partial}{\partial y } L(x,y, \lambda) 
+                   \\ \frac{\partial}{\partial \lambda} L(x,y, \lambda) 
+                   \end{bmatrix} 
+                   =
+                   \begin{bmatrix} 
+                   \frac{\partial}{\partial x } \bigg( \sqrt{x^2+ y^2} - \lambda(x^2y - 16) \bigg)
+                   \\ \frac{\partial}{\partial y } \bigg( \sqrt{x^2+ y^2} - \lambda(x^2y - 16) \bigg)
+                   \\ \frac{\partial}{\partial \lambda } \bigg( \sqrt{x^2+ y^2} - \lambda(x^2y - 16) \bigg)\end{bmatrix} 
+                   \]
+                   \[
+                   =
+                   \begin{bmatrix} 
+                   x(x^2+ y^2)^{-1/2} - 2\lambda xy
+                   \\ y(x^2+ y^2)^{-1/2} - \lambda x^2
+                   \\  -x^2y + 16
+                   \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+                   \]
+                   som gir tre ligninger, en for hver komponent i vektoren. Vi må finne punktene som tilfredsstiller alle. <br>
+                  
+                   1) La oss begynne med den første, 
+                   \[ 
+                   x(x^2+ y^2)^{-1/2} - 2\lambda xy = 0 \implies x(x^2+ y^2)^{-1/2} = 2\lambda xy \overset{x \neq 0}{\implies}
+                   (x^2+ y^2)^{-1/2} = 2\lambda y,
+                   \]
+                    der vi antar \(x \neq 0\) for å kunne dele på \(x\). Dersom \(x=0\) får vi 
+                    \((0)((0)^2+ y^2)^{-1/2} = 2\lambda (0)y \implies 1/y = 0 \implies y \to \infty \), men vi 
+                    vet at at \(f(x,y) = \sqrt{x^2 + y^2} \to \infty \) hvis \(y\to \infty\), og vi ønsker å minimere \(f\), så vi kan trygt anta \(x \neq 0\).
+                   <br> <br>
+                   2) La oss ta for oss andre ligning, og vi kan bruke det vi fant i første ligning, nemlig at \((x^2+ y^2)^{-1/2} = 2\lambda y,\)
+                   \[
+                   y(x^2+ y^2)^{-1/2} - \lambda x^2 = 0 \implies  y2\lambda y - \lambda x^2 = 0 \implies 2y^2\lambda -x^2 \lambda = 0 
+                   \overset{\lambda \neq 0 }{\implies} 2y^2 - x^2 = 0 \implies 2y^2 = x^2.
+                   \]
+                   der vi antok \(\lambda \neq 0 \) for å dele på \(\lambda\). Hvis \(\lambda=0\) får vi \( 2y^2(0) -x^2 (0) = 0 
+                   \implies 0=0 \) som ikke gir oss nye ytterligere informasjon, som gjør at vi kan anta \(\lambda \neq 0\). 
+                   <br> <br>
+                   3) Tredje ligning i disse oppgavene er alltid \(g(x,y) = 0\) per konstruksjon av Lagrangefunksjonen, og 
+                   det er nemlig derfor den er konstruert slik; \(x\) og \(y\) må jo ligge på \(C\). Vi bruker det vi fant i ligning to sammen 
+                   med ligning tre og får 
+
+                   \[
+                   -x^2y + 16 = 0 \implies x^2 y =16 \implies (2y^2) y =16 \implies y = \sqrt[3]{8} = 2.
+                   \]
+                   Vi finner da at 
+                   \[
+                   x^2 = 2y^2 = 2(2)^2 = 8 \implies x = \pm \sqrt{8} \simeq \pm 2.83.
+                   \]
+                   De to kritiske punktene til Lagrangefunksjonen er dermed \((\sqrt{8}, 2)\) og \((-\sqrt{8}, 2)\). Utifra dette 
+                   kan vi finne det punktet hvor \(f\) er minst ved å sammenligne. Vi ser at 
+                   \[
+                   f(\sqrt{8}, 2) = f(-\sqrt{8}, 2) = \sqrt{8 + 4} = \sqrt{12} \simeq 3.46,
+                   \]
+                   noe som betyr at begge punktene er bunnpunkter for \(f\) langs \(C\).
+
+                   <h3>Flere variable</h3>
+                   <p>Hvis funksjonen er av tre variable istedenfor to, \(f(x,y,z)\), og vi har flere bibetingelser, 
+                       \(g(x,y,z)=0\) og \(h(x,y,z)=0\), definerer vi Lagrangefunksjonen som 
+                    
+                    \[
+                    L(x,y,z,\lambda, \mu) = f(x,y,z) - \lambda g(x,y,z) - \mu h(x,y,z).
+                    \]
+                Altså introduserer vi en ekstravariabel (av typen \(\lambda \) eller \(\mu\)) per bibetingelse. Hver bibetingelse i 
+                tre dimensjoner er flater, og to bibetingelser er således skjæringskurven mellom disse flatene. Det vil 
+                si at vi ser for oss hvor langs en kurve i rommet \(f\) har minst eller størst verdi. Du kan 
+                visualisere deg en bane til en partikkel i rommet, og \(f\) som temperaturmål på hvert punkt.
+                </p>
+
+               </p>
+               
+
+               
+
+
+
               </div>
+
+            
             <div id="indreSide4" class="indreSide">
-                <h1>Hyperbolske funksjoner</h1>
-                <p>Hyperbolske funksjoner er eksponentialfunksjoner satt sammen på en slik måte at den blir nært beslektet med trigonometriske funksjoner. Funksjonene vi skal se på i dette kapitellet har navnene \(\sinh(x)\), \(\cosh(x)\) og \(\tanh(x)\) og har mange av de samme egenskapene som trigonometriske funksjoner.</p>
-                <h2>Video - Hyperbolske funksjoner</h2>
+                <h1>Oppgaver</h1>
+                <p>Under er oppgaver fra kapittelet.</p>
+                <h2>Video - Oppgaver</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03hyperbolske.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -314,65 +448,9 @@ a^{-x} &= \frac{1}{a^x},    & \qquad a^{x-y} &= \frac{a^x}{a^y}, \\[1em]
                     </label>
                     </div>
                </form>
-               <h2>Definisjon</h2>
-               <div class="boks">
-                   \[
-                   \cosh(x) = \frac{e^x+e^{-x}}{2}
-                   \]
-                   \[
-                   \sinh(x) = \frac{e^x-e^{-x}}{2}
-                   \]
-                   \[
-                   \tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x-e^{-x}}{e^x+e^{-x}}
-                   \]
-               </div>
-               <p>Det kan se tilfeldig ut at slike kombinasjoner av eksponentialfunksjoner skal gi opphav til nye uttrykk med egenskaper som minner om trigonometriske uttrykk. 
-                   For spesielt interesserte kan det være givende å ta en titt på <i>Eulers formel</i> (som ikke er pensum i kurset) og se på definisjonene til de trigonometriske funksjonene. For eksempel kan \(\cos{x}\) skrives som
-                   \(1/2(e^{ix} + e^{-ix})\), der \(i\) er den imaginære enheten. Her ser vi at sammenhengen mellom \(\cosh{x}\) og \(\cos{x}\) blir tydelig.
-               </p>
-               <h2>Identitet</h2>
-               <p>I vanlig trigonometri kan man ved hjelp av pythagoras' setning utlede \(\cos^2 + \sin^2 = 1\). Nesten tilsvarende kan vi definere en liknende identitet for hyperbolske funksjoner. Vi skriver at</p>
-               <div class="boks">
-                   \[
-                   \cosh^2{x} - \sinh^2{x} = 1
-                   \]
-               </div>
-            <p>Denne likningen kan bevises ved å ta utgangspunkt i eksponentialformen til de hyperbolske funksjonene.</p>
-            <h2>Deriverte</h2>
-            <p>De deriverte til hyperbolske funksjoner har også <b>nesten</b> like resultater som trigonometriske funksjoner.</p>
-            <div class="boks">
-                \[
-                \frac{d}{dx} \sinh{x} = \cosh{x}
-                \]
-                \[
-                \frac{d}{dx} \cosh{x} = \sinh{x}
-                \]
-                \[
-                \frac{d}{dx} \tanh{x} = \frac{1}{\cosh^2{x}}
-                \]
-            </div>
+               
                 </div>
-                <div id="indreSide5" class="indreSide">
-                    <h1>Oppgaver</h1>
-                    <p>Videoen under tar for seg vanskeligere eksempler fra hele kapittelet.</p>
-                    <h2>Video - Oppgaver</h2>
-                    <div class="iframe-container">
-                            
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/D6W0FBieWfA?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
-    
-                        <input type="hidden" name="_subject" value="Transcendente">
-                        
-                        <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
-                        <div class="form">
-                        <input type="text" name="Tilbakemelding_oppgaver" autocomplete="off" required>
-                        <label for="name" class="label-name">
-                            <span class="content-name">Tilbakemelding:</span>
-                        </label>
-                        </div>
-                   </form>
-                    </div>
+                
         </div>
         
     </div>

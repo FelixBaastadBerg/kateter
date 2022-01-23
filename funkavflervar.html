@@ -97,11 +97,11 @@
             <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
 
             <div id = "indreSide0" class="indreSide">
-                <h1>Introduksjon</h1>
+                <h1>Introduksjon til funksjoner av flere variable</h1>
                 <p>Vi skal nå bli kjent med funksjoner av flere variable. Dette er <i>skalare</i> funksjoner, 
                 altså er outputtet av funksjonen et <i>tall</i>. Inputtet er derimot flervariabelt, og funksjonene
-            i dette kurset vil maksimalt ha input i \(\mathbb R^3\), altså på formen \(f(x,y,z)\). Vi kan alternativt skriver 
-        vi \(f(\vec r)\), der \(\vec r=(x,y,z)\) er et punkt i \(\mathbb R^3\), og dette betyr det samme. </p>
+            i dette kurset vil maksimalt ha input i \(\mathbb R^3\), altså på formen \(f(x,y,z)\). Vi kan alternativt skrive 
+         \(f(\vec r)\), der \(\vec r=(x,y,z)\) er et punkt i \(\mathbb R^3\), og dette betyr det samme. </p>
            
                     <h2>Video - Introduksjon</h2>
                     <!--<video width="400" controls>
@@ -212,7 +212,7 @@
                             </label>
                             </div>
                        </form>
-                <h2>Formell definisjon av grenseverdi</h2>
+                <h2>Formell definisjon av grenseverdi (\(\epsilon \delta \)- def.) </h2>
                 <p>Avstand mellom to punkter \((a,b)\) og \((c,d)\) er \(|(a,b) - (c,d)|\), altså lengden av 
                     vektoren som går fra det ene punktet til det andre. Vi sier at 
                       \(\lim_{(x,y) \to (a,b)} f(x,y) = L\) dersom følgende to punkter er oppfylt: </p>
@@ -223,7 +223,7 @@
                             <i>Dette punktet så vi ikke i Matte 1. Dette kriteriet 
                              er sjeldent relevant, og forsikrer bare at uansett hvor liten radius du velger utfra 
                             \((a,b)\) så vil det eksistere minst et annet punkt i input-rommet innenfor denne radiusen.
-                            </i> 
+                            </i> <br> <br>
                     </li>
                     <li>
                         For enhver \(\epsilon>0\) eksisterer det en \(\delta >0\) slik at dersom
@@ -241,11 +241,12 @@
                     dette ikke er tilfelle, og du får et tall når \((x,y) \to (a,b)\) er funksjonen kontinuerlig,
                     og dermed eksisterer grensen.
                 </p>
-                <p>For rasjonale funksjoner som blir \(\frac00) , eller for funksjoner med delt forskrift, er det generelt
+                <p>For rasjonale funksjoner som blir \(\frac00\) , eller for funksjoner med delt forskrift, er det generelt
                     vanskeligere å vise at en grenseverdi eksisterer enn å vise at den <i>ikke</i> eksisterer. 
                     For å vise at en grense ikke eksisterer er det bare å finne to retninger mot \((a,b)\) hvor grensene ikke blir like. 
                 </p>
-                
+            
+            <h3>Eksempel</h3>
 
             <p>La oss sjekke om følgende grense eksisterer,
             \[
@@ -274,14 +275,14 @@
             <div id="indreSide2" class="indreSide">
                 <h1>Partiellderivasjon</h1>
                 
-                <h2>Video - Partiellderivasjon</h2>
+                <h2>Video - Partiellderivasjon (kommer)</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverse_funksjoner.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/APOqWu_OFOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -296,8 +297,9 @@
                     </div>
                </form>
                <h2>Definisjon</h2>
-               <p>Partiellderivasjon er ikke veldig vanskelig. Du behandler alle andre variabler som konstanter, og 
-                   \(\partial\) (uttales "del") erstatter \(d\) i Leibniz' notasjon (\(d/dx\) ). 
+               <p>I partiellderivasjon deriverer vi et flervariabelt uttrykk med hensyn på en 
+                   variabel, og behandler alle andre variabler som konstanter. Vi bruker 
+                   \(\partial\) (uttales "del"), som erstatter \(d\) i Leibniz' notasjon (\(d/dx\) ). 
                    La oss ta to raske eksempler. </p>
                 <p>
                     \[ \frac{\partial}{\partial x}( yx^3 + zx + y) = 3yx^2+z  \]
@@ -372,14 +374,14 @@
                     er det helt tilsvarende.
                 </p>
                
-                <h2>Video - Linearisering og deriverbarhet</h2>
+                <h2>Video - Linearisering og deriverbarhet (kommer)</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p6670fS4Go0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -420,14 +422,14 @@
             <div id="indreSide4" class="indreSide">
                 <h1>Retningsderiverte</h1>
                 
-                <h2>Video - Retningsderiverte</h2>
+                <h2>Video - Retningsderiverte (kommer)</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -489,14 +491,14 @@
                     sirkelen som \(y=\sqrt{1-x^2}\), og den nedre delen som \(y=-\sqrt{1-x^2}\).
                 </p>
 
-                <h2>Video - Implisitt funksjonsteorem</h2>
+                <h2>Video - Implisitt funksjonsteorem (kommer)</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -576,10 +578,10 @@
         <div id="indreSide6" class="indreSide">
             <h1>Oppgaver</h1>
             
-            <h2>Video - Oppgaver</h2>
+            <h2>Video - Oppgaver (kommer)</h2>
             <div class="iframe-container">
                     
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zPBwf0uJHPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
