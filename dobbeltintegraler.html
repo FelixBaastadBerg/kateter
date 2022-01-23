@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="test.css">
+<title>Kateter</title>
+<link rel="icon" href="bilder/kateterSymbol.png">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body onload="changeDisplay(0, 8)" onload="limitFunc()">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<div class="main">
+    <div id="dropdown">
+        <div id="innerDropdown">
+            <div id="inInIn">
+                <div><a href="kurs.html">Kurs</a></div>
+            <div><a href="kontakt.html">Kontakt</a></div>
+            <div><a href="forord.html">Forord</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="rel">
+        <div id="logo1"><a href="index.html"><div id="innerLogo"><img src = "bilder/kateterLogo.png" style="height: 27px; width: auto;"></div></a></div>
+        <div id="header">
+            <div class="valg"><a href="kurs.html">Kurs</a></div>
+            <div class="valg"><a href="kontakt.html">Kontakt</a></div>
+        </div>
+        
+    </div>
+    <div id="siden">
+        <div id="venstreSide">
+            <div id="indreVenstre">
+                <div id="venstreTema">
+                    <img src="bilder/ikoner_matte2/dobbelt.png" height="100px">
+                    <h2>Dobbeltintegraler</h2>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(0, 8)">Introduksjon
+                    <div class="triangle-left" id= "v0">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(1, 8)">Egenskaper ved dobbeltintegralet
+                    <div class="triangle-left" id= "v1">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks"  onclick="changeDisplay(2, 8)">Iterert integrasjon
+                    <div class="triangle-left" id= "v2">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(3, 8)">Uegentlige integraler
+                    <div class="triangle-left" id= "v3">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(4, 8)">Middelverdisetningen
+                    <div class="triangle-left" id= "v4">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(5, 8)">Dobbeltintegraler i polarkoordinater
+                    <div class="triangle-left" id= "v5">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(6, 8)">Variabelskifte i dobbeltintegral
+                    <div class="triangle-left" id= "v6">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+                <div class="venstreBoks" onclick="changeDisplay(7, 8)">Oppgaver
+                    <div class="triangle-left" id= "v7">
+                        <div class="inner-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+
+            <div id="sideNavBar">
+                <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
+                <div id="toppen">
+                    <img src="bilder/transcendente.png" height="100px">
+                    <h2>Transcendente funksjoner</h2>
+                </div>
+                <div class="barListe" onclick="changeDisplay(0, 8)"><h3 class="sideH">Introduksjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(1, 8)"><h3 class="sideH">Egenskaper ved dobbeltintegralet</h3></div>
+                <div class="barListe" onclick="changeDisplay(2 ,8)"><h3 class="sideH">Iterert integrasjon</h3></div>
+                <div class="barListe" onclick="changeDisplay(3 ,8)"><h3 class="sideH">Uegentlige integraler</h3></div>
+                <div class="barListe" onclick="changeDisplay(4, 8)"><h3 class="sideH">Middelverdisetningen</h3></div>
+                <div class="barListe" onclick="changeDisplay(5, 8)"><h3 class="sideH">Dobbeltintegraler i polarkoordinater</h3></div>
+                <div class="barListe" onclick="changeDisplay(6, 8)"><h3 class="sideH">Variabelskifte i dobbeltintegral</h3></div>
+                <div class="barListe" onclick="changeDisplay(7, 8)"><h3 class="sideH">Oppgaver</h3></div>
+            </div>
+            <div id="aroundLeftArrow" onclick="openSideBar()"><i class="arrow right"></i></div>
+
+            <div id = "indreSide0" class="indreSide">
+                <h1>Introduksjon til dobbeltintegralet</h1>
+                <p>Dobbeltintegralet er integralet du husker fra Matte 1 i to input-dimensjoner.</p>
+                    <h2>Video - Introduksjon</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding:</span>
+                            </label>
+                            </div>
+                       </form>
+                    
+                       <h2>Dobbeltintegral over rektangulært område</h2>
+                       <p>Dersom område \(D\) vi skal integrere er rektangulært i xy-planet, er integrasjonen 
+                           veldig grei. Vi skriver det rett og slett som to integral-tegn, og fører på x-grensene 
+                           og y-grensene. La oss si \(D\) er området \([a,b] \times [c,d]\), som er notasjon for rektangelet 
+                           der \(x\in[a,b]\) og \(y\in[c,d]\). Da skriver vi 
+                           \[
+                           \iint_D f(x,y) dA = \int_c^d\int_a^b f(x,y) dxdy = \int_a^b\int_c^d f(x,y) dydx 
+                           \]
+                           Som du ser matches hver \(\int\) med sin respektive differensial innenfra og ut, så viktig 
+                           å være konsekvent her. Dersom vi løser \(\int_c^d\int_a^b f(x,y) dxdy \)
+                       </p>
+                       
+
+            </div>
+
+
+            <div id="indreSide1" class="indreSide">
+                <h1>Egenskaper ved dobbeltintegralet</h1>
+                <h2>Egenskaper</h2>
+                <div class="boks">
+                    Vi lar \(f(x,y)\) være integrerbar på det lukkede området \(D \subset \mathbb R^2\) (\(\subset\) betyr undermengde).
+                    Vi har et par egenskaper som er nyttige å kjenne til.
+                    <ol>
+                        <li>
+                            \(\iint_D dA = \text{areal}(D) \)<br> <br>
+                            <i>Dette gir mening. Dobbeltintegraler gir volumet under funksjonen over området \(D\) på xy-planet, og her 
+                                er funksjonen \(1\), da det står \( \iint_D 1\cdot dA \). Vi vet at \( \text{volum til uniformt objekt} =  \text{areal av grunnflate} \cdot 
+                                \text{høyde} \), og \(\text{høyde}=1 \implies \text{volum til uniformt objekt} =  \text{areal av grunnflate}.\)
+                            </i> <br> <br>
+                        </li>
+                        <li>
+                            Hvis \(\text{areal}(D)=0\) så er \(\iint_D f(x,y) = 0\). Dette er analogt med det envariable tilfelle,
+                            \(\int_a^a f(x) dx = 0\) for alle kontinuerlige \(f(x)\).
+                        </li>
+                        <li>
+                            Hvis \(f(x,y) \geq 0 \) for alle punkter \((x,y)\) i \(D\) så er 
+                            \[
+                            \iint_D f(x,y) dA = V,
+                            \]
+                            der \(V\) er volumet under grafen til \(z=f(x,y)\) over \(D\).
+                        </li>
+                        <li>
+                            Hvis vi har flere områder \(D_1, D_2 , ... , D_k\) som ikke overlapper (ingen felles punkter),
+                            og \(f\) antas integrerbar på alle områdene, så vil integralet over alle områdene være å summere 
+                            opp alle områdenes integral. Vi kaller unionen av områdene \(D=D_1\cup D_2 \cup \dots \cup D_k\).
+                            \[
+                            \iint_D f(x,y) dA = \sum_{i=1}^k \iint_{D_i} f(x,y)dA
+                            \]
+                            <br> <br>
+                            <i>
+                                I det envariable tilfelle vil dette tilsvare å integrere \(f(x)\) på ikke-overlappende intervall 
+                                \([a_1, a_2]\), \([a_3, a_4]\), ..., \([a_{k-1}, a_k]\), der vi lar \(I= 
+                                [a_1, a_2] \cup [a_3, a_4] \cup  \dots \cup [a_{k-1}, a_k] \), som bare er å summere 
+                                \[
+                                \int_I f(x) dx = \sum_{i=1}^{k-1} \int_{a_i}^{a_{i+1}} f(x) dx.
+                                \]
+                            </i>
+                        </li>
+
+                    </ol>
+
+
+                </div>
+
+                
+               
+            
+            </div>
+            
+            <div id="indreSide2" class="indreSide">
+                <h1>Iterert integrasjon</h1>
+                <p>Iterert integrasjon er en teknikk for hakket mer kompliserte områder \(D\) enn bare rektangler. Vi integrerer over såkalt <b>enkle områder</b>. </p>
+                <h2>Video - Iterert integrasjon</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03logeksp.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcbJGE9_Zaw?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2> \(y\)-enkelt område </h2>
+               <div class="boks">
+                   <p>Et område er \(y\)-enkelt dersom området \(D\) er avgrenset rent av 
+                       funksjoner av \(x\). Vi skriver </p>
+                    \(D = \{(x,y) : a \leq x \leq b, c(x) \leq y \leq d(x)\}. \)
+                    <br>
+                    <p>Dette er en notasjon du kanskje ikke kjenner, og kalles <b>set-builder notation</b>. 
+                    Her er området/mengden \(D\) definert ved et predikat / en betingelse: \(D\) 
+                består av <b>alle punktene</b> \((x,y)\) som tilfredsstiller (betegnet "\(:\)") de to 
+                betingelsene
+                <ol>
+                    <li>
+                        \( a \leq x \leq b \), altså ligger x mellom de to konstantene \(a\) og \(b\), og
+                    </li>
+                    <li>
+                        \(c(x) \leq y \leq d(x)\), som betyr at y ligger mellom de to funksjonene av \(x\), \(c(x), d(x)\).
+                    </li>
+                </ol>
+               </div>
+
+
+               <h2> \(x\)-enkelt område </h2>
+               <div class="boks">
+                   <p>Et område er \(x\)-enkelt dersom området \(D\) er avgrenset rent av 
+                       funksjoner av \(y\). Vi skriver </p>
+                    \(D = \{(x,y) : c \leq y \leq d, a(y) \leq x \leq b(y)\}. \)
+                    <br> 
+                    <p>Her er de to betingelsene
+                <ol>
+                    <li>
+                        \( c \leq y \leq d \), altså ligger y mellom de to konstantene \(c\) og \(d\), og
+                    </li>
+                    <li>
+                        \(a(y) \leq x \leq d(y)\), som betyr at x ligger mellom de to funksjonene av \(y\), \(a(y), b(y)\).
+                    </li>
+                </ol>
+                </p>
+                </div>
+
+            <h2>Integrasjonsteknikk</h2>
+            <div class="boks">
+                <p>
+                    Dersom vi har et \(y\)-enkelt område \(D\) gitt ved betingelsene over, integrerer vi slik:
+                    \[
+                    \iint_D f(x,y)dA = \int_a^b \int_{c(x)}^{d(x)} f(x,y) dy dx
+                    \]
+                    Dersom vi har et \(x\)-enkelt område \(D\) gitt ved betingelsene over, integrerer vi slik:
+                    \[
+                    \iint_D f(x,y)dA = \int_c^d \int_{a(y)}^{b(y)} f(x,y) dx dy
+                    \]
+                </p>
+
+            </div>
+                   
+
+            </div>
+               
+               
+
+
+
+            <div id="indreSide3" class="indreSide">
+                <h1>Uegentlige integraler</h1>
+                <p>
+                    Uegentlige integral er en følge av at enten integrasjonsområde \(D\) eller integranden \(f\)
+                    er ubegrenset, akkurat som i det envariable tilfelle. Også her defineres integralet som en grenseverdi.
+                </p>
+                <h2>Video - Uegentlige integraler</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03inverstrig.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tRWc1x4nlrk?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Ubegrenset område</h2>
+               <p>
+                   La oss si vi ønsker å finne \(\iint_D f(x,y)dA\) der \(D\) er et ubegrenset område. Da må 
+                   dette område defineres som en grenseverdi. La oss si \(D\) er det ubegrensede området \(\mathbb R^2\).
+                   Da kan vi definere \[D_M = \{ (x,y) : -M\leq x\leq M, -M \leq y \leq M \} \] for et tall \(M>0\),                   
+                   og \[D = \lim_{M \to \infty} D_M. \] Det uegentlige integralet defineres da slik
+                   \[
+                   \iint_D f(x,y) dA = \lim_{M \to \infty} \iint_{D_M} f(x,y)dA
+                   \]
+               </p>
+
+               <h2>Ubegrenset integrand</h2>
+               <p>
+                   Hvis funksjonen \(f(x,y)\) går mot uendelig i et punkt på randen \(\partial D\), gjelder det også her 
+                   å definere området \(D\) som en grenseverdi som nærmer seg å inkludere det aktuelle punktet. Si vi har en funksjon 
+                   som går mot uendelig i origo, og integrasjonsområdet vårt er
+                   \[
+                   D = \{ (x,y) : 0 \leq x \leq 1, 0 \leq y \leq x^3 \}.
+                   \]
+                   Da kan vi definere \[D_{\epsilon} = \{(x,y) : \epsilon \leq x \leq 1, 0 \leq y \leq x^3 \}, \] og 
+                   \[
+                   D = \lim_{\epsilon \to 0} D_{\epsilon}, 
+                   \]
+                   og integralet blir på tilsvarende måte 
+                   \[
+                   \iint_{D} f(x,y)dA = \lim_{\epsilon \to 0} \iint_{D_{\epsilon}} f(x,y) dA.
+                   \]
+               </p>
+               
+              </div>
+
+            
+            <div id="indreSide4" class="indreSide">
+                <h1>Middelverdisetningen</h1>
+                <p>Middelverdisetningen fra Matte 1 sa at dersom vi har en integrerbar funksjon 
+                    \(f(x)\) vil det eksistere en \(c\) på \((a,b)\) slik at 
+                \[
+                 f(c) = \frac{1}{b-a} \int_a^b f(x) dx.
+                \]
+                Navnet <b>middelverdisetningen</b> kommer av at \( \frac{1}{b-a} \int_a^b f(x)dx \) er <b>gjennomsnittsverdien</b> til 
+                \(f\) over intervallet, og middelverdi er et annet ord for gjennomsnitt.
+                </p>
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Definisjon</h2>
+               <p>
+                   Middelverdisetningen i flervariabel analyse sier rett og slett at på området \(D\) <b>vil</b> det eksistere 
+                   et <b>punkt</b> \( (x_0, y_0) \) slik at 
+                   \[
+                   f(x_0, y_0) = \frac{1}{\text{areal}(D)} \iint_D f(x,y) dA,
+                   \]
+                   og vi husker at \(\text{areal}(D) = \iint_D dA\).
+               </p>
+               
+            </div>
+
+            <div id="indreSide5" class="indreSide">
+                <h1>Dobbeltintegraler i polarkoordinater</h1>
+                <p>I blant har vi funksjoner som har radiell symmetri eller på annen måte er 
+                    enklere å integrere i polarkoordinater. Her skal vi se hvordan vi gjør dette.
+                </p>
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+                </form>
+
+                <h2>Variabelskifte i dobbeltintegral</h2>
+               <div class="boks">
+                   Anta at vi har dobbeltintegralet 
+                   \[
+                   \iint_D f(x,y) dA.
+                   \]
+                   Variabelskifte fra kartesiske til polarkoordinater. Variablene husker vi omgjøres ved 
+                   \[
+                   x = r \cos \theta, \qquad y = r \sin \theta.
+                   \]
+                   I tillegg må vi gjøre om integrasjonsdifferensialen \(dA\)
+                   \[
+                   dA = dx dy = r dr d\theta.
+                   \]
+                
+               </div>
+               
+               
+            </div>
+
+            <div id="indreSide6" class="indreSide">
+                <h1>Variabelskifte i dobbeltintegral</h1>
+                
+                <h2>Video - Variabelskifte i dobbeltintegral</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+
+               <h2>Jacobideterminant</h2>
+               <p>Dersom vi ønsker å transformere integranden vår \(f(x,y)\) til integranden 
+                  \(g(u,v)\)  gjør vi om <b>differensialen</b> \(dA\) ved å finne Jacobideterminanten. </p>
+                <div class="boks">
+
+                    \[
+                    J(u,v) = \frac{\partial (x,y)}{\partial (u,v)} = 
+                    \begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} 
+                    \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{vmatrix}=
+                     \frac{\partial x}{\partial u}\frac{\partial y}{\partial v} - 
+                     \frac{\partial x}{\partial v} \frac{\partial y}{\partial u}
+                    \]
+                    og 
+                    \[
+                    dA = dxdy = |J(u,v)|dudv.
+                    \]
+                    
+                </div>
+                <h3>Eksempel - polarkoordinater</h3>
+                <p>Vi så i forrige delkapittel at vi i polarkoordinater bruker \(dA=rdrd\theta\), la oss vise det fra 
+                    formelen over. Vi har at \(x = r \cos \theta,\) \(y=r \sin \theta\). Dermed er 
+                    \[
+                    J(r, \theta) = \frac{\partial (x,y)}{\partial (r,\theta)} =  
+                    \begin{vmatrix} \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} 
+                    \\ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta} \end{vmatrix}=
+                    \begin{vmatrix} \frac{\partial r \cos \theta}{\partial r} & \frac{\partial r \cos \theta}{\partial \theta} 
+                    \\ \frac{\partial r \sin \theta}{\partial r} & \frac{\partial r \sin \theta}{\partial \theta} \end{vmatrix}
+                    \]
+
+                    \[
+                     =
+                     \frac{\partial r \cos \theta}{\partial r}\frac{\partial r \sin \theta}{\partial \theta} - 
+                     \frac{\partial r \cos \theta}{\partial \theta} \frac{\partial r \sin \theta}{\partial r}
+                     =
+                     (\cos \theta) (r \cos \theta) -  (-r \sin \theta) (\sin \theta) = r \cos^2 \theta + r \sin^2 \theta
+                     = r(\cos^2 \theta +  \sin^2 \theta) = r.
+                    \]
+                    Da får vi fra formelen at 
+                    \[
+                    dA = dxdy = |J(u,v)|dudv = |J(r,\theta)|drd\theta = rdr d\theta.
+                    \]
+                
+                </p>
+
+               
+            </div>
+
+            <div id="indreSide7" class="indreSide">
+                <h1>Oppgaver</h1>
+                <p>Under er oppgaver fra kapittelet.</p>
+                <h2>Video - Oppgaver</h2>
+                <!--<video width="400" controls>
+                    <source src="videoer/03hyperbolske.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>-->
+                <div class="iframe-container">
+                        
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                    <input type="hidden" name="_subject" value="Transcendente">
+                    
+                    <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                    <div class="form">
+                    <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Tilbakemelding:</span>
+                    </label>
+                    </div>
+               </form>
+               
+            </div>
+                
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="test.js"></script> 
+
+</body>
+</html> 
