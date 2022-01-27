@@ -102,7 +102,12 @@
 
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon til trippelintegralet</h1>
-                <p>Da skal vi begynne å integrere i tre dimensjoner.</p>
+                <p>Da skal vi begynne å integrere i tre dimensjoner, og integralet er på formen 
+                
+                    \[
+                    \iiint_D f(x,y,z) \: dV.
+                    \]
+                </p>
                     <h2>Video - Introduksjon</h2>
                     <!--<video width="400" controls>
                         <source src="videoer/03intro.mp4" type="video/mp4">
@@ -161,6 +166,11 @@
 
                 
                     <h2>Sylinderkoordinater</h2>
+                    <p>Sylinderkoordinater er enkelt forklart polarkoordinater i tillegg til 
+                        dimensjonen i \(z\)-retning. Vi beskriver et punkt \((x,y,z)\) ved 
+                        \((r, \theta, z)\), der \((r, \theta)\) angir \((x,y)\) ved normale polarkoordinater,
+                        og \(z=z\),
+                    </p>
                     <div class="boks">
                         \[
                         x= r \cos \theta
@@ -173,13 +183,14 @@
                         \]
 
                     </div>
+                    <center><img src="bilder/Matte2_div/sylinderkoord.png" alt="" width="300px"></center>
             
             </div>
             
             <div id="indreSide2" class="indreSide">
                 <h1>Kulekoordinater</h1>
-                <p>Iterert integrasjon er en teknikk for hakket mer kompliserte områder \(D\) enn bare rektangler. Vi integrerer over såkalt <b>enkle områder</b>. </p>
-                <h2>Video - Iterert integrasjon</h2>
+                
+                <h2>Video - Kulekoordinater</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -203,8 +214,14 @@
 
 
                <h2>Kulekoordinater</h2>
+               <p>
+                   Kulekoordinater, eller sfæriske koordinater, angir et punkt \((x,y,z)\) utifra avstand 
+                   fra origo \(\rho\), vinkelen mellom projeksjonen til punktet i \(xy\)-planet og positiv \(x\)
+                   -retning \(\theta\), og vinkelen mellom punktet og positiv 
+                   \(z\)-retning, \(\phi\).
+               </p>
                <div class="boks">
-
+                
                 \[
                 x= \underbrace{ \rho \sin \phi}_{r} \cos \theta
                 \]
@@ -212,10 +229,11 @@
                 y= \underbrace{ \rho \sin \phi}_{r} \sin \theta
                 \]
                 \[
-                x= \rho \cos \phi
+                z= \rho \cos \phi.
                 \]
                </div>
 
+               <center><img src="bilder/Matte2_div/sphericalcoords.png" alt="" width="300px"></center>
 
 
 
@@ -228,7 +246,7 @@
             <div id="indreSide3" class="indreSide">
                 <h1>Variabelskifte i trippelintegraler</h1>
                 <p>Tilsvarende som i dobbeltintegraler bruker vi Jacobideterminanten til å 
-                    omgjøre til nye koordinater, og finner volumdifferensialen \(dV\).
+                    omgjøre til nye koordinater, og finner volumdifferensialen \( dV \).
                 </p>
                   
                 <h2>Video - Variabelskifte i trippelintegraler</h2>
@@ -254,7 +272,9 @@
                </form>
 
                <h2>Jacobideterminanten</h2>
-               <p>Jacobideterminanten er også her skaleringsfaktoren til volumdifferensialen</p>
+               <p>Jacobideterminanten er også her skaleringsfaktoren til integrasjonsdifferensialen, som 
+                   her er \(dV\).
+               </p>
                <div class="boks">
                    For \(x=x(u,v,w), y= y(u,v,w), z = z(u,v,w)\) har vi
                 \[
@@ -321,6 +341,7 @@
                    \]
                </div>
                
+               
             </div>
 
             <div id="indreSide5" class="indreSide">
@@ -348,23 +369,90 @@
                     </div>
                 </form>
 
-                <h2>Variabelskifte i dobbeltintegral</h2>
-               <div class="boks">
-                   Anta at vi har dobbeltintegralet 
-                   \[
-                   \iint_D f(x,y) dA.
-                   \]
-                   Variabelskifte fra kartesiske til polarkoordinater. Variablene husker vi omgjøres ved 
-                   \[
-                   x = r \cos \theta, \qquad y = r \sin \theta.
-                   \]
-                   I tillegg må vi gjøre om integrasjonsdifferensialen \(dA\)
-                   \[
-                   dA = dx dy = r dr d\theta.
-                   \]
+                <h2>Volumdifferensial</h2>
+
+                <p>Vi vet at \(dV = |J(u,v,w)| \:du \: dv\:dw=|J(\rho,\theta,\phi)|\: d\rho \: d\theta \: d \phi\), og nå er 
+                     \[
+                     x= \rho \sin \phi \cos \theta
+                     \]
+                     \[
+                     y= \rho \sin \phi \sin \theta
+                     \]
+                     \[
+                     z= \rho \cos \phi.
+                     \]
                 
-               </div>
+                La oss finne \(J(\rho,\theta,\phi).\)
+
+                \[
+                J(\rho,\theta,\phi)=
+                \begin{vmatrix}
+                \frac{\partial x}{\partial \rho} & \frac{\partial x}{\partial \theta} & \frac{\partial x}{\partial \phi}
+                \\
+                \frac{\partial y}{\partial \rho} & \frac{\partial y}{\partial \theta} & \frac{\partial y}{\partial \phi}
+                \\
+                \frac{\partial z}{\partial \rho} & \frac{\partial z}{\partial \theta} & \frac{\partial z}{\partial \phi}
+                \end{vmatrix}
+                =
+                \begin{vmatrix}
+                \frac{\partial }{\partial \rho}\rho \sin \phi \cos \theta & \frac{\partial }{\partial \theta}\rho \sin \phi \cos \theta & \frac{\partial }{\partial \phi}\rho \sin \phi \cos \theta
+                \\
+                \frac{\partial }{\partial \rho}\rho \sin \phi \sin \theta & \frac{\partial }{\partial \theta}\rho \sin \phi \sin \theta & \frac{\partial }{\partial \phi}\rho \sin \phi \sin \theta
+                \\
+                \frac{\partial }{\partial \rho}\rho \cos \phi & \frac{\partial }{\partial \theta}\rho \cos \phi & \frac{\partial }{\partial \phi}\rho \cos \phi
+                \end{vmatrix}
+                \]
+                \[
+                =
+                \begin{vmatrix}
+                \sin \phi \cos \theta & -\rho \sin \phi \sin \theta & \rho \cos \phi \cos \theta
+                \\
+                \sin \phi \sin \theta & \rho \sin \phi \cos \theta & \rho \cos \phi \sin \theta
+                \\
+                \cos \phi & 0 & -\rho \sin \phi
+                \end{vmatrix}
+                \]
+                \[
+                =\sin \phi \cos \theta \bigg( (\rho \sin \phi \cos \theta )(-\rho \sin \phi) - \underbrace{ (\rho \cos \phi \sin \theta) (0)}_{0} \bigg)
+                \]
+                \[
+                - (-\rho \sin \phi \sin \theta) \bigg( (\sin \phi \sin \theta )(-\rho \sin \phi) - (\rho \cos \phi \sin \theta)(\cos \phi) \bigg)
+                \]
+                \[
+                + \rho \cos \phi \cos \theta \bigg( \underbrace{ (\sin \phi \sin \theta)(0)}_{0} - (\rho \sin \phi \cos \theta)(\cos \phi) \bigg)
+                \]
+                \[
+                =-\rho^2 \underbrace{ \sin^3 \phi}_{\sin \phi (1- \cos^2 \phi) } \cos^2 \theta
+                \]
+                \[
+                -\rho^2 \sin \phi \sin^2 \theta \bigg(\underbrace{ \sin^2 \phi  + \cos^2 \phi) }_{1} \bigg)
+                \]
+                \[
+                - \rho^2 \cos^2 \phi \cos^2 \theta\sin \phi
+                \]
+                \[
+                = -\rho^2 \sin \phi (1- \cos^2 \phi)  \cos^2 \theta -\rho^2 \sin \phi \sin^2 \theta - \rho^2 \cos^2 \phi \cos^2 \theta\sin \phi
+                \]
+                \[
+                = -\rho^2 \sin \phi \cos^2 \theta  \cancel{- \rho^2 \sin \phi (- \cos^2 \phi) \cos^2 \theta}  -\rho^2 \sin \phi \sin^2 \theta \cancel{- \rho^2 \cos^2 \phi \cos^2 \theta\sin \phi}
+                \]
+                \[
+                = -\rho^2 \sin \phi \cos^2 \theta   -\rho^2 \sin \phi \sin^2 \theta  =-\rho^2 \sin \phi \bigg(\underbrace{\cos^2 \theta + \sin^2 \theta}_{1} \bigg) = -\rho^2 \sin \phi
+                \]
+                \[
+                \implies dV = |J(\rho,\theta,\phi)|\: d\rho \: d\theta \: d \phi = |-\rho^2 \sin \phi|\: d\rho \: d\theta \: d \phi = \rho^2 \sin \phi\: d\rho \: d\theta \: d \phi.
+                \]
+                </p>
                
+                <div class="boks">
+
+                    \[
+                    dV = \rho^2 \:\sin \phi \: d\rho \:d\theta\: d \phi
+                    \]
+
+                </div>
+
+                <center><img src="bilder/Matte2_div/dVspherical.png" alt="" width="700px"></center>
                
             </div>
 

@@ -87,7 +87,7 @@
                 <div id="aroundArrow"onclick="closeSideBar()"><i class="arrow left"></i></div>
                 <div id="toppen">
                     <img src="bilder/transcendente.png" height="100px">
-                    <h2>Transcendente funksjoner</h2>
+                    <h2>Dobbeltintegraler</h2>
                 </div>
                 <div class="barListe" onclick="changeDisplay(0, 8)"><h3 class="sideH">Introduksjon</h3></div>
                 <div class="barListe" onclick="changeDisplay(1, 8)"><h3 class="sideH">Egenskaper ved dobbeltintegralet</h3></div>
@@ -137,6 +137,10 @@
                            Som du ser matches hver \(\int\) med sin respektive differensial innenfra og ut, så viktig 
                            å være konsekvent her. Dersom vi løser \(\int_c^d\int_a^b f(x,y) dxdy \)
                        </p>
+                       <center>
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player  id="lotti3" src="https://assets4.lottiefiles.com/packages/lf20_bypskbes.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop autoplay></lottie-player>
+                        </center>
                        
 
             </div>
@@ -180,7 +184,7 @@
                                 \([a_1, a_2]\), \([a_3, a_4]\), ..., \([a_{k-1}, a_k]\), der vi lar \(I= 
                                 [a_1, a_2] \cup [a_3, a_4] \cup  \dots \cup [a_{k-1}, a_k] \), som bare er å summere 
                                 \[
-                                \int_I f(x) dx = \sum_{i=1}^{k-1} \int_{a_i}^{a_{i+1}} f(x) dx.
+                                \int_I f(x) dx = \int_{a_1}^{a_2} f(x) dx + \int_{a_3}^{a_4} f(x) dx + \dots + \int_{a_{k-1}}^{a_k} f(x) dx
                                 \]
                             </i>
                         </li>
@@ -239,6 +243,8 @@
                     </li>
                 </ol>
                </div>
+               <center><img src="bilder/Matte2_div/y-enkelt_omraade.png" alt="" width="300px"></center>
+               
 
 
                <h2> \(x\)-enkelt område </h2>
@@ -264,15 +270,21 @@
                 <p>
                     Dersom vi har et \(y\)-enkelt område \(D\) gitt ved betingelsene over, integrerer vi slik:
                     \[
-                    \iint_D f(x,y)dA = \int_a^b \int_{c(x)}^{d(x)} f(x,y) dy dx
+                    \iint_D f(x,y)dA = \int_a^b \bigg( \int_{c(x)}^{d(x)} f(x,y) dy \bigg) dx
                     \]
                     Dersom vi har et \(x\)-enkelt område \(D\) gitt ved betingelsene over, integrerer vi slik:
                     \[
-                    \iint_D f(x,y)dA = \int_c^d \int_{a(y)}^{b(y)} f(x,y) dx dy
+                    \iint_D f(x,y)dA = \int_c^d \bigg( \int_{a(y)}^{b(y)}  f(x,y) dx \bigg) dy
                     \]
                 </p>
 
             </div>
+            <center>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player  id="lotti3" src="https://assets5.lottiefiles.com/packages/lf20_kgc5gnyh.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop autoplay></lottie-player>
+                <p><i>Fra <b>What are double integrals? What are they for?</b> 
+                    (https://www.youtube.com/watch?v=DTVk8oa2f8s&t=479s). Anbefalt å se for visualisering. </i></p>
+            </center>
                    
 
             </div>
