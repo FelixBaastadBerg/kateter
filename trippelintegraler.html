@@ -126,7 +126,7 @@
                             <div class="form">
                             <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
                             <label for="name" class="label-name">
-                                <span class="content-name">Tilbakemelding:</span>
+                                <span class="content-name">Tilbakemelding / spørsmål</span>
                             </label>
                             </div>
                        </form>
@@ -158,7 +158,7 @@
                             <div class="form">
                             <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
                             <label for="name" class="label-name">
-                                <span class="content-name">Tilbakemelding:</span>
+                                <span class="content-name">Tilbakemelding / spørsmål</span>
                             </label>
                             </div>
                        </form>
@@ -207,7 +207,7 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_ekslog" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                </form>
@@ -266,12 +266,32 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_invers_trig" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                </form>
 
-               <h2>Jacobideterminanten</h2>
+            <h2>Determinanten til \(3 \times 3\)-matrise </h2>
+               <p>For å kunne regne ut en Jacobideterminant (som vi kommer til nedenfor) og for å regne ut kryssprodukt er det
+                nyttig å vite hvordan du finner <b>determinanten</b> til en \(3 \times 3\)-matrise. En 3-minutters 
+            gjennomgang finner du <a href="https://www.youtube.com/watch?v=ROFcVgehEYA&ab_channel=CaptainMatrix">her.</a> </p>
+            <h3>Kryssprodukt</h3>
+            <div class="boks">
+                For å så regne ut kryssprodukt til to vektorer \(\vec u = [a,b,c]\) og \(\vec v = [d,e,f]\) 
+                kan dette skrives opp som en determinant:
+                \[
+                \vec u \times \vec v =
+                 \begin{vmatrix} 
+                 \hat i & \hat j & \hat k \\
+                 a & b & c \\
+                 d & e & f 
+                \end{vmatrix} = \hat i \bigg(bf - ce \bigg) + \hat j \bigg(cd - af \bigg) + \hat k \bigg( ae - bd \bigg).
+                \]
+            </div>
+            <p>Determinantregning går fort å lære seg, er nyttig til senere, og bedre enn å pugge formelen 
+                \(\hat i \bigg(bf - ce \bigg)  + \hat j \bigg(cd - \dots\) </p>
+
+            <h2>Jacobideterminanten</h2>
                <p>Jacobideterminanten er også her skaleringsfaktoren til integrasjonsdifferensialen, som 
                    her er \(dV\).
                </p>
@@ -325,7 +345,7 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                </form>
@@ -340,6 +360,7 @@
                 dV = dA \: dz =  r\: dr\: d\theta\: dz
                    \]
                </div>
+               <center><img src="bilder/Matte2_div/dVcylinder.gif" alt="" width="400px"></center>
                
                
             </div>
@@ -364,7 +385,7 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                 </form>
@@ -457,9 +478,12 @@
             </div>
 
             <div id="indreSide6" class="indreSide">
-                <h1>Variabelskifte i dobbeltintegral</h1>
+                <h1>Moment og massesenter</h1>
+                <p>Moment og massesenter er anvendelser av trippelintegrasjon i fysikken. Moment 
+
+                </p>
                 
-                <h2>Video - Variabelskifte i dobbeltintegral</h2>
+                <h2>Video - Moment og massesenter</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03hyperbolske.mp4" type="video/mp4">
                     Your browser does not support HTML video.
@@ -476,54 +500,85 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                </form>
+               <h2>Masse</h2>
+               <p>
+                   For et legeme på område \(D\) med massetetthetsfunksjon \(\delta(x,y,z)\) er massen \(m\) 
+                   gitt ved 
+                   \[
+                   m = \iiint_D dm =  \iiint_D \delta(x,y,z) dV.
+                   \]
+               </p>
+               <h2>Moment</h2>
+               <p>Vi skal ikke gå i dybden på fysikken, men litt intuisjon før formelen serveres skader ikke.
+                For en punktmasse er dets <b>moment</b> om et punkt gitt ved kryssproduktet av 
+                avstandsvektoren \(\vec r\) fra punktet og kraftvektor \(\vec F\). 
+        </p>
+               <center><img src="bilder/Matte2_div/moment2.svg" alt="" width="400px"></center>
+               <p>Da 
+                vektorene her står vinkelrett på hverandre blir dette forenklet til 
+            \(|\vec r|\: |\vec F| = r F \). Momentet gitt av massen til venstre er \(M_1 = \vec r_1 \times \vec F_1 = r_1 F_1\).
+            I fysikken er gravitasjonskraft gitt ved \(mg\), men i matematikken bryr vi oss ikke om 
+            tyngdeakselerasjonskonstanten \(g\), så vi lar den være \(1\). Altså anser vi 
+            kraften lik massen, \(F = m\). Momentet gitt av massen til venstre er dermed 
+            \(M_1 = m r_1\). Her står planken i ro, som betyr at momentet gitt av de to massene til høyre \(M_2\) er <b>like stort</b>
+            som \(M_1\), altså \(M_1 = M_2\). Selv om vi her har to masser, 
+            som betyr dobbelt så stor kraft \(F_2 = 2m\), så er radiusen
+            halvparten så stor, \(r_2 = \frac12 r_1\). Derfor er \(M_2 = (2m)r_2 = (2m) \frac12 r_1 = m r_1 = M_1\).
+            <br> <br>
+            Poenget med dette eksempelet er at moment er gitt av både <b>masse</b> og <b>avstand</b>.
+            Her har vi kun sett på punktmasser, som har gjort at vi enkelt bare ganger ut
+            \(M=m \: r\). Men hvis vi har 
+            en massetetthetsfunksjon \(\delta(x)\) må vi selvfølgelig integrere 
+            \(M = \int r dm =\int r(x) \underbrace{\delta(x) dx}_{dm} \), der vi summerer opp 
+            produktet av en infinitesimal masse \(dm = \delta(x) dx\) ganget med dens avstand fra punktet 
+            vi skal finne momentet om \(r(x)\).
+            <br> <br>
+            I tre dimensjoner er det som regel et <b>plan</b> vi skal finne momentet om. 
+            Her blir \(dm = \delta(x,y,z) dV\), altså massetetthetsfunksjonen ganget med et lite volumelement.
+            Anta at legeme vårt er på området \(D\).
+            Avstanden til planet \(x=x_0\) er gitt ved \(x-x_0\), og dermed får vi momentet om planet 
+            \(x=x_0\) ved
+            \(
+            M_{x=x_0} = \iiint_D (x-x_0) \delta(x,y,z) dV.
+            \)
+            </p>
 
-               <h2>Jacobideterminant</h2>
-               <p>Dersom vi ønsker å transformere integranden vår \(f(x,y)\) til integranden 
-                  \(g(u,v)\)  gjør vi om <b>differensialen</b> \(dA\) ved å finne Jacobideterminanten. </p>
-                <div class="boks">
+            <div class="boks">
+            Moment om: <br> <br>
+            Planet \(x=x_0\):
+            \[
+            M_{x=x_0} = \iiint_D (x-x_0) \delta(x,y,z) dV,
+            \]
+            planet \(y=y_0\):
+            \[
+            M_{y=y_0} = \iiint_D (y-y_0) \delta(x,y,z) dV,
+            \]
+            planet \(z=z_0\):
+            \[
+            M_{z=z_0} = \iiint_D (z-z_0) \delta(x,y,z) dV.
+            \]
+            </div>
 
-                    \[
-                    J(u,v) = \frac{\partial (x,y)}{\partial (u,v)} = 
-                    \begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} 
-                    \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{vmatrix}=
-                     \frac{\partial x}{\partial u}\frac{\partial y}{\partial v} - 
-                     \frac{\partial x}{\partial v} \frac{\partial y}{\partial u}
-                    \]
-                    og 
-                    \[
-                    dA = dxdy = |J(u,v)|dudv.
-                    \]
-                    
-                </div>
-                <h3>Eksempel - polarkoordinater</h3>
-                <p>Vi så i forrige delkapittel at vi i polarkoordinater bruker \(dA=rdrd\theta\), la oss vise det fra 
-                    formelen over. Vi har at \(x = r \cos \theta,\) \(y=r \sin \theta\). Dermed er 
-                    \[
-                    J(r, \theta) = \frac{\partial (x,y)}{\partial (r,\theta)} =  
-                    \begin{vmatrix} \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} 
-                    \\ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta} \end{vmatrix}=
-                    \begin{vmatrix} \frac{\partial r \cos \theta}{\partial r} & \frac{\partial r \cos \theta}{\partial \theta} 
-                    \\ \frac{\partial r \sin \theta}{\partial r} & \frac{\partial r \sin \theta}{\partial \theta} \end{vmatrix}
-                    \]
+            <h2>Massesenter</h2>
+            <div class="boks">Massesenteret til et legeme på området \(D\)
+                og med massetetthetsfunksjon \(\delta(x,y,z)\) er punktet \((\bar x, \bar y, \bar z)\), 
+                der 
+            \[
+            \bar x  = \frac{\iiint_D x \delta(x,y,z) dV}{\iiint_D \delta(x,y,z) dV} = \frac{M_{x=0}}{m},
+            \]
+            \[
+            \bar y  = \frac{\iiint_D y \delta(x,y,z) dV}{\iiint_D \delta(x,y,z) dV} = \frac{M_{y=0}}{m},
+            \]
+            \[
+            \bar z  = \frac{\iiint_D z \delta(x,y,z) dV}{\iiint_D \delta(x,y,z) dV} = \frac{M_{z=0}}{m}.
+            \]
+            Massesenteret er det som i dagligtalen kalles "tyngdepunktet".
 
-                    \[
-                     =
-                     \frac{\partial r \cos \theta}{\partial r}\frac{\partial r \sin \theta}{\partial \theta} - 
-                     \frac{\partial r \cos \theta}{\partial \theta} \frac{\partial r \sin \theta}{\partial r}
-                     =
-                     (\cos \theta) (r \cos \theta) -  (-r \sin \theta) (\sin \theta) = r \cos^2 \theta + r \sin^2 \theta
-                     = r(\cos^2 \theta +  \sin^2 \theta) = r.
-                    \]
-                    Da får vi fra formelen at 
-                    \[
-                    dA = dxdy = |J(u,v)|dudv = |J(r,\theta)|drd\theta = rdr d\theta.
-                    \]
-                
-                </p>
+            </div>
 
                
             </div>
@@ -548,7 +603,7 @@
                     <div class="form">
                     <input type="text" name="Tilbakemelding_hyperbolsk" autocomplete="off" required>
                     <label for="name" class="label-name">
-                        <span class="content-name">Tilbakemelding:</span>
+                        <span class="content-name">Tilbakemelding / spørsmål</span>
                     </label>
                     </div>
                </form>
