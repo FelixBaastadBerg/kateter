@@ -384,10 +384,18 @@
                     <lottie-player  id="lotti3" src="https://assets9.lottiefiles.com/packages/lf20_pk3o23hy.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop autoplay></lottie-player>
                     </center>
 
-                   <h3>Flere variable</h3>
-                   <p>Hvis funksjonen er av tre variable istedenfor to, \(f(x,y,z)\), og vi har flere bibetingelser, 
+                   <h2>Flere variable og flere bibetingelser</h2>
+                   <h3>Flere variable, én bibetingelse</h3>
+                   <p>Hvis funksjonen er av tre variable istedenfor to, \(f(x,y,z)\), vil også 
+                       bibetingelsen \(g\) ha samme dimensjon og er en flate. Da blir Lagrangefunksjonen på formen 
+                       \[
+                       L(x,y,z, \lambda) = f(x,y,z) - \lambda g(x,y,z).
+                       \]
+                   </p>
+
+                   <h3>Flere variable, flere bibetingelser</h3>
+                <p>Hvis funksjonen er av tre variable \(f(x,y,z)\) og vi har har flere bibetingelser, 
                        \(g(x,y,z)=0\) og \(h(x,y,z)=0\), definerer vi Lagrangefunksjonen som 
-                    
                     \[
                     L(x,y,z,\lambda, \mu) = f(x,y,z) - \lambda g(x,y,z) - \mu h(x,y,z).
                     \]
@@ -397,6 +405,17 @@
                 visualisere deg en bane til en partikkel i rommet, og \(f\) som temperaturmål på hvert punkt i 
                 rommet.
                 </p>
+
+                <h2>Spørsmål mottatt</h2>
+                <p>I det siste eksempelet i videoen er \(f\) av tre variable, men dere bruker 
+                    formelen for to variable? </p>
+                <b>Svar:</b> <br>
+                <p>Her er det viktig å skille mellom antall <b>variable</b> og antall 
+                <b>bibetingelser</b>. Det er riktig at både \(f\) og \(g\) er funksjoner av tre variable, 
+            og Lagrangefunksjonen blir dermed avhengig av \(x\), \(y\), \(z\). Men det 
+        er kun én bibetingelse, nemlig funksjonen \(g\). Dermed trenger vi kun én ekstravariabel, 
+    nemlig \(\lambda \). Dermed blir Lagrangefunksjonen på formen \(L(x,y,z, \lambda).\) </p>
+                
 
                </p>
                
