@@ -99,7 +99,7 @@
             <div id = "indreSide0" class="indreSide">
                 <h1>Introduksjon</h1>
                 <p>
-                    Vi skal i dette kapittelet bli kjent med <b>vektorfelt</b> og integrasjon i disse.
+                    Vi skal i dette kapittelet bli kjent med integrasjon i skalar- og vektorfelt.
                 </p>
 
                     <h2>Video - Introduksjon</h2>
@@ -109,7 +109,7 @@
                     </video>-->
                     <div class="iframe-container">
                         
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u8FSk58Rg0s?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_hI79cRrWVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     
                         <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
@@ -172,6 +172,29 @@
                 
                 <h1>Konservative vektorfelt</h1>
 
+                <h2>Video - Konservative vektorfelt</h2>
+                    <!--<video width="400" controls>
+                        <source src="videoer/03intro.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>-->
+                    <div class="iframe-container">
+                        
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lGcT-7DVOAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                        <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
+
+                            <input type="hidden" name="_subject" value="Transcendente">
+                            
+                            <input type="hidden" name="_next" value="https://katetr.no/transcendent.html">
+                            <div class="form">
+                            <input type="text" name="Tilbakemelding_introduksjon" autocomplete="off" required>
+                            <label for="name" class="label-name">
+                                <span class="content-name">Tilbakemelding / spørsmål</span>
+                            </label>
+                            </div>
+                       </form>
+
                 <h2>Definisjon</h2>
                  <p>
                      Et vektorfelt \(\vec F\) er konservativt dersom det eksisterer en skalarfunksjon 
@@ -220,7 +243,9 @@
             
             <div id="indreSide2" class="indreSide">
                 <h1>Linjeintegral av skalarfelt</h1>
-                
+                <p>Linjeintegral kjenner du fra før, og er integrasjon av en skalar funksjon 
+                    \(f(x,y,z)\) langs en kurve i \(\mathbb R^3\). Tilsvarende gjelder for \(\mathbb R^2\).
+                </p>
                 <h2>Video - Linjeintegral av skalarfelt</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03logeksp.mp4" type="video/mp4">
@@ -228,7 +253,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcbJGE9_Zaw?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iyDS7xO3Q38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -243,9 +268,29 @@
                     </div>
                </form>
 
+               <h2>Definisjon</h2>
                
-               
-                
+               <p>
+                Intuisjonen for linjeintegral er som følger. La \(C\) være en kurve beskrevet av 
+                \(\vec r(t)=[x(t), y(t), z(t)], t \in [a, b]\). Hvis vi ønsker å integrere \(f(x,y,z)\) langs 
+                kurven \(C\) vil det si å summere opp de infinitesimale bidragene 
+                \(f \: ds\), der \(ds=|d\vec r|\) er et lite stykke av kurven \(C\). 
+                Ved å "gange med" \(dt/dt\) får vi
+
+                \[
+                \int_C f \: \underbrace{ds}_{|d \vec r|} = \int_C f(\vec r(t)) \: |d\vec r(t)| \frac{dt}{dt}
+                = \int_C f(\vec r(t)) \: \frac{|d\vec r(t)|}{dt} dt = \int_a^b f(\vec r(t)) \: |\vec r'(t)| dt 
+                \]
+               </p>
+               <div class="boks">
+
+                \[
+                \int_C f(\vec r(t)) \: ds = \int_a^b f(\vec r(t)) \: |\vec r'(t)| dt 
+                \]
+
+               </div>
+
+
             </div>
                
                
@@ -254,11 +299,11 @@
 
             <div id="indreSide3" class="indreSide">
                 <h1>Linjeintegral av vektorfelt</h1>
-                <p>Divergensteoremet stammer fra Gauss' teorem fra elektrostatikken, som 
-                viser relasjonen mellom elektrisk fluks ut av en lukket flate og elektrisk 
-                feltdivergens innenfor den lukkede flaten.
+                <p>
+                    Som i forrige kapittel skal vi også her se på linjeintegral, altså integrasjon langs 
+                    en kurve \(C\) beskrevet av \(\vec r(t), t \in [a,b],\) men her er funksjonen vi integrerer 
+                    et vektorfelt \(\vec F\).
                 </p>
-                  
                 <h2>Video - Linjeintegral av vektorfelt</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03inverstrig.mp4" type="video/mp4">
@@ -266,7 +311,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tRWc1x4nlrk?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t5-sZPQdOLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -281,34 +326,44 @@
                     </div>
                </form>
 
-               <h2>Divergensteoremet</h2>
+               <h2>Definisjon</h2>
+               
+               <p>
+                   Når vi integrerer i et vektorfelt ser vi på summen av <b>prikkproduktet</b> 
+                   \(\vec F \cdot d\vec r\) langs alle små bidrag \(d\vec r\) i \(\vec r(t), t \in [a,b].\) Her 
+                   har \(d\vec r(t_0)\) retning tangentielt med kurven \(C\) i punktet \(\vec r(t_0).\)
+                   Tilsvarende som i forrige delkapittel ganger vi med \(\frac{dt}{dt}\) og får
+
+                   \[
+                   \int_C \vec F \cdot d\vec r = \int_C \vec F \cdot d\vec r \frac{dt}{dt} = 
+                   \int_C \vec F \cdot \frac{ d\vec r }{dt} dt = \int_a^b \vec F(\vec r(t)) \: \cdot \: \vec r'(t) dt.
+                   \]
+               </p>
+
                <div class="boks">
-
-                \[
-                \oiint_C \vec F(x,y,z) \cdot \hat{\mathbf N} |dr| = \iint_D (\nabla \cdot \vec F(x,y)) dA
-                \]
-
+                   La \(C\) være parametrisert av \(\vec r(t), t \in [a, b]\). Linjeintegralet i 
+                   vektorfeltet \(\vec F\) er gitt ved
+                   \[
+                   \int_C \vec F \cdot d\vec r = \int_a^b \vec F(\vec r(t)) \: \cdot \: \vec r'(t) dt.
+                   \]
                </div>
-               <p>Helt analogt gir divergensteoremet en relasjon mellom vektorfeltets 
-                   oppførsel inne i området \(D\) med oppførselen langs randen \(C\).
-                   <br><br>
-                   Greens teorem viste at \(\vec F\)s totale <b>curl</b> i \(D\) er lik summen av \(\vec F\)s <b>tangentielle</b> 
-                   bidrag langs randen til \(D\), mens divergensteoremet viser at \(\vec F\)s totale <b>divergens</b> i 
-                   \(D\) er lik summen av \(\vec F\)s <b>normale</b> bidrag langs randen. På sett og vis er teoremene 
-                   komplimentære.
-                </p>
 
               
                
             </div>
-
+          
             
             <div id="indreSide4" class="indreSide">
                 <h1>Flater og flateintegral</h1>
-                <p>Stokes teorem er på sett og vis Greens teorem tatt ut i rommet. Istedenfor 
-                    å studere total curl over et område \(D\) i xy-planet ser vi nå på total
-                curl over en <b>flate</b> i \(\mathbb R^3\). Flaten er gjerne gitt 
-            ved en ligning \(z=g(x,y)\). </p>
+                <p>Vi har allerede sett flater bli beskrevet ved tovariable funksjoner på formen 
+                    \(z = f(x,y),\) men mer generelt kan vi beskrive en flate implisitt ved en ligning. For 
+                    å dra en analogi til envariabel kalkulus, så vet vi at <i>ikke</i> kan beskrive en sirkel 
+                    i origo med radius \(r\) ved en funksjon \(y=f(x)\). Vi trenger en implisitt ligning,
+                    \(r^2 = x^2 + y^2\).
+                    Tilsvarende er det også i høyere dimensjoner. Ønsker vi å beskrive en kuleflate gjøres 
+                    dette med den implisitte ligningen \(r^2 = x^2 + y^2 + z^2\) eller ekvivalent 
+                    \(G(x,y,z) = x^2 + y^2 + z^2 - r^2=0\).
+                </p>
                 
                 <h2>Video - Flater og flateintegral</h2>
                 <!--<video width="400" controls>
@@ -317,7 +372,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -332,10 +387,66 @@
                     </div>
                </form>
 
-               <h2>Stokes teorem</h2>
+               <h2>Parametrisering</h2>
+
+            <p>Vi har til nå sett på parametrisering av <b>kurver</b>, som beskrives 
+                    ved en \(\vec r(t)\). For å beskrive en flate trenger vi <b>to</b> inputvariabler
+                    som det er vanlig å kalle \(u\) og \(v\), altså en \(\vec r(u,v).\)
+            </p>
+
+            <h3>Grafer</h3>
                <div class="boks">
-                   Tjafs.
-               </div>
+                Dersom vi har en \(z=f(x,y)\) som beskriver flaten vår kan vi helt enkelt parametrisere 
+                flaten som \(\vec r(u,v) = [u, v, f(u,v)]\).
+            </div>
+            <h3>Nivåflater</h3>
+            <p>
+                Når vi beskriver en flate implisitt ved en ligning \(G(x,y,z)=0\) pleier man 
+                å kalle dette en <b>nivåflate,</b> da venstresiden \(G(x,y,z)\) er en 
+                funksjon av tre variabler som settes lik \(0\), altså vil flatens punkter 
+                være alle punkter i rommet der \(G\) er lik \(0\) - et konstant nivå.
+            </p>
+            <div class="boks">
+                Vi kan beskrive en flate ved en implisitt ligning/nivåflate \(G(x,y,z)=0\) der 
+                \(\nabla G \neq \vec 0\).
+            </div>
+            <p>Grunnen til at vi krever \(\nabla G \neq \vec 0\) er at vi ikke hadde fått 
+                en veldefinert flate med \(\nabla G =\vec 0\), da \(\nabla G = \vec 0\)
+            impliserer at \(G\) er en konstant \(C_0\), som betyr at ligningen vår er 
+        \(C_0 = 0,\) som betyr at \(C_0\) må være null. Alle punkter i \(\mathbb R^3\) 
+    tilfredsstiller denne ligningen, og flaten er dermed ikke veldefinert. </p>
+
+            <h2>Areal av flater</h2>
+            <p>
+                Vi finner arealet til en flate \(S\) beskrevet av \(\vec r(u,v)\) ved å huske på at
+                et areal til et parallellogram mellom to vektorer \(\vec a, \vec b\) er gitt ved
+                kryssproduktet \(\vec a \times \vec b\). Nå blir arealdifferensialen vår 
+                kryssproduktet mellom to vektorer: <br> <br>
+                \(\vec r(u+\Delta u, v) - \vec r(u,v)\), et skritt i u-retning langs \(\vec r\), og <br> <br>
+                \(\vec r(u, v+ \Delta v) - \vec r(u,v)\), et skritt i v-retning langs \(\vec r\). <br> <br>
+                Vi vet fra 
+                \[
+                \lim_{\Delta u \to 0} \frac{\vec r(u + \Delta u, v) - \vec r(u,v)}{\Delta u}
+                = \frac{\vec r(u + d u, v) - \vec r(u,v)}{d u} = \frac{\partial \vec r(u,v)}{\partial u}
+                \]
+                at når \((\Delta u, \Delta v) \to (0,0)\) kan vi skrive <br> <br>
+                \(\vec r(u+ du, v) - \vec r(u,v) = \frac{\partial \vec r(u,v)}{\partial u} du \)<br> <br>
+                \(\vec r(u, v+ d v) - \vec r(u,v) = \frac{\partial \vec r(u,v)}{\partial v} dv \). <br> <br>
+                Arealet til parallellogrammet mellom de to vektorene, er som nevnt kryssproduktet av de to, og er således
+                \[
+                dS = | \frac{\partial \vec r(u,v)}{\partial u} d u \times \frac{\partial \vec r(u,v)}{\partial v} d v|
+                = | \frac{\partial \vec r(u,v)}{\partial u} \times \frac{\partial \vec r(u,v)}{\partial v}|  d u  d v
+                \]
+                der absoluttverdi brukes på grunn av at areal alltid er positivt. Totalt areal blir å integrere denne størrelsen over hele domenet til \(u\) og \(v\), som flaten \(S\)
+                er definert på, som vi kaller \(R.\) For eksempel, dersom \(u \in [a,b]\) og \(v \in [c,d]\) blir 
+                \(R = [a, b] \times [c,d]\).
+            </p>
+            <div class="boks">
+                La \(S\) være en flate definert av \(\vec r(u,v)\), der \((u,v)\) tar verdier på området \(R.\) Flatearealet til \(S\) er gitt ved
+                \[
+                S = \iint_S dS = \iint_R \bigg| \frac{\partial \vec r(u,v)}{\partial u} \times \frac{\partial \vec r(u,v)}{\partial v} \bigg|  d u  d v
+                \]
+            </div>
                
                
                
@@ -346,7 +457,10 @@
 
             <div id="indreSide5" class="indreSide">
                 <h1>Orienterte flater og fluksintegral</h1>
-             
+                <p>
+                    En orientering er et <b>vektorfelt</b> definert på en flate \(S\), og består 
+                    av alle enhetsnormaler på \(S\).
+                </p>
                 <h2>Video - Orienterte flater og fluksintegral</h2>
                 <!--<video width="400" controls>
                     <source src="videoer/03hyperbolske.mp4" type="video/mp4">
@@ -354,7 +468,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -368,6 +482,49 @@
                     </label>
                     </div>
                </form>
+               <h2>Orientering</h2>
+               <h3>Nivåflate/implisitt ligning</h3>
+               <div class="boks">
+                En orientering til en sammenhengende flate \(S\) er et <b>vektorfelt</b> \(\hat N(\vec p)\) som gir 
+                enhetsnormalen i punktet \(\vec p\) på \(S\). For en flate beskrevet implisitt av ligningen 
+                \(G(x,y,z) = 0\) vil orienteringen beskrives av 
+                \[
+                \text{Orientering} = \hat N = \frac{\nabla G}{|\nabla|}.
+                \]
+                Det finnes to orienteringer til en flate, nemlig \(\hat N(\vec p)\) og \(-\hat N(\vec p)\).
+               </div>
+
+               <h3>Graf</h3>
+               <div class="boks">
+                   For en graf \(z= f(x,y,)\) parametrisert ved \(\vec r(u,v) = [u, v, f(u,v,)]\) har vi 
+                   \[
+                   \text{Orientering} = \hat N = \frac{1}{\sqrt{1 + (\partial_u f)^2 + (\partial_v f)^2}} [-\partial_u f, - \partial_v f, 1]
+                   \]
+               </div>
+
+               <h2>Fluksintegral/flateintegral</h2>
+               <p>
+                   Fluks kan intuitivt ses på som hvor mye et vektorfelt strømmer gjennom en flate.
+                   I fluidmekanikk vil fluksen til en hastighetsfelt gjennom en flate betegne hvor
+                   mye vann som strømmer gjennom flaten per tidsenhet.
+               </p>
+               <center><img src="bilder/Matte2_div/flux.png" alt="" width="300px"></center>
+               <p>
+                   Total fluks består av å integrere vektorfeltets normale komponent på flaten 
+                   \(S\), over hele \(S\). Vi finner den normale komponenten ved å ta prikkproduktet av 
+                   \(\vec F(\vec p)\) med \(\hat N(\vec p)\) i hvert punkt \(\vec p\) på \(S\).
+               </p>
+               <div class="boks">
+                \[                
+                \text{Fluksintegralet av $\vec F$ over $S$} = \iint_S \vec F \cdot d\vec S =
+                \iint_S \vec F \cdot \hat N dS,
+                \]
+                der \(\hat N\) er orienteringen til \(S\). Ved parametrisert \(S\), ved \(\vec r(u,v), (u,v) \in R\),
+                kan vi skrive 
+                \[
+                \iint_S \vec F \cdot \hat N dS = \iint_R \vec F \cdot \bigg(\frac{\partial \vec r(u,v)}{\partial u} \times \frac{\partial \vec r(u,v)}{\partial v} \bigg)dudv
+                \]
+               </div>
                
             </div>
 
@@ -381,7 +538,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_cA0Ngj1QHQ?modestbranding=1&color=white&rel=0&vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
