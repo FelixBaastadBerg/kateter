@@ -198,44 +198,44 @@
                 <h2>Definisjon</h2>
                  <p>
                      Et vektorfelt \(\vec F\) er konservativt dersom det eksisterer en skalarfunksjon 
-                     \(\phi\) slik at \(\vec F = \nabla \phi\).
+                     \(\varphi\) slik at \(\vec F = \nabla \varphi\).
                  </p>
 
                  <h3>Eksempel</h3>
                  
                  <p>La \(\vec F = [3x\sin y, 3x \cos y + e^z , ye^z \). Vi ønsker å finne ut om det
-                     eksisterer en skalar \(\phi(x,y,z)\) som har gradient lik \(\vec F\), altså 
+                     eksisterer en skalar \(\varphi(x,y,z)\) som har gradient lik \(\vec F\), altså 
                     \[
                     \underbrace{\begin{bmatrix} 3x\sin y \\ 3x \cos y + e^z  \\ ye^z \end{bmatrix}}_{\vec F}
-                    = \underbrace{ \begin{bmatrix} \partial_x \phi\\ \partial_y \phi  \\ \partial_z \phi \end{bmatrix}}_{\nabla \phi }
+                    = \underbrace{ \begin{bmatrix} \partial_x \varphi\\ \partial_y \varphi  \\ \partial_z \varphi \end{bmatrix}}_{\nabla \varphi }
                     \implies 
                     \begin{bmatrix} \int 3x\sin y dx + C_1(y,z) \\ \int ( 3x \cos y + e^z ) dy + C_2(x,z) 
                     \\ \int ye^z dz + C_3(x,y) \end{bmatrix}
-                    = \begin{bmatrix} \phi \\ \phi  \\ \phi \end{bmatrix}
+                    = \begin{bmatrix} \varphi \\ \varphi  \\ \varphi \end{bmatrix}
                     \]
                     og vi ønsker dermed å finne ut om det eksisterer funksjoner \(C_1, C_2, C_3\) som 
                     tilfredsstiller de tre ligningene over. Vi tar for oss hver ligning hver for seg:
                     
                     \[
-                    \int 3\sin y dx + C_1(y,z) =  3x \sin y +  C_1(y,z) = \phi
+                    \int 3\sin y dx + C_1(y,z) =  3x \sin y +  C_1(y,z) = \varphi
                     \]
 
                     \[
-                    \int ( 3x \cos y + e^z ) dy + C_2(x,z)  = 3x \sin y + ye^z + C_2(x,z) = \phi
+                    \int ( 3x \cos y + e^z ) dy + C_2(x,z)  = 3x \sin y + ye^z + C_2(x,z) = \varphi
                     \]
 
                     \[
-                     \int ye^z dz + C_3(x,y)   = ye^z + C_3(x,y) = \phi,
+                     \int ye^z dz + C_3(x,y)   = ye^z + C_3(x,y) = \varphi,
                     \]
 
-                    og siden alle ligninger er lik \(\phi\) må vi ha at 
+                    og siden alle ligninger er lik \(\varphi\) må vi ha at 
                     \[
                     3x \sin y +  C_1(y,z) = 3x \sin y + ye^z + C_2(x,z) = ye^z  + C_3(x,y).
                     \]
                     Vi må nå se om det finnes \(C_1, C_2, C_3 \) som tilfredsstiller dette.
                     Vi "ser" at \(C_1(y,z) = ye^z,\) \(C_2(x,z) = 0\) og \(C_3(x,y) = 3x \sin y\) løser 
-                    denne dobbeltligningen, og dermed er \(\phi(x,y,z) = 3x \sin y + ye^z\), og 
-                    siden \(\nabla \phi = \vec F\) kan vi konkludere med at \(\vec F\) er konservativt.
+                    denne dobbeltligningen, og dermed er \(\varphi(x,y,z) = 3x \sin y + ye^z\), og 
+                    siden \(\nabla \varphi = \vec F\) kan vi konkludere med at \(\vec F\) er konservativt.
                 
                 </p>
                 
