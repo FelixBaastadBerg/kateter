@@ -520,7 +520,7 @@
                </p>
                <p>Intuitivt forteller det oss at den totale curlen / rotasjonen i \(D\) er like 
                    stor som summen av alle tangentielle bidrag langs kurven som omslutter \(D\).
-                Dette kommer vi mer tilbake til under integrasjon i vektorfelt. </p>
+                 </p>
                 
             </div>
                
@@ -542,7 +542,7 @@
                 </video>-->
                 <div class="iframe-container">
                         
-                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V845rvPbpQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <form action="https://formsubmit.co/contact.kateter@gmail.com" method="POST" class="big_form">
 
@@ -581,7 +581,7 @@
             
             <div id="indreSide4" class="indreSide">
                 <h1>Stokes teorem</h1>
-                <p>Stokes teorem er på sett og vis Greens teorem tatt ut i rommet. Istedenfor 
+                <p>Stokes teorem er en generalisering av Greens teorem tatt ut i rommet. Istedenfor 
                     å studere total curl over et område \(D\) i xy-planet ser vi nå på total
                 curl over en <b>flate</b> i \(\mathbb R^3\). Flaten er gjerne gitt 
             ved en ligning \(z=g(x,y)\). </p>
@@ -608,10 +608,20 @@
                     </div>
                </form>
 
+               
                <h2>Stokes teorem</h2>
                <div class="boks">
-                   
+                
+                La \(\vec F = [ P(x,y,z), Q(x,y,z), R(x,y,z) ] \) være et vektorfelt i \( \mathbb R^3\) med kontinuerlige 
+                partiellderiverte. La \(S\) være en glatt flate i rommet med endelig overflateareal, og la \(\vec r(t)\) beskrive 
+                \(\partial S\), altså <i>randen</i> til \(S\). \(\hat N = \hat N(x,y,z) \) beskriver orienteringen til flaten \(S\), altså 
+                enhetsnormalen i hvert punkt på flaten (se Orienterte flater og fluksintegral, under Vektorfelt og integrasjon, om du trenger en oppfriskning på dette).
+                \[
+                \iint_S \underbrace{(\nabla \times \vec F)}_{\textbf{curl} \: \vec F} \cdot \hat N dS = \oint_{\partial S} \vec F \cdot d \vec r
+                \]
+
                </div>
+               <center><img src="bilder/Matte2_div/stokess.png" alt="" width="400px"></center>
                
                
                
