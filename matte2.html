@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body onload="limitFunc()">
+<body onload="promtFunc()">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -98,5 +98,18 @@
 </div>
 
 <script type="text/javascript" src="test.js"></script> 
+<script>
+
+function promtFunc() {
+  let person = prompt("Please enter your Password", "Placeholder");
+  if (person == 'skilpadde') {
+    limitFunc();
+  }
+  else{
+    document.body.innerHTML = `<div style="padding:50px;">Ta kontakt på contact.kateter@gmail.com dersom du trenger tilgang til kurset grunnet kontinuasjonseksamen.</div>`;
+  }
+}
+
+</script>
 </body>
 </html> 
